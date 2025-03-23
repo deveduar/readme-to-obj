@@ -43,19 +43,48 @@ export function generateHtml(readmes: Record<string, Readme>) {
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="container">`;
+    <div class="container">
+      <nav class="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul>`;
 
-  for (const repoId in readmes) {
+
+   // Generate table of contents
+   for (const repoId in readmes) {
     const readme = readmes[repoId];
     htmlContent += `
-      <article class="readme">
-        <h2 class="readme-title">${readme.title}</h2>`;
+          <li>
+            <a href="#${repoId}">${readme.title}</a>
+            <ul>`;
     
+    // Add section links
     for (const section in readme.sections) {
-      const sectionContent = readme.sections[section];
+      const sectionId = `${repoId}-${section.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
       htmlContent += `
-        <section class="readme-section">
-          <h2 class="section-title">${section}</h2>`;
+              <li><a href="#${sectionId}">${section}</a></li>`;
+    }
+    
+    htmlContent += `
+            </ul>
+          </li>`;
+  }
+
+  htmlContent += `
+        </ul>
+      </nav>`;
+
+    for (const repoId in readmes) {
+      const readme = readmes[repoId];
+      htmlContent += `
+        <article id="${repoId}" class="readme">
+          <h2 class="readme-title">${readme.title}</h2>`;
+    
+      for (const section in readme.sections) {
+        const sectionId = `${repoId}-${section.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+        const sectionContent = readme.sections[section];
+        htmlContent += `
+          <section id="${sectionId}" class="readme-section">
+            <h2 class="section-title">${section}</h2>`;
       
           if (Array.isArray(sectionContent)) {
             // Handle regular section content

@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { remark } from "remark";
 import remarkParse from "remark-parse";
-import { Root, Heading, Paragraph, List, ListItem, Text, Code, Link, LinkReference, CodeData, LinkData, Emphasis } from "mdast";
+import { Root, Heading, Paragraph, List, ListItem, Text, Code, Link, LinkReference, CodeData, LinkData, Emphasis, InlineCode } from "mdast";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -42,12 +42,21 @@ export function extractSections(markdown: string): Record<string, any> {
           }
           currentSubSection = textNode.value;
           currentItems = [];
+        } else if (heading.depth === 4) {
+          // Handle h4 headings
+          if (currentSubSection) {
+            sections[currentSection][currentSubSection] = currentItems;
+          }
+          currentSubSection = textNode.value;
+          currentItems = [];
         }
       }
-    }else if (node.type === "paragraph") {
+    } else if (node.type === "paragraph") {
       let paragraphText = "";
       for (const child of (node as Paragraph).children) {
-        if (child.type === "text") {
+        if (child.type === "inlineCode") {
+          paragraphText += `\`${child.value}\``;
+        } else if (child.type === "text") {
           paragraphText += child.value;
         } else if (child.type === "link") {
           const linkText = child.children
@@ -86,48 +95,81 @@ export function extractSections(markdown: string): Record<string, any> {
     else if (node.type === "list") {
       for (const item of (node as List).children) {
         const listItem = item as ListItem;
-        const textNode = listItem.children.find((child) => child.type === "paragraph") as Paragraph | undefined;
-        if (textNode) {
-          let text = "";
-          for (const child of textNode.children) {
-            if (child.type === "text") {
-              text += child.value;
-            } else if (child.type === "link") {
-              const linkText = child.children
-                .map(c => 'value' in c ? c.value : '')
-                .join('');
-              text += `[${linkText}](${child.url})`;
-            } else if (child.type === "strong") {
-              let strongText = "";
-              for (const c of child.children) {
-                if (c.type === "text") {
-                  strongText += c.value;
-                } else if (c.type === "link") {
-                  const linkText = c.children
-                    .map(lc => 'value' in lc ? lc.value : '')
-                    .join('');
-                  strongText += `[${linkText}](${c.url})`;
-                } else if (c.type === "emphasis") {
-                  const emphasisText = c.children
-                    .map(ec => 'value' in ec ? ec.value : '')
-                    .join('');
-                  strongText += `*${emphasisText}*`;
+        // Handle both paragraph and nested lists
+        for (const child of listItem.children) {
+          if (child.type === "paragraph") {
+            let text = "";
+            for (const pChild of child.children) {
+              if (pChild.type === "text") {
+                text += pChild.value;
+              } else if (pChild.type === "inlineCode") {
+                text += `\`${pChild.value}\``;
+              } else if (pChild.type === "link") {
+                const linkText = pChild.children
+                  .map(c => 'value' in c ? c.value : '')
+                  .join('');
+                text += `[${linkText}](${pChild.url})`;
+              } else if (pChild.type === "strong") {
+                let strongText = "";
+                for (const c of pChild.children) {
+                  if (c.type === "text") {
+                    strongText += c.value;
+                  } else if (c.type === "link") {
+                    const linkText = c.children
+                      .map(lc => 'value' in lc ? lc.value : '')
+                      .join('');
+                    strongText += `[${linkText}](${c.url})`;
+                  } else if (c.type === "emphasis") {
+                    const emphasisText = c.children
+                      .map(ec => 'value' in ec ? ec.value : '')
+                      .join('');
+                    strongText += `*${emphasisText}*`;
+                  }
                 }
+                text += `**${strongText}**`;
+              } else if (pChild.type === "emphasis") {
+                const emphasisText = pChild.children
+                  .map(c => 'value' in c ? c.value : '')
+                  .join('');
+                text += `*${emphasisText}*`;
               }
-              text += `**${strongText}**`;
-            } else if (child.type === "emphasis") {
-              const emphasisText = child.children
-                .map(c => 'value' in c ? c.value : '')
-                .join('');
-              text += `*${emphasisText}*`;
             }
-          }
-          if (text.trim()) {
-            currentItems.push(text.trim());
+            if (text.trim()) {
+              currentItems.push(text.trim());
+            }
+          } else if (child.type === "list") {
+          // Handle nested list
+          for (const nestedItem of child.children) {
+            if (nestedItem.type === "listItem") {
+              const nestedText = nestedItem.children
+                .map(nc => {
+                  if (nc.type === "paragraph") {
+                    return nc.children
+                      .map(pc => {
+                        if (pc.type === "text") return pc.value;
+                        if (pc.type === "inlineCode") return `\`${pc.value}\``;
+                        if (pc.type === "link") {
+                          const linkText = pc.children
+                            .map(lc => 'value' in lc ? lc.value : '')
+                            .join('');
+                          return `[${linkText}](${pc.url})`;
+                        }
+                        return '';
+                      })
+                      .join('');
+                  }
+                  return '';
+                })
+                .join('');
+              if (nestedText.trim()) {
+                currentItems.push(`  - ${nestedText.trim()}`);
+              }
+            }
           }
         }
       }
-    } else if (node.type === "code") {
+    }
+  } else if (node.type === "code") {
       const codeNode = node as Code;
       const codeData: CodeData = {
         type: 'code',

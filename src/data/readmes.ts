@@ -6,7 +6,7 @@ export const readmes = {
       "🌟 Features": [
         "✅ **Modern UI/UX** – Responsive and clean design.",
         "✅ **Project showcase** – Dynamic project listing with details.",
-        "✅ **Optimized performance** – Uses  for fast loading.",
+        "✅ **Optimized performance** – Uses `next/image` for fast loading.",
         "✅ **Interactive modal** – View project details in a modal.",
         "✅ **Contact form** – Securely send messages directly.",
         "✅ **Dark Mode** – Supports light and dark themes.",
@@ -187,7 +187,9 @@ export const readmes = {
             "meta": null,
             "value": "pip install -r requirements.txt"
           },
-          "Download and Install Poppler:"
+          "Download and Install Poppler:",
+          "  - Download Poppler binaries for Windows",
+          "  - Extract contents into the project folder"
         ]
       },
       "Usage": {
@@ -205,11 +207,13 @@ export const readmes = {
             "lang": "bash",
             "meta": null,
             "value": "python main.py \"path/to/file.pdf\" --output-dir images --dpi 300 --quality 95"
-          },
-          ": Path to the PDF file to convert",
-          ": Output directory for images (default: )",
-          ": Image resolution (default: 300)",
-          ": JPEG compression quality (default: 95, range 1-100)"
+          }
+        ],
+        "Parameters": [
+          "`path/to/file.pdf`: Path to the PDF file to convert",
+          "`--output-dir`: Output directory for images (default: `output`)",
+          "`--dpi`: Image resolution (default: 300)",
+          "`--quality`: JPEG compression quality (default: 95, range 1-100)"
         ]
       },
       "Examples": {
@@ -255,7 +259,7 @@ export const readmes = {
         "[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur)."
       ],
       "Type Support for ": [
-        "TypeScript cannot handle type information for  imports by default, so we replace the  CLI with  for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of  types."
+        "TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types."
       ],
       "Customize configuration": [
         "See [Vite Configuration Reference](https://vite.dev/config/)."
@@ -293,7 +297,7 @@ export const readmes = {
             "value": "npm run test:e2e:dev"
           },
           "This runs the end-to-end tests against the Vite development server.\nIt is much faster than the production build.",
-          "But it's still recommended to test the production build with  before deploying (e.g. in CI environments):",
+          "But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):",
           {
             "type": "code",
             "lang": "sh",
@@ -318,8 +322,8 @@ export const readmes = {
     "sections": {
       "Requirements": [
         "Python 3.x",
-        ": For downloading YouTube videos.",
-        ": For converting audio files to MP3."
+        "`yt-dlp`: For downloading YouTube videos.",
+        "`ffmpeg`: For converting audio files to MP3."
       ],
       "Installation": {
         "1. Clone this repository": [
@@ -331,18 +335,18 @@ export const readmes = {
           }
         ],
         "2. Install dependencies": [
-          "Make sure Python is installed, and then install the required Python packages. You can use the  file provided:",
+          "Make sure Python is installed, and then install the required Python packages. You can use the `requirements.txt` file provided:",
           {
             "type": "code",
             "lang": "bash",
             "meta": null,
             "value": "pip install -r requirements.txt"
           },
-          "This will install all necessary dependencies, including ."
+          "This will install all necessary dependencies, including `yt-dlp`."
         ],
         "3. Download and install ": [
-          "You can download  from the [official website](https://ffmpeg.org/download.html).",
-          "If you are using Windows, make sure to add the  path to your  environment variable, or place the  binary in a folder within your project and modify the path in the script."
+          "You can download `ffmpeg` from the [official website](https://ffmpeg.org/download.html).",
+          "If you are using Windows, make sure to add the `ffmpeg` path to your `PATH` environment variable, or place the `ffmpeg.exe` binary in a folder within your project and modify the path in the script."
         ],
         "4. Project Structure": [
           "The project should have the following folder structure:",
@@ -369,12 +373,12 @@ export const readmes = {
           "meta": null,
           "value": "https://www.youtube.com/watch?v=abc123, https://www.youtube.com/watch?v=xyz456"
         },
-        "The script will download the audio in the best available format, convert it to MP3 at 320kbps, and save it in the  folder with the video title, removing invalid characters."
+        "The script will download the audio in the best available format, convert it to MP3 at 320kbps, and save it in the `output` folder with the video title, removing invalid characters."
       ],
       "Features": [
         "Efficiently downloads and converts multiple YouTube videos to MP3.",
         "Sanitizes filenames to avoid issues with invalid characters on Windows.",
-        "The converted MP3 files are organized and saved in an  folder."
+        "The converted MP3 files are organized and saved in an `output` folder."
       ],
       "Contributions": [
         "If you have suggestions or improvements, feel free to create a pull request or open an issue."
@@ -411,12 +415,12 @@ export const readmes = {
         "Processes multiple JSON files based on a filename pattern, allowing batch conversion."
       ],
       "Installation": [
-        "Clone this repository or download the  script.",
+        "Clone this repository or download the `convert.py` script.",
         "Place the script in a directory where your exported JSON files from Omnivore are located."
       ],
       "Usage": {
         "Output": [
-          "The script will generate a CSV file named  in the same directory.",
+          "The script will generate a CSV file named `metadata.csv` in the same directory.",
           "This file can be imported into Raindrop.io or other applications that accept CSV imports."
         ]
       },
@@ -425,21 +429,21 @@ export const readmes = {
         "| Column    | Description                       |\n|-----------|-----------------------------------|\n| url       | The URL associated with the item  |\n| title     | The title of the item             |\n| tags      | Comma-separated tags              |\n| note      | Notes or description              |\n| created   | The creation date of the item     |"
       ],
       "Example": [
-        "Here’s how to use the script for multiple JSON files matching the pattern :",
+        "Here’s how to use the script for multiple JSON files matching the pattern `metadata_*.json`:",
         {
           "type": "code",
           "lang": "bash",
           "meta": null,
           "value": "python3 convert.py \"metadata_*.json\""
         },
-        "Upon successful completion, you should see a message indicating the total number of records processed and that  has been created."
+        "Upon successful completion, you should see a message indicating the total number of records processed and that `metadata.csv` has been created."
       ],
       "Error Handling": [
         "If a JSON file cannot be processed (for example, if it is corrupted), an error message will be displayed, and the script will continue processing the remaining files."
       ],
       "Notes": [
         "Ensure that all Omnivore export files are saved in UTF-8 format to avoid encoding issues.",
-        "Open  with a UTF-8 compatible editor, such as Excel or LibreOffice, to ensure proper display of special characters."
+        "Open `metadata.csv` with a UTF-8 compatible editor, such as Excel or LibreOffice, to ensure proper display of special characters."
       ]
     }
   },
@@ -448,7 +452,7 @@ export const readmes = {
     "url": "https://raw.githubusercontent.com/deveduar/medusa-store-backend/master/README.md",
     "sections": {
       "Compatibility": [
-        "This starter is compatible with versions >= 1.8.0 of ."
+        "This starter is compatible with versions >= 1.8.0 of `@medusajs/medusa`."
       ],
       "Getting Started": [
         "Visit the [Quickstart Guide](https://docs.medusajs.com/create-medusa-app) to set up a server.",
@@ -480,13 +484,13 @@ export const readmes = {
     "url": "https://raw.githubusercontent.com/deveduar/readme-to-obj/main/README.md",
     "sections": {
       "Description": [
-        "The project downloads  files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a  file for later use."
+        "The project downloads `README.md` files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a `.ts` file for later use."
       ],
       "Features": [
-        "Downloads  files from public GitHub repositories.",
+        "Downloads `README.md` files from public GitHub repositories.",
         "Automatically extracts sections from the Markdown file.",
         "Converts sections into a structured object.",
-        "Saves the result in a  file for easy integration with TypeScript projects.",
+        "Saves the result in a `.ts` file for easy integration with TypeScript projects.",
         "You can customize which repositories to download the README from."
       ],
       "Installation": [
@@ -495,17 +499,17 @@ export const readmes = {
       ],
       "Usage": {
         "1. Run the Conversion Script": [
-          "The  script is responsible for downloading and converting the  files from the specified repositories. To run the script, use the following command:",
+          "The `updateReadmes.ts` script is responsible for downloading and converting the `README.md` files from the specified repositories. To run the script, use the following command:",
           {
             "type": "code",
             "lang": "bash",
             "meta": null,
             "value": "npm run update-readmes"
           },
-          "This will download the  files, extract the sections, and save the resulting object in ."
+          "This will download the `README.md` files, extract the sections, and save the resulting object in `src/data/readmes.ts`."
         ],
         "2. Example Output": [
-          "After running the script, the  file will contain something like this:",
+          "After running the script, the `readmes.ts` file will contain something like this:",
           {
             "type": "code",
             "lang": "ts",
@@ -514,7 +518,7 @@ export const readmes = {
           }
         ],
         "3. Include the Data in Your Project": [
-          "You can import the  object into your code:",
+          "You can import the `readmes` object into your code:",
           {
             "type": "code",
             "lang": "ts",
@@ -524,7 +528,7 @@ export const readmes = {
         ]
       },
       "Customization": [
-        "You can modify the list of repositories in the  file by adding or removing repositories. The repository structure is as follows:",
+        "You can modify the list of repositories in the `src/scripts/updateReadmes.ts` file by adding or removing repositories. The repository structure is as follows:",
         {
           "type": "code",
           "lang": "ts",
