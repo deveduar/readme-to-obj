@@ -1,0 +1,404 @@
+:root {
+  --primary-color: #0070f3;
+  --secondary-color: #0366d6;
+  --accent-color: #79b8ff;
+  --text-color: #24292e;
+  --text-secondary: #586069;
+  --background: #ffffff;
+  --background-secondary: #f6f8fa;
+  --border-color: #e1e4e8;
+  --code-background: #f6f8fa;
+  --success-color: #2ea44f;
+  --warning-color: #f9c513;
+  --danger-color: #cb2431;
+  --radius: 6px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --max-width: 1200px;
+  --content-width: 800px;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #58a6ff;
+    --secondary-color: #79c0ff;
+    --accent-color: #388bfd;
+    --text-color: #c9d1d9;
+    --text-secondary: #8b949e;
+    --background: #0d1117;
+    --background-secondary: #161b22;
+    --border-color: #30363d;
+    --code-background: #1f2428;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background);
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 600px), 1fr));
+  gap: 2rem;
+}
+
+/* README Article Styling */
+.readme {
+  background-color: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.readme:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.readme-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  padding: 1.5rem;
+  margin: 0;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--primary-color);
+}
+
+.readme-section {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.readme-section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.section-text {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.section-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Code Blocks */
+pre {
+  background-color: var(--code-background);
+  border-radius: var(--radius);
+  margin: 1rem 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+pre::before {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-bottom-left-radius: var(--radius);
+}
+
+pre code {
+  display: block;
+  padding: 1rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+code.language-bash::before,
+code.language-sh::before {
+  content: "$ ";
+  opacity: 0.75;
+}
+
+code:not([class*="language-"]) {
+  background-color: var(--code-background);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--background-secondary);
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* Emoji and Icons */
+/* .section-text:first-letter {
+  margin-right: 0.25rem;
+} */
+
+/* Checkboxes in lists */
+.section-text:has([]) {
+  display: flex;
+  align-items: baseline;
+}
+
+.section-text:has([x]) {
+  color: var(--success-color);
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .readme-title {
+    font-size: 1.5rem;
+    padding: 1.25rem;
+  }
+  
+  .readme-section {
+    padding: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+  }
+  
+  pre code {
+    font-size: 0.8rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .container {
+    display: block;
+  }
+  
+  .readme {
+    page-break-inside: avoid;
+    margin-bottom: 2rem;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+
+/* Additional Styling for Special Elements */
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 2rem;
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  margin-right: 0.5rem;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background-color: var(--primary-color);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Roadmap items */
+.section-text:has([x]) {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.section-text:has([x])::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+}
+
+.section-text:has([ ]) {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.section-text:has([ ])::before {
+  content: "□";
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
+}
+
+/* Feature items with emoji */
+.section-text:has(✅) {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.section-text:has(✅)::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+}
+
+/* Disclaimer and License sections */
+.readme-section:has(.section-title:contains("Disclaimer")),
+.readme-section:has(.section-title:contains("License")) {
+  background-color: var(--background-secondary);
+  border-left: 4px solid var(--primary-color);
+}
+
+/* Contact section */
+.readme-section:has(.section-title:contains("Contact")) {
+  background-color: var(--background-secondary);
+}
+
+/* Animation for hover effects */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--primary-color-rgb), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0);
+  }
+}
+
+/* Add a subtle animation to code blocks on hover */
+pre:hover {
+  animation: pulse 2s infinite;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: var(--code-background);
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}

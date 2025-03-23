@@ -12,6 +12,7 @@ export const repos = [
     { id: "portfolio-3d", url: "https://raw.githubusercontent.com/deveduar/portfolio-3d/main/README.md" },
     { id: "omnivore-to-raindrop", url: "https://raw.githubusercontent.com/deveduar/omnivore-to-raindrop/master/README.md" },
     { id: "medusa-store-backend", url: "https://raw.githubusercontent.com/deveduar/medusa-store-backend/master/README.md" },
-    { id: "medusa-store-frontend", url: "https://raw.githubusercontent.com/deveduar/medusa-store-frontend/main/README.md" }
+    { id: "medusa-store-frontend", url: "https://raw.githubusercontent.com/deveduar/medusa-store-frontend/main/README.md" },
+    { id: "readme-to-obj", url: "https://raw.githubusercontent.com/deveduar/readme-to-obj/main/README.md" }
   ];
   
