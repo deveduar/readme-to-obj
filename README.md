@@ -1,5 +1,4 @@
 ---
-id: 4
 title: "README to Object Converter"
 description: "A project to convert README.md files from multiple repositories into structured JavaScript objects for easy integration with TypeScript projects."
 imageSrc: "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
