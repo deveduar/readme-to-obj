@@ -521,9 +521,6 @@ export const readmes = [
         "label": "Live Demo"
       }
     ],
-    "gallery": [
-      "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
-    ],
     "features": [
       "Bento-style UI for a modern and structured layout.",
       "Dynamic project showcase integrated with GitHub README repository.",
@@ -724,9 +721,6 @@ export const readmes = [
         "href": "https://github.com/deveduar/omnivore-to-raindrop",
         "label": "GitHub"
       }
-    ],
-    "gallery": [
-      "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
     ],
     "features": [
       "Converts Omnivore JSON exports to CSV format.",
