@@ -5,7 +5,8 @@ import { dirname } from 'path';
 import { remark } from "remark";
 import remarkParse from "remark-parse";
 import { Root, Heading, Paragraph, List, ListItem, Text, Code, Link, LinkReference, CodeData, LinkData, Emphasis, InlineCode, Node, PhrasingContent } from "mdast";
-
+import { Readme } from "./types.js";
+import matter from 'gray-matter';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -85,6 +86,7 @@ function handleHeading(
 
 
 export function extractSections(markdown: string): Record<string, any> {
+  const { data: frontmatter, content } = matter(markdown);
   const tree = remark().use(remarkParse).parse(markdown) as Root;
   const sections: Record<string, any> = {};
   const currentState = {
@@ -146,10 +148,13 @@ export function extractSections(markdown: string): Record<string, any> {
     }
   }
 
-  return sections;
+  return {
+    projectData: frontmatter, // Contains all the YAML data
+    sections    // Contains the markdown sections
+  };
 }
 
-export function saveReadmes(readmes: Record<string, any>) {
+export function saveReadmes(readmes: Readme[]) {
     const filePath = path.join(__dirname, "../src/data/readmes.ts");
     fs.writeFileSync(filePath, `export const readmes = ${JSON.stringify(readmes, null, 2)};\n`);
     console.log("✅ README actualizado en", filePath);

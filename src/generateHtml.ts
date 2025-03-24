@@ -3,36 +3,12 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { Code, Link, LinkReference,PhrasingContent, Parent, Text } from "mdast";
+import { Readme, CodeData, LinkData } from "./types.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-interface CodeData extends Code {
-  type: 'code';
-  lang: string | null;
-  meta: string | null;
-  value: string;
-}
-
-interface LinkData extends Link {
-  type: 'link';
-  url: string;
-  title: string | null;
-  children: PhrasingContent[];
-}
-
-interface Readme {
-  title: string;
-  sections: {
-    [key: string]: {
-      [key: string]: (string | CodeData | LinkData)[];
-    } | (string | CodeData | LinkData)[];
-  };
-}
-
-
-
-export function generateHtml(readmes: Record<string, Readme>) {
+export function generateHtml(readmes: Readme[]) {
   let htmlContent = `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -54,11 +30,11 @@ export function generateHtml(readmes: Record<string, Readme>) {
     const readme = readmes[repoId];
     htmlContent += `
           <li>
-            <a href="#${repoId}">${readme.title}</a>
+            <a href="#${repoId}">${readme.readmeContent.title}</a>
             <ul>`;
     
     // Add section links
-    for (const section in readme.sections) {
+    for (const section in readme.readmeContent.sections) {
       const sectionId = `${repoId}-${section.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
       htmlContent += `
               <li><a href="#${sectionId}">${section}</a></li>`;
@@ -71,17 +47,18 @@ export function generateHtml(readmes: Record<string, Readme>) {
 
   htmlContent += `
         </ul>
-      </nav>`;
+      </nav>
+        <div class="readme-container">`;
 
     for (const repoId in readmes) {
       const readme = readmes[repoId];
       htmlContent += `
         <article id="${repoId}" class="readme">
-          <h2 class="readme-title">${readme.title}</h2>`;
+          <h2 class="readme-title">${readme.readmeContent.title}</h2>`;
     
-      for (const section in readme.sections) {
+      for (const section in readme.readmeContent.sections) {
         const sectionId = `${repoId}-${section.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-        const sectionContent = readme.sections[section];
+        const sectionContent = readme.readmeContent.sections[section];
         htmlContent += `
           <section id="${sectionId}" class="readme-section">
             <h2 class="section-title">${section}</h2>`;
@@ -144,9 +121,11 @@ export function generateHtml(readmes: Record<string, Readme>) {
   }
 
   htmlContent += `
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="app.js"></script>
   </body>
   </html>`;
 

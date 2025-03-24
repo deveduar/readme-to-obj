@@ -4,25 +4,28 @@ import { repos } from "./repos.js";
 import { generateHtml } from "./generateHtml.js";
 
 async function updateReadmes() {
-  let readmes: Record<string, any> = {};
+  let readmes = [] as any[];
 
   for (const repo of repos) {
-    console.log(`🔍 Procesando ${repo.id}...`);
+    console.log(`🔍 Procesando ${repo.repoId}...`);
     const markdown = await fetchReadme(repo.url);
     if (!markdown) {
-      console.warn(`⚠️ No se pudo obtener el README de ${repo.id}`);
+      console.warn(`⚠️ No se pudo obtener el README de ${repo.repoId}`);
       continue;
     }
 
-    const titleMatch = markdown.match(/^#\s(.+)/);
-    const title = titleMatch ? titleMatch[1] : repo.id;
-    const sections = extractSections(markdown);
-
-    readmes[repo.id] = { 
-      title, 
-      url: repo.url,
-      sections 
-    };
+    const { projectData, sections } = extractSections(markdown);
+    
+    readmes.push({ 
+      id: repo.id,
+      repoId: repo.repoId,
+      ...projectData, // This will spread the YAML frontmatter data at the root level
+      readmeContent: {
+        title: projectData.title || repo.repoId,
+        url: repo.url,
+        sections
+      }
+    });
   }
 
   saveReadmes(readmes);

@@ -402,3 +402,256 @@ pre[class*="language-"] {
 	-ms-hyphens: none;
 	hyphens: none;
 }
+
+/* Table of Contents Navigation */
+.table-of-contents {
+  background-color: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  width: 300px;
+  transition: all 0.3s ease;
+}
+
+/* Scrollbar styling for the navigation */
+.table-of-contents::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-of-contents::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+  border-radius: 4px;
+}
+
+.table-of-contents::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.table-of-contents::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.table-of-contents h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--primary-color);
+}
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.table-of-contents ul ul {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  border-left: 1px solid var(--border-color);
+}
+
+.table-of-contents li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.table-of-contents li:last-child {
+  margin-bottom: 0;
+}
+
+.table-of-contents a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-of-contents a:hover {
+  background-color: var(--background-secondary);
+  color: var(--primary-color);
+  text-decoration: none;
+  transform: translateX(3px);
+}
+
+.table-of-contents a.active {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+/* Main level items */
+.table-of-contents > ul > li > a {
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Add icons to main level items */
+.table-of-contents > ul > li > a::before {
+  content: "📄 ";
+  margin-right: 0.5rem;
+  opacity: 0.8;
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .table-of-contents {
+    position: relative;
+    width: 100%;
+    max-height: none;
+    margin-bottom: 2rem;
+    top: 0;
+  }
+  
+  /* Collapsible navigation for mobile */
+  .table-of-contents ul ul {
+    display: none;
+  }
+  
+  .table-of-contents li.active > ul {
+    display: block;
+  }
+  
+  /* Toggle button for mobile */
+  .table-of-contents h2 {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .table-of-contents h2::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .table-of-contents.collapsed h2::after {
+    transform: rotate(-90deg);
+  }
+  
+  .table-of-contents.collapsed ul {
+    display: none;
+  }
+}
+
+/* Animation for active link */
+@keyframes highlight {
+  0% {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  100% {
+    background-color: var(--background-secondary);
+    color: var(--primary-color);
+  }
+}
+
+.table-of-contents a:target {
+  animation: highlight 2s ease;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .table-of-contents {
+    background-color: var(--background);
+  }
+  
+  .table-of-contents a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Layout for desktop: side-by-side navigation and content */
+@media (min-width: 1201px) {
+  .container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  
+  .readme-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 600px), 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Add this JavaScript to make the navigation collapsible on mobile */
+/* 
+document.addEventListener('DOMContentLoaded', function() {
+  const tocHeading = document.querySelector('.table-of-contents h2');
+  const toc = document.querySelector('.table-of-contents');
+  
+  tocHeading.addEventListener('click', function() {
+    toc.classList.toggle('collapsed');
+  });
+  
+  // Make parent items expandable
+  const mainItems = document.querySelectorAll('.table-of-contents > ul > li');
+  
+  mainItems.forEach(item => {
+    const link = item.querySelector('a');
+    const sublist = item.querySelector('ul');
+    
+    if (sublist) {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 1200) {
+          e.preventDefault();
+          item.classList.toggle('active');
+        }
+      });
+    }
+  });
+  
+  // Highlight current section
+  const updateActiveLink = () => {
+    const links = document.querySelectorAll('.table-of-contents a');
+    
+    links.forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    const hash = window.location.hash || '#0';
+    const activeLink = document.querySelector(`.table-of-contents a[href="${hash}"]`);
+    
+    if (activeLink) {
+      activeLink.classList.add('active');
+      
+      // Expand parent if on mobile
+      if (window.innerWidth <= 1200) {
+        const parentLi = activeLink.closest('li.active');
+        if (parentLi) {
+          parentLi.classList.add('active');
+        }
+      }
+    }
+  };
+  
+  // Update active link on page load and hash change
+  updateActiveLink();
+  window.addEventListener('hashchange', updateActiveLink);
+});
+*/
