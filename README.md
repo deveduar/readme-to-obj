@@ -1,10 +1,37 @@
+---
+id: 4
+title: "README to Object Converter"
+description: "A project to convert README.md files from multiple repositories into structured JavaScript objects for easy integration with TypeScript projects."
+imageSrc: "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
+detailedDescription: "This project downloads README.md files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a .ts file for later use."
+technologies:
+  - "Node.js"
+  - "TypeScript"
+  - "GitHub API"
+  - "remark"
+links:
+  - href: "https://github.com/yourusername/readme-to-obj"
+    label: "GitHub Repository"
+  - href: "https://demo-link.com"
+    label: "Live Demo"
+gallery:
+  - "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
+features:
+  - "Downloads README.md files from public GitHub repositories."
+  - "Extracts sections such as headers, paragraphs, and lists from Markdown."
+  - "Converts extracted content into a structured JavaScript object."
+  - "Saves the resulting object in a ts file for TypeScript integration."
+  - "Customizable list of repositories to download from."
+  - "Supports integration with TypeScript projects for dynamic README usage."
+---
+
 # README to Object Converter
 
 This project converts `README.md` files from multiple repositories into JavaScript objects. The goal is to facilitate the extraction of sections and content from README files in a structured way.
 
 ## Description
 
-The project downloads `README.md` files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a `.ts` file for later use.
+The project downloads `README.md` files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a `.ts` file for later use. Additionally, it generates an HTML view for each README to visualize its content directly in the browser.
 
 ## Features
 
@@ -13,6 +40,7 @@ The project downloads `README.md` files from specified repositories, processes t
 - Converts sections into a structured object.
 - Saves the result in a `.ts` file for easy integration with TypeScript projects.
 - You can customize which repositories to download the README from.
+- **HTML Generation**: Generates HTML to visualize the README files directly in the browser.
 
 ## Installation
 
@@ -39,7 +67,17 @@ npm run update-readmes
 
 This will download the `README.md` files, extract the sections, and save the resulting object in `src/data/readmes.ts`.
 
-### 2. Example Output
+### 2. View the HTML
+
+After running the script, you can also generate an HTML view of each README file by running the following:
+
+```bash
+npm run generate-html
+```
+
+This will create an HTML page for each README file that can be viewed directly in a browser.
+
+### 3. Example Output
 
 After running the script, the `readmes.ts` file will contain something like this:
 
@@ -64,7 +102,9 @@ export const readmes = {
 }
 ```
 
-### 3. Include the Data in Your Project
+The HTML output will be available in the `dist` folder.
+
+### 4. Include the Data in Your Project
 
 You can import the `readmes` object into your code:
 
