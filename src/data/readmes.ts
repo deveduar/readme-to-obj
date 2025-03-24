@@ -281,16 +281,9 @@ export const readmes = [
     ],
     "links": [
       {
-        "href": "https://github.com/yourusername/readme-to-obj",
+        "href": "https://github.com/deveduar/readme-to-obj",
         "label": "GitHub Repository"
-      },
-      {
-        "href": "https://demo-link.com",
-        "label": "Live Demo"
       }
-    ],
-    "gallery": [
-      "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
     ],
     "features": [
       "Downloads README.md files from public GitHub repositories.",
@@ -729,7 +722,7 @@ export const readmes = [
     "links": [
       {
         "href": "https://github.com/deveduar/omnivore-to-raindrop",
-        "label": "Omnivore to Raindrop GitHub Repository"
+        "label": "GitHub"
       }
     ],
     "gallery": [
