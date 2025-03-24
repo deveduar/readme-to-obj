@@ -398,9 +398,6 @@ export const readmes = [
         "label": "GitHub Repository"
       }
     ],
-    "gallery": [
-      "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
-    ],
     "features": [
       "Converts PDFs to CBR format for digital comic reading.",
       "Supports custom output directories, DPI, and image quality settings.",
@@ -503,14 +500,16 @@ export const readmes = [
     "id": 6,
     "repoId": "portfolio",
     "title": "My Portfolio",
-    "description": "A Single Page Application (SPA) developed with Next.js 14, TypeScript, and Tailwind CSS to showcase my projects, skills, and experience.",
+    "description": "A modern portfolio built with Next.js 14, TypeScript, and Tailwind CSS, featuring a Bento-style layout, AOS animations, and GitHub integration for projects.",
     "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "A modern portfolio built using Next.js 14, TypeScript, and Tailwind CSS. It features a project showcase, interactive modals, dark mode support, and performance optimizations.",
+    "detailedDescription": "This portfolio is designed to showcase my projects, skills, and experience with a visually engaging Bento grid, animations powered by AOS, and automated project details fetched from a GitHub repository.",
     "technologies": [
       "Next.js 14",
       "TypeScript",
       "Tailwind CSS",
-      "Vercel"
+      "Vercel",
+      "AOS",
+      "GitHub API"
     ],
     "links": [
       {
@@ -526,11 +525,10 @@ export const readmes = [
       "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
     ],
     "features": [
-      "Modern UI/UX with responsive design.",
-      "Dynamic project listing with details.",
-      "Optimized performance using next/image.",
+      "Bento-style UI for a modern and structured layout.",
+      "Dynamic project showcase integrated with GitHub README repository.",
       "Interactive modals for project details.",
-      "Secure contact form.",
+      "Smooth animations using AOS for an engaging experience.",
       "Dark mode support.",
       "Fully responsive design for all devices.",
       "Deployed on Vercel for fast and reliable hosting."
@@ -540,11 +538,11 @@ export const readmes = [
       "url": "https://raw.githubusercontent.com/deveduar/nextjs-portfolio/main/README.md",
       "sections": {
         "🌟 Features": [
-          "✅ **Modern UI/UX** – Responsive and clean design.",
-          "✅ **Project showcase** – Dynamic project listing with details.",
+          "✅ **Modern UI/UX** – Bento-grid layout with smooth animations.",
+          "✅ **Project showcase** – Integrated with a GitHub repository to fetch project details from READMEs.",
           "✅ **Optimized performance** – Uses `next/image` for fast loading.",
-          "✅ **Interactive modal** – View project details in a modal.",
-          "✅ **Contact form** – Securely send messages directly.",
+          "✅ **AOS Animations** – Smooth scrolling animations for a dynamic experience.",
+          "✅ **Static site** – No longer a SPA, improved SEO and performance.",
           "✅ **Dark Mode** – Supports light and dark themes.",
           "✅ **Fully Responsive** – Works seamlessly on all devices.",
           "✅ **Deployed on Vercel** – Fast and reliable hosting."
@@ -553,6 +551,8 @@ export const readmes = [
           "**Next.js 14** – App router & server components",
           "**TypeScript** – Strongly typed codebase",
           "**Tailwind CSS** – Utility-first styling",
+          "**AOS (Animate on Scroll)** – Smooth animations",
+          "**GitHub API** – Fetch project details dynamically",
           "**Vercel** – Deployment and hosting"
         ],
         "🚀 Getting Started": {
@@ -561,7 +561,7 @@ export const readmes = [
               "type": "code",
               "lang": "bash",
               "meta": null,
-              "value": "git clone https://github.com/deveduar/nextjs-portfolio.git\ncd your-portfolio"
+              "value": "git clone https://github.com/deveduar/nextjs-portfolio.git\ncd nextjs-portfolio"
             }
           ],
           "2️⃣ Install dependencies": [
@@ -586,9 +586,9 @@ export const readmes = [
           "🔴 **Check it out live:** [deveduar-portfolio.vercel.app](https://deveduar-portfolio.vercel.app/)"
         ],
         "📌 Future Improvements": [
-          "📌 Add API to dynamically manage projects.",
-          "📌 Implement filtering and search for projects.",
-          "📌 Improve accessibility and mobile gestures."
+          "📌 Enhance filtering and search for projects.",
+          "📌 Improve accessibility and mobile gestures.",
+          "📌 Expand GitHub integration with more metadata."
         ],
         "📞 Contact": [
           "If you have any questions or feedback, feel free to reach out!"
