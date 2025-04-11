@@ -103,103 +103,95 @@ export const readmes = [
   },
   {
     "id": 2,
-    "repoId": "angular-SGI-front",
-    "title": "Inventory System",
-    "description": "Inventory management for dropshipping store created with Angular.",
-    "imageSrc": "https://i.postimg.cc/xd9MxWZ5/tablet-sgi-mockup.webp",
-    "detailedDescription": "Developed with TypeScript, Angular, Node.js.",
+    "repoId": "ping-test-tool",
+    "title": "Ping Test Tool",
+    "description": "A real-time network monitoring tool with a retro UI that helps users analyze latency, jitter, and packet loss.",
+    "imageSrc": "https://i.postimg.cc/XYZ123/network-metrics-mockup.webp",
+    "detailedDescription": "Network Metrics is a responsive and privacy-focused web app built with Next.js, TypeScript, and Zustand. It provides real-time feedback on connection quality, showing metrics like latency, jitter, and packet loss, all within a nostalgic retro-gaming interface.",
     "technologies": [
-      "Angular",
-      "NodeJS",
+      "Next.js",
+      "React",
       "TypeScript",
-      "SASS",
-      "Express"
+      "Tailwind CSS",
+      "Zustand",
+      "Web Workers"
     ],
     "links": [
       {
-        "href": "https://github.com/deveduar/angular-SGI-front",
-        "label": "GitHub Frontend"
-      },
-      {
-        "href": "https://github.com/deveduar/inventory-backend.git",
-        "label": "GitHub Backend"
+        "href": "https://ping-test-tool.vercel.app/",
+        "label": "Live Demo"
       }
     ],
     "gallery": [
-      "https://i.postimg.cc/xd9MxWZ5/tablet-sgi-mockup.webp",
-      "https://i.postimg.cc/hGMxH2WB/iphone-sgi-mockup.webp",
-      "https://i.postimg.cc/sgY5JVT1/laptop-sgi-mockup.webp"
+      "https://i.postimg.cc/XYZ123/metrics-dashboard.webp",
+      "https://i.postimg.cc/XYZ123/ping-visualization.webp",
+      "https://i.postimg.cc/XYZ123/jitter-metrics.webp"
     ],
     "features": [
-      "Backend connection with Printful API.",
-      "Responsive design with SASS.",
-      "Static site generation with Angular.",
-      "Product and category management.",
-      "Export data in CSV format.",
-      "Authentication and user management.",
-      "Orders and suppliers tracking.",
-      "Reports and dashboard."
+      "Real-time monitoring of latency, jitter, and packet loss.",
+      "Retro gaming-inspired UI.",
+      "Responsive design with color indicators and charts.",
+      "State management using Zustand.",
+      "Runs tests using Web Workers for non-blocking performance.",
+      "Switch between different metric views.",
+      "Privacy-friendly: no personal data collected."
     ],
     "readmeContent": {
-      "title": "Inventory System",
-      "url": "https://raw.githubusercontent.com/deveduar/angular-SGI-front/master/README.md",
+      "title": "Ping Test Tool",
+      "url": "https://raw.githubusercontent.com/deveduar/network-metrics-tool/main/README.md",
       "sections": {
         "✨ Features": [
-          "📦 **Product and category management**: Easily add, edit, and organize products and categories.",
-          "🔄 **Backend connection with Printful API**: Sync inventory in real-time.",
-          "📄 **Export data in CSV format**: Download inventory reports for external use.",
-          "🔐 **Authentication and user management**: Secure access to the system.",
-          "📊 **Orders and suppliers tracking**: Manage incoming orders and supplier details.",
-          "📈 **Reports and dashboard**: Gain insights into inventory performance.",
-          "🎨 **Responsive design**: Optimized for various screen sizes with **SASS** and **PrimeNG**."
+          "✅ **Real-Time Monitoring** – Continuous updates on key network stats✅ **Latency, Jitter, Packet Loss** – Displayed via animated charts and color indicators✅ **Retro-Inspired UI** – A throwback to vintage gaming consoles✅ **Zustand State Management** – For clean and fast app state updates✅ **Web Workers** – Keep performance smooth while running tests in the background✅ **Responsive Design** – Works great on mobile and desktop✅ **Privacy Respecting** – No personal data is stored, only uses local storage for preferences"
         ],
-        "🛠️ Technologies Used": {
-          "Frontend": [
-            "🅰️ **Angular 18**",
-            "🎨 **PrimeNG & SASS** for UI and styling"
+        "🚀 How to Use": [
+          "1️⃣ **Start Test** – Click the button to begin monitoring2️⃣ **Watch Metrics** – Observe live updates in the dashboard3️⃣ **Toggle Views** – Switch between metric displays (ping, jitter, loss)"
+        ],
+        "❓ FAQ": [
+          "**Q: How accurate are the measurements?**A: The metrics are based on real-time network requests and give a good representation of your connection quality.",
+          "**Q: Does it work offline?**A: No, the app requires an active internet connection.",
+          "**Q: Can I export the data?**A: Not yet, but this is a planned feature for future versions."
+        ],
+        "🛠️ Built With": [
+          "⚛️ **React + Next.js** – The backbone of the web app",
+          "🅾️ **TypeScript** – Type-safe development",
+          "🎨 **Tailwind CSS** – Rapid and responsive UI",
+          "⚙️ **Zustand** – Lightweight and scalable state management",
+          "💪 **Web Workers** – Efficient background processing",
+          "📈 **Custom Metrics Charts** – Visualizations with color indicators"
+        ],
+        "🔐 Privacy & Cookies": [
+          "✅ No personal data is stored or transmitted",
+          "✅ Only uses local storage for your UI preferences",
+          "✅ No third-party analytics or tracking cookies"
+        ],
+        "⚠️ Limitations of the Network Measurement System": {
+          "1. ": [
+            "The system measures network latency using `HEAD` requests to various remote endpoints. These requests may not provide an accurate measurement of actual latency as results can be influenced by external factors like server load, user network, and internet propagation delays.",
+            "The selected endpoints for ping measurement include popular services like Google, Cloudflare, Microsoft, Amazon, and Apple. If any of these services experience issues or downtime, the ping measurement may not be accurate or could fail."
           ],
-          "Backend": [
-            "🚀 **Node.js with Express**"
+          "2. ": [
+            "Jitter is calculated based on the time difference between consecutive ping measurements. If there is a large variation in response times between pings, this may affect the results.",
+            "Jitter can be influenced by changes in the network, traffic fluctuations, and other variability outside the system's control."
+          ],
+          "3. ": [
+            "If a ping request fails (e.g., due to a network issue or server unavailability), it is counted as packet loss.",
+            "The system does not directly measure packet loss but estimates it based on the successful and failed pings."
+          ],
+          "4. ": [
+            "Measurements are only performed towards selected remote servers, meaning they do not reflect latency or network quality between local devices or within a local network.",
+            "Measurement accuracy could improve if local endpoints or specific servers were added depending on the use case."
+          ],
+          "5. ": [
+            "The measurement results can be affected by local network congestion or temporary internet connection issues. Ping, jitter, and packet loss metrics may vary significantly depending on network stability.",
+            "The system does not provide detailed information about specific network issues (e.g., local bottlenecks or intermittent routing problems)."
+          ],
+          "6. ": [
+            "Measurement requests use the `no-cors` mode to avoid CORS-related issues, which limits the type of responses that can be received. This means that detailed server response metrics, such as header response time, are not available and only the round-trip time for the request is measured."
+          ],
+          "7. ": [
+            "The system performs measurements at 2-second intervals. If there is a network interruption or the server does not respond within this interval, an error or an increase in packet loss might be recorded."
           ]
-        },
-        "🚀 Installation": {
-          "1️⃣ Clone the repositories": [],
-          "Frontend": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run start"
-            }
-          ],
-          "Backend": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run dev"
-            }
-          ],
-          "2️⃣ Install dependencies": [
-            "For both projects, run:",
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm install"
-            }
-          ],
-          "3️⃣ Run the applications": []
-        },
-        "📌 Roadmap": [
-          "[x] Basic frontend",
-          "[x] Products and categories management",
-          "[x] Export in CSV",
-          "[ ] Authentication",
-          "[ ] Orders and suppliers integration",
-          "[ ] Reports and dashboard",
-          "📌 *Contributions and suggestions are welcome.*"
-        ]
+        }
       }
     }
   },
@@ -767,6 +759,108 @@ export const readmes = [
         "Notes": [
           "Ensure that all Omnivore export files are saved in UTF-8 format to avoid encoding issues.",
           "Open `metadata.csv` with a UTF-8 compatible editor, such as Excel or LibreOffice, to ensure proper display of special characters."
+        ]
+      }
+    }
+  },
+  {
+    "id": 9,
+    "repoId": "angular-SGI-front",
+    "title": "Inventory System",
+    "description": "Inventory management for dropshipping store created with Angular.",
+    "imageSrc": "https://i.postimg.cc/xd9MxWZ5/tablet-sgi-mockup.webp",
+    "detailedDescription": "Developed with TypeScript, Angular, Node.js.",
+    "technologies": [
+      "Angular",
+      "NodeJS",
+      "TypeScript",
+      "SASS",
+      "Express"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/angular-SGI-front",
+        "label": "GitHub Frontend"
+      },
+      {
+        "href": "https://github.com/deveduar/inventory-backend.git",
+        "label": "GitHub Backend"
+      }
+    ],
+    "gallery": [
+      "https://i.postimg.cc/xd9MxWZ5/tablet-sgi-mockup.webp",
+      "https://i.postimg.cc/hGMxH2WB/iphone-sgi-mockup.webp",
+      "https://i.postimg.cc/sgY5JVT1/laptop-sgi-mockup.webp"
+    ],
+    "features": [
+      "Backend connection with Printful API.",
+      "Responsive design with SASS.",
+      "Static site generation with Angular.",
+      "Product and category management.",
+      "Export data in CSV format.",
+      "Authentication and user management.",
+      "Orders and suppliers tracking.",
+      "Reports and dashboard."
+    ],
+    "readmeContent": {
+      "title": "Inventory System",
+      "url": "https://raw.githubusercontent.com/deveduar/angular-SGI-front/master/README.md",
+      "sections": {
+        "✨ Features": [
+          "📦 **Product and category management**: Easily add, edit, and organize products and categories.",
+          "🔄 **Backend connection with Printful API**: Sync inventory in real-time.",
+          "📄 **Export data in CSV format**: Download inventory reports for external use.",
+          "🔐 **Authentication and user management**: Secure access to the system.",
+          "📊 **Orders and suppliers tracking**: Manage incoming orders and supplier details.",
+          "📈 **Reports and dashboard**: Gain insights into inventory performance.",
+          "🎨 **Responsive design**: Optimized for various screen sizes with **SASS** and **PrimeNG**."
+        ],
+        "🛠️ Technologies Used": {
+          "Frontend": [
+            "🅰️ **Angular 18**",
+            "🎨 **PrimeNG & SASS** for UI and styling"
+          ],
+          "Backend": [
+            "🚀 **Node.js with Express**"
+          ]
+        },
+        "🚀 Installation": {
+          "1️⃣ Clone the repositories": [],
+          "Frontend": [
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "npm run start"
+            }
+          ],
+          "Backend": [
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "npm run dev"
+            }
+          ],
+          "2️⃣ Install dependencies": [
+            "For both projects, run:",
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "npm install"
+            }
+          ],
+          "3️⃣ Run the applications": []
+        },
+        "📌 Roadmap": [
+          "[x] Basic frontend",
+          "[x] Products and categories management",
+          "[x] Export in CSV",
+          "[ ] Authentication",
+          "[ ] Orders and suppliers integration",
+          "[ ] Reports and dashboard",
+          "📌 *Contributions and suggestions are welcome.*"
         ]
       }
     }
