@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "node dist/index.js",
-    "update-readmes": "npm run build && npm run start"
+    "update-readmes": "npm run build && npm run start",
+    "commit-data": "git add src/data && git commit -m \"Update project data\" && git push"
   },
   "keywords": [],
   "author": "",
