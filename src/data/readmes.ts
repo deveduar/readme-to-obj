@@ -1,102 +1,50 @@
 export const readmes = [
   {
     "id": 1,
-    "repoId": "todo-app",
-    "title": "Todo app",
-    "description": "A task management application designed to help organize and prioritize activities efficiently.",
-    "imageSrc": "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
-    "detailedDescription": "The app allows setting due dates, reminders, and managing task statuses. Now, it also includes a Kanban board with drag-and-drop functionality, allowing tasks to be easily moved between different statuses for better organization.",
+    "repoId": "ai-notes-converter",
+    "title": "AI Notes Manager",
+    "description": "A note management application with real-time monitoring and a reactive interface built with Flask and Alpine.js.",
+    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
+    "detailedDescription": "This project is a notes manager that detects file changes in real time, updates the interface automatically, and handles different states for each note. It uses Flask for a maintainable architecture and Alpine.js for a lightweight, modern UI.",
     "technologies": [
-      "Next.js",
-      "React.js",
-      "Tailwind",
-      "Node.js",
-      "Shacdn UI",
-      "PostgreSQL",
-      "Docker"
+      "Python",
+      "Flask",
+      "Alpine.js",
+      "JavaScript",
+      "HTML"
     ],
     "links": [
       {
-        "href": "https://github.com/deveduar/todo-app",
-        "label": "GitHub"
+        "href": "https://github.com/deveduar/ai-notes-converter.git",
+        "label": "GitHub Repository"
       }
     ],
-    "gallery": [
-      "https://i.postimg.cc/L8jy39Fb/iphone-todo-app-mockup.webp",
-      "https://i.postimg.cc/kMhhnYyf/laptop-todo-app-mockup.webp",
-      "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
-      "https://i.postimg.cc/RV6pq1s9/tablet-todo-app-mockup.webp"
-    ],
     "features": [
-      "Task management: Create, edit, delete, and mark tasks as completed.",
-      "Statuses and priorities: Assign custom statuses and priority levels.",
-      "Due dates and reminders: Set due dates and notifications.",
-      "Smart date and time selection: Ensures valid time selection based on the chosen date.",
-      "Backend synchronization: Data persistence via an API.",
-      "Kanban board: Drag-and-drop tasks between different statuses for a visual workflow.",
-      "Responsive design with ShadCN UI.",
-      "Static site generation with Next.js."
+      "Real-time file monitoring without restarting the server.",
+      "Automatic UI updates every 3 seconds.",
+      "Improved state management: pending, copied, processed, and modified.",
+      "Flask-based architecture for better scalability and maintainability.",
+      "Modern, reactive user interface using Alpine.js."
     ],
     "readmeContent": {
-      "title": "Todo app",
-      "url": "https://raw.githubusercontent.com/deveduar/todo-app/master/README.md",
+      "title": "AI Notes Manager",
+      "url": "https://raw.githubusercontent.com/deveduar/ai-notes-converter/refs/heads/main/README.md",
       "sections": {
-        "✨ Features": [
-          "📋 **Task management**: Create, edit, delete, and mark tasks as completed.",
-          "🎯 **Statuses and priorities**: Assign custom statuses and priority levels.",
-          "⏰ **Due dates and reminders**: Set due dates and notifications.",
-          "📅 **Smart date and time selection**: Ensures valid time selection based on the chosen date.",
-          "🔄 **Backend synchronization**: Data persistence via an API.",
-          "📌 **Kanban board**: Drag-and-drop tasks between different statuses for a visual workflow."
+        "Key Features": [
+          "**Real-time monitoring**: Automatically detects file changes without restarting the server",
+          "**Reactive interface**: UI updates every 3 seconds automatically",
+          "**Improved states**: Better handling of note states (pending, copied, processed, modified)",
+          "**Flask architecture**: More maintainable and scalable than a basic HTTP server",
+          "**Alpine.js**: Modern and reactive user interface"
         ],
-        "🛠️ Technologies Used": {
-          "Frontend": [
-            "⚛️ **React** with TypeScript",
-            "🎨 **Tailwind CSS** for styling",
-            "📦 **ShadCN/UI** for UI components",
-            "🗂 **date-fns** and **date-fns-tz** for date handling",
-            "🖱 **dnd-kit** for drag-and-drop functionality in the Kanban board"
-          ],
-          "Backend (Separate GitHub Project)": [
-            "🚀 **Node.js with Express**",
-            "🐘 **PostgreSQL** as the database",
-            "🐳 **Docker** for deployment and configuration"
-          ]
-        },
-        "🚀 Installation": {
-          "1️⃣ Clone the repository": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "git clone https://github.com/your-user/your-todo-repo.git\ncd your-todo-repo"
-            }
-          ],
-          "2️⃣ Install dependencies": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm install"
-            }
-          ],
-          "3️⃣ Set up the backend (Docker)": [
-            "The backend is in a separate GitHub project. Follow its instructions to set it up with Docker."
-          ],
-          "4️⃣ Run the frontend": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run dev"
-            }
-          ]
-        },
-        "📌 Roadmap": [
-          "[ ] Authentication integration",
-          "[ ] Support for subtasks",
-          "[ ] Real-time notifications",
-          "📌 *Contributions and suggestions are welcome.*"
+        "Installation": [
+          "Install dependencies:",
+          {
+            "type": "code",
+            "lang": "bash",
+            "meta": null,
+            "value": "pip install -r requirements.txt"
+          }
         ]
       }
     }
@@ -203,6 +151,87 @@ export const readmes = [
   },
   {
     "id": 3,
+    "repoId": "deveduar-blog",
+    "title": "Jekyll Blog App",
+    "description": "A personal technical blog built with Jekyll and enriched with search functionality, Obsidian integration, and custom content creation tools.",
+    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
+    "detailedDescription": "This project is a static site powered by Jekyll that serves as a personal blog and technical knowledge base. It integrates a custom Obsidian plugin for content creation. The architecture emphasizes performance and modern tooling with SSG and Turbo enhancements.",
+    "technologies": [
+      "Jekyll",
+      "Static Site Generator (SSG)",
+      "Turbo",
+      "Ruby",
+      "GitHub Pages",
+      "Vanilla JS",
+      "SASS",
+      "vis.js"
+    ],
+    "links": [
+      {
+        "href": "https://deveduar.github.io",
+        "label": "Live Demo"
+      },
+      {
+        "href": "https://github.com/deveduar/deveduar.github.io",
+        "label": "GitHub Repository"
+      }
+    ],
+    "features": [
+      "Built with Jekyll for static site generation and fast performance.",
+      "Frontend built with Vanilla JS, SASS, and Turbo for dynamic UX.",
+      "Plans for an Obsidian plugin to streamline content creation.",
+      "Integrated with GitHub Pages for free hosting and version control.",
+      "Wiki-style content management using backlinks and preview features.",
+      "Custom SASS Styling Aesthetic, minimal, and responsive UI inspired by Obsidian."
+    ],
+    "readmeContent": {
+      "title": "Jekyll Blog App",
+      "url": "https://raw.githubusercontent.com/deveduar/deveduar.github.io/refs/heads/main/README.md",
+      "sections": {
+        "Key Features": [
+          "**Powered by Jekyll**: Static site generation for performance and simplicity",
+          "**Backlink Graph (vis.js)**: Navigate posts through a visual backlink graph like Obsidian.",
+          "**Obsidian integration**: Plans to build a custom plugin for seamless content creation",
+          "**Hosted on GitHub Pages**: Free, versioned, and easy to deploy",
+          "**Wiki-style navigation**: Backlinks, page previews.",
+          "**Frontend with Turbo & Vanilla JS:** Fast, responsive UX without heavy frameworks.",
+          "**Custom SASS Styling**: Aesthetic, minimal, and responsive UI inspired by Obsidian."
+        ],
+        "Installation": [
+          "Clone the repository:",
+          {
+            "type": "code",
+            "lang": "bash",
+            "meta": null,
+            "value": "git clone https://github.com/deveduar/deveduar.github.io.git\ncd deveduar.github.io"
+          },
+          "Install dependencies (ensure Ruby and Bundler are installed):",
+          {
+            "type": "code",
+            "lang": "bash",
+            "meta": null,
+            "value": "bundle install"
+          },
+          "Run the server locally:",
+          {
+            "type": "code",
+            "lang": "bash",
+            "meta": null,
+            "value": "bundle exec jekyll serve"
+          },
+          "Open in browser:",
+          {
+            "type": "code",
+            "lang": null,
+            "meta": null,
+            "value": "http://localhost:4000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 4,
     "repoId": "merakikrea",
     "title": "Merakikrea Cerámica",
     "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
@@ -265,7 +294,109 @@ export const readmes = [
     }
   },
   {
-    "id": 4,
+    "id": 5,
+    "repoId": "todo-app",
+    "title": "Todo app",
+    "description": "A task management application designed to help organize and prioritize activities efficiently.",
+    "imageSrc": "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
+    "detailedDescription": "The app allows setting due dates, reminders, and managing task statuses. Now, it also includes a Kanban board with drag-and-drop functionality, allowing tasks to be easily moved between different statuses for better organization.",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "Tailwind",
+      "Node.js",
+      "Shacdn UI",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/todo-app",
+        "label": "GitHub"
+      }
+    ],
+    "gallery": [
+      "https://i.postimg.cc/L8jy39Fb/iphone-todo-app-mockup.webp",
+      "https://i.postimg.cc/kMhhnYyf/laptop-todo-app-mockup.webp",
+      "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
+      "https://i.postimg.cc/RV6pq1s9/tablet-todo-app-mockup.webp"
+    ],
+    "features": [
+      "Task management: Create, edit, delete, and mark tasks as completed.",
+      "Statuses and priorities: Assign custom statuses and priority levels.",
+      "Due dates and reminders: Set due dates and notifications.",
+      "Smart date and time selection: Ensures valid time selection based on the chosen date.",
+      "Backend synchronization: Data persistence via an API.",
+      "Kanban board: Drag-and-drop tasks between different statuses for a visual workflow.",
+      "Responsive design with ShadCN UI.",
+      "Static site generation with Next.js."
+    ],
+    "readmeContent": {
+      "title": "Todo app",
+      "url": "https://raw.githubusercontent.com/deveduar/todo-app/master/README.md",
+      "sections": {
+        "✨ Features": [
+          "📋 **Task management**: Create, edit, delete, and mark tasks as completed.",
+          "🎯 **Statuses and priorities**: Assign custom statuses and priority levels.",
+          "⏰ **Due dates and reminders**: Set due dates and notifications.",
+          "📅 **Smart date and time selection**: Ensures valid time selection based on the chosen date.",
+          "🔄 **Backend synchronization**: Data persistence via an API.",
+          "📌 **Kanban board**: Drag-and-drop tasks between different statuses for a visual workflow."
+        ],
+        "🛠️ Technologies Used": {
+          "Frontend": [
+            "⚛️ **React** with TypeScript",
+            "🎨 **Tailwind CSS** for styling",
+            "📦 **ShadCN/UI** for UI components",
+            "🗂 **date-fns** and **date-fns-tz** for date handling",
+            "🖱 **dnd-kit** for drag-and-drop functionality in the Kanban board"
+          ],
+          "Backend (Separate GitHub Project)": [
+            "🚀 **Node.js with Express**",
+            "🐘 **PostgreSQL** as the database",
+            "🐳 **Docker** for deployment and configuration"
+          ]
+        },
+        "🚀 Installation": {
+          "1️⃣ Clone the repository": [
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "git clone https://github.com/your-user/your-todo-repo.git\ncd your-todo-repo"
+            }
+          ],
+          "2️⃣ Install dependencies": [
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "npm install"
+            }
+          ],
+          "3️⃣ Set up the backend (Docker)": [
+            "The backend is in a separate GitHub project. Follow its instructions to set it up with Docker."
+          ],
+          "4️⃣ Run the frontend": [
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "npm run dev"
+            }
+          ]
+        },
+        "📌 Roadmap": [
+          "[ ] Authentication integration",
+          "[ ] Support for subtasks",
+          "[ ] Real-time notifications",
+          "📌 *Contributions and suggestions are welcome.*"
+        ]
+      }
+    }
+  },
+  {
+    "id": 6,
     "repoId": "readme-to-obj",
     "title": "README to Object Converter",
     "description": "A project to convert README.md files from multiple repositories into structured JavaScript objects for easy integration with TypeScript projects.",
@@ -378,7 +509,7 @@ export const readmes = [
     }
   },
   {
-    "id": 5,
+    "id": 7,
     "repoId": "pdf-to-cbr",
     "title": "PDF to CBR Converter",
     "description": "A Python script to convert PDF files to CBR (Comic Book RAR) format, perfect for digital comic and manga readers.",
@@ -495,7 +626,7 @@ export const readmes = [
     }
   },
   {
-    "id": 6,
+    "id": 8,
     "repoId": "portfolio",
     "title": "My Portfolio",
     "description": "A modern portfolio built with Next.js 14, TypeScript, and Tailwind CSS, featuring a Bento-style layout, AOS animations, and GitHub integration for projects.",
@@ -595,7 +726,7 @@ export const readmes = [
     }
   },
   {
-    "id": 7,
+    "id": 9,
     "repoId": "you-mp3-python",
     "title": "YouTube MP3 Downloader",
     "description": "A Python script to download audio from YouTube videos in MP3 format at 320kbps using yt-dlp and ffmpeg.",
@@ -699,7 +830,7 @@ export const readmes = [
     }
   },
   {
-    "id": 8,
+    "id": 10,
     "repoId": "omnivore-to-raindrop",
     "title": "Omnivore JSON to Raindrop.io CSV Converter",
     "description": "A Python script to convert Omnivore JSON exports to CSV format for easy migration to Raindrop.io.",
@@ -770,7 +901,7 @@ export const readmes = [
     }
   },
   {
-    "id": 9,
+    "id": 11,
     "repoId": "angular-SGI-front",
     "title": "Inventory System",
     "description": "Inventory management for dropshipping store created with Angular.",
