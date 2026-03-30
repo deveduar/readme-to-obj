@@ -1,41 +1,40 @@
 ---
 title: "README to Object Converter"
-description: "A project to convert README.md files from multiple repositories into structured JavaScript objects for easy integration with TypeScript projects."
+description: "A project to convert local Obsidian Markdown files into structured JavaScript objects for easy integration with TypeScript projects."
 imageSrc: "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
-detailedDescription: "This project downloads README.md files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a .ts file for later use."
+detailedDescription: "This project reads local Markdown files from an Obsidian vault, processes them to extract key sections, and converts them into a JavaScript object. The resulting object is saved into a .ts file for later use in your portfolio or app."
 technologies:
   - "Node.js"
   - "TypeScript"
-  - "GitHub API"
   - "remark"
 links:
   - href: "https://github.com/deveduar/readme-to-obj"
     label: "GitHub Repository"
 features:
-  - "Downloads README.md files from public GitHub repositories."
-  - "Extracts sections such as headers, paragraphs, and lists from Markdown."
-  - "Converts extracted content into a structured JavaScript object."
+  - "Reads local Markdown files from an Obsidian vault."
+  - "Extracts sections such as headings, paragraphs, lists, and code from Markdown."
+  - "Converts the extracted content into a structured JavaScript object."
   - "Saves the resulting object in a ts file for TypeScript integration."
-  - "Customizable list of repositories to download from."
-  - "Supports integration with TypeScript projects for dynamic README usage."
+  - "Works with local files instead of live GitHub downloads."
+  - "Supports preview HTML generation for the converted content."
 ---
 
 # README to Object Converter
 
-This project converts `README.md` files from multiple repositories into JavaScript objects. The goal is to facilitate the extraction of sections and content from README files in a structured way.
+This project converts local `.md` files from an Obsidian vault into JavaScript objects. The goal is to facilitate the extraction of sections and content from local Markdown notes in a structured way.
 
 ## Description
 
-The project downloads `README.md` files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a `.ts` file for later use. Additionally, it generates an HTML view for each README to visualize its content directly in the browser.
+The project reads local `.md` files from your Obsidian vault, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a `.ts` file for later use. Additionally, it generates an HTML view in `src/data/readmes.html`.
 
 ## Features
 
-- Downloads `README.md` files from public GitHub repositories.
-- Automatically extracts sections from the Markdown file.
+- Reads local Markdown files from your Obsidian vault.
+- Automatically extracts sections from the Markdown files.
 - Converts sections into a structured object.
 - Saves the result in a `.ts` file for easy integration with TypeScript projects.
-- You can customize which repositories to download the README from.
-- **HTML Generation**: Generates HTML to visualize the README files directly in the browser.
+- Works entirely with local files, no GitHub downloads required.
+- **HTML Generation**: Generates HTML to visualize the Markdown content directly in the browser.
 
 ## Installation
 
@@ -52,25 +51,23 @@ The project downloads `README.md` files from specified repositories, processes t
 
 ## Usage
 
-### 1. Run the Conversion Script
+### 1. Configure the local Obsidian path
 
-The `updateReadmes.ts` script is responsible for downloading and converting the `README.md` files from the specified repositories. To run the script, use the following command:
+Create a `.env` file in the project root with a line like this:
+
+```env
+READMES_OBSIDIAN_PATH="C:\path\to\your\obsidian\vault\Blog-Portfolio"
+```
+
+### 2. Run the Conversion Script
+
+`src/index.ts` reads all `.md` files from the local folder specified in `.env`. To run the script:
 
 ```bash
 npm run update-readmes
 ```
 
-This will download the `README.md` files, extract the sections, and save the resulting object in `src/data/readmes.ts`.
-
-### 2. View the HTML
-
-After running the script, you can also generate an HTML view of each README file by running the following:
-
-```bash
-npm run generate-html
-```
-
-This will create an HTML page for each README file that can be viewed directly in a browser.
+This will process the local files, extract the sections, and save the resulting object to `src/data/readmes.ts`.
 
 ### 3. Example Output
 
@@ -99,7 +96,7 @@ export const readmes = {
 
 The HTML output will be available in the `dist` folder.
 
-### 4. Include the Data in Your Project
+### 3. Include the Data in Your Project
 
 You can import the `readmes` object into your code:
 
@@ -109,16 +106,15 @@ import { readmes } from './data/readmes';
 console.log(readmes['portfolio']);
 ```
 
-## Customization
+## Configuration
 
-You can modify the list of repositories in the `src/scripts/updateReadmes.ts` file by adding or removing repositories. The repository structure is as follows:
+The folder path is configured through a `.env` file in the project root. Create a `.env` file alongside `package.json` with this content:
 
-```ts
-const repos = [
-  { id: "repo_id", url: "https://raw.githubusercontent.com/user/repo/main/README.md" },
-  // ...
-];
+```env
+READMES_OBSIDIAN_PATH="C:\path\to\your\obsidian\vault\Blog-Portfolio"
 ```
+
+Then run the script from the project root.
 
 ## Libraries Used
 

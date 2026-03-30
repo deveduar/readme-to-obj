@@ -16,7 +16,7 @@ export interface ProjectData {
 
 export interface ReadmeContent {
   title: string;
-  url: string;
+  fileName: string;
   sections: {
     [key: string]: {
       [key: string]: (string | CodeData | LinkData)[];

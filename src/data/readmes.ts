@@ -1,237 +1,24 @@
 export const readmes = [
   {
     "id": 1,
-    "repoId": "ai-notes-converter",
-    "title": "AI Notes Manager",
-    "description": "A note management application with real-time monitoring and a reactive interface built with Flask and Alpine.js.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "This project is a notes manager that detects file changes in real time, updates the interface automatically, and handles different states for each note. It uses Flask for a maintainable architecture and Alpine.js for a lightweight, modern UI.",
-    "technologies": [
-      "Python",
-      "Flask",
-      "Alpine.js",
-      "JavaScript",
-      "HTML"
-    ],
-    "links": [
-      {
-        "href": "https://github.com/deveduar/ai-notes-converter.git",
-        "label": "GitHub Repository"
-      }
-    ],
-    "features": [
-      "Real-time file monitoring without restarting the server.",
-      "Automatic UI updates every 3 seconds.",
-      "Improved state management: pending, copied, processed, and modified.",
-      "Flask-based architecture for better scalability and maintainability.",
-      "Modern, reactive user interface using Alpine.js."
-    ],
+    "repoId": "angular-SGI-front",
     "readmeContent": {
-      "title": "AI Notes Manager",
-      "url": "https://raw.githubusercontent.com/deveduar/ai-notes-converter/refs/heads/main/README.md",
-      "sections": {
-        "Key Features": [
-          "**Real-time monitoring**: Automatically detects file changes without restarting the server",
-          "**Reactive interface**: UI updates every 3 seconds automatically",
-          "**Improved states**: Better handling of note states (pending, copied, processed, modified)",
-          "**Flask architecture**: More maintainable and scalable than a basic HTTP server",
-          "**Alpine.js**: Modern and reactive user interface"
-        ],
-        "Installation": [
-          "Install dependencies:",
-          {
-            "type": "code",
-            "lang": "bash",
-            "meta": null,
-            "value": "pip install -r requirements.txt"
-          }
-        ]
-      }
+      "title": "angular-SGI-front",
+      "fileName": "angular-SGI-front.md",
+      "sections": {}
     }
   },
   {
     "id": 2,
-    "repoId": "ping-test-tool",
-    "title": "Ping Test Tool",
-    "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "Ping Test Tool is a responsive and privacy-focused web app built with Next.js, TypeScript, and Zustand. It provides real-time feedback on connection quality, showing metrics like latency, jitter, and packet loss.",
-    "technologies": [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Zustand",
-      "Web Workers"
-    ],
-    "links": [
-      {
-        "href": "https://ping-test-tool.vercel.app/",
-        "label": "Live Demo"
-      }
-    ],
-    "features": [
-      "Real-time monitoring of latency, jitter, and packet loss.",
-      "Retro gaming-inspired UI.",
-      "Responsive design with color indicators and charts.",
-      "State management using Zustand.",
-      "Runs tests using Web Workers for non-blocking performance.",
-      "Switch between different metric views.",
-      "Privacy-friendly: no personal data collected."
-    ],
+    "repoId": "lilililililil",
     "readmeContent": {
-      "title": "Ping Test Tool",
-      "url": "https://raw.githubusercontent.com/deveduar/network-metrics-tool/main/README.md",
-      "sections": {
-        "✨ Features": [
-          "✅ **Real-Time Monitoring** – Continuous updates on key network stats",
-          "✅ **Latency, Jitter, Packet Loss** – Displayed via animated charts and color indicators",
-          "✅ **Retro-Inspired UI** – A throwback to vintage gaming consoles",
-          "✅ **Zustand State Management** – For clean and fast app state updates",
-          "✅ **Web Workers** – Keep performance smooth while running tests in the background",
-          "✅ **Responsive Design** – Works great on mobile and desktop",
-          "✅ **Privacy Respecting** – No personal data is stored, only uses local storage for preferences"
-        ],
-        "🚀 How to Use": [
-          "1️⃣ **Start Test** – Click the button to begin monitoring",
-          "2️⃣ **Watch Metrics** – Observe live updates in the dashboard",
-          "3️⃣ **Toggle Views** – Switch between metric displays (ping, jitter, loss)"
-        ],
-        "❓ FAQ": [
-          "**Q: How accurate are the measurements?**",
-          "A: The metrics are based on real-time network requests and give a good representation of your connection quality.",
-          "**Q: Does it work offline?**",
-          "A: No, the app requires an active internet connection.",
-          "**Q: Can I export the data?**",
-          "A: Not yet, but this is a planned feature for future versions."
-        ],
-        "🛠️ Built With": [
-          "⚛️ **React + Next.js** – The backbone of the web app",
-          "🅾️ **TypeScript** – Type-safe development",
-          "🎨 **Tailwind CSS** – Rapid and responsive UI",
-          "⚙️ **Zustand** – Lightweight and scalable state management",
-          "💪 **Web Workers** – Efficient background processing",
-          "📈 **Custom Metrics Charts** – Visualizations with color indicators"
-        ],
-        "🔐 Privacy & Cookies": [
-          "✅ No personal data is stored or transmitted",
-          "✅ Only uses local storage for your UI preferences",
-          "✅ No third-party analytics or tracking cookies"
-        ],
-        "⚠️ Limitations of the Network Measurement System": {
-          "1. ": [
-            "The system measures network latency using `HEAD` requests to various remote endpoints. These requests may not provide an accurate measurement of actual latency as results can be influenced by external factors like server load, user network, and internet propagation delays.",
-            "The selected endpoints for ping measurement include popular services like Google, Cloudflare, Microsoft, Amazon, and Apple. If any of these services experience issues or downtime, the ping measurement may not be accurate or could fail."
-          ],
-          "2. ": [
-            "Jitter is calculated based on the time difference between consecutive ping measurements. If there is a large variation in response times between pings, this may affect the results.",
-            "Jitter can be influenced by changes in the network, traffic fluctuations, and other variability outside the system's control."
-          ],
-          "3. ": [
-            "If a ping request fails (e.g., due to a network issue or server unavailability), it is counted as packet loss.",
-            "The system does not directly measure packet loss but estimates it based on the successful and failed pings."
-          ],
-          "4. ": [
-            "Measurements are only performed towards selected remote servers, meaning they do not reflect latency or network quality between local devices or within a local network.",
-            "Measurement accuracy could improve if local endpoints or specific servers were added depending on the use case."
-          ],
-          "5. ": [
-            "The measurement results can be affected by local network congestion or temporary internet connection issues. Ping, jitter, and packet loss metrics may vary significantly depending on network stability.",
-            "The system does not provide detailed information about specific network issues (e.g., local bottlenecks or intermittent routing problems)."
-          ],
-          "6. ": [
-            "Measurement requests use the `no-cors` mode to avoid CORS-related issues, which limits the type of responses that can be received. This means that detailed server response metrics, such as header response time, are not available and only the round-trip time for the request is measured."
-          ],
-          "7. ": [
-            "The system performs measurements at 2-second intervals. If there is a network interruption or the server does not respond within this interval, an error or an increase in packet loss might be recorded."
-          ]
-        }
-      }
+      "title": "lilililililil",
+      "fileName": "lilililililil.md",
+      "sections": {}
     }
   },
   {
     "id": 3,
-    "repoId": "deveduar-blog",
-    "title": "Jekyll Blog App",
-    "description": "A personal technical blog built with Jekyll and enriched with search functionality, Obsidian integration, and custom content creation tools.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "This project is a static site powered by Jekyll that serves as a personal blog and technical knowledge base. It integrates a custom Obsidian plugin for content creation. The architecture emphasizes performance and modern tooling with SSG and Turbo enhancements.",
-    "technologies": [
-      "Jekyll",
-      "Static Site Generator (SSG)",
-      "Turbo",
-      "Ruby",
-      "GitHub Pages",
-      "Vanilla JS",
-      "SASS",
-      "vis.js"
-    ],
-    "links": [
-      {
-        "href": "https://deveduar.github.io",
-        "label": "Live Demo"
-      },
-      {
-        "href": "https://github.com/deveduar/deveduar.github.io",
-        "label": "GitHub Repository"
-      }
-    ],
-    "features": [
-      "Built with Jekyll for static site generation and fast performance.",
-      "Frontend built with Vanilla JS, SASS, and Turbo for dynamic UX.",
-      "Plans for an Obsidian plugin to streamline content creation.",
-      "Integrated with GitHub Pages for free hosting and version control.",
-      "Wiki-style content management using backlinks and preview features.",
-      "Custom SASS Styling Aesthetic, minimal, and responsive UI inspired by Obsidian."
-    ],
-    "readmeContent": {
-      "title": "Jekyll Blog App",
-      "url": "https://raw.githubusercontent.com/deveduar/deveduar.github.io/refs/heads/main/README.md",
-      "sections": {
-        "Key Features": [
-          "**Powered by Jekyll**: Static site generation for performance and simplicity",
-          "**Backlink Graph (vis.js)**: Navigate posts through a visual backlink graph like Obsidian.",
-          "**Obsidian integration**: Plans to build a custom plugin for seamless content creation",
-          "**Hosted on GitHub Pages**: Free, versioned, and easy to deploy",
-          "**Wiki-style navigation**: Backlinks, page previews.",
-          "**Frontend with Turbo & Vanilla JS:** Fast, responsive UX without heavy frameworks.",
-          "**Custom SASS Styling**: Aesthetic, minimal, and responsive UI inspired by Obsidian."
-        ],
-        "Installation": [
-          "Clone the repository:",
-          {
-            "type": "code",
-            "lang": "bash",
-            "meta": null,
-            "value": "git clone https://github.com/deveduar/deveduar.github.io.git\ncd deveduar.github.io"
-          },
-          "Install dependencies (ensure Ruby and Bundler are installed):",
-          {
-            "type": "code",
-            "lang": "bash",
-            "meta": null,
-            "value": "bundle install"
-          },
-          "Run the server locally:",
-          {
-            "type": "code",
-            "lang": "bash",
-            "meta": null,
-            "value": "bundle exec jekyll serve"
-          },
-          "Open in browser:",
-          {
-            "type": "code",
-            "lang": null,
-            "meta": null,
-            "value": "http://localhost:4000"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "id": 4,
     "repoId": "merakikrea",
     "title": "Merakikrea Cerámica",
     "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
@@ -270,7 +57,7 @@ export const readmes = [
     ],
     "readmeContent": {
       "title": "Merakikrea Cerámica",
-      "url": "https://raw.githubusercontent.com/deveduar/meraki-krea-ceramica/main/README.md",
+      "fileName": "merakikrea.md",
       "sections": {
         "✨ Features": [
           "✅ **Responsive design** – Adapted for both mobile and desktop.✅ **Light/Dark Mode** – Implemented using **Tailwind CSS**.✅ **SEO and Accessibility** – Optimized for search engines with semantic HTML tags.✅ **Key Sections**:",
@@ -294,222 +81,78 @@ export const readmes = [
     }
   },
   {
-    "id": 5,
-    "repoId": "todo-app",
-    "title": "Todo app",
-    "description": "A task management application designed to help organize and prioritize activities efficiently.",
-    "imageSrc": "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
-    "detailedDescription": "The app allows setting due dates, reminders, and managing task statuses. Now, it also includes a Kanban board with drag-and-drop functionality, allowing tasks to be easily moved between different statuses for better organization.",
+    "id": 4,
+    "repoId": "omnivore-to-raindrop",
+    "title": "Omnivore JSON to Raindrop.io CSV Converter",
+    "description": "A Python script to convert Omnivore JSON exports to CSV format for easy migration to Raindrop.io.",
+    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
+    "detailedDescription": "This Python script helps users convert JSON files exported from Omnivore into CSV format, making them compatible with Raindrop.io. It allows easy migration of data as Omnivore is scheduled to shut down.",
     "technologies": [
-      "Next.js",
-      "React.js",
-      "Tailwind",
-      "Node.js",
-      "Shacdn UI",
-      "PostgreSQL",
-      "Docker"
+      "Python",
+      "Scripting",
+      "Automation",
+      "Data Conversion"
     ],
     "links": [
       {
-        "href": "https://github.com/deveduar/todo-app",
+        "href": "https://github.com/deveduar/omnivore-to-raindrop",
         "label": "GitHub"
       }
     ],
-    "gallery": [
-      "https://i.postimg.cc/L8jy39Fb/iphone-todo-app-mockup.webp",
-      "https://i.postimg.cc/kMhhnYyf/laptop-todo-app-mockup.webp",
-      "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
-      "https://i.postimg.cc/RV6pq1s9/tablet-todo-app-mockup.webp"
-    ],
     "features": [
-      "Task management: Create, edit, delete, and mark tasks as completed.",
-      "Statuses and priorities: Assign custom statuses and priority levels.",
-      "Due dates and reminders: Set due dates and notifications.",
-      "Smart date and time selection: Ensures valid time selection based on the chosen date.",
-      "Backend synchronization: Data persistence via an API.",
-      "Kanban board: Drag-and-drop tasks between different statuses for a visual workflow.",
-      "Responsive design with ShadCN UI.",
-      "Static site generation with Next.js."
+      "Converts Omnivore JSON exports to CSV format.",
+      "Supports UTF-8 encoding for correct display of text data.",
+      "Batch processing of multiple JSON files based on filename pattern.",
+      "Generates CSV file compatible with Raindrop.io for easy import."
     ],
     "readmeContent": {
-      "title": "Todo app",
-      "url": "https://raw.githubusercontent.com/deveduar/todo-app/master/README.md",
+      "title": "Omnivore JSON to Raindrop.io CSV Converter",
+      "fileName": "omnivore-to-raindrop.md",
       "sections": {
-        "✨ Features": [
-          "📋 **Task management**: Create, edit, delete, and mark tasks as completed.",
-          "🎯 **Statuses and priorities**: Assign custom statuses and priority levels.",
-          "⏰ **Due dates and reminders**: Set due dates and notifications.",
-          "📅 **Smart date and time selection**: Ensures valid time selection based on the chosen date.",
-          "🔄 **Backend synchronization**: Data persistence via an API.",
-          "📌 **Kanban board**: Drag-and-drop tasks between different statuses for a visual workflow."
-        ],
-        "🛠️ Technologies Used": {
-          "Frontend": [
-            "⚛️ **React** with TypeScript",
-            "🎨 **Tailwind CSS** for styling",
-            "📦 **ShadCN/UI** for UI components",
-            "🗂 **date-fns** and **date-fns-tz** for date handling",
-            "🖱 **dnd-kit** for drag-and-drop functionality in the Kanban board"
-          ],
-          "Backend (Separate GitHub Project)": [
-            "🚀 **Node.js with Express**",
-            "🐘 **PostgreSQL** as the database",
-            "🐳 **Docker** for deployment and configuration"
-          ]
-        },
-        "🚀 Installation": {
-          "1️⃣ Clone the repository": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "git clone https://github.com/your-user/your-todo-repo.git\ncd your-todo-repo"
-            }
-          ],
-          "2️⃣ Install dependencies": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm install"
-            }
-          ],
-          "3️⃣ Set up the backend (Docker)": [
-            "The backend is in a separate GitHub project. Follow its instructions to set it up with Docker."
-          ],
-          "4️⃣ Run the frontend": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run dev"
-            }
-          ]
-        },
-        "📌 Roadmap": [
-          "[ ] Authentication integration",
-          "[ ] Support for subtasks",
-          "[ ] Real-time notifications",
-          "📌 *Contributions and suggestions are welcome.*"
-        ]
-      }
-    }
-  },
-  {
-    "id": 6,
-    "repoId": "readme-to-obj",
-    "title": "README to Object Converter",
-    "description": "A project to convert README.md files from multiple repositories into structured JavaScript objects for easy integration with TypeScript projects.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "This project downloads README.md files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a .ts file for later use.",
-    "technologies": [
-      "Node.js",
-      "TypeScript",
-      "GitHub API",
-      "remark"
-    ],
-    "links": [
-      {
-        "href": "https://github.com/deveduar/readme-to-obj",
-        "label": "GitHub Repository"
-      }
-    ],
-    "features": [
-      "Downloads README.md files from public GitHub repositories.",
-      "Extracts sections such as headers, paragraphs, and lists from Markdown.",
-      "Converts extracted content into a structured JavaScript object.",
-      "Saves the resulting object in a ts file for TypeScript integration.",
-      "Customizable list of repositories to download from.",
-      "Supports integration with TypeScript projects for dynamic README usage."
-    ],
-    "readmeContent": {
-      "title": "README to Object Converter",
-      "url": "https://raw.githubusercontent.com/deveduar/readme-to-obj/main/README.md",
-      "sections": {
-        "Description": [
-          "The project downloads `README.md` files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a `.ts` file for later use. Additionally, it generates an HTML view for each README to visualize its content directly in the browser."
+        "Prerequisites": [
+          "**Python 3**: Ensure that you have Python 3 installed. You can check your Python version by running:"
         ],
         "Features": [
-          "Downloads `README.md` files from public GitHub repositories.",
-          "Automatically extracts sections from the Markdown file.",
-          "Converts sections into a structured object.",
-          "Saves the result in a `.ts` file for easy integration with TypeScript projects.",
-          "You can customize which repositories to download the README from.",
-          "**HTML Generation**: Generates HTML to visualize the README files directly in the browser."
+          "Converts Omnivore JSON exports to a CSV file.",
+          "Compatible with UTF-8 encoding, so text data displays correctly.",
+          "Processes multiple JSON files based on a filename pattern, allowing batch conversion."
         ],
         "Installation": [
-          "Clone this repository:",
-          "Install the dependencies:"
+          "Clone this repository or download the `convert.py` script.",
+          "Place the script in a directory where your exported JSON files from Omnivore are located."
         ],
         "Usage": {
-          "1. Run the Conversion Script": [
-            "The `updateReadmes.ts` script is responsible for downloading and converting the `README.md` files from the specified repositories. To run the script, use the following command:",
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run update-readmes"
-            },
-            "This will download the `README.md` files, extract the sections, and save the resulting object in `src/data/readmes.ts`."
-          ],
-          "2. View the HTML": [
-            "After running the script, you can also generate an HTML view of each README file by running the following:",
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run generate-html"
-            },
-            "This will create an HTML page for each README file that can be viewed directly in a browser."
-          ],
-          "3. Example Output": [
-            "After running the script, the `readmes.ts` file will contain something like this:",
-            {
-              "type": "code",
-              "lang": "ts",
-              "meta": null,
-              "value": "export const readmes = {\n  \"portfolio\": {\n    title: \"My Portfolio\",\n    sections: {\n      \"Introduction\": \"This is my portfolio...\",\n      \"Technologies\": \"React, Node.js, etc.\",\n      // ...\n    }\n  },\n  \"todo-app\": {\n    title: \"Todo App\",\n    sections: {\n      \"Features\": \"Task management...\",\n      \"Setup\": \"To install...\",\n      // ...\n    }\n  }\n}"
-            },
-            "The HTML output will be available in the `dist` folder."
-          ],
-          "4. Include the Data in Your Project": [
-            "You can import the `readmes` object into your code:",
-            {
-              "type": "code",
-              "lang": "ts",
-              "meta": null,
-              "value": "import { readmes } from './data/readmes';\n\nconsole.log(readmes['portfolio']);"
-            }
+          "Output": [
+            "The script will generate a CSV file named `metadata.csv` in the same directory.",
+            "This file can be imported into Raindrop.io or other applications that accept CSV imports."
           ]
         },
-        "Customization": [
-          "You can modify the list of repositories in the `src/scripts/updateReadmes.ts` file by adding or removing repositories. The repository structure is as follows:",
+        "CSV Structure": [
+          "The output CSV file includes the following columns:",
+          "| Column    | Description                       |\n|-----------|-----------------------------------|\n| url       | The URL associated with the item  |\n| title     | The title of the item             |\n| tags      | Comma-separated tags              |\n| note      | Notes or description              |\n| created   | The creation date of the item     |"
+        ],
+        "Example": [
+          "Here’s how to use the script for multiple JSON files matching the pattern `metadata_*.json`:",
           {
             "type": "code",
-            "lang": "ts",
+            "lang": "bash",
             "meta": null,
-            "value": "const repos = [\n  { id: \"repo_id\", url: \"https://raw.githubusercontent.com/user/repo/main/README.md\" },\n  // ...\n];"
-          }
+            "value": "python3 convert.py \"metadata_*.json\""
+          },
+          "Upon successful completion, you should see a message indicating the total number of records processed and that `metadata.csv` has been created."
         ],
-        "Libraries Used": [
-          "This project uses the following libraries:",
-          "**[remark](https://github.com/remarkjs/remark)** - A Markdown processor for parsing and transforming Markdown.",
-          "**[remark-parse](https://github.com/remarkjs/remark/tree/main/packages/remark-parse)** - A plugin for remark to parse Markdown into an abstract syntax tree (AST).",
-          "**[typescript](https://www.typescriptlang.org/)** - A strict syntactical superset of JavaScript that adds optional static typing.",
-          "**[@types/node](https://www.npmjs.com/package/@types/node)** - TypeScript type definitions for Node.js."
+        "Error Handling": [
+          "If a JSON file cannot be processed (for example, if it is corrupted), an error message will be displayed, and the script will continue processing the remaining files."
         ],
-        "Node.js and TypeScript Version Requirements": [
-          "Node.js version: **v16.0.0** or higher",
-          "TypeScript version: **v5.8.2** or higher"
-        ],
-        "License": [
-          "This project is licensed under the [MIT License](LICENSE)."
+        "Notes": [
+          "Ensure that all Omnivore export files are saved in UTF-8 format to avoid encoding issues.",
+          "Open `metadata.csv` with a UTF-8 compatible editor, such as Excel or LibreOffice, to ensure proper display of special characters."
         ]
       }
     }
   },
   {
-    "id": 7,
+    "id": 5,
     "repoId": "pdf-to-cbr",
     "title": "PDF to CBR Converter",
     "description": "A Python script to convert PDF files to CBR (Comic Book RAR) format, perfect for digital comic and manga readers.",
@@ -536,7 +179,7 @@ export const readmes = [
     ],
     "readmeContent": {
       "title": "PDF to CBR Converter",
-      "url": "https://raw.githubusercontent.com/deveduar/pdf-to-cbr/master/README.md",
+      "fileName": "pdf-to-cbr.md",
       "sections": {
         "Description": [
           "A Python script to convert PDF files to CBR (Comic Book RAR) format, perfect for digital comic and manga readers."
@@ -626,7 +269,107 @@ export const readmes = [
     }
   },
   {
-    "id": 8,
+    "id": 6,
+    "repoId": "ping-test-tool",
+    "title": "Ping Test Tool",
+    "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
+    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
+    "detailedDescription": "Ping Test Tool is a responsive and privacy-focused web app built with Next.js, TypeScript, and Zustand. It provides real-time feedback on connection quality, showing metrics like latency, jitter, and packet loss.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Web Workers"
+    ],
+    "links": [
+      {
+        "href": "https://ping-test-tool.vercel.app/",
+        "label": "Live Demo"
+      }
+    ],
+    "features": [
+      "Real-time monitoring of latency, jitter, and packet loss.",
+      "Retro gaming-inspired UI.",
+      "Responsive design with color indicators and charts.",
+      "State management using Zustand.",
+      "Runs tests using Web Workers for non-blocking performance.",
+      "Switch between different metric views.",
+      "Privacy-friendly: no personal data collected."
+    ],
+    "readmeContent": {
+      "title": "Ping Test Tool",
+      "fileName": "ping-test-tool.md",
+      "sections": {
+        "✨ Features": [
+          "✅ **Real-Time Monitoring** – Continuous updates on key network stats",
+          "✅ **Latency, Jitter, Packet Loss** – Displayed via animated charts and color indicators",
+          "✅ **Retro-Inspired UI** – A throwback to vintage gaming consoles",
+          "✅ **Zustand State Management** – For clean and fast app state updates",
+          "✅ **Web Workers** – Keep performance smooth while running tests in the background",
+          "✅ **Responsive Design** – Works great on mobile and desktop",
+          "✅ **Privacy Respecting** – No personal data is stored, only uses local storage for preferences"
+        ],
+        "🚀 How to Use": [
+          "1️⃣ **Start Test** – Click the button to begin monitoring",
+          "2️⃣ **Watch Metrics** – Observe live updates in the dashboard",
+          "3️⃣ **Toggle Views** – Switch between metric displays (ping, jitter, loss)"
+        ],
+        "❓ FAQ": [
+          "**Q: How accurate are the measurements?**",
+          "A: The metrics are based on real-time network requests and give a good representation of your connection quality.",
+          "**Q: Does it work offline?**",
+          "A: No, the app requires an active internet connection.",
+          "**Q: Can I export the data?**",
+          "A: Not yet, but this is a planned feature for future versions."
+        ],
+        "🛠️ Built With": [
+          "⚛️ **React + Next.js** – The backbone of the web app",
+          "🅾️ **TypeScript** – Type-safe development",
+          "🎨 **Tailwind CSS** – Rapid and responsive UI",
+          "⚙️ **Zustand** – Lightweight and scalable state management",
+          "💪 **Web Workers** – Efficient background processing",
+          "📈 **Custom Metrics Charts** – Visualizations with color indicators"
+        ],
+        "🔐 Privacy & Cookies": [
+          "✅ No personal data is stored or transmitted",
+          "✅ Only uses local storage for your UI preferences",
+          "✅ No third-party analytics or tracking cookies"
+        ],
+        "⚠️ Limitations of the Network Measurement System": {
+          "1. ": [
+            "The system measures network latency using `HEAD` requests to various remote endpoints. These requests may not provide an accurate measurement of actual latency as results can be influenced by external factors like server load, user network, and internet propagation delays.",
+            "The selected endpoints for ping measurement include popular services like Google, Cloudflare, Microsoft, Amazon, and Apple. If any of these services experience issues or downtime, the ping measurement may not be accurate or could fail."
+          ],
+          "2. ": [
+            "Jitter is calculated based on the time difference between consecutive ping measurements. If there is a large variation in response times between pings, this may affect the results.",
+            "Jitter can be influenced by changes in the network, traffic fluctuations, and other variability outside the system's control."
+          ],
+          "3. ": [
+            "If a ping request fails (e.g., due to a network issue or server unavailability), it is counted as packet loss.",
+            "The system does not directly measure packet loss but estimates it based on the successful and failed pings."
+          ],
+          "4. ": [
+            "Measurements are only performed towards selected remote servers, meaning they do not reflect latency or network quality between local devices or within a local network.",
+            "Measurement accuracy could improve if local endpoints or specific servers were added depending on the use case."
+          ],
+          "5. ": [
+            "The measurement results can be affected by local network congestion or temporary internet connection issues. Ping, jitter, and packet loss metrics may vary significantly depending on network stability.",
+            "The system does not provide detailed information about specific network issues (e.g., local bottlenecks or intermittent routing problems)."
+          ],
+          "6. ": [
+            "Measurement requests use the `no-cors` mode to avoid CORS-related issues, which limits the type of responses that can be received. This means that detailed server response metrics, such as header response time, are not available and only the round-trip time for the request is measured."
+          ],
+          "7. ": [
+            "The system performs measurements at 2-second intervals. If there is a network interruption or the server does not respond within this interval, an error or an increase in packet loss might be recorded."
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
     "repoId": "portfolio",
     "title": "My Portfolio",
     "description": "A modern portfolio built with Next.js 14, TypeScript, and Tailwind CSS, featuring a Bento-style layout, AOS animations, and GitHub integration for projects.",
@@ -661,7 +404,7 @@ export const readmes = [
     ],
     "readmeContent": {
       "title": "My Portfolio",
-      "url": "https://raw.githubusercontent.com/deveduar/nextjs-portfolio/main/README.md",
+      "fileName": "portfolio.md",
       "sections": {
         "🌟 Features": [
           "✅ **Modern UI/UX** – Bento-grid layout with smooth animations.",
@@ -726,7 +469,231 @@ export const readmes = [
     }
   },
   {
+    "id": 8,
+    "repoId": "prueba 1",
+    "readmeContent": {
+      "title": "prueba 1",
+      "fileName": "prueba 1.md",
+      "sections": {}
+    }
+  },
+  {
     "id": 9,
+    "repoId": "readme-to-obj",
+    "title": "README to Object Converter",
+    "description": "A project to convert README.md files from multiple repositories into structured JavaScript objects for easy integration with TypeScript projects.",
+    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
+    "detailedDescription": "This project downloads README.md files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a .ts file for later use.",
+    "technologies": [
+      "Node.js",
+      "TypeScript",
+      "GitHub API",
+      "remark"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/readme-to-obj",
+        "label": "GitHub Repository"
+      }
+    ],
+    "features": [
+      "Downloads README.md files from public GitHub repositories.",
+      "Extracts sections such as headers, paragraphs, and lists from Markdown.",
+      "Converts extracted content into a structured JavaScript object.",
+      "Saves the resulting object in a ts file for TypeScript integration.",
+      "Customizable list of repositories to download from.",
+      "Supports integration with TypeScript projects for dynamic README usage."
+    ],
+    "readmeContent": {
+      "title": "README to Object Converter",
+      "fileName": "readme-to-obj.md",
+      "sections": {
+        "Description": [
+          "The project downloads `README.md` files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a `.ts` file for later use. Additionally, it generates an HTML view for each README to visualize its content directly in the browser."
+        ],
+        "Features": [
+          "Downloads `README.md` files from public GitHub repositories.",
+          "Automatically extracts sections from the Markdown file.",
+          "Converts sections into a structured object.",
+          "Saves the result in a `.ts` file for easy integration with TypeScript projects.",
+          "You can customize which repositories to download the README from.",
+          "**HTML Generation**: Generates HTML to visualize the README files directly in the browser."
+        ],
+        "Installation": [
+          "Clone this repository:",
+          "Install the dependencies:"
+        ],
+        "Usage": {
+          "1. Run the Conversion Script": [
+            "The `updateReadmes.ts` script is responsible for downloading and converting the `README.md` files from the specified repositories. To run the script, use the following command:",
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "npm run update-readmes"
+            },
+            "This will download the `README.md` files, extract the sections, and save the resulting object in `src/data/readmes.ts`."
+          ],
+          "2. View the HTML": [
+            "After running the script, you can also generate an HTML view of each README file by running the following:",
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "npm run generate-html"
+            },
+            "This will create an HTML page for each README file that can be viewed directly in a browser."
+          ],
+          "3. Example Output": [
+            "After running the script, the `readmes.ts` file will contain something like this:",
+            {
+              "type": "code",
+              "lang": "ts",
+              "meta": null,
+              "value": "export const readmes = {\n  \"portfolio\": {\n    title: \"My Portfolio\",\n    sections: {\n      \"Introduction\": \"This is my portfolio...\",\n      \"Technologies\": \"React, Node.js, etc.\",\n      // ...\n    }\n  },\n  \"todo-app\": {\n    title: \"Todo App\",\n    sections: {\n      \"Features\": \"Task management...\",\n      \"Setup\": \"To install...\",\n      // ...\n    }\n  }\n}"
+            },
+            "The HTML output will be available in the `dist` folder."
+          ],
+          "4. Include the Data in Your Project": [
+            "You can import the `readmes` object into your code:",
+            {
+              "type": "code",
+              "lang": "ts",
+              "meta": null,
+              "value": "import { readmes } from './data/readmes';\n\nconsole.log(readmes['portfolio']);"
+            }
+          ]
+        },
+        "Customization": [
+          "You can modify the list of repositories in the `src/scripts/updateReadmes.ts` file by adding or removing repositories. The repository structure is as follows:",
+          {
+            "type": "code",
+            "lang": "ts",
+            "meta": null,
+            "value": "const repos = [\n  { id: \"repo_id\", url: \"https://raw.githubusercontent.com/user/repo/main/README.md\" },\n  // ...\n];"
+          }
+        ],
+        "Libraries Used": [
+          "This project uses the following libraries:",
+          "**[remark](https://github.com/remarkjs/remark)** - A Markdown processor for parsing and transforming Markdown.",
+          "**[remark-parse](https://github.com/remarkjs/remark/tree/main/packages/remark-parse)** - A plugin for remark to parse Markdown into an abstract syntax tree (AST).",
+          "**[typescript](https://www.typescriptlang.org/)** - A strict syntactical superset of JavaScript that adds optional static typing.",
+          "**[@types/node](https://www.npmjs.com/package/@types/node)** - TypeScript type definitions for Node.js."
+        ],
+        "Node.js and TypeScript Version Requirements": [
+          "Node.js version: **v16.0.0** or higher",
+          "TypeScript version: **v5.8.2** or higher"
+        ],
+        "License": [
+          "This project is licensed under the [MIT License](LICENSE)."
+        ]
+      }
+    }
+  },
+  {
+    "id": 10,
+    "repoId": "todo-app",
+    "title": "Todo app",
+    "description": "A task management application designed to help organize and prioritize activities efficiently.",
+    "imageSrc": "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
+    "detailedDescription": "The app allows setting due dates, reminders, and managing task statuses. Now, it also includes a Kanban board with drag-and-drop functionality, allowing tasks to be easily moved between different statuses for better organization.",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "Tailwind",
+      "Node.js",
+      "Shacdn UI",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/todo-app",
+        "label": "GitHub"
+      }
+    ],
+    "gallery": [
+      "https://i.postimg.cc/L8jy39Fb/iphone-todo-app-mockup.webp",
+      "https://i.postimg.cc/kMhhnYyf/laptop-todo-app-mockup.webp",
+      "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
+      "https://i.postimg.cc/RV6pq1s9/tablet-todo-app-mockup.webp"
+    ],
+    "features": [
+      "Task management: Create, edit, delete, and mark tasks as completed.",
+      "Statuses and priorities: Assign custom statuses and priority levels.",
+      "Due dates and reminders: Set due dates and notifications.",
+      "Smart date and time selection: Ensures valid time selection based on the chosen date.",
+      "Backend synchronization: Data persistence via an API.",
+      "Kanban board: Drag-and-drop tasks between different statuses for a visual workflow.",
+      "Responsive design with ShadCN UI.",
+      "Static site generation with Next.js."
+    ],
+    "readmeContent": {
+      "title": "Todo app",
+      "fileName": "todo-app.md",
+      "sections": {
+        "✨ Features": [
+          "📋 **Task management**: Create, edit, delete, and mark tasks as completed.",
+          "🎯 **Statuses and priorities**: Assign custom statuses and priority levels.",
+          "⏰ **Due dates and reminders**: Set due dates and notifications.",
+          "📅 **Smart date and time selection**: Ensures valid time selection based on the chosen date.",
+          "🔄 **Backend synchronization**: Data persistence via an API.",
+          "📌 **Kanban board**: Drag-and-drop tasks between different statuses for a visual workflow."
+        ],
+        "🛠️ Technologies Used": {
+          "Frontend": [
+            "⚛️ **React** with TypeScript",
+            "🎨 **Tailwind CSS** for styling",
+            "📦 **ShadCN/UI** for UI components",
+            "🗂 **date-fns** and **date-fns-tz** for date handling",
+            "🖱 **dnd-kit** for drag-and-drop functionality in the Kanban board"
+          ],
+          "Backend (Separate GitHub Project)": [
+            "🚀 **Node.js with Express**",
+            "🐘 **PostgreSQL** as the database",
+            "🐳 **Docker** for deployment and configuration"
+          ]
+        },
+        "🚀 Installation": {
+          "1️⃣ Clone the repository": [
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "git clone https://github.com/your-user/your-todo-repo.git\r\ncd your-todo-repo"
+            }
+          ],
+          "2️⃣ Install dependencies": [
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "npm install"
+            }
+          ],
+          "3️⃣ Set up the backend (Docker)": [
+            "The backend is in a separate GitHub project. Follow its instructions to set it up with Docker."
+          ],
+          "4️⃣ Run the frontend": [
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "npm run dev"
+            }
+          ]
+        },
+        "📌 Roadmap": [
+          "[ ] Authentication integration",
+          "[ ] Support for subtasks",
+          "[ ] Real-time notifications",
+          "📌 *Contributions and suggestions are welcome.*"
+        ]
+      }
+    }
+  },
+  {
+    "id": 11,
     "repoId": "you-mp3-python",
     "title": "YouTube MP3 Downloader",
     "description": "A Python script to download audio from YouTube videos in MP3 format at 320kbps using yt-dlp and ffmpeg.",
@@ -754,7 +721,7 @@ export const readmes = [
     ],
     "readmeContent": {
       "title": "YouTube MP3 Downloader",
-      "url": "https://raw.githubusercontent.com/deveduar/you-mp3-python/master/README.md",
+      "fileName": "you-mp3-python.md",
       "sections": {
         "Requirements": [
           "Python 3.x",
@@ -825,179 +792,6 @@ export const readmes = [
         ],
         "License": [
           "MIT License. See the LICENSE file for more details."
-        ]
-      }
-    }
-  },
-  {
-    "id": 10,
-    "repoId": "omnivore-to-raindrop",
-    "title": "Omnivore JSON to Raindrop.io CSV Converter",
-    "description": "A Python script to convert Omnivore JSON exports to CSV format for easy migration to Raindrop.io.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "This Python script helps users convert JSON files exported from Omnivore into CSV format, making them compatible with Raindrop.io. It allows easy migration of data as Omnivore is scheduled to shut down.",
-    "technologies": [
-      "Python",
-      "Scripting",
-      "Automation",
-      "Data Conversion"
-    ],
-    "links": [
-      {
-        "href": "https://github.com/deveduar/omnivore-to-raindrop",
-        "label": "GitHub"
-      }
-    ],
-    "features": [
-      "Converts Omnivore JSON exports to CSV format.",
-      "Supports UTF-8 encoding for correct display of text data.",
-      "Batch processing of multiple JSON files based on filename pattern.",
-      "Generates CSV file compatible with Raindrop.io for easy import."
-    ],
-    "readmeContent": {
-      "title": "Omnivore JSON to Raindrop.io CSV Converter",
-      "url": "https://raw.githubusercontent.com/deveduar/omnivore-to-raindrop/master/README.md",
-      "sections": {
-        "Prerequisites": [
-          "**Python 3**: Ensure that you have Python 3 installed. You can check your Python version by running:"
-        ],
-        "Features": [
-          "Converts Omnivore JSON exports to a CSV file.",
-          "Compatible with UTF-8 encoding, so text data displays correctly.",
-          "Processes multiple JSON files based on a filename pattern, allowing batch conversion."
-        ],
-        "Installation": [
-          "Clone this repository or download the `convert.py` script.",
-          "Place the script in a directory where your exported JSON files from Omnivore are located."
-        ],
-        "Usage": {
-          "Output": [
-            "The script will generate a CSV file named `metadata.csv` in the same directory.",
-            "This file can be imported into Raindrop.io or other applications that accept CSV imports."
-          ]
-        },
-        "CSV Structure": [
-          "The output CSV file includes the following columns:",
-          "| Column    | Description                       |\n|-----------|-----------------------------------|\n| url       | The URL associated with the item  |\n| title     | The title of the item             |\n| tags      | Comma-separated tags              |\n| note      | Notes or description              |\n| created   | The creation date of the item     |"
-        ],
-        "Example": [
-          "Here’s how to use the script for multiple JSON files matching the pattern `metadata_*.json`:",
-          {
-            "type": "code",
-            "lang": "bash",
-            "meta": null,
-            "value": "python3 convert.py \"metadata_*.json\""
-          },
-          "Upon successful completion, you should see a message indicating the total number of records processed and that `metadata.csv` has been created."
-        ],
-        "Error Handling": [
-          "If a JSON file cannot be processed (for example, if it is corrupted), an error message will be displayed, and the script will continue processing the remaining files."
-        ],
-        "Notes": [
-          "Ensure that all Omnivore export files are saved in UTF-8 format to avoid encoding issues.",
-          "Open `metadata.csv` with a UTF-8 compatible editor, such as Excel or LibreOffice, to ensure proper display of special characters."
-        ]
-      }
-    }
-  },
-  {
-    "id": 11,
-    "repoId": "angular-SGI-front",
-    "title": "Inventory System",
-    "description": "Inventory management for dropshipping store created with Angular.",
-    "imageSrc": "https://i.postimg.cc/xd9MxWZ5/tablet-sgi-mockup.webp",
-    "detailedDescription": "Developed with TypeScript, Angular, Node.js.",
-    "technologies": [
-      "Angular",
-      "NodeJS",
-      "TypeScript",
-      "SASS",
-      "Express"
-    ],
-    "links": [
-      {
-        "href": "https://github.com/deveduar/angular-SGI-front",
-        "label": "GitHub Frontend"
-      },
-      {
-        "href": "https://github.com/deveduar/inventory-backend.git",
-        "label": "GitHub Backend"
-      }
-    ],
-    "gallery": [
-      "https://i.postimg.cc/xd9MxWZ5/tablet-sgi-mockup.webp",
-      "https://i.postimg.cc/hGMxH2WB/iphone-sgi-mockup.webp",
-      "https://i.postimg.cc/sgY5JVT1/laptop-sgi-mockup.webp"
-    ],
-    "features": [
-      "Backend connection with Printful API.",
-      "Responsive design with SASS.",
-      "Static site generation with Angular.",
-      "Product and category management.",
-      "Export data in CSV format.",
-      "Authentication and user management.",
-      "Orders and suppliers tracking.",
-      "Reports and dashboard."
-    ],
-    "readmeContent": {
-      "title": "Inventory System",
-      "url": "https://raw.githubusercontent.com/deveduar/angular-SGI-front/master/README.md",
-      "sections": {
-        "✨ Features": [
-          "📦 **Product and category management**: Easily add, edit, and organize products and categories.",
-          "🔄 **Backend connection with Printful API**: Sync inventory in real-time.",
-          "📄 **Export data in CSV format**: Download inventory reports for external use.",
-          "🔐 **Authentication and user management**: Secure access to the system.",
-          "📊 **Orders and suppliers tracking**: Manage incoming orders and supplier details.",
-          "📈 **Reports and dashboard**: Gain insights into inventory performance.",
-          "🎨 **Responsive design**: Optimized for various screen sizes with **SASS** and **PrimeNG**."
-        ],
-        "🛠️ Technologies Used": {
-          "Frontend": [
-            "🅰️ **Angular 18**",
-            "🎨 **PrimeNG & SASS** for UI and styling"
-          ],
-          "Backend": [
-            "🚀 **Node.js with Express**"
-          ]
-        },
-        "🚀 Installation": {
-          "1️⃣ Clone the repositories": [],
-          "Frontend": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run start"
-            }
-          ],
-          "Backend": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run dev"
-            }
-          ],
-          "2️⃣ Install dependencies": [
-            "For both projects, run:",
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm install"
-            }
-          ],
-          "3️⃣ Run the applications": []
-        },
-        "📌 Roadmap": [
-          "[x] Basic frontend",
-          "[x] Products and categories management",
-          "[x] Export in CSV",
-          "[ ] Authentication",
-          "[ ] Orders and suppliers integration",
-          "[ ] Reports and dashboard",
-          "📌 *Contributions and suggestions are welcome.*"
         ]
       }
     }
