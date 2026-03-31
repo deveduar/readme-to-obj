@@ -3,44 +3,103 @@ export const readmes = [
     "id": 1,
     "repoId": "angular-SGI-front",
     "title": "Angular inventory system for printfull store",
-    "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
+    "description": "Complete inventory management system built with Angular 21 and PrimeNG, connected to Printful API for product management, categories, variants and CSV export.",
     "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
-    "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
+    "detailedDescription": "Full-featured inventory management dashboard developed with Angular 21, PrimeNG and SASS, integrated with Printful API and custom Express backend. Includes products and categories management, CSV export/import, dark/light mode, responsive design and advanced filtering. Architecture follows hexagonal patterns with clear separation of concerns, HTTP interceptors, and reactive programming with RxJS.",
     "technologies": [
-      "Next.js",
+      "Angular 21",
       "TypeScript",
-      "Tailwind",
-      "ShadCN UI",
-      "Framer Motion"
+      "PrimeNG",
+      "SASS/SCSS",
+      "RxJS",
+      "Express.js"
     ],
     "links": [
       {
-        "href": "https://github.com/deveduar/merakikrea-landing",
+        "href": "https://github.com/deveduar/angular-SGI-front",
         "label": "GitHub"
       },
       {
-        "href": "https://meraki-krea-ceramica-six.vercel.app",
-        "label": "Live Demo"
+        "href": "https://github.com/deveduar/inventory-backendd",
+        "label": "Backend API"
       }
     ],
-    "gallery": [
-      "https://i.postimg.cc/5032x1kZ/pc-meraki-mockup.webp",
-      "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
-      "https://i.postimg.cc/8z1HFJbt/laptop-meraki-mockup.webp",
-      "https://i.postimg.cc/NjpxRsJY/tablet-meraki-mockup.webp"
-    ],
     "features": [
-      "Responsive and accessible design.",
-      "Light/Dark mode with Tailwind CSS.",
-      "Integration with Google Maps and WhatsApp.",
-      "SEO optimized for better visibility.",
-      "Google reviews and social media section.",
-      "Floating WhatsApp button for quick contact."
+      "Complete product and category management with Printful API integration.",
+      "CSV import/export functionality for bulk operations.",
+      "Dark/Light mode theming with PrimeNG SASS variables.",
+      "Responsive design with DataView and Table components.",
+      "HTTP interceptors for error handling and request caching.",
+      "Related products carousel with filtered recommendations.",
+      "Real-time product editing with inline forms.",
+      "Hexagonal architecture with DTO adapters."
     ],
     "readmeContent": {
       "title": "Angular inventory system for printfull store",
       "fileName": "angular-SGI-front.md",
-      "sections": {}
+      "sections": {
+        "✨ Demo y repositorios": [
+          "| Recurso | Enlace |\n|--------|--------|\n| 🔗 Frontend (este repo) | [GitHub - angular-inventory-system](https://github.com/deveduar/angular-inventory-system) |\n| 🔗 Backend (Express) | [GitHub - inventory-backend](https://github.com/deveduar/inventory-backend) |\n| 🚀 Demo del dashboard | Próximamente |"
+        ],
+        "🎯 Objetivos del proyecto": [
+          "✅ Gestionar productos, categorías y variantes desde un panel administrativo.",
+          "✅ Exportar inventario a CSV.",
+          "✅ Integrar con la API de Printful para obtener productos reales.",
+          "🔄 Conectar con pasarela de pagos (Stripe) para futura tienda.",
+          "🔄 Crear un frontend público para clientes.",
+          "🔄 Dashboard con reportes y gráficos.",
+          "🔄 Autenticación de usuarios (auth).",
+          "🔄 Gestión de pedidos y proveedores."
+        ],
+        "🧠 Arquitectura y decisiones técnicas": [
+          "El sistema sigue una **arquitectura hexagonal (puertos y adaptadores)**, separando claramente:",
+          "**Modelos/DTOs** → Transforman los datos de la API de Printful a un modelo interno.",
+          "**Servicios** → Manejan la lógica de negocio y comunicación con el backend.",
+          "**Adaptadores** → Permiten cambiar fácilmente entre fuentes de datos (API real, JSON local, etc.).",
+          "Además, se ha implementado:",
+          "Cache de productos para evitar sobrecargar la API de Printful.",
+          "Manejo de errores 429 (demasiadas peticiones) con reintentos y mensajes amigables.",
+          "Interceptores HTTP funcionales (pendiente de migración completa).",
+          "Soporte para SSR sin configurar completamente (fetch con `withFetch()`)."
+        ],
+        "🛠️ Tecnologías utilizadas": [
+          "| Área | Tecnologías |\n|------|-------------|\n| **Frontend** | Angular 21, PrimeNG, SASS, RxJS |\n| **Backend** | Express, Node.js, Axios |\n| **Build tools** | ESLint, Prettier, Angular CLI |\n| **Extras** | PapaParse (CSV), xlsx (Excel), Angular CDK (drag & drop) |"
+        ],
+        "⚙️ Funcionalidades implementadas": {
+          "✅ Completadas": [
+            "[x] Listado de productos con DataView y Table (PrimeNG)",
+            "[x] Detalle de producto con carrusel de productos relacionados",
+            "[x] Filtros por categoría",
+            "[x] Edición inline de productos",
+            "[x] Exportar e importar productos a CSV (PapaParse / xlsx)",
+            "[x] Temas dinámicos (claro/oscuro) con PrimeNG SASS",
+            "[x] Sidebar y menús responsivos",
+            "[x] Conexión al backend Express + Printful API",
+            "[x] Mock de productos locales como fallback"
+          ],
+          "🔄 En progreso / Backlog": [
+            "[ ] Autenticación de usuarios (JWT)",
+            "[ ] Gestión de pedidos y proveedores",
+            "[ ] Dashboard con métricas y gráficos",
+            "[ ] Frontend público tipo tienda (cliente final)",
+            "[ ] Integración con Stripe para pagos reales",
+            "[ ] Migración de RxJS a Signals (experimental)",
+            "[ ] Optimización de imágenes",
+            "[ ] Skeleton loaders para mejorar UX"
+          ]
+        },
+        "🧩 Conceptos avanzados aplicados": [
+          "**Lifecycle hooks** (`ngOnInit`, `ngOnChanges`, `SimpleChanges`)",
+          "**Data binding** y **event binding**",
+          "**ViewChild** para acceder a elementos del DOM",
+          "**Router events** y captura de parámetros (`paramsMap`, `snapshot`)",
+          "**Operador unario (`+`)** para convertir IDs a número",
+          "**Spread operator** para evitar mutaciones en arrays",
+          "**Manejo de errores HTTP** con interceptores funcionales",
+          "**Separación de lógica en servicios** reutilizables",
+          "**Paginación** con scroll automático al inicio"
+        ]
+      }
     }
   },
   {

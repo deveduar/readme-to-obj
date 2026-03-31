@@ -15,6 +15,12 @@
           <li>
             <a href="#0">Angular inventory system for printfull store</a>
             <ul>
+              <li><a href="#0--demo-y-repositorios">✨ Demo y repositorios</a></li>
+              <li><a href="#0--objetivos-del-proyecto">🎯 Objetivos del proyecto</a></li>
+              <li><a href="#0--arquitectura-y-decisiones-t-cnicas">🧠 Arquitectura y decisiones técnicas</a></li>
+              <li><a href="#0--tecnolog-as-utilizadas">🛠️ Tecnologías utilizadas</a></li>
+              <li><a href="#0--funcionalidades-implementadas">⚙️ Funcionalidades implementadas</a></li>
+              <li><a href="#0--conceptos-avanzados-aplicados">🧩 Conceptos avanzados aplicados</a></li>
             </ul>
           </li>
           <li>
@@ -111,7 +117,28 @@
       </nav>
         <div class="readme-container">
         <article id="0" class="readme">
-          <h2 class="readme-title">Angular inventory system for printfull store</h2></article>
+          <h2 class="readme-title">Angular inventory system for printfull store</h2>
+          <section id="0--demo-y-repositorios" class="readme-section">
+            <h2 class="section-title">✨ Demo y repositorios</h2><p class="section-text">| Recurso | Enlace |
+|--------|--------|
+| 🔗 Frontend (este repo) | [GitHub - angular-inventory-system](https://github.com/deveduar/angular-inventory-system) |
+| 🔗 Backend (Express) | [GitHub - inventory-backend](https://github.com/deveduar/inventory-backend) |
+| 🚀 Demo del dashboard | Próximamente |</p></section>
+          <section id="0--objetivos-del-proyecto" class="readme-section">
+            <h2 class="section-title">🎯 Objetivos del proyecto</h2><p class="section-text">✅ Gestionar productos, categorías y variantes desde un panel administrativo.</p><p class="section-text">✅ Exportar inventario a CSV.</p><p class="section-text">✅ Integrar con la API de Printful para obtener productos reales.</p><p class="section-text">🔄 Conectar con pasarela de pagos (Stripe) para futura tienda.</p><p class="section-text">🔄 Crear un frontend público para clientes.</p><p class="section-text">🔄 Dashboard con reportes y gráficos.</p><p class="section-text">🔄 Autenticación de usuarios (auth).</p><p class="section-text">🔄 Gestión de pedidos y proveedores.</p></section>
+          <section id="0--arquitectura-y-decisiones-t-cnicas" class="readme-section">
+            <h2 class="section-title">🧠 Arquitectura y decisiones técnicas</h2><p class="section-text">El sistema sigue una **arquitectura hexagonal (puertos y adaptadores)**, separando claramente:</p><p class="section-text">**Modelos/DTOs** → Transforman los datos de la API de Printful a un modelo interno.</p><p class="section-text">**Servicios** → Manejan la lógica de negocio y comunicación con el backend.</p><p class="section-text">**Adaptadores** → Permiten cambiar fácilmente entre fuentes de datos (API real, JSON local, etc.).</p><p class="section-text">Además, se ha implementado:</p><p class="section-text">Cache de productos para evitar sobrecargar la API de Printful.</p><p class="section-text">Manejo de errores 429 (demasiadas peticiones) con reintentos y mensajes amigables.</p><p class="section-text">Interceptores HTTP funcionales (pendiente de migración completa).</p><p class="section-text">Soporte para SSR sin configurar completamente (fetch con `withFetch()`).</p></section>
+          <section id="0--tecnolog-as-utilizadas" class="readme-section">
+            <h2 class="section-title">🛠️ Tecnologías utilizadas</h2><p class="section-text">| Área | Tecnologías |
+|------|-------------|
+| **Frontend** | Angular 21, PrimeNG, SASS, RxJS |
+| **Backend** | Express, Node.js, Axios |
+| **Build tools** | ESLint, Prettier, Angular CLI |
+| **Extras** | PapaParse (CSV), xlsx (Excel), Angular CDK (drag & drop) |</p></section>
+          <section id="0--funcionalidades-implementadas" class="readme-section">
+            <h2 class="section-title">⚙️ Funcionalidades implementadas</h2><h3 class="subsection-title">✅ Completadas</h3><p class="section-text">[x] Listado de productos con DataView y Table (PrimeNG)</p><p class="section-text">[x] Detalle de producto con carrusel de productos relacionados</p><p class="section-text">[x] Filtros por categoría</p><p class="section-text">[x] Edición inline de productos</p><p class="section-text">[x] Exportar e importar productos a CSV (PapaParse / xlsx)</p><p class="section-text">[x] Temas dinámicos (claro/oscuro) con PrimeNG SASS</p><p class="section-text">[x] Sidebar y menús responsivos</p><p class="section-text">[x] Conexión al backend Express + Printful API</p><p class="section-text">[x] Mock de productos locales como fallback</p><h3 class="subsection-title">🔄 En progreso / Backlog</h3><p class="section-text">[ ] Autenticación de usuarios (JWT)</p><p class="section-text">[ ] Gestión de pedidos y proveedores</p><p class="section-text">[ ] Dashboard con métricas y gráficos</p><p class="section-text">[ ] Frontend público tipo tienda (cliente final)</p><p class="section-text">[ ] Integración con Stripe para pagos reales</p><p class="section-text">[ ] Migración de RxJS a Signals (experimental)</p><p class="section-text">[ ] Optimización de imágenes</p><p class="section-text">[ ] Skeleton loaders para mejorar UX</p></section>
+          <section id="0--conceptos-avanzados-aplicados" class="readme-section">
+            <h2 class="section-title">🧩 Conceptos avanzados aplicados</h2><p class="section-text">**Lifecycle hooks** (`ngOnInit`, `ngOnChanges`, `SimpleChanges`)</p><p class="section-text">**Data binding** y **event binding**</p><p class="section-text">**ViewChild** para acceder a elementos del DOM</p><p class="section-text">**Router events** y captura de parámetros (`paramsMap`, `snapshot`)</p><p class="section-text">**Operador unario (`+`)** para convertir IDs a número</p><p class="section-text">**Spread operator** para evitar mutaciones en arrays</p><p class="section-text">**Manejo de errores HTTP** con interceptores funcionales</p><p class="section-text">**Separación de lógica en servicios** reutilizables</p><p class="section-text">**Paginación** con scroll automático al inicio</p></section></article>
         <article id="1" class="readme">
           <h2 class="readme-title">Merakikrea Cerámica</h2>
           <section id="1--features" class="readme-section">
