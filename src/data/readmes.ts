@@ -2,8 +2,43 @@ export const readmes = [
   {
     "id": 1,
     "repoId": "angular-SGI-front",
+    "title": "Angular inventory system for printfull store",
+    "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
+    "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
+    "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "ShadCN UI",
+      "Framer Motion"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/merakikrea-landing",
+        "label": "GitHub"
+      },
+      {
+        "href": "https://meraki-krea-ceramica-six.vercel.app",
+        "label": "Live Demo"
+      }
+    ],
+    "gallery": [
+      "https://i.postimg.cc/5032x1kZ/pc-meraki-mockup.webp",
+      "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
+      "https://i.postimg.cc/8z1HFJbt/laptop-meraki-mockup.webp",
+      "https://i.postimg.cc/NjpxRsJY/tablet-meraki-mockup.webp"
+    ],
+    "features": [
+      "Responsive and accessible design.",
+      "Light/Dark mode with Tailwind CSS.",
+      "Integration with Google Maps and WhatsApp.",
+      "SEO optimized for better visibility.",
+      "Google reviews and social media section.",
+      "Floating WhatsApp button for quick contact."
+    ],
     "readmeContent": {
-      "title": "angular-SGI-front",
+      "title": "Angular inventory system for printfull store",
       "fileName": "angular-SGI-front.md",
       "sections": {}
     }
@@ -11,6 +46,41 @@ export const readmes = [
   {
     "id": 2,
     "repoId": "lilililililil",
+    "title": "lilililililil",
+    "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
+    "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
+    "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "ShadCN UI",
+      "Framer Motion"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/merakikrea-landing",
+        "label": "GitHub"
+      },
+      {
+        "href": "https://meraki-krea-ceramica-six.vercel.app",
+        "label": "Live Demo"
+      }
+    ],
+    "gallery": [
+      "https://i.postimg.cc/5032x1kZ/pc-meraki-mockup.webp",
+      "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
+      "https://i.postimg.cc/8z1HFJbt/laptop-meraki-mockup.webp",
+      "https://i.postimg.cc/NjpxRsJY/tablet-meraki-mockup.webp"
+    ],
+    "features": [
+      "Responsive and accessible design.",
+      "Light/Dark mode with Tailwind CSS.",
+      "Integration with Google Maps and WhatsApp.",
+      "SEO optimized for better visibility.",
+      "Google reviews and social media section.",
+      "Floating WhatsApp button for quick contact."
+    ],
     "readmeContent": {
       "title": "lilililililil",
       "fileName": "lilililililil.md",
@@ -471,6 +541,41 @@ export const readmes = [
   {
     "id": 8,
     "repoId": "prueba 1",
+    "title": "prueba 1",
+    "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
+    "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
+    "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "ShadCN UI",
+      "Framer Motion"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/merakikrea-landing",
+        "label": "GitHub"
+      },
+      {
+        "href": "https://meraki-krea-ceramica-six.vercel.app",
+        "label": "Live Demo"
+      }
+    ],
+    "gallery": [
+      "https://i.postimg.cc/5032x1kZ/pc-meraki-mockup.webp",
+      "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
+      "https://i.postimg.cc/8z1HFJbt/laptop-meraki-mockup.webp",
+      "https://i.postimg.cc/NjpxRsJY/tablet-meraki-mockup.webp"
+    ],
+    "features": [
+      "Responsive and accessible design.",
+      "Light/Dark mode with Tailwind CSS.",
+      "Integration with Google Maps and WhatsApp.",
+      "SEO optimized for better visibility.",
+      "Google reviews and social media section.",
+      "Floating WhatsApp button for quick contact."
+    ],
     "readmeContent": {
       "title": "prueba 1",
       "fileName": "prueba 1.md",
@@ -660,7 +765,7 @@ export const readmes = [
               "type": "code",
               "lang": "bash",
               "meta": null,
-              "value": "git clone https://github.com/your-user/your-todo-repo.git\r\ncd your-todo-repo"
+              "value": "git clone https://github.com/your-user/your-todo-repo.git\ncd your-todo-repo"
             }
           ],
           "2️⃣ Install dependencies": [
