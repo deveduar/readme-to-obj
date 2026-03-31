@@ -45,50 +45,6 @@ export const readmes = [
   },
   {
     "id": 2,
-    "repoId": "lilililililil",
-    "title": "lilililililil",
-    "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
-    "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
-    "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
-    "technologies": [
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "ShadCN UI",
-      "Framer Motion"
-    ],
-    "links": [
-      {
-        "href": "https://github.com/deveduar/merakikrea-landing",
-        "label": "GitHub"
-      },
-      {
-        "href": "https://meraki-krea-ceramica-six.vercel.app",
-        "label": "Live Demo"
-      }
-    ],
-    "gallery": [
-      "https://i.postimg.cc/5032x1kZ/pc-meraki-mockup.webp",
-      "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
-      "https://i.postimg.cc/8z1HFJbt/laptop-meraki-mockup.webp",
-      "https://i.postimg.cc/NjpxRsJY/tablet-meraki-mockup.webp"
-    ],
-    "features": [
-      "Responsive and accessible design.",
-      "Light/Dark mode with Tailwind CSS.",
-      "Integration with Google Maps and WhatsApp.",
-      "SEO optimized for better visibility.",
-      "Google reviews and social media section.",
-      "Floating WhatsApp button for quick contact."
-    ],
-    "readmeContent": {
-      "title": "lilililililil",
-      "fileName": "lilililililil.md",
-      "sections": {}
-    }
-  },
-  {
-    "id": 3,
     "repoId": "merakikrea",
     "title": "Merakikrea Cerámica",
     "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
@@ -151,7 +107,7 @@ export const readmes = [
     }
   },
   {
-    "id": 4,
+    "id": 3,
     "repoId": "omnivore-to-raindrop",
     "title": "Omnivore JSON to Raindrop.io CSV Converter",
     "description": "A Python script to convert Omnivore JSON exports to CSV format for easy migration to Raindrop.io.",
@@ -222,7 +178,7 @@ export const readmes = [
     }
   },
   {
-    "id": 5,
+    "id": 4,
     "repoId": "pdf-to-cbr",
     "title": "PDF to CBR Converter",
     "description": "A Python script to convert PDF files to CBR (Comic Book RAR) format, perfect for digital comic and manga readers.",
@@ -339,7 +295,7 @@ export const readmes = [
     }
   },
   {
-    "id": 6,
+    "id": 5,
     "repoId": "ping-test-tool",
     "title": "Ping Test Tool",
     "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
@@ -439,7 +395,7 @@ export const readmes = [
     }
   },
   {
-    "id": 7,
+    "id": 6,
     "repoId": "portfolio",
     "title": "My Portfolio",
     "description": "A modern portfolio built with Next.js 14, TypeScript, and Tailwind CSS, featuring a Bento-style layout, AOS animations, and GitHub integration for projects.",
@@ -539,51 +495,7 @@ export const readmes = [
     }
   },
   {
-    "id": 8,
-    "repoId": "prueba 1",
-    "title": "prueba 1",
-    "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
-    "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
-    "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
-    "technologies": [
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "ShadCN UI",
-      "Framer Motion"
-    ],
-    "links": [
-      {
-        "href": "https://github.com/deveduar/merakikrea-landing",
-        "label": "GitHub"
-      },
-      {
-        "href": "https://meraki-krea-ceramica-six.vercel.app",
-        "label": "Live Demo"
-      }
-    ],
-    "gallery": [
-      "https://i.postimg.cc/5032x1kZ/pc-meraki-mockup.webp",
-      "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
-      "https://i.postimg.cc/8z1HFJbt/laptop-meraki-mockup.webp",
-      "https://i.postimg.cc/NjpxRsJY/tablet-meraki-mockup.webp"
-    ],
-    "features": [
-      "Responsive and accessible design.",
-      "Light/Dark mode with Tailwind CSS.",
-      "Integration with Google Maps and WhatsApp.",
-      "SEO optimized for better visibility.",
-      "Google reviews and social media section.",
-      "Floating WhatsApp button for quick contact."
-    ],
-    "readmeContent": {
-      "title": "prueba 1",
-      "fileName": "prueba 1.md",
-      "sections": {}
-    }
-  },
-  {
-    "id": 9,
+    "id": 7,
     "repoId": "readme-to-obj",
     "title": "README to Object Converter",
     "description": "A project to convert README.md files from multiple repositories into structured JavaScript objects for easy integration with TypeScript projects.",
@@ -696,7 +608,7 @@ export const readmes = [
     }
   },
   {
-    "id": 10,
+    "id": 8,
     "repoId": "todo-app",
     "title": "Todo app",
     "description": "A task management application designed to help organize and prioritize activities efficiently.",
@@ -798,7 +710,7 @@ export const readmes = [
     }
   },
   {
-    "id": 11,
+    "id": 9,
     "repoId": "you-mp3-python",
     "title": "YouTube MP3 Downloader",
     "description": "A Python script to download audio from YouTube videos in MP3 format at 320kbps using yt-dlp and ffmpeg.",
