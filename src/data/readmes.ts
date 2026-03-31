@@ -134,13 +134,7 @@ export const readmes = [
         ],
         "📄 License": [
           "MIT — feel free to steal ideas, but let's connect if you build something cool!",
-          "**Built with ☕ and way too many console.logs**— [deveduar](https://github.com/deveduar)",
-          {
-            "type": "code",
-            "lang": null,
-            "meta": null,
-            "value": "\nEste formato es mucho más **personal**, muestra tu **proceso de pensamiento**, los **problemas reales** que enfrentaste, y las **decisiones técnicas** que tomaste. Perfecto para un portafolio donde quieres destacar como desarrollador, no solo el proyecto.\n\n¿Quieres que ajuste el tono (más técnico, más casual, más orientado a empleo)?\n"
-          }
+          "**Built with ☕ and way too many console.logs**— [deveduar](https://github.com/deveduar)"
         ]
       }
     }
