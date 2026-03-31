@@ -15,12 +15,19 @@
           <li>
             <a href="#0">Angular inventory system for printfull store</a>
             <ul>
-              <li><a href="#0--demo-y-repositorios">✨ Demo y repositorios</a></li>
-              <li><a href="#0--objetivos-del-proyecto">🎯 Objetivos del proyecto</a></li>
-              <li><a href="#0--arquitectura-y-decisiones-t-cnicas">🧠 Arquitectura y decisiones técnicas</a></li>
-              <li><a href="#0--tecnolog-as-utilizadas">🛠️ Tecnologías utilizadas</a></li>
-              <li><a href="#0--funcionalidades-implementadas">⚙️ Funcionalidades implementadas</a></li>
-              <li><a href="#0--conceptos-avanzados-aplicados">🧩 Conceptos avanzados aplicados</a></li>
+              <li><a href="#0--why-i-built-this">🎯 Why I built this</a></li>
+              <li><a href="#0--live-repos">🔗 Live & Repos</a></li>
+              <li><a href="#0--the-real-story-not-just-features-">🧠 The Real Story (not just features)</a></li>
+              <li><a href="#0--tech-stack-real-choices-real-reasons-">🛠️ Tech Stack (real choices, real reasons)</a></li>
+              <li><a href="#0--what-i-built-mvp-to-production-ready-">📦 What I built (MVP to Production-ready)</a></li>
+              <li><a href="#0--architecture-hexagonal-">🏗️ Architecture (Hexagonal)</a></li>
+              <li><a href="#0--weird-bugs-i-fixed">🧪 Weird bugs I fixed</a></li>
+              <li><a href="#0--concepts-i-mastered">📚 Concepts I mastered</a></li>
+              <li><a href="#0--gallery">🎨 Gallery</a></li>
+              <li><a href="#0--what-s-next-my-roadmap-">🚀 What's next (my roadmap)</a></li>
+              <li><a href="#0--local-setup">🧰 Local setup</a></li>
+              <li><a href="#0--lessons-learned">💡 Lessons learned</a></li>
+              <li><a href="#0--license">📄 License</a></li>
             </ul>
           </li>
           <li>
@@ -118,27 +125,79 @@
         <div class="readme-container">
         <article id="0" class="readme">
           <h2 class="readme-title">Angular inventory system for printfull store</h2>
-          <section id="0--demo-y-repositorios" class="readme-section">
-            <h2 class="section-title">✨ Demo y repositorios</h2><p class="section-text">| Recurso | Enlace |
-|--------|--------|
-| 🔗 Frontend (este repo) | [GitHub - angular-inventory-system](https://github.com/deveduar/angular-inventory-system) |
-| 🔗 Backend (Express) | [GitHub - inventory-backend](https://github.com/deveduar/inventory-backend) |
-| 🚀 Demo del dashboard | Próximamente |</p></section>
-          <section id="0--objetivos-del-proyecto" class="readme-section">
-            <h2 class="section-title">🎯 Objetivos del proyecto</h2><p class="section-text">✅ Gestionar productos, categorías y variantes desde un panel administrativo.</p><p class="section-text">✅ Exportar inventario a CSV.</p><p class="section-text">✅ Integrar con la API de Printful para obtener productos reales.</p><p class="section-text">🔄 Conectar con pasarela de pagos (Stripe) para futura tienda.</p><p class="section-text">🔄 Crear un frontend público para clientes.</p><p class="section-text">🔄 Dashboard con reportes y gráficos.</p><p class="section-text">🔄 Autenticación de usuarios (auth).</p><p class="section-text">🔄 Gestión de pedidos y proveedores.</p></section>
-          <section id="0--arquitectura-y-decisiones-t-cnicas" class="readme-section">
-            <h2 class="section-title">🧠 Arquitectura y decisiones técnicas</h2><p class="section-text">El sistema sigue una **arquitectura hexagonal (puertos y adaptadores)**, separando claramente:</p><p class="section-text">**Modelos/DTOs** → Transforman los datos de la API de Printful a un modelo interno.</p><p class="section-text">**Servicios** → Manejan la lógica de negocio y comunicación con el backend.</p><p class="section-text">**Adaptadores** → Permiten cambiar fácilmente entre fuentes de datos (API real, JSON local, etc.).</p><p class="section-text">Además, se ha implementado:</p><p class="section-text">Cache de productos para evitar sobrecargar la API de Printful.</p><p class="section-text">Manejo de errores 429 (demasiadas peticiones) con reintentos y mensajes amigables.</p><p class="section-text">Interceptores HTTP funcionales (pendiente de migración completa).</p><p class="section-text">Soporte para SSR sin configurar completamente (fetch con `withFetch()`).</p></section>
-          <section id="0--tecnolog-as-utilizadas" class="readme-section">
-            <h2 class="section-title">🛠️ Tecnologías utilizadas</h2><p class="section-text">| Área | Tecnologías |
-|------|-------------|
-| **Frontend** | Angular 21, PrimeNG, SASS, RxJS |
-| **Backend** | Express, Node.js, Axios |
-| **Build tools** | ESLint, Prettier, Angular CLI |
-| **Extras** | PapaParse (CSV), xlsx (Excel), Angular CDK (drag & drop) |</p></section>
-          <section id="0--funcionalidades-implementadas" class="readme-section">
-            <h2 class="section-title">⚙️ Funcionalidades implementadas</h2><h3 class="subsection-title">✅ Completadas</h3><p class="section-text">[x] Listado de productos con DataView y Table (PrimeNG)</p><p class="section-text">[x] Detalle de producto con carrusel de productos relacionados</p><p class="section-text">[x] Filtros por categoría</p><p class="section-text">[x] Edición inline de productos</p><p class="section-text">[x] Exportar e importar productos a CSV (PapaParse / xlsx)</p><p class="section-text">[x] Temas dinámicos (claro/oscuro) con PrimeNG SASS</p><p class="section-text">[x] Sidebar y menús responsivos</p><p class="section-text">[x] Conexión al backend Express + Printful API</p><p class="section-text">[x] Mock de productos locales como fallback</p><h3 class="subsection-title">🔄 En progreso / Backlog</h3><p class="section-text">[ ] Autenticación de usuarios (JWT)</p><p class="section-text">[ ] Gestión de pedidos y proveedores</p><p class="section-text">[ ] Dashboard con métricas y gráficos</p><p class="section-text">[ ] Frontend público tipo tienda (cliente final)</p><p class="section-text">[ ] Integración con Stripe para pagos reales</p><p class="section-text">[ ] Migración de RxJS a Signals (experimental)</p><p class="section-text">[ ] Optimización de imágenes</p><p class="section-text">[ ] Skeleton loaders para mejorar UX</p></section>
-          <section id="0--conceptos-avanzados-aplicados" class="readme-section">
-            <h2 class="section-title">🧩 Conceptos avanzados aplicados</h2><p class="section-text">**Lifecycle hooks** (`ngOnInit`, `ngOnChanges`, `SimpleChanges`)</p><p class="section-text">**Data binding** y **event binding**</p><p class="section-text">**ViewChild** para acceder a elementos del DOM</p><p class="section-text">**Router events** y captura de parámetros (`paramsMap`, `snapshot`)</p><p class="section-text">**Operador unario (`+`)** para convertir IDs a número</p><p class="section-text">**Spread operator** para evitar mutaciones en arrays</p><p class="section-text">**Manejo de errores HTTP** con interceptores funcionales</p><p class="section-text">**Separación de lógica en servicios** reutilizables</p><p class="section-text">**Paginación** con scroll automático al inicio</p></section></article>
+          <section id="0--why-i-built-this" class="readme-section">
+            <h2 class="section-title">🎯 Why I built this</h2><p class="section-text">I wanted to understand how dropshipping platforms work under the hood. Instead of using Shopify or a pre-built solution, I decided to build my own dashboard that connects to **Printful API** — handling products, variants, categories, and exports.</p><p class="section-text">This project is part of my journey to master:</p><p class="section-text">Angular standalone components</p><p class="section-text">Hexagonal architecture (ports & adapters)</p><p class="section-text">Real-world API integration (rate limits, CORS, caching)</p><p class="section-text">CSV import/export at scale</p></section>
+          <section id="0--live-repos" class="readme-section">
+            <h2 class="section-title">🔗 Live & Repos</h2><p class="section-text">| Type | Link |
+|------|------|
+| 📦 Frontend | [github.com/deveduar/angular-inventory-system](https://github.com/deveduar/angular-inventory-system) |
+| ⚙️ Backend API | [github.com/deveduar/inventory-backend](https://github.com/deveduar/inventory-backend) |
+| 🎥 Live Demo | Coming soon |</p></section>
+          <section id="0--the-real-story-not-just-features-" class="readme-section">
+            <h2 class="section-title">🧠 The Real Story (not just features)</h2><h3 class="subsection-title">🚧 The challenges I faced</h3><p class="section-text">**1. Printful API rate limits (429 errors)**</p><p class="section-text">I implemented a **caching layer** that stores products locally, reducing API calls by ~80%. No localStorage — just in-memory cache with TTL.</p><p class="section-text">**2. Variant hell — colors + sizes**
+Products with multiple variants showed too many sizes. I had to separate variants by color first, then size. Built a custom selector similar to ecommerce stores.</p><p class="section-text">**3. CSV import/export with type safety**
+Used `PapaParse` + `xlsx` but ran into type definition issues. Solved by creating custom TypeScript declarations and using `any` with object cloning for the rating column.</p><p class="section-text">**4. CORS & proxy configuration**
+Angular + Express + Printful = CORS nightmare. Fixed with proxy config in Express and `tap` operators in RxJS.</p><p class="section-text">**5. Node version hell**
+Unsupported engine errors with PrimeNG icons. Solved using `nvm` to pin Node 20.11.1.</p><p class="section-text">**6. Angular standalone animations**
+Async animations don't work well with standalone components. Had to provide them synchronously in `appConfig`.</p><p class="section-text">**7. Product editing without mutations**
+Used spread operator `...product` to avoid cloning issues and keep change detection predictable.</p></section>
+          <section id="0--tech-stack-real-choices-real-reasons-" class="readme-section">
+            <h2 class="section-title">🛠️ Tech Stack (real choices, real reasons)</h2><p class="section-text">| Technology | Why I chose it |
+|------------|----------------|
+| **Angular 21** | Standalone components, signals (soon), mature HTTP client |
+| **PrimeNG** | Enterprise-ready tables, theming, less boilerplate |
+| **SASS** | Custom theming with PrimeNG variables (Lara theme) |
+| **RxJS** | Caching, retry logic, handling 429 errors |
+| **Express** | Simple proxy + Printful SDK wrapper |
+| **PapaParse** | CSV parsing with streaming support |
+| **Angular CDK** | Drag & drop for future features |</p></section>
+          <section id="0--what-i-built-mvp-to-production-ready-" class="readme-section">
+            <h2 class="section-title">📦 What I built (MVP to Production-ready)</h2><h3 class="subsection-title">✅ Completed</h3><p class="section-text">[x] **Product dashboard** with DataView & Table (PrimeNG)</p><p class="section-text">[x] **Category filtering** with real-time updates</p><p class="section-text">[x] **Inline product editing** (no forms — direct table editing)</p><p class="section-text">[x] **CSV Export/Import** (PapaParse + xlsx)</p><p class="section-text">[x] **Dark/Light mode** with PrimeNG SASS variables</p><p class="section-text">[x] **Related products carousel** (excludes current product)</p><p class="section-text">[x] **Local mock system** (fallback when API fails)</p><p class="section-text">[x] **Express backend** with Printful SDK wrapper</p><p class="section-text">[x] **HTTP error handling** (429, CORS, offline detection)</p><h3 class="subsection-title">🔄 Still cooking</h3><p class="section-text">[ ] **Stripe integration** (Printful + Stripe webhooks)</p><p class="section-text">[ ] **Customer storefront** (separate Angular app)</p><p class="section-text">[ ] **Signals migration** (moving away from RxJS)</p><p class="section-text">[ ] **Bulk product import** (JSON/CSV to DB)</p><p class="section-text">[ ] **Order management** + supplier integration</p><p class="section-text">[ ] **Analytics dashboard** with charts</p></section>
+          <section id="0--architecture-hexagonal-" class="readme-section">
+            <h2 class="section-title">🏗️ Architecture (Hexagonal)</h2><pre><code class="language-text">src/
+├── core/           # Interfaces, DTOs, ports
+├── features/       # Products, categories, variants
+├── shared/         # Reusable components, directives
+├── infrastructure/ # API adapters, Printful service
+└── app.config.ts   # Standalone providers, fetch, animations</code></pre><p class="section-text">**Key pattern:** ProductDTO (API) → Product (model) adapter pattern. This lets me switch between Printful API, local JSON, or a database without changing UI code.</p></section>
+          <section id="0--weird-bugs-i-fixed" class="readme-section">
+            <h2 class="section-title">🧪 Weird bugs I fixed</h2><p class="section-text">| Problem | Solution |
+|---------|----------|
+| Double render on dropdown (offline mode) | Still investigating — seems related to change detection |
+| Checkbox selects wrong items in table | Fixed by binding to filtered data, not raw API response |
+| Textarea not expanding with description | CSS workaround (JS solution planned) |
+| `Cannot GET /` but API works | Port mismatch between Angular (4200) and Express (3000) |</p></section>
+          <section id="0--concepts-i-mastered" class="readme-section">
+            <h2 class="section-title">📚 Concepts I mastered</h2><p class="section-text">**Hexagonal architecture** (ports & adapters)</p><p class="section-text">**RxJS operators** (`tap`, `catchError`, `retryWhen`)</p><p class="section-text">**Functional interceptors** vs class-based</p><p class="section-text">**Angular lifecycle** (`ngOnChanges` vs `SimpleChanges`)</p><p class="section-text">**Unary operator** (`+productId`) for type coercion</p><p class="section-text">**Spread operator** for immutable state</p><p class="section-text">**ViewChild** + template references</p><p class="section-text">**Router params** (`snapshot` vs `paramsMap`)</p></section>
+          <section id="0--gallery" class="readme-section">
+            <h2 class="section-title">🎨 Gallery</h2><p class="section-text">| Dashboard view | Product detail | Dark mode |
+|----------------|----------------|------------|
+| *(screenshot)* | *(screenshot)* | *(screenshot)* |</p></section>
+          <section id="0--what-s-next-my-roadmap-" class="readme-section">
+            <h2 class="section-title">🚀 What's next (my roadmap)</h2><p class="section-text">**Signals** — replace RxJS where it makes sense</p><p class="section-text">**Stripe webhooks** — real payment flow</p><p class="section-text">**Customer store** — second Angular app for public facing store</p><p class="section-text">**Multi-tenant** — support multiple Printful stores from one dashboard</p><p class="section-text">**Deploy** — Vercel (frontend) + Railway (backend)</p></section>
+          <section id="0--local-setup" class="readme-section">
+            <h2 class="section-title">🧰 Local setup</h2><pre><code class="language-bash"># Clone both repos
+git clone https://github.com/deveduar/angular-inventory-system.git
+git clone https://github.com/deveduar/inventory-backend.git
+
+# Frontend
+cd angular-inventory-system
+nvm use 20.11.1  # or nvm install 20.11.1
+npm install
+ng serve -o
+
+# Backend (separate terminal)
+cd inventory-backend
+npm install
+node server.js</code></pre></section>
+          <section id="0--lessons-learned" class="readme-section">
+            <h2 class="section-title">💡 Lessons learned</h2><p class="section-text">**Never trust API rate limits** — always implement caching</p><p class="section-text">**CORS is always harder than you think**</p><p class="section-text">**Standalone components are great, but animations need sync providers**</p><p class="section-text">**CSV parsing in TypeScript requires type declaration hacks**</p><p class="section-text">**Node version matters** — use `.nvmrc`</p></section>
+          <section id="0--license" class="readme-section">
+            <h2 class="section-title">📄 License</h2><p class="section-text">MIT — feel free to steal ideas, but let's connect if you build something cool!</p><p class="section-text">**Built with ☕ and way too many console.logs**— [deveduar](https://github.com/deveduar)</p><pre><code class="language-text">
+Este formato es mucho más **personal**, muestra tu **proceso de pensamiento**, los **problemas reales** que enfrentaste, y las **decisiones técnicas** que tomaste. Perfecto para un portafolio donde quieres destacar como desarrollador, no solo el proyecto.
+
+¿Quieres que ajuste el tono (más técnico, más casual, más orientado a empleo)?
+</code></pre></section></article>
         <article id="1" class="readme">
           <h2 class="readme-title">Merakikrea Cerámica</h2>
           <section id="1--features" class="readme-section">

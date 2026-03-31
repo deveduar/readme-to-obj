@@ -20,7 +20,7 @@ export const readmes = [
         "label": "GitHub"
       },
       {
-        "href": "https://github.com/deveduar/inventory-backendd",
+        "href": "https://github.com/deveduar/inventory-backend",
         "label": "Backend API"
       }
     ],
@@ -38,66 +38,109 @@ export const readmes = [
       "title": "Angular inventory system for printfull store",
       "fileName": "angular-SGI-front.md",
       "sections": {
-        "✨ Demo y repositorios": [
-          "| Recurso | Enlace |\n|--------|--------|\n| 🔗 Frontend (este repo) | [GitHub - angular-inventory-system](https://github.com/deveduar/angular-inventory-system) |\n| 🔗 Backend (Express) | [GitHub - inventory-backend](https://github.com/deveduar/inventory-backend) |\n| 🚀 Demo del dashboard | Próximamente |"
+        "🎯 Why I built this": [
+          "I wanted to understand how dropshipping platforms work under the hood. Instead of using Shopify or a pre-built solution, I decided to build my own dashboard that connects to **Printful API** — handling products, variants, categories, and exports.",
+          "This project is part of my journey to master:",
+          "Angular standalone components",
+          "Hexagonal architecture (ports & adapters)",
+          "Real-world API integration (rate limits, CORS, caching)",
+          "CSV import/export at scale"
         ],
-        "🎯 Objetivos del proyecto": [
-          "✅ Gestionar productos, categorías y variantes desde un panel administrativo.",
-          "✅ Exportar inventario a CSV.",
-          "✅ Integrar con la API de Printful para obtener productos reales.",
-          "🔄 Conectar con pasarela de pagos (Stripe) para futura tienda.",
-          "🔄 Crear un frontend público para clientes.",
-          "🔄 Dashboard con reportes y gráficos.",
-          "🔄 Autenticación de usuarios (auth).",
-          "🔄 Gestión de pedidos y proveedores."
+        "🔗 Live & Repos": [
+          "| Type | Link |\n|------|------|\n| 📦 Frontend | [github.com/deveduar/angular-inventory-system](https://github.com/deveduar/angular-inventory-system) |\n| ⚙️ Backend API | [github.com/deveduar/inventory-backend](https://github.com/deveduar/inventory-backend) |\n| 🎥 Live Demo | Coming soon |"
         ],
-        "🧠 Arquitectura y decisiones técnicas": [
-          "El sistema sigue una **arquitectura hexagonal (puertos y adaptadores)**, separando claramente:",
-          "**Modelos/DTOs** → Transforman los datos de la API de Printful a un modelo interno.",
-          "**Servicios** → Manejan la lógica de negocio y comunicación con el backend.",
-          "**Adaptadores** → Permiten cambiar fácilmente entre fuentes de datos (API real, JSON local, etc.).",
-          "Además, se ha implementado:",
-          "Cache de productos para evitar sobrecargar la API de Printful.",
-          "Manejo de errores 429 (demasiadas peticiones) con reintentos y mensajes amigables.",
-          "Interceptores HTTP funcionales (pendiente de migración completa).",
-          "Soporte para SSR sin configurar completamente (fetch con `withFetch()`)."
-        ],
-        "🛠️ Tecnologías utilizadas": [
-          "| Área | Tecnologías |\n|------|-------------|\n| **Frontend** | Angular 21, PrimeNG, SASS, RxJS |\n| **Backend** | Express, Node.js, Axios |\n| **Build tools** | ESLint, Prettier, Angular CLI |\n| **Extras** | PapaParse (CSV), xlsx (Excel), Angular CDK (drag & drop) |"
-        ],
-        "⚙️ Funcionalidades implementadas": {
-          "✅ Completadas": [
-            "[x] Listado de productos con DataView y Table (PrimeNG)",
-            "[x] Detalle de producto con carrusel de productos relacionados",
-            "[x] Filtros por categoría",
-            "[x] Edición inline de productos",
-            "[x] Exportar e importar productos a CSV (PapaParse / xlsx)",
-            "[x] Temas dinámicos (claro/oscuro) con PrimeNG SASS",
-            "[x] Sidebar y menús responsivos",
-            "[x] Conexión al backend Express + Printful API",
-            "[x] Mock de productos locales como fallback"
-          ],
-          "🔄 En progreso / Backlog": [
-            "[ ] Autenticación de usuarios (JWT)",
-            "[ ] Gestión de pedidos y proveedores",
-            "[ ] Dashboard con métricas y gráficos",
-            "[ ] Frontend público tipo tienda (cliente final)",
-            "[ ] Integración con Stripe para pagos reales",
-            "[ ] Migración de RxJS a Signals (experimental)",
-            "[ ] Optimización de imágenes",
-            "[ ] Skeleton loaders para mejorar UX"
+        "🧠 The Real Story (not just features)": {
+          "🚧 The challenges I faced": [
+            "**1. Printful API rate limits (429 errors)**",
+            "I implemented a **caching layer** that stores products locally, reducing API calls by ~80%. No localStorage — just in-memory cache with TTL.",
+            "**2. Variant hell — colors + sizes**\nProducts with multiple variants showed too many sizes. I had to separate variants by color first, then size. Built a custom selector similar to ecommerce stores.",
+            "**3. CSV import/export with type safety**\nUsed `PapaParse` + `xlsx` but ran into type definition issues. Solved by creating custom TypeScript declarations and using `any` with object cloning for the rating column.",
+            "**4. CORS & proxy configuration**\nAngular + Express + Printful = CORS nightmare. Fixed with proxy config in Express and `tap` operators in RxJS.",
+            "**5. Node version hell**\nUnsupported engine errors with PrimeNG icons. Solved using `nvm` to pin Node 20.11.1.",
+            "**6. Angular standalone animations**\nAsync animations don't work well with standalone components. Had to provide them synchronously in `appConfig`.",
+            "**7. Product editing without mutations**\nUsed spread operator `...product` to avoid cloning issues and keep change detection predictable."
           ]
         },
-        "🧩 Conceptos avanzados aplicados": [
-          "**Lifecycle hooks** (`ngOnInit`, `ngOnChanges`, `SimpleChanges`)",
-          "**Data binding** y **event binding**",
-          "**ViewChild** para acceder a elementos del DOM",
-          "**Router events** y captura de parámetros (`paramsMap`, `snapshot`)",
-          "**Operador unario (`+`)** para convertir IDs a número",
-          "**Spread operator** para evitar mutaciones en arrays",
-          "**Manejo de errores HTTP** con interceptores funcionales",
-          "**Separación de lógica en servicios** reutilizables",
-          "**Paginación** con scroll automático al inicio"
+        "🛠️ Tech Stack (real choices, real reasons)": [
+          "| Technology | Why I chose it |\n|------------|----------------|\n| **Angular 21** | Standalone components, signals (soon), mature HTTP client |\n| **PrimeNG** | Enterprise-ready tables, theming, less boilerplate |\n| **SASS** | Custom theming with PrimeNG variables (Lara theme) |\n| **RxJS** | Caching, retry logic, handling 429 errors |\n| **Express** | Simple proxy + Printful SDK wrapper |\n| **PapaParse** | CSV parsing with streaming support |\n| **Angular CDK** | Drag & drop for future features |"
+        ],
+        "📦 What I built (MVP to Production-ready)": {
+          "✅ Completed": [
+            "[x] **Product dashboard** with DataView & Table (PrimeNG)",
+            "[x] **Category filtering** with real-time updates",
+            "[x] **Inline product editing** (no forms — direct table editing)",
+            "[x] **CSV Export/Import** (PapaParse + xlsx)",
+            "[x] **Dark/Light mode** with PrimeNG SASS variables",
+            "[x] **Related products carousel** (excludes current product)",
+            "[x] **Local mock system** (fallback when API fails)",
+            "[x] **Express backend** with Printful SDK wrapper",
+            "[x] **HTTP error handling** (429, CORS, offline detection)"
+          ],
+          "🔄 Still cooking": [
+            "[ ] **Stripe integration** (Printful + Stripe webhooks)",
+            "[ ] **Customer storefront** (separate Angular app)",
+            "[ ] **Signals migration** (moving away from RxJS)",
+            "[ ] **Bulk product import** (JSON/CSV to DB)",
+            "[ ] **Order management** + supplier integration",
+            "[ ] **Analytics dashboard** with charts"
+          ]
+        },
+        "🏗️ Architecture (Hexagonal)": [
+          {
+            "type": "code",
+            "lang": null,
+            "meta": null,
+            "value": "src/\n├── core/           # Interfaces, DTOs, ports\n├── features/       # Products, categories, variants\n├── shared/         # Reusable components, directives\n├── infrastructure/ # API adapters, Printful service\n└── app.config.ts   # Standalone providers, fetch, animations"
+          },
+          "**Key pattern:** ProductDTO (API) → Product (model) adapter pattern. This lets me switch between Printful API, local JSON, or a database without changing UI code."
+        ],
+        "🧪 Weird bugs I fixed": [
+          "| Problem | Solution |\n|---------|----------|\n| Double render on dropdown (offline mode) | Still investigating — seems related to change detection |\n| Checkbox selects wrong items in table | Fixed by binding to filtered data, not raw API response |\n| Textarea not expanding with description | CSS workaround (JS solution planned) |\n| `Cannot GET /` but API works | Port mismatch between Angular (4200) and Express (3000) |"
+        ],
+        "📚 Concepts I mastered": [
+          "**Hexagonal architecture** (ports & adapters)",
+          "**RxJS operators** (`tap`, `catchError`, `retryWhen`)",
+          "**Functional interceptors** vs class-based",
+          "**Angular lifecycle** (`ngOnChanges` vs `SimpleChanges`)",
+          "**Unary operator** (`+productId`) for type coercion",
+          "**Spread operator** for immutable state",
+          "**ViewChild** + template references",
+          "**Router params** (`snapshot` vs `paramsMap`)"
+        ],
+        "🎨 Gallery": [
+          "| Dashboard view | Product detail | Dark mode |\n|----------------|----------------|------------|\n| *(screenshot)* | *(screenshot)* | *(screenshot)* |"
+        ],
+        "🚀 What's next (my roadmap)": [
+          "**Signals** — replace RxJS where it makes sense",
+          "**Stripe webhooks** — real payment flow",
+          "**Customer store** — second Angular app for public facing store",
+          "**Multi-tenant** — support multiple Printful stores from one dashboard",
+          "**Deploy** — Vercel (frontend) + Railway (backend)"
+        ],
+        "🧰 Local setup": [
+          {
+            "type": "code",
+            "lang": "bash",
+            "meta": null,
+            "value": "# Clone both repos\ngit clone https://github.com/deveduar/angular-inventory-system.git\ngit clone https://github.com/deveduar/inventory-backend.git\n\n# Frontend\ncd angular-inventory-system\nnvm use 20.11.1  # or nvm install 20.11.1\nnpm install\nng serve -o\n\n# Backend (separate terminal)\ncd inventory-backend\nnpm install\nnode server.js"
+          }
+        ],
+        "💡 Lessons learned": [
+          "**Never trust API rate limits** — always implement caching",
+          "**CORS is always harder than you think**",
+          "**Standalone components are great, but animations need sync providers**",
+          "**CSV parsing in TypeScript requires type declaration hacks**",
+          "**Node version matters** — use `.nvmrc`"
+        ],
+        "📄 License": [
+          "MIT — feel free to steal ideas, but let's connect if you build something cool!",
+          "**Built with ☕ and way too many console.logs**— [deveduar](https://github.com/deveduar)",
+          {
+            "type": "code",
+            "lang": null,
+            "meta": null,
+            "value": "\nEste formato es mucho más **personal**, muestra tu **proceso de pensamiento**, los **problemas reales** que enfrentaste, y las **decisiones técnicas** que tomaste. Perfecto para un portafolio donde quieres destacar como desarrollador, no solo el proyecto.\n\n¿Quieres que ajuste el tono (más técnico, más casual, más orientado a empleo)?\n"
+          }
         ]
       }
     }
