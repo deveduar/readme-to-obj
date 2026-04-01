@@ -1,7 +1,7 @@
 export const readmes = [
   {
     "id": 1,
-    "repoId": "angular-SGI-front",
+    "repoId": "Inventory Management System for Dropshipping Store",
     "title": "Inventory Management System for Dropshipping Store",
     "description": "A production-ready inventory management system built with Angular 21, PrimeNG, and Hexagonal Architecture. This is not just another CRUD — it's my deep dive into dropshipping integration, API caching, CSV handling, and real-world Angular challenges.",
     "imageSrc": "https://i.postimg.cc/660BTKqC/luca-bravo-XJXWbf-So2f0-unsplash-(1).jpg",
@@ -36,7 +36,7 @@ export const readmes = [
     ],
     "readmeContent": {
       "title": "Inventory Management System for Dropshipping Store",
-      "fileName": "angular-SGI-front.md",
+      "fileName": "Inventory Management System for Dropshipping Store.md",
       "sections": {
         "🎯 Why I built this": [
           "I wanted to understand how dropshipping platforms work under the hood. Instead of using Shopify or a pre-built solution, I decided to build my own dashboard that connects to **Printful API** — handling products, variants, categories, and exports.",
@@ -109,8 +109,8 @@ export const readmes = [
   },
   {
     "id": 2,
-    "repoId": "merakikrea",
-    "title": "Merakikrea Cerámica Landing Page",
+    "repoId": "Merakikrea Ceramica – Landing Page",
+    "title": "Merakikrea Cerámica – Landing Page",
     "description": "A custom landing page for an artisan ceramics business**, inspired by the Google Business Profile experience. The goal was to create a fast, accessible digital presence that bridges the physical store with its customers through key information, authentic reviews, and up-to-date visual content",
     "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
     "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
@@ -146,8 +146,8 @@ export const readmes = [
       "Floating WhatsApp button for quick contact."
     ],
     "readmeContent": {
-      "title": "Merakikrea Cerámica Landing Page",
-      "fileName": "merakikrea.md",
+      "title": "Merakikrea Cerámica – Landing Page",
+      "fileName": "Merakikrea Ceramica – Landing Page.md",
       "sections": {
         "📌 About the project": [
           "This project was born from the need to centralize all the information of a local business in one place: location, customer reviews, visual catalog from Instagram, and direct contact channels. The design focuses on conveying warmth and trust, with a smooth user experience across both mobile and desktop devices."
