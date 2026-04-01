@@ -39,7 +39,6 @@ export const readmes = [
       "fileName": "angular-SGI-front.md",
       "sections": {
         "🎯 Why I built this": [
-          "![[OIP.Jad-MLl-9LUDDGTlbBi6PgHaFj](https://tse1.mm.bing.net/th/id/OIP.Jad-MLl-9LUDDGTlbBi6PgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3)",
           "I wanted to understand how dropshipping platforms work under the hood. Instead of using Shopify or a pre-built solution, I decided to build my own dashboard that connects to **Printful API** — handling products, variants, categories, and exports.",
           "This project is part of my journey to master:",
           "Angular standalone components",
@@ -111,8 +110,8 @@ export const readmes = [
   {
     "id": 2,
     "repoId": "merakikrea",
-    "title": "Merakikrea Cerámica",
-    "description": "A landing page inspired by Google Business Profile to showcase store information and facilitate easy contact.",
+    "title": "Merakikrea Cerámica Landing Page",
+    "description": "A custom landing page for an artisan ceramics business**, inspired by the Google Business Profile experience. The goal was to create a fast, accessible digital presence that bridges the physical store with its customers through key information, authentic reviews, and up-to-date visual content",
     "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
     "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
     "technologies": [
@@ -147,220 +146,42 @@ export const readmes = [
       "Floating WhatsApp button for quick contact."
     ],
     "readmeContent": {
-      "title": "Merakikrea Cerámica",
+      "title": "Merakikrea Cerámica Landing Page",
       "fileName": "merakikrea.md",
       "sections": {
-        "✨ Features": [
-          "✅ **Responsive design** – Adapted for both mobile and desktop.✅ **Light/Dark Mode** – Implemented using **Tailwind CSS**.✅ **SEO and Accessibility** – Optimized for search engines with semantic HTML tags.✅ **Key Sections**:",
-          "**About Us** – Information about the store and courses.",
-          "**Location** – Integrated with **Google Maps**.",
-          "**Instagram Feed** – Displays recent posts from Instagram.",
-          "**Google Reviews** – Shows customer reviews.",
-          "**Contact** – Buttons for WhatsApp, email, and social media.✅ **Floating WhatsApp button** – Always visible.✅ **Header and Footer** – Intuitive navigation."
+        "📌 About the project": [
+          "This project was born from the need to centralize all the information of a local business in one place: location, customer reviews, visual catalog from Instagram, and direct contact channels. The design focuses on conveying warmth and trust, with a smooth user experience across both mobile and desktop devices."
         ],
-        "🛠️ Technologies Used": [
-          "⚛️ **Next.js** (React framework for web applications)",
-          "🅾️ **TypeScript** (Safe typing for JavaScript)",
-          "🎨 **Tailwind CSS** (Styling and light/dark mode with variables)",
-          "📦 **ShadCN UI** (Accessible and modern UI components)",
-          "🎬 **Framer Motion** (Smooth and attractive animations)",
-          "🗺️ **Google Maps API** (For location display)",
-          "📸 **Instagram Feed API** (For displaying recent posts)",
-          "🌐 **Vercel** (Hosting and deployment)"
+        "✨ Key features": [
+          "**Fully responsive design** that adapts seamlessly to any screen size",
+          "**Light/Dark mode** implemented with Tailwind CSS and CSS variables",
+          "**SEO optimized** using semantic HTML tags and a search-engine-friendly structure",
+          "**Core sections**:",
+          "  - About the business and its workshops",
+          "  - Location with integrated Google Maps",
+          "  - Dynamic Instagram feed",
+          "  - Real Google reviews",
+          "  - Direct contact buttons (WhatsApp, email, social media)",
+          "**Floating WhatsApp button** always visible for quick inquiries",
+          "**Header and footer** with clear, accessible navigation"
+        ],
+        "🛠️ Tech stack": [
+          "| Technology         | Purpose                                        |\n| ------------------ | ---------------------------------------------- |\n| Next.js            | React framework with SSR and optimized routing |\n| TypeScript         | Static typing for more robust code             |\n| Tailwind CSS       | Styling and dark mode implementation           |\n| ShadCN UI          | Accessible, customizable UI components         |\n| Framer Motion      | Smooth animations to enhance user experience   |\n| Google Maps API    | Physical store location display                |\n| Instagram Feed API | Dynamic display of recent posts                |\n| Vercel             | Continuous deployment and hosting              |"
+        ],
+        "🚀 Why this stack?": [
+          "I chose Next.js to leverage hybrid rendering and built-in performance. Tailwind combined with ShadCN allowed me to build a clean, accessible interface without sacrificing flexibility. Integrating external APIs (Google Maps, Instagram, reviews) was key to making the site act as a real bridge between the business and its customers."
+        ],
+        "📸 Preview": [],
+        "📎 Links": [
+          "🌐 [Live demo](https://your-domain.com)",
+          "📂 [GitHub repository](https://github.com/yourusername/merakikrea)",
+          "*This project reflects my focus on frontend development for local businesses, prioritizing performance, accessibility, and real-world service integrations.*"
         ]
       }
     }
   },
   {
     "id": 3,
-    "repoId": "omnivore-to-raindrop",
-    "title": "Omnivore JSON to Raindrop.io CSV Converter",
-    "description": "A Python script to convert Omnivore JSON exports to CSV format for easy migration to Raindrop.io.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "This Python script helps users convert JSON files exported from Omnivore into CSV format, making them compatible with Raindrop.io. It allows easy migration of data as Omnivore is scheduled to shut down.",
-    "technologies": [
-      "Python",
-      "Scripting",
-      "Automation",
-      "Data Conversion"
-    ],
-    "links": [
-      {
-        "href": "https://github.com/deveduar/omnivore-to-raindrop",
-        "label": "GitHub"
-      }
-    ],
-    "features": [
-      "Converts Omnivore JSON exports to CSV format.",
-      "Supports UTF-8 encoding for correct display of text data.",
-      "Batch processing of multiple JSON files based on filename pattern.",
-      "Generates CSV file compatible with Raindrop.io for easy import."
-    ],
-    "readmeContent": {
-      "title": "Omnivore JSON to Raindrop.io CSV Converter",
-      "fileName": "omnivore-to-raindrop.md",
-      "sections": {
-        "Prerequisites": [
-          "**Python 3**: Ensure that you have Python 3 installed. You can check your Python version by running:"
-        ],
-        "Features": [
-          "Converts Omnivore JSON exports to a CSV file.",
-          "Compatible with UTF-8 encoding, so text data displays correctly.",
-          "Processes multiple JSON files based on a filename pattern, allowing batch conversion."
-        ],
-        "Installation": [
-          "Clone this repository or download the `convert.py` script.",
-          "Place the script in a directory where your exported JSON files from Omnivore are located."
-        ],
-        "Usage": {
-          "Output": [
-            "The script will generate a CSV file named `metadata.csv` in the same directory.",
-            "This file can be imported into Raindrop.io or other applications that accept CSV imports."
-          ]
-        },
-        "CSV Structure": [
-          "The output CSV file includes the following columns:",
-          "| Column    | Description                       |\n|-----------|-----------------------------------|\n| url       | The URL associated with the item  |\n| title     | The title of the item             |\n| tags      | Comma-separated tags              |\n| note      | Notes or description              |\n| created   | The creation date of the item     |"
-        ],
-        "Example": [
-          "Here’s how to use the script for multiple JSON files matching the pattern `metadata_*.json`:",
-          {
-            "type": "code",
-            "lang": "bash",
-            "meta": null,
-            "value": "python3 convert.py \"metadata_*.json\""
-          },
-          "Upon successful completion, you should see a message indicating the total number of records processed and that `metadata.csv` has been created."
-        ],
-        "Error Handling": [
-          "If a JSON file cannot be processed (for example, if it is corrupted), an error message will be displayed, and the script will continue processing the remaining files."
-        ],
-        "Notes": [
-          "Ensure that all Omnivore export files are saved in UTF-8 format to avoid encoding issues.",
-          "Open `metadata.csv` with a UTF-8 compatible editor, such as Excel or LibreOffice, to ensure proper display of special characters."
-        ]
-      }
-    }
-  },
-  {
-    "id": 4,
-    "repoId": "pdf-to-cbr",
-    "title": "PDF to CBR Converter",
-    "description": "A Python script to convert PDF files to CBR (Comic Book RAR) format, perfect for digital comic and manga readers.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "This tool converts PDF files into the CBR format, suitable for comic book and manga readers. It requires Poppler for Windows and Python 3.7+.",
-    "technologies": [
-      "Python",
-      "PDF Conversion",
-      "CBR Format",
-      "Poppler"
-    ],
-    "links": [
-      {
-        "href": "https://github.com/deveduar/pdf-to-cbr.git",
-        "label": "GitHub Repository"
-      }
-    ],
-    "features": [
-      "Converts PDFs to CBR format for digital comic reading.",
-      "Supports custom output directories, DPI, and image quality settings.",
-      "Easy-to-use command line interface.",
-      "Requires Poppler for PDF rendering.",
-      "Perfect for manga and comic book digitalization."
-    ],
-    "readmeContent": {
-      "title": "PDF to CBR Converter",
-      "fileName": "pdf-to-cbr.md",
-      "sections": {
-        "Description": [
-          "A Python script to convert PDF files to CBR (Comic Book RAR) format, perfect for digital comic and manga readers."
-        ],
-        "Disclaimer": [
-          "This tool is intended for personal and educational use only. Please ensure you have the right to convert and distribute any content with copyright protection. The creator of this script does not condone or take responsibility for any unauthorized use, including the redistribution of copyrighted material."
-        ],
-        "Prerequisites": {
-          "Installation": [
-            "Clone the repository:",
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "git clone https://github.com/your-username/pdf-to-cbr.git\ncd pdf-to-cbr"
-            },
-            "Install dependencies:",
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "pip install -r requirements.txt"
-            },
-            "Download and Install Poppler:",
-            "  - Download Poppler binaries for Windows",
-            "  - Extract contents into the project folder"
-          ]
-        },
-        "Usage": {
-          "Basic Usage": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "python main.py \"path/to/file.pdf\""
-            }
-          ],
-          "Advanced Options": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "python main.py \"path/to/file.pdf\" --output-dir images --dpi 300 --quality 95"
-            }
-          ],
-          "Parameters": [
-            "`path/to/file.pdf`: Path to the PDF file to convert",
-            "`--output-dir`: Output directory for images (default: `output`)",
-            "`--dpi`: Image resolution (default: 300)",
-            "`--quality`: JPEG compression quality (default: 95, range 1-100)"
-          ]
-        },
-        "Examples": {
-          "Convert PDF with default settings": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "python main.py \"D:/Manga/chapter1.pdf\""
-            }
-          ],
-          "Convert with custom configuration": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "python main.py \"D:/Manga/chapter2.pdf\" --output-dir my_images --dpi 600 --quality 90"
-            }
-          ]
-        },
-        "Roadmap": [
-          "[x] Convert to ZIP and CBR",
-          "[ ] Loading improvements and color enhancements"
-        ],
-        "Troubleshooting": [
-          "Ensure Poppler is correctly installed and added to system PATH",
-          "Check Python version compatibility",
-          "Verify input PDF file integrity"
-        ],
-        "Contributing": [
-          "Contributions are welcome! Please:",
-          "Open an issue to discuss proposed changes",
-          "Create a pull request with detailed description",
-          "Follow project coding standards"
-        ]
-      }
-    }
-  },
-  {
-    "id": 5,
     "repoId": "ping-test-tool",
     "title": "Ping Test Tool",
     "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
@@ -460,7 +281,7 @@ export const readmes = [
     }
   },
   {
-    "id": 6,
+    "id": 4,
     "repoId": "portfolio",
     "title": "My Portfolio",
     "description": "A modern portfolio built with Next.js 14, TypeScript, and Tailwind CSS, featuring a Bento-style layout, AOS animations, and GitHub integration for projects.",
@@ -560,7 +381,7 @@ export const readmes = [
     }
   },
   {
-    "id": 7,
+    "id": 5,
     "repoId": "readme-to-obj",
     "title": "README to Object Converter",
     "description": "A project to convert README.md files from multiple repositories into structured JavaScript objects for easy integration with TypeScript projects.",
@@ -673,7 +494,7 @@ export const readmes = [
     }
   },
   {
-    "id": 8,
+    "id": 6,
     "repoId": "todo-app",
     "title": "Todo app",
     "description": "A task management application designed to help organize and prioritize activities efficiently.",
@@ -775,105 +596,140 @@ export const readmes = [
     }
   },
   {
-    "id": 9,
-    "repoId": "you-mp3-python",
-    "title": "YouTube MP3 Downloader",
-    "description": "A Python script to download audio from YouTube videos in MP3 format at 320kbps using yt-dlp and ffmpeg.",
+    "id": 7,
+    "repoId": "Utility Tools Collection – Data Migration & Media Conversion",
+    "title": "Utility Tools Collection – Data Migration & Media Conversion",
+    "description": "A collection of Python CLI tools: migrate Omnivore bookmarks to Raindrop.io, convert PDFs to CBR format for digital comics, and download YouTube audio as high-quality MP3.",
     "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "This Python script downloads audio from YouTube videos, converts it to MP3 at 320kbps, and saves it in an output folder with sanitized filenames. It uses yt-dlp for downloading and ffmpeg for conversion.",
+    "detailedDescription": "Three practical Python command-line tools designed to solve real-world problems. The Omnivore Converter helps users migrate their saved articles to Raindrop.io before the service shutdown. The PDF to CBR Converter transforms PDF files into comic book format for digital readers. The YouTube MP3 Downloader extracts high-quality audio from YouTube videos with a simple CLI interface. Each tool prioritizes simplicity, clear documentation, and robust error handling.",
     "technologies": [
-      "Python",
+      "Python 3",
       "yt-dlp",
       "ffmpeg",
-      "Scripting",
-      "Automation"
+      "pdf2image",
+      "Poppler",
+      "JSON",
+      "CSV",
+      "Command Line Interface"
     ],
     "links": [
       {
-        "href": "https://github.com/deveduar/you-mp3-python",
-        "label": "GitHub Repository",
-        "svg": "GitHubIcon"
+        "href": "https://github.com/deveduar/omnivore-to-raindrop.git",
+        "label": "Omnivore to Raindrop Converter"
+      },
+      {
+        "href": "https://github.com/deveduar/pdf-to-cbr.git",
+        "label": "PDF to CBR Converter"
+      },
+      {
+        "href": "https://github.com/deveduar/py-mp3-you.git",
+        "label": "YouTube MP3 Downloader"
       }
     ],
     "features": [
-      "Efficiently download and convert multiple YouTube videos to MP3 at 320kbps.",
-      "Sanitize filenames to avoid invalid characters on Windows.",
-      "Organize MP3 files in the 'output' folder.",
-      "Supports batch download of multiple YouTube URLs."
+      "Omnivore to Raindrop.io migration: Convert JSON exports to CSV with preserved metadata (URLs, titles, tags, notes, dates)",
+      "PDF to CBR: Convert PDFs to comic book format with customizable DPI and JPEG quality settings",
+      "YouTube MP3 Downloader: Download high-quality 320kbps MP3 audio from multiple video URLs",
+      "Batch processing support across all three tools",
+      "Cross-platform compatibility (Windows, macOS, Linux)",
+      "Clear error handling and user feedback",
+      "UTF-8 encoding support for special characters and non-English text"
     ],
     "readmeContent": {
-      "title": "YouTube MP3 Downloader",
-      "fileName": "you-mp3-python.md",
+      "title": "Utility Tools Collection – Data Migration & Media Conversion",
+      "fileName": "Utility Tools Collection – Data Migration & Media Conversion.md",
       "sections": {
-        "Requirements": [
-          "Python 3.x",
-          "`yt-dlp`: For downloading YouTube videos.",
-          "`ffmpeg`: For converting audio files to MP3."
-        ],
-        "Installation": {
-          "1. Clone this repository": [
+        "📦 Project 1: Omnivore → Raindrop.io Migration Tool": {
+          "✨ Key features": [
+            "**Batch processing** – Handles multiple JSON files matching a filename pattern",
+            "**UTF-8 encoding** – Preserves special characters and non-English text",
+            "**Complete metadata migration** – Preserves URLs, titles, tags, notes, and creation dates",
+            "**Error resilience** – Continues processing remaining files if one fails"
+          ],
+          "🛠️ Tech stack": [
+            "| Technology | Purpose |\n|-----------|---------|\n| Python 3 | Core scripting language |\n| JSON | Parsing exported data |\n| CSV | Output format for Raindrop.io import |"
+          ],
+          "📋 CSV output structure": [
+            "| Column | Description |\n|--------|-------------|\n| url | The original article or bookmark URL |\n| title | Article or bookmark title |\n| tags | Comma-separated tags |\n| note | Personal notes or descriptions |\n| created | Creation date of the saved item |"
+          ],
+          "📎 Usage example": [
             {
               "type": "code",
               "lang": "bash",
               "meta": null,
-              "value": "git clone https://github.com/yourusername/py-mp3-you.git\ncd py-mp3-you"
-            }
-          ],
-          "2. Install dependencies": [
-            "Make sure Python is installed, and then install the required Python packages. You can use the `requirements.txt` file provided:",
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "pip install -r requirements.txt"
-            },
-            "This will install all necessary dependencies, including `yt-dlp`."
-          ],
-          "3. Download and install ": [
-            "You can download `ffmpeg` from the [official website](https://ffmpeg.org/download.html).",
-            "If you are using Windows, make sure to add the `ffmpeg` path to your `PATH` environment variable, or place the `ffmpeg.exe` binary in a folder within your project and modify the path in the script."
-          ],
-          "4. Project Structure": [
-            "The project should have the following folder structure:",
-            {
-              "type": "code",
-              "lang": null,
-              "meta": null,
-              "value": "py-mp3-you/\n├── ffmpeg/                   # Folder containing the ffmpeg binary\n│   └── bin/\n│       └── ffmpeg.exe         # ffmpeg executable\n├── output/                   # Folder where the downloaded MP3s will be saved\n├── script.py                 # Python script for downloading and converting\n├── requirements.txt          # File containing the Python dependencies\n└── README.md                 # This file"
+              "value": "python3 convert.py \"metadata_*.json\""
             }
           ]
         },
-        "Usage": [
-          "Run the script with the following command:",
-          {
-            "type": "code",
-            "lang": "bash",
-            "meta": null,
-            "value": "python script.py"
-          },
-          "The script will ask you to enter the YouTube video URL(s) separated by commas. For example:",
-          {
-            "type": "code",
-            "lang": null,
-            "meta": null,
-            "value": "https://www.youtube.com/watch?v=abc123, https://www.youtube.com/watch?v=xyz456"
-          },
-          "The script will download the audio in the best available format, convert it to MP3 at 320kbps, and save it in the `output` folder with the video title, removing invalid characters."
+        "📚 Project 2: PDF to CBR Converter": {
+          "✨ Key features": [
+            "**One‑command conversion** – Simple CLI interface",
+            "**Customizable output** – Adjustable DPI and JPEG quality",
+            "**Preserves page order** – Pages maintain original sequence",
+            "**Efficient compression** – Optimized for comic reading devices"
+          ],
+          "🛠️ Tech stack": [
+            "| Technology | Purpose |\n|-----------|---------|\n| Python 3.7+ | Core scripting language |\n| pdf2image | PDF page extraction |\n| Pillow | Image processing |\n| RAR/zipfile | Archive creation |\n| Poppler | PDF rendering backend |"
+          ],
+          "📎 Usage examples": [
+            "**Basic conversion:**",
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "python main.py \"comic.pdf\""
+            },
+            "**Advanced options:**",
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "python main.py \"manga.pdf\" --output-dir images --dpi 300 --quality 95"
+            }
+          ],
+          "⚠️ Note": [
+            "This tool is intended for personal use with content you have the rights to convert."
+          ]
+        },
+        "🎵 Project 3: YouTube MP3 Downloader": {
+          "✨ Key features": [
+            "**Batch processing** – Accepts multiple video URLs at once",
+            "**High‑quality audio** – Downloads best available format and converts to 320kbps MP3",
+            "**Filename sanitization** – Automatically removes invalid characters for cross‑platform compatibility",
+            "**Organized output** – Files saved in a dedicated `output` folder"
+          ],
+          "🛠️ Tech stack": [
+            "| Technology | Purpose |\n|-----------|---------|\n| Python 3 | Core scripting language |\n| yt-dlp | YouTube video/audio extraction |\n| ffmpeg | Audio conversion and encoding |"
+          ],
+          "📎 Usage example": [
+            {
+              "type": "code",
+              "lang": "bash",
+              "meta": null,
+              "value": "python script.py\n# Then enter URLs: https://youtube.com/watch?v=abc123, https://youtube.com/watch?v=xyz456"
+            }
+          ],
+          "⚠️ Disclaimer": [
+            "This tool is for educational purposes only. Users are responsible for complying with YouTube's terms of service and applicable copyright laws."
+          ]
+        },
+        "🚀 Why I built these tools": [
+          "Each of these projects represents a practical response to a specific user need:",
+          "**Omnivore Converter** – Helped users preserve their reading history before a service shutdown",
+          "**PDF to CBR** – Solved a niche but common pain point for digital comic readers",
+          "**YouTube MP3 Downloader** – Automated a repetitive task with a simple, clean interface",
+          "These tools share a common philosophy: **solve a real problem with minimal complexity, clear documentation, and robust error handling.**"
         ],
-        "Features": [
-          "Efficiently downloads and converts multiple YouTube videos to MP3.",
-          "Sanitizes filenames to avoid issues with invalid characters on Windows.",
-          "The converted MP3 files are organized and saved in an `output` folder."
+        "🔧 Common technical themes": [
+          "**Command‑line first** – Designed for automation and scriptability",
+          "**Cross‑platform** – Works on Windows, macOS, and Linux",
+          "**Educational value** – Clear code structure and documentation for learning",
+          "**User‑focused** – Handles edge cases and provides meaningful feedback"
         ],
-        "Contributions": [
-          "If you have suggestions or improvements, feel free to create a pull request or open an issue."
-        ],
-        "Disclaimer": [
-          "This script is intended for educational purposes only. The author does not condone or encourage the downloading of copyrighted material without permission. It is the responsibility of the user to ensure they comply with local laws and the terms of service of YouTube or any other platform they are using the script with.",
-          "The author will not be held liable for any misuse of this tool or for any legal consequences that arise from its use."
-        ],
-        "License": [
-          "MIT License. See the LICENSE file for more details."
+        "📎 Links": [
+          "🔄 [Omnivore to Raindrop Converter]((https://github.com/deveduar/omnivore-to-raindrop)",
+          "📚 [PDF to CBR Converter](https://github.com/deveduar/pdf-to-cbr.git)",
+          "🎵 [YouTube MP3 Downloader](https://github.com/deveduar/you-mp3-python)"
         ]
       }
     }
