@@ -182,10 +182,10 @@ export const readmes = [
   },
   {
     "id": 3,
-    "repoId": "ping-test-tool",
-    "title": "Ping Test Tool",
+    "repoId": "Ping Test Tool - Real-Time Network Monitor",
+    "title": "Ping Test Tool - Real-Time Network Monitor",
     "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
+    "imageSrc": "https://i.postimg.cc/661JsKNF/Captura.png",
     "detailedDescription": "Ping Test Tool is a responsive and privacy-focused web app built with Next.js, TypeScript, and Zustand. It provides real-time feedback on connection quality, showing metrics like latency, jitter, and packet loss.",
     "technologies": [
       "Next.js",
@@ -211,16 +211,16 @@ export const readmes = [
       "Privacy-friendly: no personal data collected."
     ],
     "readmeContent": {
-      "title": "Ping Test Tool",
-      "fileName": "ping-test-tool.md",
+      "title": "Ping Test Tool - Real-Time Network Monitor",
+      "fileName": "Ping Test Tool - Real-Time Network Monitor.md",
       "sections": {
         "✨ Features": [
-          "✅ **Real-Time Monitoring** – Continuous updates on key network stats",
-          "✅ **Latency, Jitter, Packet Loss** – Displayed via animated charts and color indicators",
-          "✅ **Retro-Inspired UI** – A throwback to vintage gaming consoles",
-          "✅ **Zustand State Management** – For clean and fast app state updates",
-          "✅ **Web Workers** – Keep performance smooth while running tests in the background",
-          "✅ **Responsive Design** – Works great on mobile and desktop",
+          "**Real-Time Monitoring** – Continuous updates on key network stats",
+          "**Latency, Jitter, Packet Loss** – Displayed via animated charts and color indicators",
+          "**Retro-Inspired UI** – A throwback to vintage gaming consoles",
+          "**Zustand State Management** – For clean and fast app state updates",
+          "**Web Workers** – Keep performance smooth while running tests in the background",
+          "**Responsive Design** – Works great on mobile and desktop",
           "✅ **Privacy Respecting** – No personal data is stored, only uses local storage for preferences"
         ],
         "🚀 How to Use": [
