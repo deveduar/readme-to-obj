@@ -2,9 +2,9 @@ export const readmes = [
   {
     "id": 1,
     "repoId": "angular-SGI-front",
-    "title": "Angular inventory system for printfull store",
-    "description": "Complete inventory management system built with Angular 21 and PrimeNG, connected to Printful API for product management, categories, variants and CSV export.",
-    "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
+    "title": "Inventory Management System for Dropshipping Store",
+    "description": "A production-ready inventory management system built with Angular 21, PrimeNG, and Hexagonal Architecture. This is not just another CRUD — it's my deep dive into dropshipping integration, API caching, CSV handling, and real-world Angular challenges.",
+    "imageSrc": "https://i.postimg.cc/660BTKqC/luca-bravo-XJXWbf-So2f0-unsplash-(1).jpg",
     "detailedDescription": "Full-featured inventory management dashboard developed with Angular 21, PrimeNG and SASS, integrated with Printful API and custom Express backend. Includes products and categories management, CSV export/import, dark/light mode, responsive design and advanced filtering. Architecture follows hexagonal patterns with clear separation of concerns, HTTP interceptors, and reactive programming with RxJS.",
     "technologies": [
       "Angular 21",
@@ -35,7 +35,7 @@ export const readmes = [
       "Hexagonal architecture with DTO adapters."
     ],
     "readmeContent": {
-      "title": "Angular inventory system for printfull store",
+      "title": "Inventory Management System for Dropshipping Store",
       "fileName": "angular-SGI-front.md",
       "sections": {
         "🎯 Why I built this": [
@@ -46,25 +46,20 @@ export const readmes = [
           "Real-world API integration (rate limits, CORS, caching)",
           "CSV import/export at scale"
         ],
-        "🔗 Live & Repos": [
-          "| Type | Link |\n|------|------|\n| 📦 Frontend | [github.com/deveduar/angular-inventory-system](https://github.com/deveduar/angular-inventory-system) |\n| ⚙️ Backend API | [github.com/deveduar/inventory-backend](https://github.com/deveduar/inventory-backend) |\n| 🎥 Live Demo | Coming soon |"
+        "🚧 The challenges I faced": [
+          "**1. Printful API rate limits (429 errors)**",
+          "I implemented a **caching layer** that stores products locally, reducing API calls by ~80%. No localStorage — just in-memory cache with TTL.",
+          "**2. Variant hell — colors + sizes**\nProducts with multiple variants showed too many sizes. I had to separate variants by color first, then size. Built a custom selector similar to ecommerce stores.",
+          "**3. CSV import/export with type safety**\nUsed `PapaParse` + `xlsx` but ran into type definition issues. Solved by creating custom TypeScript declarations and using `any` with object cloning for the rating column.",
+          "**4. CORS & proxy configuration**\nAngular + Express + Printful = CORS nightmare. Fixed with proxy config in Express and `tap` operators in RxJS.",
+          "**5. Node version hell**\nUnsupported engine errors with PrimeNG icons. Solved using `nvm` to pin Node 20.11.1.",
+          "**6. Angular standalone animations**\nAsync animations don't work well with standalone components. Had to provide them synchronously in `appConfig`.",
+          "**7. Product editing without mutations**\nUsed spread operator `...product` to avoid cloning issues and keep change detection predictable."
         ],
-        "🧠 The Real Story (not just features)": {
-          "🚧 The challenges I faced": [
-            "**1. Printful API rate limits (429 errors)**",
-            "I implemented a **caching layer** that stores products locally, reducing API calls by ~80%. No localStorage — just in-memory cache with TTL.",
-            "**2. Variant hell — colors + sizes**\nProducts with multiple variants showed too many sizes. I had to separate variants by color first, then size. Built a custom selector similar to ecommerce stores.",
-            "**3. CSV import/export with type safety**\nUsed `PapaParse` + `xlsx` but ran into type definition issues. Solved by creating custom TypeScript declarations and using `any` with object cloning for the rating column.",
-            "**4. CORS & proxy configuration**\nAngular + Express + Printful = CORS nightmare. Fixed with proxy config in Express and `tap` operators in RxJS.",
-            "**5. Node version hell**\nUnsupported engine errors with PrimeNG icons. Solved using `nvm` to pin Node 20.11.1.",
-            "**6. Angular standalone animations**\nAsync animations don't work well with standalone components. Had to provide them synchronously in `appConfig`.",
-            "**7. Product editing without mutations**\nUsed spread operator `...product` to avoid cloning issues and keep change detection predictable."
-          ]
-        },
-        "🛠️ Tech Stack (real choices, real reasons)": [
+        "🛠️ Tech Stack": [
           "| Technology | Why I chose it |\n|------------|----------------|\n| **Angular 21** | Standalone components, signals (soon), mature HTTP client |\n| **PrimeNG** | Enterprise-ready tables, theming, less boilerplate |\n| **SASS** | Custom theming with PrimeNG variables (Lara theme) |\n| **RxJS** | Caching, retry logic, handling 429 errors |\n| **Express** | Simple proxy + Printful SDK wrapper |\n| **PapaParse** | CSV parsing with streaming support |\n| **Angular CDK** | Drag & drop for future features |"
         ],
-        "📦 What I built (MVP to Production-ready)": {
+        "📦 What I built": {
           "✅ Completed": [
             "[x] **Product dashboard** with DataView & Table (PrimeNG)",
             "[x] **Category filtering** with real-time updates",
@@ -85,18 +80,6 @@ export const readmes = [
             "[ ] **Analytics dashboard** with charts"
           ]
         },
-        "🏗️ Architecture (Hexagonal)": [
-          {
-            "type": "code",
-            "lang": null,
-            "meta": null,
-            "value": "src/\n├── core/           # Interfaces, DTOs, ports\n├── features/       # Products, categories, variants\n├── shared/         # Reusable components, directives\n├── infrastructure/ # API adapters, Printful service\n└── app.config.ts   # Standalone providers, fetch, animations"
-          },
-          "**Key pattern:** ProductDTO (API) → Product (model) adapter pattern. This lets me switch between Printful API, local JSON, or a database without changing UI code."
-        ],
-        "🧪 Weird bugs I fixed": [
-          "| Problem | Solution |\n|---------|----------|\n| Double render on dropdown (offline mode) | Still investigating — seems related to change detection |\n| Checkbox selects wrong items in table | Fixed by binding to filtered data, not raw API response |\n| Textarea not expanding with description | CSS workaround (JS solution planned) |\n| `Cannot GET /` but API works | Port mismatch between Angular (4200) and Express (3000) |"
-        ],
         "📚 Concepts I mastered": [
           "**Hexagonal architecture** (ports & adapters)",
           "**RxJS operators** (`tap`, `catchError`, `retryWhen`)",
@@ -107,9 +90,6 @@ export const readmes = [
           "**ViewChild** + template references",
           "**Router params** (`snapshot` vs `paramsMap`)"
         ],
-        "🎨 Gallery": [
-          "| Dashboard view | Product detail | Dark mode |\n|----------------|----------------|------------|\n| *(screenshot)* | *(screenshot)* | *(screenshot)* |"
-        ],
         "🚀 What's next (my roadmap)": [
           "**Signals** — replace RxJS where it makes sense",
           "**Stripe webhooks** — real payment flow",
@@ -117,24 +97,12 @@ export const readmes = [
           "**Multi-tenant** — support multiple Printful stores from one dashboard",
           "**Deploy** — Vercel (frontend) + Railway (backend)"
         ],
-        "🧰 Local setup": [
-          {
-            "type": "code",
-            "lang": "bash",
-            "meta": null,
-            "value": "# Clone both repos\ngit clone https://github.com/deveduar/angular-inventory-system.git\ngit clone https://github.com/deveduar/inventory-backend.git\n\n# Frontend\ncd angular-inventory-system\nnvm use 20.11.1  # or nvm install 20.11.1\nnpm install\nng serve -o\n\n# Backend (separate terminal)\ncd inventory-backend\nnpm install\nnode server.js"
-          }
-        ],
         "💡 Lessons learned": [
           "**Never trust API rate limits** — always implement caching",
           "**CORS is always harder than you think**",
           "**Standalone components are great, but animations need sync providers**",
           "**CSV parsing in TypeScript requires type declaration hacks**",
           "**Node version matters** — use `.nvmrc`"
-        ],
-        "📄 License": [
-          "MIT — feel free to steal ideas, but let's connect if you build something cool!",
-          "**Built with ☕ and way too many console.logs**— [deveduar](https://github.com/deveduar)"
         ]
       }
     }
