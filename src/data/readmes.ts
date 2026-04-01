@@ -39,6 +39,7 @@ export const readmes = [
       "fileName": "angular-SGI-front.md",
       "sections": {
         "🎯 Why I built this": [
+          "![[OIP.Jad-MLl-9LUDDGTlbBi6PgHaFj](https://tse1.mm.bing.net/th/id/OIP.Jad-MLl-9LUDDGTlbBi6PgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3)",
           "I wanted to understand how dropshipping platforms work under the hood. Instead of using Shopify or a pre-built solution, I decided to build my own dashboard that connects to **Printful API** — handling products, variants, categories, and exports.",
           "This project is part of my journey to master:",
           "Angular standalone components",
