@@ -14,6 +14,11 @@ export const readmes = [
       "RxJS",
       "Express.js"
     ],
+    "gallery": [
+      "https://i.postimg.cc/B6bS0RTf/localhost-4200-(5).png",
+      "https://i.postimg.cc/L6xMHx8Q/localhost-4200-(3).png",
+      "https://i.postimg.cc/BbvMNBf7/localhost-4200-(4).png"
+    ],
     "links": [
       {
         "href": "https://github.com/deveduar/angular-SGI-front",
@@ -38,28 +43,35 @@ export const readmes = [
       "title": "Inventory Management System for Dropshipping Store",
       "fileName": "Inventory Management System for Dropshipping Store.md",
       "sections": {
-        "🎯 Why I built this": [
+        "Why I built this": [
           "I wanted to understand how dropshipping platforms work under the hood. Instead of using Shopify or a pre-built solution, I decided to build my own dashboard that connects to **Printful API** — handling products, variants, categories, and exports.",
           "This project is part of my journey to master:",
-          "Angular standalone components",
-          "Hexagonal architecture (ports & adapters)",
-          "Real-world API integration (rate limits, CORS, caching)",
-          "CSV import/export at scale"
+          "  - Angular standalone components",
+          "  - Hexagonal architecture (ports & adapters)",
+          "  - Real-world API integration (rate limits, CORS, caching)",
+          "  - CSV import/export at scale"
         ],
-        "🚧 The challenges I faced": [
+        "The challenges I faced": [
           "**1. Printful API rate limits (429 errors)**",
-          "I implemented a **caching layer** that stores products locally, reducing API calls by ~80%. No localStorage — just in-memory cache with TTL.",
-          "**2. Variant hell — colors + sizes**\nProducts with multiple variants showed too many sizes. I had to separate variants by color first, then size. Built a custom selector similar to ecommerce stores.",
-          "**3. CSV import/export with type safety**\nUsed `PapaParse` + `xlsx` but ran into type definition issues. Solved by creating custom TypeScript declarations and using `any` with object cloning for the rating column.",
-          "**4. CORS & proxy configuration**\nAngular + Express + Printful = CORS nightmare. Fixed with proxy config in Express and `tap` operators in RxJS.",
-          "**5. Node version hell**\nUnsupported engine errors with PrimeNG icons. Solved using `nvm` to pin Node 20.11.1.",
-          "**6. Angular standalone animations**\nAsync animations don't work well with standalone components. Had to provide them synchronously in `appConfig`.",
-          "**7. Product editing without mutations**\nUsed spread operator `...product` to avoid cloning issues and keep change detection predictable."
+          "  - *\"You've recently sent too many requests. Please try again after 37 seconds.\"*",
+          "  - I implemented a **caching layer** that stores products locally, reducing API calls by ~80%. No localStorage — just in-memory cache with TTL.",
+          "**2. Variant hell — colors + sizes**",
+          "  - Products with multiple variants showed too many sizes. I had to separate variants by color first, then size. Built a custom selector similar to ecommerce stores.",
+          "**3. CSV import/export with type safety**",
+          "  - Used `PapaParse` + `xlsx` but ran into type definition issues. Solved by creating custom TypeScript declarations and using `any` with object cloning for the rating column.",
+          "**4. CORS & proxy configuration**",
+          "  - Angular + Express + Printful = CORS nightmare. Fixed with proxy config in Express and `tap` operators in RxJS.",
+          "**5. Node version hell**",
+          "  - Unsupported engine errors with PrimeNG icons. Solved using `nvm` to pin Node 20.11.1.",
+          "**6. Angular standalone animations**",
+          "  - Async animations don't work well with standalone components. Had to provide them synchronously in `appConfig`.",
+          "**7. Product editing without mutations**",
+          "  - Used spread operator `...product` to avoid cloning issues and keep change detection predictable."
         ],
-        "🛠️ Tech Stack": [
+        "Tech Stack": [
           "| Technology | Why I chose it |\n|------------|----------------|\n| **Angular 21** | Standalone components, signals (soon), mature HTTP client |\n| **PrimeNG** | Enterprise-ready tables, theming, less boilerplate |\n| **SASS** | Custom theming with PrimeNG variables (Lara theme) |\n| **RxJS** | Caching, retry logic, handling 429 errors |\n| **Express** | Simple proxy + Printful SDK wrapper |\n| **PapaParse** | CSV parsing with streaming support |\n| **Angular CDK** | Drag & drop for future features |"
         ],
-        "📦 What I built": {
+        "What I built": {
           "✅ Completed": [
             "[x] **Product dashboard** with DataView & Table (PrimeNG)",
             "[x] **Category filtering** with real-time updates",
@@ -80,7 +92,7 @@ export const readmes = [
             "[ ] **Analytics dashboard** with charts"
           ]
         },
-        "📚 Concepts I mastered": [
+        "Concepts I mastered": [
           "**Hexagonal architecture** (ports & adapters)",
           "**RxJS operators** (`tap`, `catchError`, `retryWhen`)",
           "**Functional interceptors** vs class-based",
@@ -90,7 +102,7 @@ export const readmes = [
           "**ViewChild** + template references",
           "**Router params** (`snapshot` vs `paramsMap`)"
         ],
-        "🚀 What's next (my roadmap)": [
+        "What's next (my roadmap)": [
           "**Signals** — replace RxJS where it makes sense",
           "**Stripe webhooks** — real payment flow",
           "**Customer store** — second Angular app for public facing store",
