@@ -199,7 +199,7 @@ export const readmes = [
   {
     "id": 3,
     "repoId": "Ping Test Tool - Real-Time Network Monitor",
-    "date": "2026-04-02T16:26:24.849Z",
+    "date": "2026-04-02T16:27:34.402Z",
     "title": "Ping Test Tool - Real-Time Network Monitor",
     "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
     "imageSrc": "https://i.postimg.cc/661JsKNF/Captura.png",
@@ -230,7 +230,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Ping Test Tool - Real-Time Network Monitor",
       "fileName": "Ping Test Tool - Real-Time Network Monitor.md",
-      "date": "2026-04-02T16:26:24.849Z",
+      "date": "2026-04-02T16:27:34.402Z",
       "sections": {
         "✨ Features": [
           "- **Real-Time Monitoring** – Continuous updates on key network stats",
@@ -262,7 +262,7 @@ export const readmes = [
           "- 💪 **Web Workers** – Efficient background processing",
           "- 📈 **Custom Metrics Charts** – Visualizations with color indicators"
         ],
-        "🔐 Privacy & Cookies": [
+        "🔐 Privacy & **Cookies**": [
           "- ✅ No personal data is stored or transmitted",
           "- ✅ Only uses local storage for your UI preferences",
           "- ✅ No third-party analytics or tracking cookies"
@@ -272,26 +272,26 @@ export const readmes = [
             "- The system measures network latency using `HEAD` requests to various remote endpoints. These requests may not provide an accurate measurement of actual latency as results can be influenced by external factors like server load, user network, and internet propagation delays.",
             "- The selected endpoints for ping measurement include popular services like Google, Cloudflare, Microsoft, Amazon, and Apple. If any of these services experience issues or downtime, the ping measurement may not be accurate or could fail."
           ],
-          "2. ": [
+          "2. Jitter": [
             "- Jitter is calculated based on the time difference between consecutive ping measurements. If there is a large variation in response times between pings, this may affect the results.",
             "- Jitter can be influenced by changes in the network, traffic fluctuations, and other variability outside the system's control."
           ],
-          "3. ": [
+          "3. Packet Loss": [
             "- If a ping request fails (e.g., due to a network issue or server unavailability), it is counted as packet loss.",
             "- The system does not directly measure packet loss but estimates it based on the successful and failed pings."
           ],
-          "4. ": [
+          "4. Limited to Remote Endpoints": [
             "- Measurements are only performed towards selected remote servers, meaning they do not reflect latency or network quality between local devices or within a local network.",
             "- Measurement accuracy could improve if local endpoints or specific servers were added depending on the use case."
           ],
-          "5. ": [
+          "5. **Network Interruptions and Configuration**": [
             "- The measurement results can be affected by local network congestion or temporary internet connection issues. Ping, jitter, and packet loss metrics may vary significantly depending on network stability.",
             "- The system does not provide detailed information about specific network issues (e.g., local bottlenecks or intermittent routing problems)."
           ],
-          "6. ": [
+          "6. **Use of `no-cors` in Requests**": [
             "- Measurement requests use the `no-cors` mode to avoid CORS-related issues, which limits the type of responses that can be received. This means that detailed server response metrics, such as header response time, are not available and only the round-trip time for the request is measured."
           ],
-          "7. ": [
+          "7. **Measurement Intervals**": [
             "- The system performs measurements at 2-second intervals. If there is a network interruption or the server does not respond within this interval, an error or an increase in packet loss might be recorded."
           ]
         }
@@ -557,7 +557,7 @@ export const readmes = [
           "- ESLint and Prettier for code quality"
         ],
         "🧠 The Real Story — Challenges I Solved": {
-          "1. ": [
+          "1. **Managing Complex State with Subtasks**": [
             "The biggest challenge was handling the parent-child relationship between tasks and subtasks. When you:",
             "- Delete a parent task — do subtasks get deleted too?",
             "- Move a parent to another project — do subtasks follow?",
@@ -567,7 +567,7 @@ export const readmes = [
             "- \"Move parent and all subtasks to new project?\"",
             "- \"Delete selected subtasks while preserving their parent?\""
           ],
-          "2. ": [
+          "2. **Drag-and-Drop at Scale**": [
             "The kanban board needed to handle hundreds of tasks across multiple columns without performance issues. I implemented:",
             "- Optimized re-rendering with proper memoization",
             "- Smooth animations that don't interfere with drag operations",
@@ -575,7 +575,7 @@ export const readmes = [
             "- Support for both desktop drag-and-drop and touch devices",
             "The biggest win? Making drag-and-drop work seamlessly while the board is sorted (not in manual mode) or when columns are collapsed."
           ],
-          "3. ": [
+          "3. **Bulk Operations Without Breaking the UI**": [
             "Selecting 50+ tasks and changing their status should feel instant. I built:",
             "- Background processing with loading states",
             "- Toast notifications showing progress",
@@ -583,7 +583,7 @@ export const readmes = [
             "- Optimistic updates that revert on failure",
             "The tricky part was handling edge cases — what happens when you bulk delete a mix of parents and children? The solution involved analyzing selections and presenting clear options before executing."
           ],
-          "4. ": [
+          "4. **Column Management in Table View**": [
             "The table view needed to be as powerful as a spreadsheet:",
             "- Resizable columns with visual indicators during resize",
             "- Sortable columns (ascending/descending) that work across all data types",
@@ -592,7 +592,7 @@ export const readmes = [
             "- Responsive behavior that adapts to mobile",
             "The responsive version collapses into cards while maintaining all functionality — a significant UI/UX challenge that required rethinking the component structure."
           ],
-          "5. ": [
+          "5. **The Recycle Bin System**": [
             "Deleting tasks shouldn't be permanent. I built a complete recycling system:",
             "- Soft delete moves tasks to trash instead of removing from database",
             "- Restore operations preserve hierarchy (restore parent, get all subtasks back)",
@@ -601,7 +601,7 @@ export const readmes = [
             "- Batch restore and delete operations",
             "This required careful database design with deleted_at timestamps and ensuring cascade operations respected the soft delete pattern."
           ],
-          "6. ": [
+          "6. **Mobile-First Responsive Design**": [
             "The app needed to work beautifully on phones, tablets, and desktops. I implemented:",
             "- Tooltips on desktop, drawers on mobile for date pickers",
             "- Collapsed views that show only essential information on small screens",
@@ -610,14 +610,14 @@ export const readmes = [
             "- Responsive tables that convert to card layouts on mobile",
             "The result is an app that feels native on any device."
           ],
-          "7. ": [
+          "7. **Real-Time Search Across Hierarchies**": [
             "Search needed to find tasks AND subtasks, then show them in context. When you search for a subtask:",
             "- The parent task expands automatically",
             "- Matching subtasks are highlighted",
             "- Search results show counts and clear indicators",
             "This required coordinating state across components and ensuring the UI updates without losing scroll position or user context."
           ],
-          "8. ": [
+          "8. **Performance at Scale**": [
             "With hundreds of tasks and subtasks, performance became critical. I optimized:",
             "- Virtual scrolling for large lists",
             "- Memoized components to prevent unnecessary re-renders",
@@ -628,19 +628,19 @@ export const readmes = [
           ]
         },
         "📊 What I Learned": {
-          "1. ": [
+          "1. **State Management Complexity**": [
             "Zustand proved perfect for this project — lightweight but powerful enough to handle complex state with selectors and middleware. The key was structuring state to minimize re-renders while keeping logic maintainable."
           ],
-          "2. ": [
+          "2. **The Importance of Database Design**": [
             "The initial schema was simple. As features grew, I needed proper indexing for search, soft delete flags, hierarchy management with parent_id, and efficient queries for counts and filters. PostgreSQL's JSON capabilities helped with flexible metadata storage."
           ],
-          "3. ": [
+          "3. **User Experience Matters**": [
             "Every edge case needs consideration. What happens when you drag a task to a collapsed column? What if you try to move a subtask to a different project? The difference between a frustrating app and a delightful one is handling these scenarios gracefully."
           ],
-          "4. ": [
+          "4. **Testing Saves Time**": [
             "Writing comprehensive tests early caught bugs that would have been nightmares to debug later. End-to-end tests with Playwright ensured critical flows (drag-and-drop, bulk operations) never regressed."
           ],
-          "5. ": [
+          "5. **Technical Debt Is Real**": [
             "As features grew, refactoring became essential. I went through multiple iterations of the kanban state management, the table component, and the bulk action system. Each refactor made the code cleaner and more maintainable."
           ]
         },
