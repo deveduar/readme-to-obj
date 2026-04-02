@@ -199,7 +199,7 @@ export const readmes = [
   {
     "id": 3,
     "repoId": "Ping Test Tool - Real-Time Network Monitor",
-    "date": "2026-04-02T01:59:05.767Z",
+    "date": "2026-04-02T16:26:24.849Z",
     "title": "Ping Test Tool - Real-Time Network Monitor",
     "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
     "imageSrc": "https://i.postimg.cc/661JsKNF/Captura.png",
@@ -230,7 +230,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Ping Test Tool - Real-Time Network Monitor",
       "fileName": "Ping Test Tool - Real-Time Network Monitor.md",
-      "date": "2026-04-02T01:59:05.767Z",
+      "date": "2026-04-02T16:26:24.849Z",
       "sections": {
         "✨ Features": [
           "- **Real-Time Monitoring** – Continuous updates on key network stats",
@@ -239,7 +239,7 @@ export const readmes = [
           "- **Zustand State Management** – For clean and fast app state updates",
           "- **Web Workers** – Keep performance smooth while running tests in the background",
           "- **Responsive Design** – Works great on mobile and desktop",
-          "✅ **Privacy Respecting** – No personal data is stored, only uses local storage for preferences"
+          "- **Privacy Respecting** – No personal data is stored, only uses local storage for preferences"
         ],
         "🚀 How to Use": [
           "1️⃣ **Start Test** – Click the button to begin monitoring",
@@ -247,12 +247,12 @@ export const readmes = [
           "3️⃣ **Toggle Views** – Switch between metric displays (ping, jitter, loss)"
         ],
         "❓ FAQ": [
-          "**Q: How accurate are the measurements?**",
-          "A: The metrics are based on real-time network requests and give a good representation of your connection quality.",
-          "**Q: Does it work offline?**",
-          "A: No, the app requires an active internet connection.",
-          "**Q: Can I export the data?**",
-          "A: Not yet, but this is a planned feature for future versions."
+          "- **Q: How accurate are the measurements?**",
+          "  - A: The metrics are based on real-time network requests and give a good representation of your connection quality.",
+          "- **Q: Does it work offline?**",
+          "  - A: No, the app requires an active internet connection.",
+          "- **Q: Can I export the data?**",
+          "  - A: Not yet, but this is a planned feature for future versions."
         ],
         "🛠️ Built With": [
           "- ⚛️ **React + Next.js** – The backbone of the web app",
@@ -268,7 +268,7 @@ export const readmes = [
           "- ✅ No third-party analytics or tracking cookies"
         ],
         "⚠️ Limitations of the Network Measurement System": {
-          "1. ": [
+          "1. Ping Measurement": [
             "- The system measures network latency using `HEAD` requests to various remote endpoints. These requests may not provide an accurate measurement of actual latency as results can be influenced by external factors like server load, user network, and internet propagation delays.",
             "- The selected endpoints for ping measurement include popular services like Google, Cloudflare, Microsoft, Amazon, and Apple. If any of these services experience issues or downtime, the ping measurement may not be accurate or could fail."
           ],
