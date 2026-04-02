@@ -2,6 +2,7 @@ export const readmes = [
   {
     "id": 1,
     "repoId": "Inventory Management System for Dropshipping Store",
+    "date": "2026-04-02T14:42:08.884Z",
     "title": "Inventory Management System for Dropshipping Store",
     "description": "A production-ready inventory management system built with Angular 21, PrimeNG, and Hexagonal Architecture. This is not just another CRUD — it's my deep dive into dropshipping integration, API caching, CSV handling, and real-world Angular challenges.",
     "imageSrc": "https://i.postimg.cc/660BTKqC/luca-bravo-XJXWbf-So2f0-unsplash-(1).jpg",
@@ -42,30 +43,31 @@ export const readmes = [
     "readmeContent": {
       "title": "Inventory Management System for Dropshipping Store",
       "fileName": "Inventory Management System for Dropshipping Store.md",
+      "date": "2026-04-02T14:42:08.884Z",
       "sections": {
         "Why I built this": [
           "I wanted to understand how dropshipping platforms work under the hood. Instead of using Shopify or a pre-built solution, I decided to build my own dashboard that connects to **Printful API** — handling products, variants, categories, and exports.",
-          "This project is part of my journey to master:",
+          "- This project is part of my journey to master:",
           "  - Angular standalone components",
           "  - Hexagonal architecture (ports & adapters)",
           "  - Real-world API integration (rate limits, CORS, caching)",
           "  - CSV import/export at scale"
         ],
         "The challenges I faced": [
-          "**1. Printful API rate limits (429 errors)**",
+          "- **1. Printful API rate limits (429 errors)**",
           "  - *\"You've recently sent too many requests. Please try again after 37 seconds.\"*",
           "  - I implemented a **caching layer** that stores products locally, reducing API calls by ~80%. No localStorage — just in-memory cache with TTL.",
-          "**2. Variant hell — colors + sizes**",
+          "- **2. Variant hell — colors + sizes**",
           "  - Products with multiple variants showed too many sizes. I had to separate variants by color first, then size. Built a custom selector similar to ecommerce stores.",
-          "**3. CSV import/export with type safety**",
+          "- **3. CSV import/export with type safety**",
           "  - Used `PapaParse` + `xlsx` but ran into type definition issues. Solved by creating custom TypeScript declarations and using `any` with object cloning for the rating column.",
-          "**4. CORS & proxy configuration**",
+          "- **4. CORS & proxy configuration**",
           "  - Angular + Express + Printful = CORS nightmare. Fixed with proxy config in Express and `tap` operators in RxJS.",
-          "**5. Node version hell**",
+          "- **5. Node version hell**",
           "  - Unsupported engine errors with PrimeNG icons. Solved using `nvm` to pin Node 20.11.1.",
-          "**6. Angular standalone animations**",
+          "- **6. Angular standalone animations**",
           "  - Async animations don't work well with standalone components. Had to provide them synchronously in `appConfig`.",
-          "**7. Product editing without mutations**",
+          "- **7. Product editing without mutations**",
           "  - Used spread operator `...product` to avoid cloning issues and keep change detection predictable."
         ],
         "Tech Stack": [
@@ -73,48 +75,48 @@ export const readmes = [
         ],
         "What I built": {
           "✅ Completed": [
-            "[x] **Product dashboard** with DataView & Table (PrimeNG)",
-            "[x] **Category filtering** with real-time updates",
-            "[x] **Inline product editing** (no forms — direct table editing)",
-            "[x] **CSV Export/Import** (PapaParse + xlsx)",
-            "[x] **Dark/Light mode** with PrimeNG SASS variables",
-            "[x] **Related products carousel** (excludes current product)",
-            "[x] **Local mock system** (fallback when API fails)",
-            "[x] **Express backend** with Printful SDK wrapper",
-            "[x] **HTTP error handling** (429, CORS, offline detection)"
+            "- [x] **Product dashboard** with DataView & Table (PrimeNG)",
+            "- [x] **Category filtering** with real-time updates",
+            "- [x] **Inline product editing** (no forms — direct table editing)",
+            "- [x] **CSV Export/Import** (PapaParse + xlsx)",
+            "- [x] **Dark/Light mode** with PrimeNG SASS variables",
+            "- [x] **Related products carousel** (excludes current product)",
+            "- [x] **Local mock system** (fallback when API fails)",
+            "- [x] **Express backend** with Printful SDK wrapper",
+            "- [x] **HTTP error handling** (429, CORS, offline detection)"
           ],
           "🔄 Still cooking": [
-            "[ ] **Stripe integration** (Printful + Stripe webhooks)",
-            "[ ] **Customer storefront** (separate Angular app)",
-            "[ ] **Signals migration** (moving away from RxJS)",
-            "[ ] **Bulk product import** (JSON/CSV to DB)",
-            "[ ] **Order management** + supplier integration",
-            "[ ] **Analytics dashboard** with charts"
+            "- [ ] **Stripe integration** (Printful + Stripe webhooks)",
+            "- [ ] **Customer storefront** (separate Angular app)",
+            "- [ ] **Signals migration** (moving away from RxJS)",
+            "- [ ] **Bulk product import** (JSON/CSV to DB)",
+            "- [ ] **Order management** + supplier integration",
+            "- [ ] **Analytics dashboard** with charts"
           ]
         },
         "Concepts I mastered": [
-          "**Hexagonal architecture** (ports & adapters)",
-          "**RxJS operators** (`tap`, `catchError`, `retryWhen`)",
-          "**Functional interceptors** vs class-based",
-          "**Angular lifecycle** (`ngOnChanges` vs `SimpleChanges`)",
-          "**Unary operator** (`+productId`) for type coercion",
-          "**Spread operator** for immutable state",
-          "**ViewChild** + template references",
-          "**Router params** (`snapshot` vs `paramsMap`)"
+          "- **Hexagonal architecture** (ports & adapters)",
+          "- **RxJS operators** (`tap`, `catchError`, `retryWhen`)",
+          "- **Functional interceptors** vs class-based",
+          "- **Angular lifecycle** (`ngOnChanges` vs `SimpleChanges`)",
+          "- **Unary operator** (`+productId`) for type coercion",
+          "- **Spread operator** for immutable state",
+          "- **ViewChild** + template references",
+          "- **Router params** (`snapshot` vs `paramsMap`)"
         ],
         "What's next (my roadmap)": [
-          "**Signals** — replace RxJS where it makes sense",
-          "**Stripe webhooks** — real payment flow",
-          "**Customer store** — second Angular app for public facing store",
-          "**Multi-tenant** — support multiple Printful stores from one dashboard",
-          "**Deploy** — Vercel (frontend) + Railway (backend)"
+          "- **Signals** — replace RxJS where it makes sense",
+          "- **Stripe webhooks** — real payment flow",
+          "- **Customer store** — second Angular app for public facing store",
+          "- **Multi-tenant** — support multiple Printful stores from one dashboard",
+          "- **Deploy** — Vercel (frontend) + Railway (backend)"
         ],
         "💡 Lessons learned": [
-          "**Never trust API rate limits** — always implement caching",
-          "**CORS is always harder than you think**",
-          "**Standalone components are great, but animations need sync providers**",
-          "**CSV parsing in TypeScript requires type declaration hacks**",
-          "**Node version matters** — use `.nvmrc`"
+          "- **Never trust API rate limits** — always implement caching",
+          "- **CORS is always harder than you think**",
+          "- **Standalone components are great, but animations need sync providers**",
+          "- **CSV parsing in TypeScript requires type declaration hacks**",
+          "- **Node version matters** — use `.nvmrc`"
         ]
       }
     }
@@ -122,6 +124,7 @@ export const readmes = [
   {
     "id": 2,
     "repoId": "Merakikrea Ceramica – Landing Page",
+    "date": "2026-04-01T17:19:41.627Z",
     "title": "Merakikrea Cerámica – Landing Page",
     "description": "A custom landing page for an artisan ceramics business**, inspired by the Google Business Profile experience. The goal was to create a fast, accessible digital presence that bridges the physical store with its customers through key information, authentic reviews, and up-to-date visual content",
     "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
@@ -160,22 +163,23 @@ export const readmes = [
     "readmeContent": {
       "title": "Merakikrea Cerámica – Landing Page",
       "fileName": "Merakikrea Ceramica – Landing Page.md",
+      "date": "2026-04-01T17:19:41.627Z",
       "sections": {
         "📌 About the project": [
           "This project was born from the need to centralize all the information of a local business in one place: location, customer reviews, visual catalog from Instagram, and direct contact channels. The design focuses on conveying warmth and trust, with a smooth user experience across both mobile and desktop devices."
         ],
         "✨ Key features": [
-          "**Fully responsive design** that adapts seamlessly to any screen size",
-          "**Light/Dark mode** implemented with Tailwind CSS and CSS variables",
-          "**SEO optimized** using semantic HTML tags and a search-engine-friendly structure",
-          "**Core sections**:",
+          "- **Fully responsive design** that adapts seamlessly to any screen size",
+          "- **Light/Dark mode** implemented with Tailwind CSS and CSS variables",
+          "- **SEO optimized** using semantic HTML tags and a search-engine-friendly structure",
+          "- **Core sections**:",
           "  - About the business and its workshops",
           "  - Location with integrated Google Maps",
           "  - Dynamic Instagram feed",
           "  - Real Google reviews",
           "  - Direct contact buttons (WhatsApp, email, social media)",
-          "**Floating WhatsApp button** always visible for quick inquiries",
-          "**Header and footer** with clear, accessible navigation"
+          "- **Floating WhatsApp button** always visible for quick inquiries",
+          "- **Header and footer** with clear, accessible navigation"
         ],
         "🛠️ Tech stack": [
           "| Technology         | Purpose                                        |\n| ------------------ | ---------------------------------------------- |\n| Next.js            | React framework with SSR and optimized routing |\n| TypeScript         | Static typing for more robust code             |\n| Tailwind CSS       | Styling and dark mode implementation           |\n| ShadCN UI          | Accessible, customizable UI components         |\n| Framer Motion      | Smooth animations to enhance user experience   |\n| Google Maps API    | Physical store location display                |\n| Instagram Feed API | Dynamic display of recent posts                |\n| Vercel             | Continuous deployment and hosting              |"
@@ -185,8 +189,8 @@ export const readmes = [
         ],
         "📸 Preview": [],
         "📎 Links": [
-          "🌐 [Live demo](https://your-domain.com)",
-          "📂 [GitHub repository](https://github.com/yourusername/merakikrea)",
+          "- 🌐 [Live demo](https://your-domain.com)",
+          "- 📂 [GitHub repository](https://github.com/yourusername/merakikrea)",
           "*This project reflects my focus on frontend development for local businesses, prioritizing performance, accessibility, and real-world service integrations.*"
         ]
       }
@@ -195,6 +199,7 @@ export const readmes = [
   {
     "id": 3,
     "repoId": "Ping Test Tool - Real-Time Network Monitor",
+    "date": "2026-04-02T01:59:05.767Z",
     "title": "Ping Test Tool - Real-Time Network Monitor",
     "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
     "imageSrc": "https://i.postimg.cc/661JsKNF/Captura.png",
@@ -225,14 +230,15 @@ export const readmes = [
     "readmeContent": {
       "title": "Ping Test Tool - Real-Time Network Monitor",
       "fileName": "Ping Test Tool - Real-Time Network Monitor.md",
+      "date": "2026-04-02T01:59:05.767Z",
       "sections": {
         "✨ Features": [
-          "**Real-Time Monitoring** – Continuous updates on key network stats",
-          "**Latency, Jitter, Packet Loss** – Displayed via animated charts and color indicators",
-          "**Retro-Inspired UI** – A throwback to vintage gaming consoles",
-          "**Zustand State Management** – For clean and fast app state updates",
-          "**Web Workers** – Keep performance smooth while running tests in the background",
-          "**Responsive Design** – Works great on mobile and desktop",
+          "- **Real-Time Monitoring** – Continuous updates on key network stats",
+          "- **Latency, Jitter, Packet Loss** – Displayed via animated charts and color indicators",
+          "- **Retro-Inspired UI** – A throwback to vintage gaming consoles",
+          "- **Zustand State Management** – For clean and fast app state updates",
+          "- **Web Workers** – Keep performance smooth while running tests in the background",
+          "- **Responsive Design** – Works great on mobile and desktop",
           "✅ **Privacy Respecting** – No personal data is stored, only uses local storage for preferences"
         ],
         "🚀 How to Use": [
@@ -249,44 +255,44 @@ export const readmes = [
           "A: Not yet, but this is a planned feature for future versions."
         ],
         "🛠️ Built With": [
-          "⚛️ **React + Next.js** – The backbone of the web app",
-          "🅾️ **TypeScript** – Type-safe development",
-          "🎨 **Tailwind CSS** – Rapid and responsive UI",
-          "⚙️ **Zustand** – Lightweight and scalable state management",
-          "💪 **Web Workers** – Efficient background processing",
-          "📈 **Custom Metrics Charts** – Visualizations with color indicators"
+          "- ⚛️ **React + Next.js** – The backbone of the web app",
+          "- 🅾️ **TypeScript** – Type-safe development",
+          "- 🎨 **Tailwind CSS** – Rapid and responsive UI",
+          "- ⚙️ **Zustand** – Lightweight and scalable state management",
+          "- 💪 **Web Workers** – Efficient background processing",
+          "- 📈 **Custom Metrics Charts** – Visualizations with color indicators"
         ],
         "🔐 Privacy & Cookies": [
-          "✅ No personal data is stored or transmitted",
-          "✅ Only uses local storage for your UI preferences",
-          "✅ No third-party analytics or tracking cookies"
+          "- ✅ No personal data is stored or transmitted",
+          "- ✅ Only uses local storage for your UI preferences",
+          "- ✅ No third-party analytics or tracking cookies"
         ],
         "⚠️ Limitations of the Network Measurement System": {
           "1. ": [
-            "The system measures network latency using `HEAD` requests to various remote endpoints. These requests may not provide an accurate measurement of actual latency as results can be influenced by external factors like server load, user network, and internet propagation delays.",
-            "The selected endpoints for ping measurement include popular services like Google, Cloudflare, Microsoft, Amazon, and Apple. If any of these services experience issues or downtime, the ping measurement may not be accurate or could fail."
+            "- The system measures network latency using `HEAD` requests to various remote endpoints. These requests may not provide an accurate measurement of actual latency as results can be influenced by external factors like server load, user network, and internet propagation delays.",
+            "- The selected endpoints for ping measurement include popular services like Google, Cloudflare, Microsoft, Amazon, and Apple. If any of these services experience issues or downtime, the ping measurement may not be accurate or could fail."
           ],
           "2. ": [
-            "Jitter is calculated based on the time difference between consecutive ping measurements. If there is a large variation in response times between pings, this may affect the results.",
-            "Jitter can be influenced by changes in the network, traffic fluctuations, and other variability outside the system's control."
+            "- Jitter is calculated based on the time difference between consecutive ping measurements. If there is a large variation in response times between pings, this may affect the results.",
+            "- Jitter can be influenced by changes in the network, traffic fluctuations, and other variability outside the system's control."
           ],
           "3. ": [
-            "If a ping request fails (e.g., due to a network issue or server unavailability), it is counted as packet loss.",
-            "The system does not directly measure packet loss but estimates it based on the successful and failed pings."
+            "- If a ping request fails (e.g., due to a network issue or server unavailability), it is counted as packet loss.",
+            "- The system does not directly measure packet loss but estimates it based on the successful and failed pings."
           ],
           "4. ": [
-            "Measurements are only performed towards selected remote servers, meaning they do not reflect latency or network quality between local devices or within a local network.",
-            "Measurement accuracy could improve if local endpoints or specific servers were added depending on the use case."
+            "- Measurements are only performed towards selected remote servers, meaning they do not reflect latency or network quality between local devices or within a local network.",
+            "- Measurement accuracy could improve if local endpoints or specific servers were added depending on the use case."
           ],
           "5. ": [
-            "The measurement results can be affected by local network congestion or temporary internet connection issues. Ping, jitter, and packet loss metrics may vary significantly depending on network stability.",
-            "The system does not provide detailed information about specific network issues (e.g., local bottlenecks or intermittent routing problems)."
+            "- The measurement results can be affected by local network congestion or temporary internet connection issues. Ping, jitter, and packet loss metrics may vary significantly depending on network stability.",
+            "- The system does not provide detailed information about specific network issues (e.g., local bottlenecks or intermittent routing problems)."
           ],
           "6. ": [
-            "Measurement requests use the `no-cors` mode to avoid CORS-related issues, which limits the type of responses that can be received. This means that detailed server response metrics, such as header response time, are not available and only the round-trip time for the request is measured."
+            "- Measurement requests use the `no-cors` mode to avoid CORS-related issues, which limits the type of responses that can be received. This means that detailed server response metrics, such as header response time, are not available and only the round-trip time for the request is measured."
           ],
           "7. ": [
-            "The system performs measurements at 2-second intervals. If there is a network interruption or the server does not respond within this interval, an error or an increase in packet loss might be recorded."
+            "- The system performs measurements at 2-second intervals. If there is a network interruption or the server does not respond within this interval, an error or an increase in packet loss might be recorded."
           ]
         }
       }
@@ -295,6 +301,7 @@ export const readmes = [
   {
     "id": 4,
     "repoId": "Portfolio project",
+    "date": "2026-04-02T02:14:40.518Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
     "description": "A deep dive into creating a dynamic portfolio that automatically syncs with my Obsidian vault, transforming markdown notes into a beautiful, interactive showcase of my work.",
     "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
@@ -336,12 +343,13 @@ export const readmes = [
     "readmeContent": {
       "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
       "fileName": "Portfolio project.md",
+      "date": "2026-04-02T02:14:40.518Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a portfolio that:",
-          "**Grows with me** — add a project in Obsidian, it appears on my site",
-          "**Shows my process** — not just final results, but the journey",
-          "**Stays technical** — actual problems, actual solutions",
+          "- **Grows with me** — add a project in Obsidian, it appears on my site",
+          "- **Shows my process** — not just final results, but the journey",
+          "- **Stays technical** — actual problems, actual solutions",
           "The result? A **Next.js portfolio** powered by a **custom automation system** that converts my Obsidian notes into structured data, automatically updating my project showcase whenever I write a new note."
         ],
         "🧩 The Ecosystem": [
@@ -358,10 +366,10 @@ export const readmes = [
           ],
           "The Solution": [
             "I built a Node.js script that:",
-            "Reads every markdown file from my Obsidian folder",
-            "Parses the structure to identify sections and their content",
-            "Converts everything into a TypeScript object that my portfolio understands",
-            "Outputs a clean data file ready to import"
+            "- Reads every markdown file from my Obsidian folder",
+            "- Parses the structure to identify sections and their content",
+            "- Converts everything into a TypeScript object that my portfolio understands",
+            "- Outputs a clean data file ready to import"
           ],
           "How It Works": [
             "The script uses a markdown parser to analyze the structure of each note. It identifies headings, paragraphs, lists, and code blocks, then organizes them by section. This means I can write naturally in Obsidian — using whatever formatting makes sense for documentation — and the converter intelligently extracts the meaningful parts.",
@@ -369,10 +377,10 @@ export const readmes = [
           ],
           "The Automation Layer": [
             "To make this workflow seamless, I created a PowerShell script that acts as a control panel. From a simple menu, I can:",
-            "View all my existing project notes",
-            "Create a new project template with the correct structure",
-            "Run the conversion script to generate fresh data",
-            "Commit the updated data to my portfolio repository",
+            "- View all my existing project notes",
+            "- Create a new project template with the correct structure",
+            "- Run the conversion script to generate fresh data",
+            "- Commit the updated data to my portfolio repository",
             "This reduces what used to be a five-minute manual process (create note, copy sections, format HTML, update links, commit) to about thirty seconds of menu selections."
           ]
         },
@@ -386,10 +394,10 @@ export const readmes = [
           ],
           "GitHub Integration": [
             "Beyond the markdown content, I also pull real-time data from GitHub for each project. The portfolio displays:",
-            "Star count (if people have starred the repo)",
-            "Last commit date",
-            "Primary programming language",
-            "Direct links to repositories and live demos",
+            "- Star count (if people have starred the repo)",
+            "- Last commit date",
+            "- Primary programming language",
+            "- Direct links to repositories and live demos",
             "This adds a layer of authenticity — visitors can see that these are active, real-world projects with actual community engagement."
           ],
           "Animations and Polish": [
@@ -431,16 +439,16 @@ export const readmes = [
           "**Personal tools are worth building.** This system doesn't exist as a product. It's custom-built for my workflow, my folder structure, my way of writing. And that's exactly why it works so well."
         ],
         "📂 Repositories": [
-          "**readme-to-obj** — The Node.js converter that processes markdown files",
-          "**nextjs-portfolio** — The frontend that displays my work",
-          "**Live Portfolio** — See it in action"
+          "- **readme-to-obj** — The Node.js converter that processes markdown files",
+          "- **nextjs-portfolio** — The frontend that displays my work",
+          "- **Live Portfolio** — See it in action"
         ],
         "🔮 Future Improvements": [
           "I'm planning to add:",
-          "**Auto-sync** — watch for Obsidian file changes and trigger updates automatically",
-          "**Full-text search** — help visitors find projects by technology or topic",
-          "**Tags and categories** — organize projects beyond just listing them",
-          "**Image handling** — automatically convert and optimize images from Obsidian"
+          "- **Auto-sync** — watch for Obsidian file changes and trigger updates automatically",
+          "- **Full-text search** — help visitors find projects by technology or topic",
+          "- **Tags and categories** — organize projects beyond just listing them",
+          "- **Image handling** — automatically convert and optimize images from Obsidian"
         ],
         "📝 Final Thoughts": [
           "This project taught me that the best tools are the ones that disappear. My portfolio doesn't feel like a system — it just feels like my work, presented honestly and automatically.",
@@ -453,6 +461,7 @@ export const readmes = [
   {
     "id": 5,
     "repoId": "Todo app - kanban board",
+    "date": "2026-04-02T02:35:33.858Z",
     "title": "Todo App — Complete Task Management System",
     "description": "A full-featured task management application with Kanban board, spreadsheet-style table view, subtask hierarchy, bulk operations, recycle bin, and project organization.",
     "imageSrc": "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
@@ -504,16 +513,17 @@ export const readmes = [
     "readmeContent": {
       "title": "Todo App — Complete Task Management System",
       "fileName": "Todo app - kanban board.md",
+      "date": "2026-04-02T02:35:33.858Z",
       "sections": {
         "🎯 The Big Picture": [
           "I set out to build more than just a todo list. I wanted to create a **production-ready task management system** that could handle real-world complexity — multiple projects, subtasks, drag-and-drop, bulk operations, and a sophisticated recycling system.",
           "What started as a simple React app evolved into a comprehensive tool with:",
-          "**Two complete views**: Kanban board and spreadsheet-style table",
-          "**Project management**: Organize tasks across different projects",
-          "**Advanced task hierarchy**: Tasks with subtasks, deep nesting",
-          "**Complete lifecycle management**: Archive, restore, permanent delete",
-          "**Bulk operations**: Select, modify, or delete multiple tasks at once",
-          "**Rich date management**: Due dates, reminders with intelligent time selection"
+          "- **Two complete views**: Kanban board and spreadsheet-style table",
+          "- **Project management**: Organize tasks across different projects",
+          "- **Advanced task hierarchy**: Tasks with subtasks, deep nesting",
+          "- **Complete lifecycle management**: Archive, restore, permanent delete",
+          "- **Bulk operations**: Select, modify, or delete multiple tasks at once",
+          "- **Rich date management**: Due dates, reminders with intelligent time selection"
         ],
         "✨ What I Built": {
           "Core Features": [
@@ -531,89 +541,89 @@ export const readmes = [
         },
         "🛠️ Technology Stack": [
           "**Frontend**",
-          "React with TypeScript for type safety",
-          "Tailwind CSS for styling with custom theming",
-          "ShadCN/UI for accessible component primitives",
-          "date-fns for robust date handling",
-          "DnD Kit for drag-and-drop functionality",
-          "Zustand for state management",
+          "- React with TypeScript for type safety",
+          "- Tailwind CSS for styling with custom theming",
+          "- ShadCN/UI for accessible component primitives",
+          "- date-fns for robust date handling",
+          "- DnD Kit for drag-and-drop functionality",
+          "- Zustand for state management",
           "**Backend** (Separate repository)",
-          "Node.js with Express",
-          "PostgreSQL database",
-          "Docker for consistent development and deployment",
+          "- Node.js with Express",
+          "- PostgreSQL database",
+          "- Docker for consistent development and deployment",
           "**Testing & Quality**",
-          "End-to-end testing with Playwright",
-          "Comprehensive unit tests",
-          "ESLint and Prettier for code quality"
+          "- End-to-end testing with Playwright",
+          "- Comprehensive unit tests",
+          "- ESLint and Prettier for code quality"
         ],
         "🧠 The Real Story — Challenges I Solved": {
           "1. ": [
             "The biggest challenge was handling the parent-child relationship between tasks and subtasks. When you:",
-            "Delete a parent task — do subtasks get deleted too?",
-            "Move a parent to another project — do subtasks follow?",
-            "Bulk select a mix of parents and children — how do operations behave?",
+            "- Delete a parent task — do subtasks get deleted too?",
+            "- Move a parent to another project — do subtasks follow?",
+            "- Bulk select a mix of parents and children — how do operations behave?",
             "I built a system that respects hierarchy while giving users control. Dialogs ask the right questions:",
-            "\"Delete parent only and convert subtasks to main tasks?\"",
-            "\"Move parent and all subtasks to new project?\"",
-            "\"Delete selected subtasks while preserving their parent?\""
+            "- \"Delete parent only and convert subtasks to main tasks?\"",
+            "- \"Move parent and all subtasks to new project?\"",
+            "- \"Delete selected subtasks while preserving their parent?\""
           ],
           "2. ": [
             "The kanban board needed to handle hundreds of tasks across multiple columns without performance issues. I implemented:",
-            "Optimized re-rendering with proper memoization",
-            "Smooth animations that don't interfere with drag operations",
-            "Visual feedback with drop indicators and preview elements",
-            "Support for both desktop drag-and-drop and touch devices",
+            "- Optimized re-rendering with proper memoization",
+            "- Smooth animations that don't interfere with drag operations",
+            "- Visual feedback with drop indicators and preview elements",
+            "- Support for both desktop drag-and-drop and touch devices",
             "The biggest win? Making drag-and-drop work seamlessly while the board is sorted (not in manual mode) or when columns are collapsed."
           ],
           "3. ": [
             "Selecting 50+ tasks and changing their status should feel instant. I built:",
-            "Background processing with loading states",
-            "Toast notifications showing progress",
-            "Smart selection logic that respects filters and grouping",
-            "Optimistic updates that revert on failure",
+            "- Background processing with loading states",
+            "- Toast notifications showing progress",
+            "- Smart selection logic that respects filters and grouping",
+            "- Optimistic updates that revert on failure",
             "The tricky part was handling edge cases — what happens when you bulk delete a mix of parents and children? The solution involved analyzing selections and presenting clear options before executing."
           ],
           "4. ": [
             "The table view needed to be as powerful as a spreadsheet:",
-            "Resizable columns with visual indicators during resize",
-            "Sortable columns (ascending/descending) that work across all data types",
-            "Fixed headers that scroll with the table",
-            "Horizontal scroll for when columns exceed viewport width",
-            "Responsive behavior that adapts to mobile",
+            "- Resizable columns with visual indicators during resize",
+            "- Sortable columns (ascending/descending) that work across all data types",
+            "- Fixed headers that scroll with the table",
+            "- Horizontal scroll for when columns exceed viewport width",
+            "- Responsive behavior that adapts to mobile",
             "The responsive version collapses into cards while maintaining all functionality — a significant UI/UX challenge that required rethinking the component structure."
           ],
           "5. ": [
             "Deleting tasks shouldn't be permanent. I built a complete recycling system:",
-            "Soft delete moves tasks to trash instead of removing from database",
-            "Restore operations preserve hierarchy (restore parent, get all subtasks back)",
-            "Permanent delete with warnings for tasks that have subtasks",
-            "Search and filter within trash",
-            "Batch restore and delete operations",
+            "- Soft delete moves tasks to trash instead of removing from database",
+            "- Restore operations preserve hierarchy (restore parent, get all subtasks back)",
+            "- Permanent delete with warnings for tasks that have subtasks",
+            "- Search and filter within trash",
+            "- Batch restore and delete operations",
             "This required careful database design with deleted_at timestamps and ensuring cascade operations respected the soft delete pattern."
           ],
           "6. ": [
             "The app needed to work beautifully on phones, tablets, and desktops. I implemented:",
-            "Tooltips on desktop, drawers on mobile for date pickers",
-            "Collapsed views that show only essential information on small screens",
-            "Touch-friendly drag-and-drop with larger hit areas",
-            "Bottom sheets for bulk actions instead of dropdowns",
-            "Responsive tables that convert to card layouts on mobile",
+            "- Tooltips on desktop, drawers on mobile for date pickers",
+            "- Collapsed views that show only essential information on small screens",
+            "- Touch-friendly drag-and-drop with larger hit areas",
+            "- Bottom sheets for bulk actions instead of dropdowns",
+            "- Responsive tables that convert to card layouts on mobile",
             "The result is an app that feels native on any device."
           ],
           "7. ": [
             "Search needed to find tasks AND subtasks, then show them in context. When you search for a subtask:",
-            "The parent task expands automatically",
-            "Matching subtasks are highlighted",
-            "Search results show counts and clear indicators",
+            "- The parent task expands automatically",
+            "- Matching subtasks are highlighted",
+            "- Search results show counts and clear indicators",
             "This required coordinating state across components and ensuring the UI updates without losing scroll position or user context."
           ],
           "8. ": [
             "With hundreds of tasks and subtasks, performance became critical. I optimized:",
-            "Virtual scrolling for large lists",
-            "Memoized components to prevent unnecessary re-renders",
-            "Debounced search inputs",
-            "Optimistic updates for instant UI feedback",
-            "Batch database operations for bulk actions",
+            "- Virtual scrolling for large lists",
+            "- Memoized components to prevent unnecessary re-renders",
+            "- Debounced search inputs",
+            "- Optimistic updates for instant UI feedback",
+            "- Batch database operations for bulk actions",
             "The app now handles 1000+ tasks without noticeable lag."
           ]
         },
@@ -636,13 +646,13 @@ export const readmes = [
         },
         "📈 The Road Ahead": [
           "I'm continuing to improve the app with:",
-          "**Authentication** — User accounts with personal data",
-          "**Real-time collaboration** — Multiple users working on the same board",
-          "**Advanced notifications** — Email reminders for due dates",
-          "**Analytics dashboard** — Charts showing productivity trends",
-          "**Pomodoro timer** — Integrated focus sessions",
-          "**AI integration** — Smart task suggestions and natural language task creation",
-          "**Mobile apps** — React Native version for iOS and Android"
+          "- **Authentication** — User accounts with personal data",
+          "- **Real-time collaboration** — Multiple users working on the same board",
+          "- **Advanced notifications** — Email reminders for due dates",
+          "- **Analytics dashboard** — Charts showing productivity trends",
+          "- **Pomodoro timer** — Integrated focus sessions",
+          "- **AI integration** — Smart task suggestions and natural language task creation",
+          "- **Mobile apps** — React Native version for iOS and Android"
         ],
         "💡 Final Thoughts": [
           "This project taught me that simple ideas become complex systems when you care about details. A todo list is trivial. A **task management system that people actually want to use** requires thinking about every interaction, every edge case, and every performance bottleneck.",
@@ -654,6 +664,7 @@ export const readmes = [
   {
     "id": 6,
     "repoId": "Utility Tools Collection – Data Migration & Media Conversion",
+    "date": "2026-04-01T17:00:50.542Z",
     "title": "Utility Tools Collection – Data Migration & Media Conversion",
     "description": "A collection of Python CLI tools: migrate Omnivore bookmarks to Raindrop.io, convert PDFs to CBR format for digital comics, and download YouTube audio as high-quality MP3.",
     "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
@@ -694,13 +705,14 @@ export const readmes = [
     "readmeContent": {
       "title": "Utility Tools Collection – Data Migration & Media Conversion",
       "fileName": "Utility Tools Collection – Data Migration & Media Conversion.md",
+      "date": "2026-04-01T17:00:50.542Z",
       "sections": {
         "📦 Project 1: Omnivore → Raindrop.io Migration Tool": {
           "✨ Key features": [
-            "**Batch processing** – Handles multiple JSON files matching a filename pattern",
-            "**UTF-8 encoding** – Preserves special characters and non-English text",
-            "**Complete metadata migration** – Preserves URLs, titles, tags, notes, and creation dates",
-            "**Error resilience** – Continues processing remaining files if one fails"
+            "- **Batch processing** – Handles multiple JSON files matching a filename pattern",
+            "- **UTF-8 encoding** – Preserves special characters and non-English text",
+            "- **Complete metadata migration** – Preserves URLs, titles, tags, notes, and creation dates",
+            "- **Error resilience** – Continues processing remaining files if one fails"
           ],
           "🛠️ Tech stack": [
             "| Technology | Purpose |\n|-----------|---------|\n| Python 3 | Core scripting language |\n| JSON | Parsing exported data |\n| CSV | Output format for Raindrop.io import |"
@@ -719,10 +731,10 @@ export const readmes = [
         },
         "📚 Project 2: PDF to CBR Converter": {
           "✨ Key features": [
-            "**One‑command conversion** – Simple CLI interface",
-            "**Customizable output** – Adjustable DPI and JPEG quality",
-            "**Preserves page order** – Pages maintain original sequence",
-            "**Efficient compression** – Optimized for comic reading devices"
+            "- **One‑command conversion** – Simple CLI interface",
+            "- **Customizable output** – Adjustable DPI and JPEG quality",
+            "- **Preserves page order** – Pages maintain original sequence",
+            "- **Efficient compression** – Optimized for comic reading devices"
           ],
           "🛠️ Tech stack": [
             "| Technology | Purpose |\n|-----------|---------|\n| Python 3.7+ | Core scripting language |\n| pdf2image | PDF page extraction |\n| Pillow | Image processing |\n| RAR/zipfile | Archive creation |\n| Poppler | PDF rendering backend |"
@@ -749,10 +761,10 @@ export const readmes = [
         },
         "🎵 Project 3: YouTube MP3 Downloader": {
           "✨ Key features": [
-            "**Batch processing** – Accepts multiple video URLs at once",
-            "**High‑quality audio** – Downloads best available format and converts to 320kbps MP3",
-            "**Filename sanitization** – Automatically removes invalid characters for cross‑platform compatibility",
-            "**Organized output** – Files saved in a dedicated `output` folder"
+            "- **Batch processing** – Accepts multiple video URLs at once",
+            "- **High‑quality audio** – Downloads best available format and converts to 320kbps MP3",
+            "- **Filename sanitization** – Automatically removes invalid characters for cross‑platform compatibility",
+            "- **Organized output** – Files saved in a dedicated `output` folder"
           ],
           "🛠️ Tech stack": [
             "| Technology | Purpose |\n|-----------|---------|\n| Python 3 | Core scripting language |\n| yt-dlp | YouTube video/audio extraction |\n| ffmpeg | Audio conversion and encoding |"
@@ -771,21 +783,21 @@ export const readmes = [
         },
         "🚀 Why I built these tools": [
           "Each of these projects represents a practical response to a specific user need:",
-          "**Omnivore Converter** – Helped users preserve their reading history before a service shutdown",
-          "**PDF to CBR** – Solved a niche but common pain point for digital comic readers",
-          "**YouTube MP3 Downloader** – Automated a repetitive task with a simple, clean interface",
+          "- **Omnivore Converter** – Helped users preserve their reading history before a service shutdown",
+          "- **PDF to CBR** – Solved a niche but common pain point for digital comic readers",
+          "- **YouTube MP3 Downloader** – Automated a repetitive task with a simple, clean interface",
           "These tools share a common philosophy: **solve a real problem with minimal complexity, clear documentation, and robust error handling.**"
         ],
         "🔧 Common technical themes": [
-          "**Command‑line first** – Designed for automation and scriptability",
-          "**Cross‑platform** – Works on Windows, macOS, and Linux",
-          "**Educational value** – Clear code structure and documentation for learning",
-          "**User‑focused** – Handles edge cases and provides meaningful feedback"
+          "- **Command‑line first** – Designed for automation and scriptability",
+          "- **Cross‑platform** – Works on Windows, macOS, and Linux",
+          "- **Educational value** – Clear code structure and documentation for learning",
+          "- **User‑focused** – Handles edge cases and provides meaningful feedback"
         ],
         "📎 Links": [
-          "🔄 [Omnivore to Raindrop Converter]((https://github.com/deveduar/omnivore-to-raindrop)",
-          "📚 [PDF to CBR Converter](https://github.com/deveduar/pdf-to-cbr.git)",
-          "🎵 [YouTube MP3 Downloader](https://github.com/deveduar/you-mp3-python)"
+          "- 🔄 [Omnivore to Raindrop Converter]((https://github.com/deveduar/omnivore-to-raindrop)",
+          "- 📚 [PDF to CBR Converter](https://github.com/deveduar/pdf-to-cbr.git)",
+          "- 🎵 [YouTube MP3 Downloader](https://github.com/deveduar/you-mp3-python)"
         ]
       }
     }
