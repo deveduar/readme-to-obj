@@ -35,6 +35,7 @@ async function updateReadmes() {
     }
 
     const markdown = fs.readFileSync(filePath, "utf-8");
+    const fileStats = fs.statSync(filePath);
     if (!markdown.trim()) {
       console.warn(`⚠️ El archivo está vacío: ${fileName}`);
       continue;
@@ -42,14 +43,17 @@ async function updateReadmes() {
 
     const { projectData, sections } = extractSections(markdown);
     const repoId = path.basename(fileName, ".md");
+    const resolvedDate = projectData.date || fileStats.mtime.toISOString();
 
     readmes.push({
       id: index + 1,
       repoId,
+      date: resolvedDate,
       ...projectData,
       readmeContent: {
         title: projectData.title || repoId,
         fileName,
+        date: resolvedDate,
         sections
       }
     });

@@ -3,6 +3,7 @@ import { Code, Link, LinkReference, PhrasingContent } from "mdast";
 export interface ProjectData {
   title: string;
   description: string;
+  date?: string;
   imageSrc?: string;
   technologies: string[];
   links: {
@@ -17,6 +18,7 @@ export interface ProjectData {
 export interface ReadmeContent {
   title: string;
   fileName: string;
+  date: string;
   sections: {
     [key: string]: {
       [key: string]: (string | CodeData | LinkData)[];
@@ -27,6 +29,7 @@ export interface ReadmeContent {
 export interface Readme {
   id: number;
   repoId: string;
+  date: string;
   projectData: ProjectData;
   readmeContent: ReadmeContent;
 }
