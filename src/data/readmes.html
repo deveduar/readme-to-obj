@@ -47,48 +47,39 @@
             </ul>
           </li>
           <li>
-            <a href="#3">My Portfolio</a>
+            <a href="#3">How I Built a Self-Updating Portfolio with Next.js + Obsidian</a>
             <ul>
-              <li><a href="#3--features">🌟 Features</a></li>
-              <li><a href="#3--tech-stack">🛠️ Tech Stack</a></li>
-              <li><a href="#3--getting-started">🚀 Getting Started</a></li>
-              <li><a href="#3--live-demo">🔗 Live Demo</a></li>
-              <li><a href="#3--future-improvements">📌 Future Improvements</a></li>
-              <li><a href="#3--contact">📞 Contact</a></li>
-              <li><a href="#3--license">📝 License</a></li>
+              <li><a href="#3--the-big-picture">🎯 The Big Picture</a></li>
+              <li><a href="#3--the-ecosystem">🧩 The Ecosystem</a></li>
+              <li><a href="#3--part-1-readme-to-object-converter">📝 Part 1: README to Object Converter</a></li>
+              <li><a href="#3--part-2-next-js-portfolio">🎨 Part 2: Next.js Portfolio</a></li>
+              <li><a href="#3--the-complete-workflow">🔄 The Complete Workflow</a></li>
+              <li><a href="#3--why-this-matters">💡 Why This Matters</a></li>
+              <li><a href="#3--the-tech-stack">🛠️ The Tech Stack</a></li>
+              <li><a href="#3--what-i-learned">🚀 What I Learned</a></li>
+              <li><a href="#3--repositories">📂 Repositories</a></li>
+              <li><a href="#3--future-improvements">🔮 Future Improvements</a></li>
+              <li><a href="#3--final-thoughts">📝 Final Thoughts</a></li>
             </ul>
           </li>
           <li>
-            <a href="#4">README to Object Converter</a>
+            <a href="#4">Todo app</a>
             <ul>
-              <li><a href="#4-description">Description</a></li>
-              <li><a href="#4-features">Features</a></li>
-              <li><a href="#4-installation">Installation</a></li>
-              <li><a href="#4-usage">Usage</a></li>
-              <li><a href="#4-customization">Customization</a></li>
-              <li><a href="#4-libraries-used">Libraries Used</a></li>
-              <li><a href="#4-node-js-and-typescript-version-requirements">Node.js and TypeScript Version Requirements</a></li>
-              <li><a href="#4-license">License</a></li>
+              <li><a href="#4--features">✨ Features</a></li>
+              <li><a href="#4--technologies-used">🛠️ Technologies Used</a></li>
+              <li><a href="#4--installation">🚀 Installation</a></li>
+              <li><a href="#4--roadmap">📌 Roadmap</a></li>
             </ul>
           </li>
           <li>
-            <a href="#5">Todo app</a>
+            <a href="#5">Utility Tools Collection – Data Migration & Media Conversion</a>
             <ul>
-              <li><a href="#5--features">✨ Features</a></li>
-              <li><a href="#5--technologies-used">🛠️ Technologies Used</a></li>
-              <li><a href="#5--installation">🚀 Installation</a></li>
-              <li><a href="#5--roadmap">📌 Roadmap</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#6">Utility Tools Collection – Data Migration & Media Conversion</a>
-            <ul>
-              <li><a href="#6--project-1-omnivore-raindrop-io-migration-tool">📦 Project 1: Omnivore → Raindrop.io Migration Tool</a></li>
-              <li><a href="#6--project-2-pdf-to-cbr-converter">📚 Project 2: PDF to CBR Converter</a></li>
-              <li><a href="#6--project-3-youtube-mp3-downloader">🎵 Project 3: YouTube MP3 Downloader</a></li>
-              <li><a href="#6--why-i-built-these-tools">🚀 Why I built these tools</a></li>
-              <li><a href="#6--common-technical-themes">🔧 Common technical themes</a></li>
-              <li><a href="#6--links">📎 Links</a></li>
+              <li><a href="#5--project-1-omnivore-raindrop-io-migration-tool">📦 Project 1: Omnivore → Raindrop.io Migration Tool</a></li>
+              <li><a href="#5--project-2-pdf-to-cbr-converter">📚 Project 2: PDF to CBR Converter</a></li>
+              <li><a href="#5--project-3-youtube-mp3-downloader">🎵 Project 3: YouTube MP3 Downloader</a></li>
+              <li><a href="#5--why-i-built-these-tools">🚀 Why I built these tools</a></li>
+              <li><a href="#5--common-technical-themes">🔧 Common technical themes</a></li>
+              <li><a href="#5--links">📎 Links</a></li>
             </ul>
           </li>
         </ul>
@@ -162,80 +153,53 @@ Used spread operator `...product` to avoid cloning issues and keep change detect
           <section id="2--limitations-of-the-network-measurement-system" class="readme-section">
             <h2 class="section-title">⚠️ Limitations of the Network Measurement System</h2><h3 class="subsection-title">1. </h3><p class="section-text">The system measures network latency using `HEAD` requests to various remote endpoints. These requests may not provide an accurate measurement of actual latency as results can be influenced by external factors like server load, user network, and internet propagation delays.</p><p class="section-text">The selected endpoints for ping measurement include popular services like Google, Cloudflare, Microsoft, Amazon, and Apple. If any of these services experience issues or downtime, the ping measurement may not be accurate or could fail.</p><h3 class="subsection-title">2. </h3><p class="section-text">Jitter is calculated based on the time difference between consecutive ping measurements. If there is a large variation in response times between pings, this may affect the results.</p><p class="section-text">Jitter can be influenced by changes in the network, traffic fluctuations, and other variability outside the system's control.</p><h3 class="subsection-title">3. </h3><p class="section-text">If a ping request fails (e.g., due to a network issue or server unavailability), it is counted as packet loss.</p><p class="section-text">The system does not directly measure packet loss but estimates it based on the successful and failed pings.</p><h3 class="subsection-title">4. </h3><p class="section-text">Measurements are only performed towards selected remote servers, meaning they do not reflect latency or network quality between local devices or within a local network.</p><p class="section-text">Measurement accuracy could improve if local endpoints or specific servers were added depending on the use case.</p><h3 class="subsection-title">5. </h3><p class="section-text">The measurement results can be affected by local network congestion or temporary internet connection issues. Ping, jitter, and packet loss metrics may vary significantly depending on network stability.</p><p class="section-text">The system does not provide detailed information about specific network issues (e.g., local bottlenecks or intermittent routing problems).</p><h3 class="subsection-title">6. </h3><p class="section-text">Measurement requests use the `no-cors` mode to avoid CORS-related issues, which limits the type of responses that can be received. This means that detailed server response metrics, such as header response time, are not available and only the round-trip time for the request is measured.</p><h3 class="subsection-title">7. </h3><p class="section-text">The system performs measurements at 2-second intervals. If there is a network interruption or the server does not respond within this interval, an error or an increase in packet loss might be recorded.</p></section></article>
         <article id="3" class="readme">
-          <h2 class="readme-title">My Portfolio</h2>
-          <section id="3--features" class="readme-section">
-            <h2 class="section-title">🌟 Features</h2><p class="section-text">✅ **Modern UI/UX** – Bento-grid layout with smooth animations.</p><p class="section-text">✅ **Project showcase** – Integrated with a GitHub repository to fetch project details from READMEs.</p><p class="section-text">✅ **Optimized performance** – Uses `next/image` for fast loading.</p><p class="section-text">✅ **AOS Animations** – Smooth scrolling animations for a dynamic experience.</p><p class="section-text">✅ **Static site** – No longer a SPA, improved SEO and performance.</p><p class="section-text">✅ **Dark Mode** – Supports light and dark themes.</p><p class="section-text">✅ **Fully Responsive** – Works seamlessly on all devices.</p><p class="section-text">✅ **Deployed on Vercel** – Fast and reliable hosting.</p></section>
-          <section id="3--tech-stack" class="readme-section">
-            <h2 class="section-title">🛠️ Tech Stack</h2><p class="section-text">**Next.js 14** – App router & server components</p><p class="section-text">**TypeScript** – Strongly typed codebase</p><p class="section-text">**Tailwind CSS** – Utility-first styling</p><p class="section-text">**AOS (Animate on Scroll)** – Smooth animations</p><p class="section-text">**GitHub API** – Fetch project details dynamically</p><p class="section-text">**Vercel** – Deployment and hosting</p></section>
-          <section id="3--getting-started" class="readme-section">
-            <h2 class="section-title">🚀 Getting Started</h2><h3 class="subsection-title">1️⃣ Clone the repository</h3><pre><code class="language-bash">git clone https://github.com/deveduar/nextjs-portfolio.git
-cd nextjs-portfolio</code></pre><h3 class="subsection-title">2️⃣ Install dependencies</h3><pre><code class="language-bash">npm install
-# or
-yarn install</code></pre><h3 class="subsection-title">3️⃣ Run the development server</h3><pre><code class="language-bash">npm run dev
-# or
-yarn dev</code></pre><p class="section-text">Open **[http://localhost:3000](http://localhost:3000)** to view in the browser.</p></section>
-          <section id="3--live-demo" class="readme-section">
-            <h2 class="section-title">🔗 Live Demo</h2><p class="section-text">🔴 **Check it out live:** [deveduar-portfolio.vercel.app](https://deveduar-portfolio.vercel.app/)</p></section>
+          <h2 class="readme-title">How I Built a Self-Updating Portfolio with Next.js + Obsidian</h2>
+          <section id="3--the-big-picture" class="readme-section">
+            <h2 class="section-title">🎯 The Big Picture</h2><p class="section-text">I wanted a portfolio that:</p><p class="section-text">**Grows with me** — add a project in Obsidian, it appears on my site</p><p class="section-text">**Shows my process** — not just final results, but the journey</p><p class="section-text">**Stays technical** — actual problems, actual solutions</p><p class="section-text">The result? A **Next.js portfolio** powered by a **custom automation system** that converts my Obsidian notes into structured data, automatically updating my project showcase whenever I write a new note.</p></section>
+          <section id="3--the-ecosystem" class="readme-section">
+            <h2 class="section-title">🧩 The Ecosystem</h2><p class="section-text">The system connects three main pieces:</p><p class="section-text">**Obsidian Vault** → Where I write all my project documentation, technical notes, and personal learnings in markdown format.</p><p class="section-text">**Node.js Converter** → A custom script that reads all my markdown files, parses them intelligently, and transforms them into a clean, structured JavaScript object.</p><p class="section-text">**Next.js Portfolio** → The frontend that consumes this data and presents it as a beautiful, interactive bento-grid layout with smooth animations.</p><p class="section-text">The magic is that everything flows automatically — I write once, and my portfolio updates itself.</p></section>
+          <section id="3--part-1-readme-to-object-converter" class="readme-section">
+            <h2 class="section-title">📝 Part 1: README to Object Converter</h2><h3 class="subsection-title">The Problem</h3><p class="section-text">I document every project I build in Obsidian. Each note contains sections like Overview, Tech Stack, Challenges, Features, and Future Plans. But my portfolio needed structured data, not raw markdown with formatting and special syntax.</p><p class="section-text">Manually copying and reformatting content for each project was tedious and error-prone. I wanted a way to keep my source of truth (Obsidian) and my public-facing portfolio in sync without duplicating work.</p><h3 class="subsection-title">The Solution</h3><p class="section-text">I built a Node.js script that:</p><p class="section-text">Reads every markdown file from my Obsidian folder</p><p class="section-text">Parses the structure to identify sections and their content</p><p class="section-text">Converts everything into a TypeScript object that my portfolio understands</p><p class="section-text">Outputs a clean data file ready to import</p><h3 class="subsection-title">How It Works</h3><p class="section-text">The script uses a markdown parser to analyze the structure of each note. It identifies headings, paragraphs, lists, and code blocks, then organizes them by section. This means I can write naturally in Obsidian — using whatever formatting makes sense for documentation — and the converter intelligently extracts the meaningful parts.</p><p class="section-text">If I add a new section to a project note, it automatically appears in the portfolio. If I edit existing content, the portfolio reflects the changes on the next build.</p><h3 class="subsection-title">The Automation Layer</h3><p class="section-text">To make this workflow seamless, I created a PowerShell script that acts as a control panel. From a simple menu, I can:</p><p class="section-text">View all my existing project notes</p><p class="section-text">Create a new project template with the correct structure</p><p class="section-text">Run the conversion script to generate fresh data</p><p class="section-text">Commit the updated data to my portfolio repository</p><p class="section-text">This reduces what used to be a five-minute manual process (create note, copy sections, format HTML, update links, commit) to about thirty seconds of menu selections.</p></section>
+          <section id="3--part-2-next-js-portfolio" class="readme-section">
+            <h2 class="section-title">🎨 Part 2: Next.js Portfolio</h2><h3 class="subsection-title">The Architecture</h3><p class="section-text">My portfolio is built with Next.js 14 using the App Router and server components. This gives me static site generation for fast loading and SEO benefits, while keeping the ability to fetch dynamic data when needed.</p><p class="section-text">The design follows a bento-grid layout — clean, modern, and responsive. Each project appears as a card with key information, and clicking through shows the full documentation extracted from my Obsidian notes.</p><h3 class="subsection-title">The Data Flow</h3><p class="section-text">At build time, Next.js imports the generated data file created by my converter. For each project in my Obsidian vault, it pre-renders a dedicated page with all the sections and content. This means visitors get instant load times, and search engines can crawl all my project content easily.</p><h3 class="subsection-title">GitHub Integration</h3><p class="section-text">Beyond the markdown content, I also pull real-time data from GitHub for each project. The portfolio displays:</p><p class="section-text">Star count (if people have starred the repo)</p><p class="section-text">Last commit date</p><p class="section-text">Primary programming language</p><p class="section-text">Direct links to repositories and live demos</p><p class="section-text">This adds a layer of authenticity — visitors can see that these are active, real-world projects with actual community engagement.</p><h3 class="subsection-title">Animations and Polish</h3><p class="section-text">I added smooth scroll animations using a lightweight library, so elements fade in and slide up as you browse. The site is fully responsive, works on any device, and includes dark mode support for comfortable viewing at night.</p></section>
+          <section id="3--the-complete-workflow" class="readme-section">
+            <h2 class="section-title">🔄 The Complete Workflow</h2><h3 class="subsection-title">1. Write in Obsidian</h3><p class="section-text">I open Obsidian and create a new note. I follow a loose template: an overview paragraph, a tech stack list, the challenges I faced, and future improvements. I write naturally — no special syntax, no formatting constraints.</p><h3 class="subsection-title">2. Run the Automation</h3><p class="section-text">From my PowerShell menu, I select "add new project" and enter the project name. The script creates a properly formatted markdown file in my Obsidian folder if it doesn't exist.</p><p class="section-text">Then I select "convert to data" — this runs the Node script that parses all my notes and generates the fresh data file.</p><p class="section-text">Finally, I select "commit and deploy" — the script commits the changes and pushes to GitHub.</p><h3 class="subsection-title">3. Automatic Deployment</h3><p class="section-text">Vercel detects the push to my main branch and automatically rebuilds the portfolio. Within minutes, the new project appears on my live site.</p><p class="section-text">**No manual HTML editing. No copy-pasting. No broken links. Just writing and running a few commands.**</p></section>
+          <section id="3--why-this-matters" class="readme-section">
+            <h2 class="section-title">💡 Why This Matters</h2><h3 class="subsection-title">For My Productivity</h3><p class="section-text">This system eliminated a repetitive task I used to dread. Before, updating my portfolio meant opening two applications, copying content, reformatting for the web, updating links, and hoping I didn't miss anything. Now I stay in my writing flow, and everything else happens automatically.</p><h3 class="subsection-title">For My Portfolio Visitors</h3><p class="section-text">Visitors get comprehensive project documentation written when the project was fresh in my mind, not weeks later when I'm forcing myself to update the site. They see the real challenges, the actual technologies, and the honest mistakes — not a polished, sanitized version.</p><h3 class="subsection-title">For My Learning</h3><p class="section-text">Documenting projects in Obsidian has become part of my development process. When I finish a feature, I jot down what worked and what didn't. When I solve a tricky bug, I capture the solution. These notes become the raw material for my portfolio, making the documentation feel organic rather than an afterthought.</p></section>
+          <section id="3--the-tech-stack" class="readme-section">
+            <h2 class="section-title">🛠️ The Tech Stack</h2><p class="section-text">| Component | Technology |
+|-----------|------------|
+| **Content Authoring** | Obsidian (markdown) |
+| **Conversion Script** | Node.js + TypeScript |
+| **Markdown Parsing** | Remark ecosystem |
+| **Workflow Automation** | PowerShell |
+| **Portfolio Framework** | Next.js 14 |
+| **Styling** | Tailwind CSS |
+| **Animations** | AOS (Animate on Scroll) |
+| **API Integration** | GitHub REST API |
+| **Hosting** | Vercel |</p></section>
+          <section id="3--what-i-learned" class="readme-section">
+            <h2 class="section-title">🚀 What I Learned</h2><p class="section-text">**Automation compounds.** The time I invested in building this workflow paid back many times over in saved manual effort. More importantly, it removed friction — I'm more likely to document projects now because the cost is so low.</p><p class="section-text">**Your source of truth matters.** Keeping all my project documentation in Obsidian means I have a single place to look for notes, ideas, and technical details. The portfolio is just a view into that database.</p><p class="section-text">**Static sites can be dynamic.** By generating pages at build time from a data source, I get the performance of static sites with the flexibility of a content management system — without actually running a CMS.</p><p class="section-text">**Personal tools are worth building.** This system doesn't exist as a product. It's custom-built for my workflow, my folder structure, my way of writing. And that's exactly why it works so well.</p></section>
+          <section id="3--repositories" class="readme-section">
+            <h2 class="section-title">📂 Repositories</h2><p class="section-text">**readme-to-obj** — The Node.js converter that processes markdown files</p><p class="section-text">**nextjs-portfolio** — The frontend that displays my work</p><p class="section-text">**Live Portfolio** — See it in action</p></section>
           <section id="3--future-improvements" class="readme-section">
-            <h2 class="section-title">📌 Future Improvements</h2><p class="section-text">📌 Enhance filtering and search for projects.</p><p class="section-text">📌 Improve accessibility and mobile gestures.</p><p class="section-text">📌 Expand GitHub integration with more metadata.</p></section>
-          <section id="3--contact" class="readme-section">
-            <h2 class="section-title">📞 Contact</h2><p class="section-text">If you have any questions or feedback, feel free to reach out!</p></section>
-          <section id="3--license" class="readme-section">
-            <h2 class="section-title">📝 License</h2><p class="section-text">This project is **MIT licensed**. Feel free to use and modify it!</p></section></article>
+            <h2 class="section-title">🔮 Future Improvements</h2><p class="section-text">I'm planning to add:</p><p class="section-text">**Auto-sync** — watch for Obsidian file changes and trigger updates automatically</p><p class="section-text">**Full-text search** — help visitors find projects by technology or topic</p><p class="section-text">**Tags and categories** — organize projects beyond just listing them</p><p class="section-text">**Image handling** — automatically convert and optimize images from Obsidian</p></section>
+          <section id="3--final-thoughts" class="readme-section">
+            <h2 class="section-title">📝 Final Thoughts</h2><p class="section-text">This project taught me that the best tools are the ones that disappear. My portfolio doesn't feel like a system — it just feels like my work, presented honestly and automatically.</p><p class="section-text">If you're tired of manually updating your portfolio or blog, consider building your own pipeline. Start with where your notes already live, add automation where you feel friction, and let the system handle the rest.</p><p class="section-text">**Built with 🖊️ Obsidian, ⚛️ Next.js, and the desire to never copy-paste again**— [deveduar](https://github.com/deveduar)</p></section></article>
         <article id="4" class="readme">
-          <h2 class="readme-title">README to Object Converter</h2>
-          <section id="4-description" class="readme-section">
-            <h2 class="section-title">Description</h2><p class="section-text">The project downloads `README.md` files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a `.ts` file for later use. Additionally, it generates an HTML view for each README to visualize its content directly in the browser.</p></section>
-          <section id="4-features" class="readme-section">
-            <h2 class="section-title">Features</h2><p class="section-text">Downloads `README.md` files from public GitHub repositories.</p><p class="section-text">Automatically extracts sections from the Markdown file.</p><p class="section-text">Converts sections into a structured object.</p><p class="section-text">Saves the result in a `.ts` file for easy integration with TypeScript projects.</p><p class="section-text">You can customize which repositories to download the README from.</p><p class="section-text">**HTML Generation**: Generates HTML to visualize the README files directly in the browser.</p></section>
-          <section id="4-installation" class="readme-section">
-            <h2 class="section-title">Installation</h2><p class="section-text">Clone this repository:</p><p class="section-text">Install the dependencies:</p></section>
-          <section id="4-usage" class="readme-section">
-            <h2 class="section-title">Usage</h2><h3 class="subsection-title">1. Run the Conversion Script</h3><p class="section-text">The `updateReadmes.ts` script is responsible for downloading and converting the `README.md` files from the specified repositories. To run the script, use the following command:</p><pre><code class="language-bash">npm run update-readmes</code></pre><p class="section-text">This will download the `README.md` files, extract the sections, and save the resulting object in `src/data/readmes.ts`.</p><h3 class="subsection-title">2. View the HTML</h3><p class="section-text">After running the script, you can also generate an HTML view of each README file by running the following:</p><pre><code class="language-bash">npm run generate-html</code></pre><p class="section-text">This will create an HTML page for each README file that can be viewed directly in a browser.</p><h3 class="subsection-title">3. Example Output</h3><p class="section-text">After running the script, the `readmes.ts` file will contain something like this:</p><pre><code class="language-ts">export const readmes = {
-  "portfolio": {
-    title: "My Portfolio",
-    sections: {
-      "Introduction": "This is my portfolio...",
-      "Technologies": "React, Node.js, etc.",
-      // ...
-    }
-  },
-  "todo-app": {
-    title: "Todo App",
-    sections: {
-      "Features": "Task management...",
-      "Setup": "To install...",
-      // ...
-    }
-  }
-}</code></pre><p class="section-text">The HTML output will be available in the `dist` folder.</p><h3 class="subsection-title">4. Include the Data in Your Project</h3><p class="section-text">You can import the `readmes` object into your code:</p><pre><code class="language-ts">import { readmes } from './data/readmes';
-
-console.log(readmes['portfolio']);</code></pre></section>
-          <section id="4-customization" class="readme-section">
-            <h2 class="section-title">Customization</h2><p class="section-text">You can modify the list of repositories in the `src/scripts/updateReadmes.ts` file by adding or removing repositories. The repository structure is as follows:</p><pre><code class="language-ts">const repos = [
-  { id: "repo_id", url: "https://raw.githubusercontent.com/user/repo/main/README.md" },
-  // ...
-];</code></pre></section>
-          <section id="4-libraries-used" class="readme-section">
-            <h2 class="section-title">Libraries Used</h2><p class="section-text">This project uses the following libraries:</p><p class="section-text">**[remark](https://github.com/remarkjs/remark)** - A Markdown processor for parsing and transforming Markdown.</p><p class="section-text">**[remark-parse](https://github.com/remarkjs/remark/tree/main/packages/remark-parse)** - A plugin for remark to parse Markdown into an abstract syntax tree (AST).</p><p class="section-text">**[typescript](https://www.typescriptlang.org/)** - A strict syntactical superset of JavaScript that adds optional static typing.</p><p class="section-text">**[@types/node](https://www.npmjs.com/package/@types/node)** - TypeScript type definitions for Node.js.</p></section>
-          <section id="4-node-js-and-typescript-version-requirements" class="readme-section">
-            <h2 class="section-title">Node.js and TypeScript Version Requirements</h2><p class="section-text">Node.js version: **v16.0.0** or higher</p><p class="section-text">TypeScript version: **v5.8.2** or higher</p></section>
-          <section id="4-license" class="readme-section">
-            <h2 class="section-title">License</h2><p class="section-text">This project is licensed under the [MIT License](LICENSE).</p></section></article>
-        <article id="5" class="readme">
           <h2 class="readme-title">Todo app</h2>
-          <section id="5--features" class="readme-section">
+          <section id="4--features" class="readme-section">
             <h2 class="section-title">✨ Features</h2><p class="section-text">📋 **Task management**: Create, edit, delete, and mark tasks as completed.</p><p class="section-text">🎯 **Statuses and priorities**: Assign custom statuses and priority levels.</p><p class="section-text">⏰ **Due dates and reminders**: Set due dates and notifications.</p><p class="section-text">📅 **Smart date and time selection**: Ensures valid time selection based on the chosen date.</p><p class="section-text">🔄 **Backend synchronization**: Data persistence via an API.</p><p class="section-text">📌 **Kanban board**: Drag-and-drop tasks between different statuses for a visual workflow.</p></section>
-          <section id="5--technologies-used" class="readme-section">
+          <section id="4--technologies-used" class="readme-section">
             <h2 class="section-title">🛠️ Technologies Used</h2><h3 class="subsection-title">Frontend</h3><p class="section-text">⚛️ **React** with TypeScript</p><p class="section-text">🎨 **Tailwind CSS** for styling</p><p class="section-text">📦 **ShadCN/UI** for UI components</p><p class="section-text">🗂 **date-fns** and **date-fns-tz** for date handling</p><p class="section-text">🖱 **dnd-kit** for drag-and-drop functionality in the Kanban board</p><h3 class="subsection-title">Backend (Separate GitHub Project)</h3><p class="section-text">🚀 **Node.js with Express**</p><p class="section-text">🐘 **PostgreSQL** as the database</p><p class="section-text">🐳 **Docker** for deployment and configuration</p></section>
-          <section id="5--installation" class="readme-section">
+          <section id="4--installation" class="readme-section">
             <h2 class="section-title">🚀 Installation</h2><h3 class="subsection-title">1️⃣ Clone the repository</h3><pre><code class="language-bash">git clone https://github.com/your-user/your-todo-repo.git
 cd your-todo-repo</code></pre><h3 class="subsection-title">2️⃣ Install dependencies</h3><pre><code class="language-bash">npm install</code></pre><h3 class="subsection-title">3️⃣ Set up the backend (Docker)</h3><p class="section-text">The backend is in a separate GitHub project. Follow its instructions to set it up with Docker.</p><h3 class="subsection-title">4️⃣ Run the frontend</h3><pre><code class="language-bash">npm run dev</code></pre></section>
-          <section id="5--roadmap" class="readme-section">
+          <section id="4--roadmap" class="readme-section">
             <h2 class="section-title">📌 Roadmap</h2><p class="section-text">[ ] Authentication integration</p><p class="section-text">[ ] Support for subtasks</p><p class="section-text">[ ] Real-time notifications</p><p class="section-text">📌 *Contributions and suggestions are welcome.*</p></section></article>
-        <article id="6" class="readme">
+        <article id="5" class="readme">
           <h2 class="readme-title">Utility Tools Collection – Data Migration & Media Conversion</h2>
-          <section id="6--project-1-omnivore-raindrop-io-migration-tool" class="readme-section">
+          <section id="5--project-1-omnivore-raindrop-io-migration-tool" class="readme-section">
             <h2 class="section-title">📦 Project 1: Omnivore → Raindrop.io Migration Tool</h2><h3 class="subsection-title">✨ Key features</h3><p class="section-text">**Batch processing** – Handles multiple JSON files matching a filename pattern</p><p class="section-text">**UTF-8 encoding** – Preserves special characters and non-English text</p><p class="section-text">**Complete metadata migration** – Preserves URLs, titles, tags, notes, and creation dates</p><p class="section-text">**Error resilience** – Continues processing remaining files if one fails</p><h3 class="subsection-title">🛠️ Tech stack</h3><p class="section-text">| Technology | Purpose |
 |-----------|---------|
 | Python 3 | Core scripting language |
@@ -247,7 +211,7 @@ cd your-todo-repo</code></pre><h3 class="subsection-title">2️⃣ Install depen
 | tags | Comma-separated tags |
 | note | Personal notes or descriptions |
 | created | Creation date of the saved item |</p><h3 class="subsection-title">📎 Usage example</h3><pre><code class="language-bash">python3 convert.py "metadata_*.json"</code></pre></section>
-          <section id="6--project-2-pdf-to-cbr-converter" class="readme-section">
+          <section id="5--project-2-pdf-to-cbr-converter" class="readme-section">
             <h2 class="section-title">📚 Project 2: PDF to CBR Converter</h2><h3 class="subsection-title">✨ Key features</h3><p class="section-text">**One‑command conversion** – Simple CLI interface</p><p class="section-text">**Customizable output** – Adjustable DPI and JPEG quality</p><p class="section-text">**Preserves page order** – Pages maintain original sequence</p><p class="section-text">**Efficient compression** – Optimized for comic reading devices</p><h3 class="subsection-title">🛠️ Tech stack</h3><p class="section-text">| Technology | Purpose |
 |-----------|---------|
 | Python 3.7+ | Core scripting language |
@@ -255,18 +219,18 @@ cd your-todo-repo</code></pre><h3 class="subsection-title">2️⃣ Install depen
 | Pillow | Image processing |
 | RAR/zipfile | Archive creation |
 | Poppler | PDF rendering backend |</p><h3 class="subsection-title">📎 Usage examples</h3><p class="section-text">**Basic conversion:**</p><pre><code class="language-bash">python main.py "comic.pdf"</code></pre><p class="section-text">**Advanced options:**</p><pre><code class="language-bash">python main.py "manga.pdf" --output-dir images --dpi 300 --quality 95</code></pre><h3 class="subsection-title">⚠️ Note</h3><p class="section-text">This tool is intended for personal use with content you have the rights to convert.</p></section>
-          <section id="6--project-3-youtube-mp3-downloader" class="readme-section">
+          <section id="5--project-3-youtube-mp3-downloader" class="readme-section">
             <h2 class="section-title">🎵 Project 3: YouTube MP3 Downloader</h2><h3 class="subsection-title">✨ Key features</h3><p class="section-text">**Batch processing** – Accepts multiple video URLs at once</p><p class="section-text">**High‑quality audio** – Downloads best available format and converts to 320kbps MP3</p><p class="section-text">**Filename sanitization** – Automatically removes invalid characters for cross‑platform compatibility</p><p class="section-text">**Organized output** – Files saved in a dedicated `output` folder</p><h3 class="subsection-title">🛠️ Tech stack</h3><p class="section-text">| Technology | Purpose |
 |-----------|---------|
 | Python 3 | Core scripting language |
 | yt-dlp | YouTube video/audio extraction |
 | ffmpeg | Audio conversion and encoding |</p><h3 class="subsection-title">📎 Usage example</h3><pre><code class="language-bash">python script.py
 # Then enter URLs: https://youtube.com/watch?v=abc123, https://youtube.com/watch?v=xyz456</code></pre><h3 class="subsection-title">⚠️ Disclaimer</h3><p class="section-text">This tool is for educational purposes only. Users are responsible for complying with YouTube's terms of service and applicable copyright laws.</p></section>
-          <section id="6--why-i-built-these-tools" class="readme-section">
+          <section id="5--why-i-built-these-tools" class="readme-section">
             <h2 class="section-title">🚀 Why I built these tools</h2><p class="section-text">Each of these projects represents a practical response to a specific user need:</p><p class="section-text">**Omnivore Converter** – Helped users preserve their reading history before a service shutdown</p><p class="section-text">**PDF to CBR** – Solved a niche but common pain point for digital comic readers</p><p class="section-text">**YouTube MP3 Downloader** – Automated a repetitive task with a simple, clean interface</p><p class="section-text">These tools share a common philosophy: **solve a real problem with minimal complexity, clear documentation, and robust error handling.**</p></section>
-          <section id="6--common-technical-themes" class="readme-section">
+          <section id="5--common-technical-themes" class="readme-section">
             <h2 class="section-title">🔧 Common technical themes</h2><p class="section-text">**Command‑line first** – Designed for automation and scriptability</p><p class="section-text">**Cross‑platform** – Works on Windows, macOS, and Linux</p><p class="section-text">**Educational value** – Clear code structure and documentation for learning</p><p class="section-text">**User‑focused** – Handles edge cases and provides meaningful feedback</p></section>
-          <section id="6--links" class="readme-section">
+          <section id="5--links" class="readme-section">
             <h2 class="section-title">📎 Links</h2><p class="section-text">🔄 [Omnivore to Raindrop Converter]((https://github.com/deveduar/omnivore-to-raindrop)</p><p class="section-text">📚 [PDF to CBR Converter](https://github.com/deveduar/pdf-to-cbr.git)</p><p class="section-text">🎵 [YouTube MP3 Downloader](https://github.com/deveduar/you-mp3-python)</p></section></article>
       </div>
     </div>

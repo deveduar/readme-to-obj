@@ -282,23 +282,30 @@ export const readmes = [
   },
   {
     "id": 4,
-    "repoId": "portfolio",
-    "title": "My Portfolio",
-    "description": "A modern portfolio built with Next.js 14, TypeScript, and Tailwind CSS, featuring a Bento-style layout, AOS animations, and GitHub integration for projects.",
+    "repoId": "Portfolio project",
+    "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
+    "description": "A deep dive into creating a dynamic portfolio that automatically syncs with my Obsidian vault, transforming markdown notes into a beautiful, interactive showcase of my work.",
     "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "This portfolio is designed to showcase my projects, skills, and experience with a visually engaging Bento grid, animations powered by AOS, and automated project details fetched from a GitHub repository.",
+    "detailedDescription": "I built a custom automation system that connects my Obsidian note-taking workflow to my Next.js portfolio. A Node.js script reads markdown files from my vault, parses them with Remark, and converts them into structured data. A PowerShell script manages the entire workflow — creating new project notes, running the conversion, and committing updates. The Next.js portfolio consumes this data, generating static pages for each project with real-time GitHub stats. The result: a portfolio that updates itself whenever I write a new note. No manual copying, no formatting headaches, just writing and publishing.",
     "technologies": [
       "Next.js 14",
       "TypeScript",
+      "Obsidian",
+      "Node.js",
+      "Remark",
       "Tailwind CSS",
-      "Vercel",
-      "AOS",
-      "GitHub API"
+      "PowerShell",
+      "GitHub API",
+      "Vercel"
     ],
     "links": [
       {
-        "href": "https://github.com/deveduar/nextjs-portfolio.git",
-        "label": "GitHub Repository"
+        "href": "https://github.com/deveduar/readme-to-obj",
+        "label": "GitHub - Converter"
+      },
+      {
+        "href": "https://github.com/deveduar/nextjs-portfolio",
+        "label": "GitHub - Portfolio"
       },
       {
         "href": "https://deveduar-portfolio.vercel.app",
@@ -306,195 +313,133 @@ export const readmes = [
       }
     ],
     "features": [
-      "Bento-style UI for a modern and structured layout.",
-      "Dynamic project showcase integrated with GitHub README repository.",
-      "Interactive modals for project details.",
-      "Smooth animations using AOS for an engaging experience.",
-      "Dark mode support.",
-      "Fully responsive design for all devices.",
-      "Deployed on Vercel for fast and reliable hosting."
+      "Automated markdown to data conversion.",
+      "Obsidian vault integration with PowerShell automation.",
+      "Static site generation with Next.js 14.",
+      "GitHub API for real-time project stats.",
+      "Bento-grid layout with AOS animations.",
+      "Dark mode and responsive design.",
+      "Vercel automatic deployment."
     ],
     "readmeContent": {
-      "title": "My Portfolio",
-      "fileName": "portfolio.md",
+      "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
+      "fileName": "Portfolio project.md",
       "sections": {
-        "🌟 Features": [
-          "✅ **Modern UI/UX** – Bento-grid layout with smooth animations.",
-          "✅ **Project showcase** – Integrated with a GitHub repository to fetch project details from READMEs.",
-          "✅ **Optimized performance** – Uses `next/image` for fast loading.",
-          "✅ **AOS Animations** – Smooth scrolling animations for a dynamic experience.",
-          "✅ **Static site** – No longer a SPA, improved SEO and performance.",
-          "✅ **Dark Mode** – Supports light and dark themes.",
-          "✅ **Fully Responsive** – Works seamlessly on all devices.",
-          "✅ **Deployed on Vercel** – Fast and reliable hosting."
+        "🎯 The Big Picture": [
+          "I wanted a portfolio that:",
+          "**Grows with me** — add a project in Obsidian, it appears on my site",
+          "**Shows my process** — not just final results, but the journey",
+          "**Stays technical** — actual problems, actual solutions",
+          "The result? A **Next.js portfolio** powered by a **custom automation system** that converts my Obsidian notes into structured data, automatically updating my project showcase whenever I write a new note."
         ],
-        "🛠️ Tech Stack": [
-          "**Next.js 14** – App router & server components",
-          "**TypeScript** – Strongly typed codebase",
-          "**Tailwind CSS** – Utility-first styling",
-          "**AOS (Animate on Scroll)** – Smooth animations",
-          "**GitHub API** – Fetch project details dynamically",
-          "**Vercel** – Deployment and hosting"
+        "🧩 The Ecosystem": [
+          "The system connects three main pieces:",
+          "**Obsidian Vault** → Where I write all my project documentation, technical notes, and personal learnings in markdown format.",
+          "**Node.js Converter** → A custom script that reads all my markdown files, parses them intelligently, and transforms them into a clean, structured JavaScript object.",
+          "**Next.js Portfolio** → The frontend that consumes this data and presents it as a beautiful, interactive bento-grid layout with smooth animations.",
+          "The magic is that everything flows automatically — I write once, and my portfolio updates itself."
         ],
-        "🚀 Getting Started": {
-          "1️⃣ Clone the repository": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "git clone https://github.com/deveduar/nextjs-portfolio.git\ncd nextjs-portfolio"
-            }
+        "📝 Part 1: README to Object Converter": {
+          "The Problem": [
+            "I document every project I build in Obsidian. Each note contains sections like Overview, Tech Stack, Challenges, Features, and Future Plans. But my portfolio needed structured data, not raw markdown with formatting and special syntax.",
+            "Manually copying and reformatting content for each project was tedious and error-prone. I wanted a way to keep my source of truth (Obsidian) and my public-facing portfolio in sync without duplicating work."
           ],
-          "2️⃣ Install dependencies": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm install\n# or\nyarn install"
-            }
+          "The Solution": [
+            "I built a Node.js script that:",
+            "Reads every markdown file from my Obsidian folder",
+            "Parses the structure to identify sections and their content",
+            "Converts everything into a TypeScript object that my portfolio understands",
+            "Outputs a clean data file ready to import"
           ],
-          "3️⃣ Run the development server": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run dev\n# or\nyarn dev"
-            },
-            "Open **[http://localhost:3000](http://localhost:3000)** to view in the browser."
+          "How It Works": [
+            "The script uses a markdown parser to analyze the structure of each note. It identifies headings, paragraphs, lists, and code blocks, then organizes them by section. This means I can write naturally in Obsidian — using whatever formatting makes sense for documentation — and the converter intelligently extracts the meaningful parts.",
+            "If I add a new section to a project note, it automatically appears in the portfolio. If I edit existing content, the portfolio reflects the changes on the next build."
+          ],
+          "The Automation Layer": [
+            "To make this workflow seamless, I created a PowerShell script that acts as a control panel. From a simple menu, I can:",
+            "View all my existing project notes",
+            "Create a new project template with the correct structure",
+            "Run the conversion script to generate fresh data",
+            "Commit the updated data to my portfolio repository",
+            "This reduces what used to be a five-minute manual process (create note, copy sections, format HTML, update links, commit) to about thirty seconds of menu selections."
           ]
         },
-        "🔗 Live Demo": [
-          "🔴 **Check it out live:** [deveduar-portfolio.vercel.app](https://deveduar-portfolio.vercel.app/)"
+        "🎨 Part 2: Next.js Portfolio": {
+          "The Architecture": [
+            "My portfolio is built with Next.js 14 using the App Router and server components. This gives me static site generation for fast loading and SEO benefits, while keeping the ability to fetch dynamic data when needed.",
+            "The design follows a bento-grid layout — clean, modern, and responsive. Each project appears as a card with key information, and clicking through shows the full documentation extracted from my Obsidian notes."
+          ],
+          "The Data Flow": [
+            "At build time, Next.js imports the generated data file created by my converter. For each project in my Obsidian vault, it pre-renders a dedicated page with all the sections and content. This means visitors get instant load times, and search engines can crawl all my project content easily."
+          ],
+          "GitHub Integration": [
+            "Beyond the markdown content, I also pull real-time data from GitHub for each project. The portfolio displays:",
+            "Star count (if people have starred the repo)",
+            "Last commit date",
+            "Primary programming language",
+            "Direct links to repositories and live demos",
+            "This adds a layer of authenticity — visitors can see that these are active, real-world projects with actual community engagement."
+          ],
+          "Animations and Polish": [
+            "I added smooth scroll animations using a lightweight library, so elements fade in and slide up as you browse. The site is fully responsive, works on any device, and includes dark mode support for comfortable viewing at night."
+          ]
+        },
+        "🔄 The Complete Workflow": {
+          "1. Write in Obsidian": [
+            "I open Obsidian and create a new note. I follow a loose template: an overview paragraph, a tech stack list, the challenges I faced, and future improvements. I write naturally — no special syntax, no formatting constraints."
+          ],
+          "2. Run the Automation": [
+            "From my PowerShell menu, I select \"add new project\" and enter the project name. The script creates a properly formatted markdown file in my Obsidian folder if it doesn't exist.",
+            "Then I select \"convert to data\" — this runs the Node script that parses all my notes and generates the fresh data file.",
+            "Finally, I select \"commit and deploy\" — the script commits the changes and pushes to GitHub."
+          ],
+          "3. Automatic Deployment": [
+            "Vercel detects the push to my main branch and automatically rebuilds the portfolio. Within minutes, the new project appears on my live site.",
+            "**No manual HTML editing. No copy-pasting. No broken links. Just writing and running a few commands.**"
+          ]
+        },
+        "💡 Why This Matters": {
+          "For My Productivity": [
+            "This system eliminated a repetitive task I used to dread. Before, updating my portfolio meant opening two applications, copying content, reformatting for the web, updating links, and hoping I didn't miss anything. Now I stay in my writing flow, and everything else happens automatically."
+          ],
+          "For My Portfolio Visitors": [
+            "Visitors get comprehensive project documentation written when the project was fresh in my mind, not weeks later when I'm forcing myself to update the site. They see the real challenges, the actual technologies, and the honest mistakes — not a polished, sanitized version."
+          ],
+          "For My Learning": [
+            "Documenting projects in Obsidian has become part of my development process. When I finish a feature, I jot down what worked and what didn't. When I solve a tricky bug, I capture the solution. These notes become the raw material for my portfolio, making the documentation feel organic rather than an afterthought."
+          ]
+        },
+        "🛠️ The Tech Stack": [
+          "| Component | Technology |\n|-----------|------------|\n| **Content Authoring** | Obsidian (markdown) |\n| **Conversion Script** | Node.js + TypeScript |\n| **Markdown Parsing** | Remark ecosystem |\n| **Workflow Automation** | PowerShell |\n| **Portfolio Framework** | Next.js 14 |\n| **Styling** | Tailwind CSS |\n| **Animations** | AOS (Animate on Scroll) |\n| **API Integration** | GitHub REST API |\n| **Hosting** | Vercel |"
         ],
-        "📌 Future Improvements": [
-          "📌 Enhance filtering and search for projects.",
-          "📌 Improve accessibility and mobile gestures.",
-          "📌 Expand GitHub integration with more metadata."
+        "🚀 What I Learned": [
+          "**Automation compounds.** The time I invested in building this workflow paid back many times over in saved manual effort. More importantly, it removed friction — I'm more likely to document projects now because the cost is so low.",
+          "**Your source of truth matters.** Keeping all my project documentation in Obsidian means I have a single place to look for notes, ideas, and technical details. The portfolio is just a view into that database.",
+          "**Static sites can be dynamic.** By generating pages at build time from a data source, I get the performance of static sites with the flexibility of a content management system — without actually running a CMS.",
+          "**Personal tools are worth building.** This system doesn't exist as a product. It's custom-built for my workflow, my folder structure, my way of writing. And that's exactly why it works so well."
         ],
-        "📞 Contact": [
-          "If you have any questions or feedback, feel free to reach out!"
+        "📂 Repositories": [
+          "**readme-to-obj** — The Node.js converter that processes markdown files",
+          "**nextjs-portfolio** — The frontend that displays my work",
+          "**Live Portfolio** — See it in action"
         ],
-        "📝 License": [
-          "This project is **MIT licensed**. Feel free to use and modify it!"
+        "🔮 Future Improvements": [
+          "I'm planning to add:",
+          "**Auto-sync** — watch for Obsidian file changes and trigger updates automatically",
+          "**Full-text search** — help visitors find projects by technology or topic",
+          "**Tags and categories** — organize projects beyond just listing them",
+          "**Image handling** — automatically convert and optimize images from Obsidian"
+        ],
+        "📝 Final Thoughts": [
+          "This project taught me that the best tools are the ones that disappear. My portfolio doesn't feel like a system — it just feels like my work, presented honestly and automatically.",
+          "If you're tired of manually updating your portfolio or blog, consider building your own pipeline. Start with where your notes already live, add automation where you feel friction, and let the system handle the rest.",
+          "**Built with 🖊️ Obsidian, ⚛️ Next.js, and the desire to never copy-paste again**— [deveduar](https://github.com/deveduar)"
         ]
       }
     }
   },
   {
     "id": 5,
-    "repoId": "readme-to-obj",
-    "title": "README to Object Converter",
-    "description": "A project to convert README.md files from multiple repositories into structured JavaScript objects for easy integration with TypeScript projects.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
-    "detailedDescription": "This project downloads README.md files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a .ts file for later use.",
-    "technologies": [
-      "Node.js",
-      "TypeScript",
-      "GitHub API",
-      "remark"
-    ],
-    "links": [
-      {
-        "href": "https://github.com/deveduar/readme-to-obj",
-        "label": "GitHub Repository"
-      }
-    ],
-    "features": [
-      "Downloads README.md files from public GitHub repositories.",
-      "Extracts sections such as headers, paragraphs, and lists from Markdown.",
-      "Converts extracted content into a structured JavaScript object.",
-      "Saves the resulting object in a ts file for TypeScript integration.",
-      "Customizable list of repositories to download from.",
-      "Supports integration with TypeScript projects for dynamic README usage."
-    ],
-    "readmeContent": {
-      "title": "README to Object Converter",
-      "fileName": "readme-to-obj.md",
-      "sections": {
-        "Description": [
-          "The project downloads `README.md` files from specified repositories, processes them to extract key sections (such as headers, paragraphs, lists, and code), and converts them into a JavaScript object. This object contains the sections with their corresponding content and is saved into a `.ts` file for later use. Additionally, it generates an HTML view for each README to visualize its content directly in the browser."
-        ],
-        "Features": [
-          "Downloads `README.md` files from public GitHub repositories.",
-          "Automatically extracts sections from the Markdown file.",
-          "Converts sections into a structured object.",
-          "Saves the result in a `.ts` file for easy integration with TypeScript projects.",
-          "You can customize which repositories to download the README from.",
-          "**HTML Generation**: Generates HTML to visualize the README files directly in the browser."
-        ],
-        "Installation": [
-          "Clone this repository:",
-          "Install the dependencies:"
-        ],
-        "Usage": {
-          "1. Run the Conversion Script": [
-            "The `updateReadmes.ts` script is responsible for downloading and converting the `README.md` files from the specified repositories. To run the script, use the following command:",
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run update-readmes"
-            },
-            "This will download the `README.md` files, extract the sections, and save the resulting object in `src/data/readmes.ts`."
-          ],
-          "2. View the HTML": [
-            "After running the script, you can also generate an HTML view of each README file by running the following:",
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run generate-html"
-            },
-            "This will create an HTML page for each README file that can be viewed directly in a browser."
-          ],
-          "3. Example Output": [
-            "After running the script, the `readmes.ts` file will contain something like this:",
-            {
-              "type": "code",
-              "lang": "ts",
-              "meta": null,
-              "value": "export const readmes = {\n  \"portfolio\": {\n    title: \"My Portfolio\",\n    sections: {\n      \"Introduction\": \"This is my portfolio...\",\n      \"Technologies\": \"React, Node.js, etc.\",\n      // ...\n    }\n  },\n  \"todo-app\": {\n    title: \"Todo App\",\n    sections: {\n      \"Features\": \"Task management...\",\n      \"Setup\": \"To install...\",\n      // ...\n    }\n  }\n}"
-            },
-            "The HTML output will be available in the `dist` folder."
-          ],
-          "4. Include the Data in Your Project": [
-            "You can import the `readmes` object into your code:",
-            {
-              "type": "code",
-              "lang": "ts",
-              "meta": null,
-              "value": "import { readmes } from './data/readmes';\n\nconsole.log(readmes['portfolio']);"
-            }
-          ]
-        },
-        "Customization": [
-          "You can modify the list of repositories in the `src/scripts/updateReadmes.ts` file by adding or removing repositories. The repository structure is as follows:",
-          {
-            "type": "code",
-            "lang": "ts",
-            "meta": null,
-            "value": "const repos = [\n  { id: \"repo_id\", url: \"https://raw.githubusercontent.com/user/repo/main/README.md\" },\n  // ...\n];"
-          }
-        ],
-        "Libraries Used": [
-          "This project uses the following libraries:",
-          "**[remark](https://github.com/remarkjs/remark)** - A Markdown processor for parsing and transforming Markdown.",
-          "**[remark-parse](https://github.com/remarkjs/remark/tree/main/packages/remark-parse)** - A plugin for remark to parse Markdown into an abstract syntax tree (AST).",
-          "**[typescript](https://www.typescriptlang.org/)** - A strict syntactical superset of JavaScript that adds optional static typing.",
-          "**[@types/node](https://www.npmjs.com/package/@types/node)** - TypeScript type definitions for Node.js."
-        ],
-        "Node.js and TypeScript Version Requirements": [
-          "Node.js version: **v16.0.0** or higher",
-          "TypeScript version: **v5.8.2** or higher"
-        ],
-        "License": [
-          "This project is licensed under the [MIT License](LICENSE)."
-        ]
-      }
-    }
-  },
-  {
-    "id": 6,
     "repoId": "todo-app",
     "title": "Todo app",
     "description": "A task management application designed to help organize and prioritize activities efficiently.",
@@ -596,7 +541,7 @@ export const readmes = [
     }
   },
   {
-    "id": 7,
+    "id": 6,
     "repoId": "Utility Tools Collection – Data Migration & Media Conversion",
     "title": "Utility Tools Collection – Data Migration & Media Conversion",
     "description": "A collection of Python CLI tools: migrate Omnivore bookmarks to Raindrop.io, convert PDFs to CBR format for digital comics, and download YouTube audio as high-quality MP3.",
