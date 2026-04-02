@@ -1,6 +1,196 @@
 export const readmes = [
   {
     "id": 1,
+    "repoId": "3D Audio Visualizer",
+    "date": "2026-04-02T20:06:08.173Z",
+    "title": "3D Audio Visualizer — Experimental Audio Engine",
+    "description": "An interactive 3D audio visualizer built with SvelteKit, Tone.js, and Threlte. Features real-time shader manipulation, multiple visual modes, metadata extraction, and professional audio metering.",
+    "imageSrc": "https://i.postimg.cc/YC34cbbF/localhost-5173-(7).png",
+    "detailedDescription": "This is an experimental audio visualization platform where music becomes art. Built with Svelte 5, Tone.js, and Threlte (Three.js for Svelte), the application functions as an audiovisual player featuring playlist management, transport controls, audio-reactive 3D visualizations with custom GLSL shaders, and a Live Editor panel to adjust parameters in real-time. Users can switch between visual modes (sphere, waveform, grid, cover art), modify geometry types (Icosahedron, Sphere, Torus, Octahedron), and control shader uniforms like noise frequency, wireframe opacity, and bloom strength. The system extracts metadata from MP3 files including album artwork, artist names, and track titles. Features include drag-and-drop playlist reordering, seekable progress bar, volume control, playback modes (AUTO/LOOP), dB/LUFS metering, and camera controls with zoom sync between mouse wheel and UI sliders. Built with Svelte 5 runes, TypeScript, and optimized for real-time performance.",
+    "technologies": [
+      "Svelte 5",
+      "SvelteKit",
+      "TypeScript",
+      "Tone.js",
+      "Threlte",
+      "Three.js",
+      "GLSL",
+      "Tweakpane",
+      "Tailwind CSS",
+      "Vite",
+      "jsmediatags"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/3d-audio-visualizer.git",
+        "label": "GitHub Repository"
+      }
+    ],
+    "gallery": [
+      "https://i.postimg.cc/BQncwPq2/localhost-5173-(2).png",
+      "https://i.postimg.cc/J4zcdH1k/localhost-5173-(3).png",
+      "https://i.postimg.cc/yY8Xr3VF/localhost-5173-(4).png",
+      "https://i.postimg.cc/YC34cbbF/localhost-5173-(7).png"
+    ],
+    "features": [
+      "Real-time 3D audio visualization with custom GLSL shaders.",
+      "Live Editor panel for instant parameter tweaking (no reload).",
+      "Multiple visual modes — sphere, waveform, grid, and cover art.",
+      "Multiple geometry types — Icosahedron, Sphere, Torus, Octahedron.",
+      "MP3 metadata extraction — album artwork, artist names, track titles.",
+      "Playlist management with drag-and-drop reordering and file uploads.",
+      "Professional audio metering — dB and LUFS measurements.",
+      "Playback modes — AUTO (autoplay next) and LOOP (repeat current).",
+      "Camera controls with zoom sync between mouse wheel and UI slider.",
+      "Preset system — save and load configurations as JSON.",
+      "Responsive design — works on desktop, tablet, and mobile.",
+      "Dark/Light theme support for UI and visualizer separately."
+    ],
+    "readmeContent": {
+      "title": "3D Audio Visualizer — Experimental Audio Engine",
+      "fileName": "3D Audio Visualizer.md",
+      "date": "2026-04-02T20:06:08.173Z",
+      "sections": {
+        "🎯 The Big Picture": [
+          "I wanted to build more than just a music player. I set out to create an **experimental audio visualization platform** where music becomes art — real-time, reactive, and completely customizable.",
+          "The result is a fully functional audiovisual player featuring:",
+          "- **3D audio-reactive visualizations** with custom GLSL shaders",
+          "- **Real-time parameter control** via Tweakpane editor",
+          "- **Multiple visual modes** (geometry, waveform, grid, cover art)",
+          "- **Professional audio engine** with metering (dB/LUFS)",
+          "- **Playlist management** with drag-and-drop reordering",
+          "- **Metadata extraction** for album artwork and track info"
+        ],
+        "✨ What I Built": {
+          "Core Features": [
+            "**Audio Engine**\nBuilt on Tone.js, the player handles playlist management, seekable timeline with real-time feedback, volume control, and playback modes (AUTO for autoplay next track, LOOP for repeating current). Audio metrics include approximate dB and LUFS metering.",
+            "**3D Visualizer**\nA custom shader-based 3D scene built with Threlte (Three.js for Svelte). The geometry reacts to audio in real-time — bass hits create bounce effects, frequencies drive noise parameters, and the entire scene pulses with the music.",
+            "**Live Editor**\nA Tweakpane-based control panel that lets users modify display modes, geometry types (Icosahedron, Sphere, Torus, Octahedron), and shader uniforms (noise frequency/amplitude/speed, base radius, wireframe opacity, bloom strength) in real-time. Every change is instantaneous — no reload needed.",
+            "**Multiple Visual Modes**",
+            "- **Sphere Mode** — Audio-reactive 3D geometry with shader effects",
+            "- **Waveform Mode** — Traditional 2D canvas-based audio signal rendering",
+            "- **Grid Mode** — Abstract grid visualization",
+            "- **Cover Art Mode** — 3D album artwork display (flat or box) with extracted metadata",
+            "**Playlist Management**\nInitial static tracks included, with support for file uploads via click or drag-and-drop. The sidebar allows track selection and drag-and-drop reordering, with full metadata extraction for album art, artist names, and track titles.",
+            "**Camera Controls**\nOrbit controls with zoom, pan, and rotation. The zoom slider syncs with mouse wheel input in real-time, and users can disable zoom entirely from the Live Editor. Auto-rotate and audio-reactive camera bounce are fully configurable."
+          ]
+        },
+        "🛠️ Technology Stack": [
+          "**Frontend Framework**",
+          "- Svelte 5 with Runes-based logic",
+          "- SvelteKit for routing and SSR",
+          "- TypeScript for type safety",
+          "**Audio Engine**",
+          "- Tone.js — Web Audio framework",
+          "- jsmediatags — ID3 metadata extraction",
+          "- Custom dB/LUFS metering",
+          "**3D Graphics**",
+          "- Threlte — Three.js for Svelte",
+          "- Custom GLSL shaders",
+          "- OrbitControls for camera manipulation",
+          "**UI & Tooling**",
+          "- Tweakpane — Real-time parameter editing",
+          "- Tailwind CSS for styling",
+          "- Vite for build tooling"
+        ],
+        "🧠 The Real Story — Challenges I Solved": {
+          "1. **Race Conditions in Track Switching**": [
+            "The biggest challenge was preventing race conditions when users switched tracks rapidly. If you clicked \"next\" three times quickly, the audio engine would try to load multiple tracks simultaneously, causing playback to freeze or skip erratically.",
+            "**The solution:** I implemented a concurrency protection system with `stopIntent` states — explicitly tracking whether a stop was caused by pause, seek, track change, or natural end. This allowed `onstop` to know exactly when to advance to the next track and when to just clean up."
+          ],
+          "2. **Sync Issues Between UI and Audio Engine**": [
+            "The progress bar was fighting with auto-play functionality. When you dragged the seek bar while a track was playing, it would trigger `onstop` and accidentally advance to the next track.",
+            "**The fix:** I separated the logic entirely. Dragging the bar now sets an `isSeeking` flag that tells the audio engine to ignore natural stop logic. The position is calculated from `playbackOffset + transport.seconds` instead of mixing multiple position variables, ensuring pause/resume works from the exact spot you left it."
+          ],
+          "3. **Metadata Extraction Hell**": [
+            "Extracting album artwork from MP3 files in the browser was surprisingly difficult. Libraries would throw `Buffer is not defined` errors (Node.js globals missing in browsers) or fail silently with `RangeError` when reading file boundaries.",
+            "**The journey:**",
+            "- First tried `music-metadata-browser` — Buffer errors",
+            "- Switched to `id3js` — RangeError on certain files",
+            "- Finally settled on `jsmediatags` with proper Vite aliasing to use the pre-bundled, minified version that includes all polyfills",
+            "**The result:** Album artwork now loads reliably with a 4-second timeout fallback, and placeholders are embedded as data URIs so they load instantly even offline."
+          ],
+          "4. **Camera Zoom Sync Hell**": [
+            "The zoom control was a nightmare of desynchronization. The OrbitControls zoom and the Live Editor slider were fighting each other — dragging the slider updated the store, but the camera didn't update until something else triggered a rerender.",
+            "**The breakthrough:** I added a `$effect` in the Scene component that directly intercepts the camera and calls `updateProjectionMatrix()` every time the store changes. Now the slider and mouse wheel are perfectly synchronized, and users can disable zoom entirely from the panel with `pointer-events: none` on the control."
+          ],
+          "5. **Performance with Real-Time Shaders**": [
+            "Custom GLSL shaders running at 60fps while processing audio data is computationally expensive. The fractal mode in particular was killing performance.",
+            "**Optimizations applied:**",
+            "- Throttled audio analysis updates",
+            "- Selective re-renders only when parameters actually change",
+            "- Geometry caching to avoid rebuilding on every frame",
+            "- Bloom effects only enabled when actually needed"
+          ],
+          "6. **Live Editor State Management**": [
+            "The Live Editor has dozens of parameters across multiple sections (Geometry, Camera, View, Post-Processing, Interface). Users wanted to save and load presets.",
+            "**The solution:** I implemented a JSON export/import system that captures every parameter in the store. Presets save everything — camera position, shader parameters, colors, even which UI panels are collapsed. Users can share presets as JSON files."
+          ],
+          "7. **Responsive Design for 3D Interfaces**": [
+            "Building a 3D tool that works on mobile is uniquely challenging. Touch events for orbit controls, sidebar that slides over the canvas without breaking interaction, and meters that reposition based on screen size.",
+            "**The approach:** I built three distinct responsive behaviors:",
+            "- **Desktop** — Sidebar slides in from left, meters float top-right, zoom control bottom-left",
+            "- **Tablet** — Same layout but larger touch targets",
+            "- **Mobile** — Sidebar takes full screen, meters move below sidebar, zoom control above player UI"
+          ]
+        },
+        "📊 What I Learned": {
+          "1. **Web Audio is Powerful but Unforgiving**": [
+            "Tone.js abstracts away many complexities, but understanding the underlying Web Audio API was essential for debugging. The difference between `player.start()` and `transport.start()` matters when you're dealing with seek positions."
+          ],
+          "2. **Svelte 5 Runes Are a Game Changer**": [
+            "The new runes syntax (`$state`, `$derived`, `$effect`) made reactive state management intuitive. The camera zoom sync issue would have been much harder with Svelte 4's store system."
+          ],
+          "3. **GLSL Shaders Require Patience**": [
+            "Writing custom shaders that react to audio data involves passing uniform values from JavaScript to the shader 60 times per second. Debugging shader compilation errors with no line numbers is... character-building."
+          ],
+          "4. **Metadata Libraries Are Fragile**": [
+            "Every MP3 file is slightly different. ID3v1, ID3v2.2, ID3v2.3, ID3v2.4 — libraries handle them differently. The robust solution was implementing timeouts and fallbacks for every extraction."
+          ],
+          "5. **3D Camera Math is Hard**": [
+            "OrbitControls handles the heavy lifting, but syncing external sliders with camera state requires understanding projection matrices, update cycles, and Three.js's rendering pipeline."
+          ]
+        },
+        "🎨 Gallery": [
+          "| View | Description |\n|------|-------------|\n| **Sphere Mode** | Audio-reactive 3D geometry with wireframe rendering |\n| **Waveform Mode** | Real-time 2D audio signal visualization |\n| **Cover Art Mode** | 3D album artwork display (flat or box) |\n| **Grid Mode** | Abstract grid that pulses with the beat |\n| **Live Editor** | Tweakpane panel with real-time parameter control |"
+        ],
+        "🔧 Technical Deep Dive": {
+          "Audio Reactive Logic": [
+            "The shader receives audio data as uniform values:",
+            "- **Bass frequencies** drive geometry scale and bounce",
+            "- **Mid frequencies** affect noise amplitude and wireframe opacity",
+            "- **High frequencies** influence bloom strength and rotation speed",
+            "Users can freeze audio reaction to inspect specific states, or disable individual reactive elements (bounce, auto-rotate, etc.) from the Live Editor."
+          ],
+          "Shader Parameters": [
+            "All parameters are exposed in real-time:",
+            "- `noiseFreq / noiseAmp / noiseSpeed` — Controls the organic movement",
+            "- `baseRadius` — Base size of the geometry",
+            "- `wireframeOpacity` — Transparency of wireframe lines",
+            "- `bloomStrength / bloomRadius / bloomThreshold` — Post-processing glow"
+          ],
+          "Performance Metrics": [
+            "The system displays real-time dB and LUFS metering, giving users professional audio feedback. Meters can be toggled on/off from the interface settings."
+          ]
+        },
+        "🚀 The Road Ahead": [
+          "I'm continuing to improve the visualizer with:",
+          "- **Multi-band visualization** — Separate shader instances reacting to different frequency ranges",
+          "- **Audio-reactive camera** — FOV zoom with the kick drum",
+          "- **Video export** — Record and download visualizations as WebM/MP4",
+          "- **PBR materials** — Audio-driven roughness and emissive pulses",
+          "- **LFO sequencers** — Automate parameters over time",
+          "- **External API integration** — Spotify and SoundCloud support"
+        ],
+        "💡 Final Thoughts": [
+          "This project pushed me into new territory — Web Audio, 3D graphics, shader programming, and complex state management across real-time systems. The result is a tool that's both functional and beautiful, and a codebase I'm proud to show as evidence of my ability to build sophisticated interactive applications.",
+          "The journey taught me that the best projects are the ones that scare you a little at the start."
+        ]
+      }
+    }
+  },
+  {
+    "id": 2,
     "repoId": "Inventory Management System for Dropshipping Store",
     "date": "2026-04-02T14:42:08.884Z",
     "title": "Inventory Management System for Dropshipping Store",
@@ -122,7 +312,245 @@ export const readmes = [
     }
   },
   {
-    "id": 2,
+    "id": 3,
+    "repoId": "Jekyll Blog  Obsidian — Building a Personal Knowledge Management System",
+    "date": "2026-04-02T20:47:53.413Z",
+    "title": "Jekyll Blog + Obsidian — Personal Knowledge Management System",
+    "description": "A static blog powered by Jekyll with Obsidian integration, visual backlink graphs, wiki-style navigation, and an automated publishing pipeline.",
+    "imageSrc": "https://i.postimg.cc/4yc6pqVp/deveduar-github-io-(4).png",
+    "detailedDescription": "A complete publishing ecosystem that bridges Obsidian note-taking with Jekyll static site generation. The system includes a custom Obsidian plugin that transforms notes into web-ready markdown (converting WikiLinks, normalizing frontmatter, generating URL-friendly slugs), a Jekyll blog featuring visual backlink graphs with vis.js, wiki-style navigation with page previews, real-time search with Fuse.js, and Turbo-powered fast page transitions. A Python-based AI assistant tool provides a web interface for managing AI-generated content, tracking processed notes, and editing drafts before publishing. The entire workflow is version-controlled and hosted for free on GitHub Pages. Features include selective sync (only notes marked public_note: true), category inference, automatic date normalization, Dataview/Templater cleanup, and configurable content transformation rules. The result is a digital garden that grows automatically from everyday note-taking.",
+    "technologies": [
+      "Jekyll",
+      "Ruby",
+      "Liquid",
+      "TypeScript",
+      "Obsidian API",
+      "JavaScript",
+      "vis.js",
+      "Fuse.js",
+      "Turbo",
+      "SASS",
+      "Python",
+      "Flask",
+      "GitHub Pages",
+      "GitHub Actions"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/deveduar.github.io",
+        "label": "GitHub Repository"
+      },
+      {
+        "href": "https://deveduar.github.io",
+        "label": "Live Blog"
+      }
+    ],
+    "gallery": [
+      "https://i.postimg.cc/0QFGMPMt/deveduar-github-io-(1).png",
+      "https://i.postimg.cc/xChGJnJ6/deveduar-github-io-(2).png",
+      "https://i.postimg.cc/T1bVnFgV/deveduar-github-io-(5).png",
+      "https://i.postimg.cc/cC3Rf2wQ/deveduar-github-io-(i-Phone-14-Pro-Max)-(3).png"
+    ],
+    "features": [
+      "Custom Obsidian plugin for one-click note syncing and transformation.",
+      "WikiLink conversion to standard markdown with proper relative paths.",
+      "Visual backlink graph with vis.js — interactive node navigation.",
+      "Turbo-powered fast page transitions without framework overhead.",
+      "Real-time search and filtering with Fuse.js.",
+      "Wiki-style navigation with page previews and context menus.",
+      "Automatic slug generation for clean URLs (/category/post-title/).",
+      "Frontmatter normalization — dates, categories, tags.",
+      "Configurable content cleanup (Dataview, Templater, Zotero links).",
+      "Python AI assistant with web interface for draft management.",
+      "Processed vs pending note tracking with status persistence.",
+      "Responsive design with Obsidian-inspired aesthetic.",
+      "GitHub Pages hosting with automated CI/CD.",
+      "Table of Contents with active heading tracking.",
+      "Category and tag filtering with URL state persistence."
+    ],
+    "readmeContent": {
+      "title": "Jekyll Blog + Obsidian — Personal Knowledge Management System",
+      "fileName": "Jekyll Blog  Obsidian — Building a Personal Knowledge Management System.md",
+      "date": "2026-04-02T20:47:53.413Z",
+      "sections": {
+        "🎯 The Big Picture": [
+          "I wanted a blog that worked the way I think — connected, non-linear, and deeply integrated with my note-taking system. Instead of forcing myself into a traditional CMS, I built a bridge between **Obsidian** (where I write) and **Jekyll** (where I publish).",
+          "The result is a complete publishing ecosystem featuring:",
+          "- **Jekyll static site** hosted on GitHub Pages",
+          "- **Obsidian plugin** for automated note transformation and syncing",
+          "- **Visual backlink graph** for navigating connected ideas",
+          "- **Wiki-style navigation** with page previews and context menus",
+          "- **Fast frontend** with Turbo and vanilla JavaScript",
+          "- **Automated content pipeline** with Python helper tools"
+        ],
+        "✨ What I Built": {
+          "The Blog (Jekyll Frontend)": [
+            "**Powered by Jekyll** — Static site generation for performance and simplicity. No databases, no complex hosting, just markdown files that become HTML.",
+            "**Wiki-Style Navigation** — Backlinks show me which other posts reference the current one. Page previews let me peek at content before clicking. The entire navigation feels like browsing a personal wiki, not a traditional blog.",
+            "**Visual Backlink Graph** — Built with vis.js, this interactive graph shows how my posts connect to each other. Nodes represent posts, edges represent links between them. I can hover to highlight connections and click to navigate.",
+            "**Turbo & Vanilla JS** — Fast, responsive UX without heavy frameworks. Turbo handles page transitions, and vanilla JavaScript manages the interactive features (search, filtering, graph rendering).",
+            "**Custom SASS Styling** — A minimalist, responsive UI inspired by Obsidian's aesthetic. Dark mode by default, clean typography with monospace fonts, and a sidebar that collapses elegantly on mobile.",
+            "**Search & Filtering** — Real-time search across all posts with Fuse.js. Filter by tags or categories. The filtering system maintains state across page loads using URL parameters."
+          ],
+          "The Obsidian Plugin (Content Pipeline)": [
+            "**Selective Sync** — Only exports notes marked with `public_note: true` in their frontmatter. This lets me keep private notes separate from blog content.",
+            "**Frontmatter Processing** — Automatically generates titles, normalizes dates (`creation date` → `date`), and manages categories and tags intelligently.",
+            "**WikiLink Transformation** — Converts Obsidian's `[[WikiLinks]]` into standard markdown links with proper relative paths. Links to unpublished notes are gracefully removed.",
+            "**URL-Friendly Slugs** — Renames files to `YYYY-MM-DD-post-title.md` format, ensuring clean URLs like `/category/post-title/`.",
+            "**Graph Generator** — Creates a `public-notes-graph.json` file containing nodes and connections between public notes. This powers the visual backlink graph on the blog."
+          ],
+          "The Automation Tools (Python Helpers)": [
+            "**AI Content Assistant** — A Python-based tool with a web interface that helps me process AI-generated content. Features include:",
+            "- Loading notes that need processing",
+            "- Copying content with one click",
+            "- Tracking processed vs pending notes",
+            "- Editing processed content before publishing",
+            "- Managing prompts and configurations",
+            "**Metadata Extraction** — Handles edge cases like removing Dataview queries, cleaning up Templater syntax, and sanitizing frontmatter for Jekyll compatibility."
+          ]
+        },
+        "🛠️ Technology Stack": [
+          "**Frontend (Blog)**",
+          "- Jekyll (Static Site Generator)",
+          "- Ruby + Liquid templating",
+          "- Turbo (Hotwire)",
+          "- Vanilla JavaScript",
+          "- vis.js (Backlink graph)",
+          "- Fuse.js (Search)",
+          "- SASS/CSS3",
+          "**Backend (Content Pipeline)**",
+          "- Obsidian Plugin (TypeScript)",
+          "- Node.js for plugin build",
+          "- Python (AI assistant tool)",
+          "- Flask for web interface",
+          "- GitHub Pages for hosting",
+          "**Infrastructure**",
+          "- GitHub Actions (CI/CD)",
+          "- GitHub Pages (Free hosting)",
+          "- Git for version control"
+        ],
+        "🧠 The Real Story — Challenges I Solved": {
+          "1. **Bridging Obsidian and Jekyll**": [
+            "Obsidian uses `[[WikiLinks]]` and flexible frontmatter. Jekyll expects standard markdown links and specific YAML structure.",
+            "**The solution:** I built an Obsidian plugin that:",
+            "- Reads notes from configured source folders",
+            "- Filters by `public_note: true` flag",
+            "- Transforms WikiLinks to `[text](/category/slug/)` format",
+            "- Normalizes dates, categories, and tags",
+            "- Generates URL-friendly slugs from filenames",
+            "- Exports everything to a `public_notes` folder",
+            "The plugin preserves original notes while creating web-ready copies."
+          ],
+          "2. **Managing Backlinks in a Static Site**": [
+            "Traditional blogs don't have backlinks — they're a wiki feature. But backlinks are essential for knowledge management.",
+            "**The implementation:** During the sync process, the plugin analyzes all WikiLinks between public notes and generates a `public-notes-graph.json` file. When the blog builds, it loads this JSON and renders an interactive graph using vis.js. Each node shows its title and links to the actual post.",
+            "The graph supports:",
+            "- Hover highlighting of connected nodes",
+            "- Color-coded links (incoming vs outgoing)",
+            "- Click navigation to posts",
+            "- Zoom and pan for large graphs"
+          ],
+          "3. **Handling Edge Cases in Content Transformation**": [
+            "Not all Obsidian notes are blog-ready. Some contain:",
+            "- Dataview queries (`$= dv.current().file.tags...`)",
+            "- Templater syntax",
+            "- Embedded Zotero links",
+            "- Local file links (`file://...`)",
+            "- Obsidian-specific CSS classes",
+            "**The cleanup process:** The plugin includes configurable rules to:",
+            "- Remove specific strings from content (like `$= dv.current().file.tags...`)",
+            "- Exclude entire lines containing certain patterns (Zotero links, file URIs)",
+            "- Strip Dataview code blocks",
+            "- Remove Obsidian-specific frontmatter properties",
+            "- Sanitize special characters for URLs (á, ñ, spaces, slashes)"
+          ],
+          "4. **Instant Navigation Without Frameworks**": [
+            "I wanted fast page transitions but didn't want to add React or Vue complexity to a static site.",
+            "**The approach:** I integrated InstantClick (later migrated to Turbo), which preloads pages on hover and swaps them seamlessly on click. This gives me SPA-like speed with zero framework overhead.",
+            "The challenge was making sure JavaScript re-initialized correctly on page transitions — search filters, graph rendering, and TOC highlighting all needed to work after Turbo loads new content."
+          ],
+          "5. **The AI Content Assistant**": [
+            "I often generate blog post drafts with AI. Managing these drafts — copying content, tracking what's been processed, editing before publishing — was tedious.",
+            "**The solution:** I built a Python web application that:",
+            "- Scans my Obsidian vault for notes flagged for processing",
+            "- Displays them in a clean interface with previews",
+            "- Lets me copy AI-generated responses with one click",
+            "- Tracks which notes have been processed (status.json)",
+            "- Shows processed notes with edit capabilities",
+            "- Detects when source notes change and flags them for reprocessing",
+            "- Includes configuration for prompts and folders",
+            "The interface uses Alpine.js for reactivity without heavy frontend frameworks."
+          ],
+          "6. **Category Inference and URL Structure**": [
+            "Jekyll expects categories to determine URL structure. My Obsidian notes don't always have categories defined.",
+            "**The logic:** The plugin can:",
+            "- Use explicit `category` from frontmatter",
+            "- Infer category from the first WikiLink in the note",
+            "- Default to \"uncategorized\" if none found",
+            "- Handle multiple categories as arrays",
+            "URLs follow the pattern `/:category/:slug/`, which Jekyll handles cleanly with permalink configuration."
+          ],
+          "7. **Responsive Wiki Navigation**": [
+            "The sidebar contains collapsible sections for recent posts, categories, and tags. On desktop, it's a fixed column. On mobile, it becomes an off-canvas menu.",
+            "**The implementation:** Pure CSS with media queries and JavaScript for toggle behavior. The scroll position is preserved when navigating between posts — no jarring jumps to the top of the page.",
+            "The Table of Contents (TOC) tracks the active heading as you scroll, highlighting it in the sidebar. On mobile, the TOC collapses into a dropdown button."
+          ]
+        },
+        "📊 What I Learned": {
+          "1. **Static Sites Can Be Dynamic**": [
+            "Jekyll with Turbo and client-side JavaScript gives you the best of both worlds — fast initial loads, SEO-friendly HTML, and smooth navigation without rebuilding the entire framework."
+          ],
+          "2. **Obsidian as a CMS is Powerful**": [
+            "Writing in Obsidian feels natural. Adding `public_note: true` to a note makes it a blog post. No separate CMS login, no formatting restrictions, just writing."
+          ],
+          "3. **Content Pipelines Need Edge Case Handling**": [
+            "Every note is different. Some have Dataview queries, some have weird characters, some have broken links. Robust content transformation requires configurable rules and graceful fallbacks."
+          ],
+          "4. **Graph Visualization Adds Value**": [
+            "The backlink graph isn't just a gimmick — it helps readers discover related content they wouldn't find through tags or categories. It turns the blog from a linear feed into a network of ideas."
+          ],
+          "5. **Tooling Around AI Content is Underrated**": [
+            "Generating content with AI is easy. Managing that content — tracking drafts, editing, versioning — is the hard part. Building custom tooling for this workflow saves hours of manual work."
+          ]
+        },
+        "🔧 Technical Deep Dive": {
+          "Obsidian Plugin Architecture": [
+            "The plugin has three main components:",
+            "**Content Processor** — Reads markdown files, parses frontmatter, transforms WikiLinks, applies cleanup rules, and generates new frontmatter for Jekyll.",
+            "**Sync Manager** — Handles folder selection, file filtering, and export destination management. It only processes files that have changed since last sync.",
+            "**Graph Generator** — Analyzes WikiLinks between public notes, builds a graph data structure (nodes + edges), and exports as JSON for the blog."
+          ],
+          "Jekyll Frontend Architecture": [
+            "**Liquid Templates** — Modular components for posts, archive pages, categories, tags, and the graph view.",
+            "**JavaScript Modules** — Search (Fuse.js), filtering, TOC highlighting, graph rendering (vis.js), and mobile sidebar toggles.",
+            "**SASS Architecture** — Variables for theming, mixins for responsive breakpoints, and component-specific styles that don't leak."
+          ],
+          "Python AI Assistant": [
+            "**Flask Web Server** — Serves the interface and API endpoints for content management.",
+            "**File Watcher** — Detects changes in source notes and flags them for reprocessing.",
+            "**Status Tracking** — JSON-based state management for processed vs pending notes, with backup functionality for rollbacks."
+          ]
+        },
+        "🚀 The Road Ahead": [
+          "I'm continuing to improve the ecosystem with:",
+          "- **Complete plugin packaging** — Publishing the Obsidian plugin to the community store",
+          "- **Jekyll theme as a gem** — Making the theme installable via `gem install`",
+          "- **GitHub Action for automation** — Auto-sync on Obsidian vault changes",
+          "- **Full-text search** — Better search with page previews and relevance ranking",
+          "- **More graph features** — Timeline view, force-directed layouts, search within graph",
+          "- **Webmentions** — Receiving and displaying interactions from other sites",
+          "- **Newsletter integration** — Email subscriptions for new posts"
+        ],
+        "💡 Final Thoughts": [
+          "This project taught me that the best publishing system is the one that disappears into your workflow. I don't think about \"blogging\" anymore — I just write notes in Obsidian, mark them as public, and they appear on my site.",
+          "The integration between Obsidian, Jekyll, and my AI assistant tools creates a seamless pipeline from idea to published post. And the backlink graph transforms the blog from a collection of articles into a genuine knowledge network.",
+          "This is my digital garden — constantly growing, automatically maintained, and a reflection of how I actually think and work."
+        ]
+      }
+    }
+  },
+  {
+    "id": 4,
     "repoId": "Merakikrea Ceramica – Landing Page",
     "date": "2026-04-01T17:19:41.627Z",
     "title": "Merakikrea Cerámica – Landing Page",
@@ -197,7 +625,7 @@ export const readmes = [
     }
   },
   {
-    "id": 3,
+    "id": 5,
     "repoId": "Ping Test Tool - Real-Time Network Monitor",
     "date": "2026-04-02T16:27:34.402Z",
     "title": "Ping Test Tool - Real-Time Network Monitor",
@@ -299,7 +727,7 @@ export const readmes = [
     }
   },
   {
-    "id": 4,
+    "id": 6,
     "repoId": "Portfolio project",
     "date": "2026-04-02T02:14:40.518Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
@@ -459,7 +887,7 @@ export const readmes = [
     }
   },
   {
-    "id": 5,
+    "id": 7,
     "repoId": "Todo app - kanban board",
     "date": "2026-04-02T02:35:33.858Z",
     "title": "Todo App — Complete Task Management System",
@@ -662,7 +1090,7 @@ export const readmes = [
     }
   },
   {
-    "id": 6,
+    "id": 8,
     "repoId": "Utility Tools Collection – Data Migration & Media Conversion",
     "date": "2026-04-01T17:00:50.542Z",
     "title": "Utility Tools Collection – Data Migration & Media Conversion",
