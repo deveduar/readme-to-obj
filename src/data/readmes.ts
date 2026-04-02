@@ -2,7 +2,7 @@ export const readmes = [
   {
     "id": 1,
     "repoId": "3D Audio Visualizer",
-    "date": "2026-04-02T20:06:08.173Z",
+    "date": "2026-04-02T21:04:57.600Z",
     "title": "3D Audio Visualizer — Experimental Audio Engine",
     "description": "An interactive 3D audio visualizer built with SvelteKit, Tone.js, and Threlte. Features real-time shader manipulation, multiple visual modes, metadata extraction, and professional audio metering.",
     "imageSrc": "https://i.postimg.cc/YC34cbbF/localhost-5173-(7).png",
@@ -29,8 +29,7 @@ export const readmes = [
     "gallery": [
       "https://i.postimg.cc/BQncwPq2/localhost-5173-(2).png",
       "https://i.postimg.cc/J4zcdH1k/localhost-5173-(3).png",
-      "https://i.postimg.cc/yY8Xr3VF/localhost-5173-(4).png",
-      "https://i.postimg.cc/YC34cbbF/localhost-5173-(7).png"
+      "https://i.postimg.cc/yY8Xr3VF/localhost-5173-(4).png"
     ],
     "features": [
       "Real-time 3D audio visualization with custom GLSL shaders.",
@@ -49,7 +48,7 @@ export const readmes = [
     "readmeContent": {
       "title": "3D Audio Visualizer — Experimental Audio Engine",
       "fileName": "3D Audio Visualizer.md",
-      "date": "2026-04-02T20:06:08.173Z",
+      "date": "2026-04-02T21:04:57.600Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted to build more than just a music player. I set out to create an **experimental audio visualization platform** where music becomes art — real-time, reactive, and completely customizable.",
@@ -552,10 +551,10 @@ export const readmes = [
   {
     "id": 4,
     "repoId": "Merakikrea Ceramica – Landing Page",
-    "date": "2026-04-01T17:19:41.627Z",
+    "date": "2026-04-02T21:14:52.163Z",
     "title": "Merakikrea Cerámica – Landing Page",
     "description": "A custom landing page for an artisan ceramics business**, inspired by the Google Business Profile experience. The goal was to create a fast, accessible digital presence that bridges the physical store with its customers through key information, authentic reviews, and up-to-date visual content",
-    "imageSrc": "https://i.postimg.cc/jqJdfFtB/iphone-meraki-mockup.webp",
+    "imageSrc": "https://i.postimg.cc/y8jKgnTZ/pc-meraki-mockup.webp",
     "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
     "technologies": [
       "Next.js",
@@ -591,7 +590,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Merakikrea Cerámica – Landing Page",
       "fileName": "Merakikrea Ceramica – Landing Page.md",
-      "date": "2026-04-01T17:19:41.627Z",
+      "date": "2026-04-02T21:14:52.163Z",
       "sections": {
         "📌 About the project": [
           "This project was born from the need to centralize all the information of a local business in one place: location, customer reviews, visual catalog from Instagram, and direct contact channels. The design focuses on conveying warmth and trust, with a smooth user experience across both mobile and desktop devices."
@@ -729,10 +728,10 @@ export const readmes = [
   {
     "id": 6,
     "repoId": "Portfolio project",
-    "date": "2026-04-02T02:14:40.518Z",
+    "date": "2026-04-02T21:18:06.018Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
     "description": "A deep dive into creating a dynamic portfolio that automatically syncs with my Obsidian vault, transforming markdown notes into a beautiful, interactive showcase of my work.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
+    "imageSrc": "https://i.postimg.cc/660BTKqC/luca-bravo-XJXWbfSo2f0-unsplash_(1).jpgg",
     "detailedDescription": "I built a custom automation system that connects my Obsidian note-taking workflow to my Next.js portfolio. A Node.js script reads markdown files from my vault, parses them with Remark, and converts them into structured data. A PowerShell script manages the entire workflow — creating new project notes, running the conversion, and committing updates. The Next.js portfolio consumes this data, generating static pages for each project with real-time GitHub stats. The result: a portfolio that updates itself whenever I write a new note. No manual copying, no formatting headaches, just writing and publishing.",
     "technologies": [
       "Next.js 14",
@@ -771,7 +770,7 @@ export const readmes = [
     "readmeContent": {
       "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
       "fileName": "Portfolio project.md",
-      "date": "2026-04-02T02:14:40.518Z",
+      "date": "2026-04-02T21:18:06.018Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a portfolio that:",
@@ -889,10 +888,10 @@ export const readmes = [
   {
     "id": 7,
     "repoId": "Todo app - kanban board",
-    "date": "2026-04-02T02:35:33.858Z",
+    "date": "2026-04-02T21:56:51.854Z",
     "title": "Todo App — Complete Task Management System",
     "description": "A full-featured task management application with Kanban board, spreadsheet-style table view, subtask hierarchy, bulk operations, recycle bin, and project organization.",
-    "imageSrc": "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
+    "imageSrc": "https://i.postimg.cc/Bv491G9X/localhost-3001-profile.png",
     "detailedDescription": "This is not just another todo list — it's a production-ready task management system I built to handle real-world complexity. Features include a Kanban board with drag-and-drop between customizable status columns, a powerful table view with sortable and resizable columns, complete subtask hierarchy, bulk operations for selecting and modifying multiple tasks at once, project organization, smart date pickers with due dates and reminders, a recycle bin with restore functionality, rich markdown input for creating multiple tasks at once, and real-time search across tasks and subtasks. The system handles edge cases like moving tasks with subtasks between projects, bulk deleting mixed selections, and maintaining order across views. Built with React, TypeScript, Zustand for state management, DnD Kit for drag-and-drop, and PostgreSQL with Docker for the backend.",
     "technologies": [
       "React.js",
@@ -919,10 +918,10 @@ export const readmes = [
       }
     ],
     "gallery": [
-      "https://i.postimg.cc/L8jy39Fb/iphone-todo-app-mockup.webp",
-      "https://i.postimg.cc/kMhhnYyf/laptop-todo-app-mockup.webp",
-      "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
-      "https://i.postimg.cc/RV6pq1s9/tablet-todo-app-mockup.webp"
+      "https://i.postimg.cc/Ls2KZMKJ/localhost-3001-(3).png",
+      "https://i.postimg.cc/Ls2KZMKh/localhost-3001-(2).png",
+      "https://i.postimg.cc/Ls2KZMKJ/localhost-3001-(3).png",
+      "https://i.postimg.cc/0NngYHPK/localhost-3001-profile(i-Phone-14-Pro-Max)-(1).png"
     ],
     "features": [
       "Kanban board with drag-and-drop between customizable status columns.",
@@ -941,7 +940,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Todo App — Complete Task Management System",
       "fileName": "Todo app - kanban board.md",
-      "date": "2026-04-02T02:35:33.858Z",
+      "date": "2026-04-02T21:56:51.854Z",
       "sections": {
         "🎯 The Big Picture": [
           "I set out to build more than just a todo list. I wanted to create a **production-ready task management system** that could handle real-world complexity — multiple projects, subtasks, drag-and-drop, bulk operations, and a sophisticated recycling system.",
@@ -1092,10 +1091,10 @@ export const readmes = [
   {
     "id": 8,
     "repoId": "Utility Tools Collection – Data Migration & Media Conversion",
-    "date": "2026-04-01T17:00:50.542Z",
+    "date": "2026-04-02T21:13:35.941Z",
     "title": "Utility Tools Collection – Data Migration & Media Conversion",
     "description": "A collection of Python CLI tools: migrate Omnivore bookmarks to Raindrop.io, convert PDFs to CBR format for digital comics, and download YouTube audio as high-quality MP3.",
-    "imageSrc": "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg",
+    "imageSrc": "hhttps://i.postimg.cc/660BTKqC/luca-bravo-XJXWbf-So2f0-unsplash-(1).jpg",
     "detailedDescription": "Three practical Python command-line tools designed to solve real-world problems. The Omnivore Converter helps users migrate their saved articles to Raindrop.io before the service shutdown. The PDF to CBR Converter transforms PDF files into comic book format for digital readers. The YouTube MP3 Downloader extracts high-quality audio from YouTube videos with a simple CLI interface. Each tool prioritizes simplicity, clear documentation, and robust error handling.",
     "technologies": [
       "Python 3",
@@ -1133,7 +1132,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Utility Tools Collection – Data Migration & Media Conversion",
       "fileName": "Utility Tools Collection – Data Migration & Media Conversion.md",
-      "date": "2026-04-01T17:00:50.542Z",
+      "date": "2026-04-02T21:13:35.941Z",
       "sections": {
         "📦 Project 1: Omnivore → Raindrop.io Migration Tool": {
           "✨ Key features": [
