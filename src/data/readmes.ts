@@ -440,24 +440,33 @@ export const readmes = [
   },
   {
     "id": 5,
-    "repoId": "todo-app",
-    "title": "Todo app",
-    "description": "A task management application designed to help organize and prioritize activities efficiently.",
+    "repoId": "Todo app - kanban board",
+    "title": "Todo App — Complete Task Management System",
+    "description": "A full-featured task management application with Kanban board, spreadsheet-style table view, subtask hierarchy, bulk operations, recycle bin, and project organization.",
     "imageSrc": "https://i.postimg.cc/RVkst3yt/pc-todo-app-mockup.webp",
-    "detailedDescription": "The app allows setting due dates, reminders, and managing task statuses. Now, it also includes a Kanban board with drag-and-drop functionality, allowing tasks to be easily moved between different statuses for better organization.",
+    "detailedDescription": "This is not just another todo list — it's a production-ready task management system I built to handle real-world complexity. Features include a Kanban board with drag-and-drop between customizable status columns, a powerful table view with sortable and resizable columns, complete subtask hierarchy, bulk operations for selecting and modifying multiple tasks at once, project organization, smart date pickers with due dates and reminders, a recycle bin with restore functionality, rich markdown input for creating multiple tasks at once, and real-time search across tasks and subtasks. The system handles edge cases like moving tasks with subtasks between projects, bulk deleting mixed selections, and maintaining order across views. Built with React, TypeScript, Zustand for state management, DnD Kit for drag-and-drop, and PostgreSQL with Docker for the backend.",
     "technologies": [
-      "Next.js",
       "React.js",
-      "Tailwind",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "Zustand",
+      "DnD Kit",
+      "date-fns",
       "Node.js",
-      "Shacdn UI",
+      "Express",
       "PostgreSQL",
-      "Docker"
+      "Docker",
+      "Playwright"
     ],
     "links": [
       {
         "href": "https://github.com/deveduar/todo-app",
-        "label": "GitHub"
+        "label": "GitHub Repository"
+      },
+      {
+        "href": "https://github.com/deveduar/todo-app-backend",
+        "label": "Backend API"
       }
     ],
     "gallery": [
@@ -467,75 +476,165 @@ export const readmes = [
       "https://i.postimg.cc/RV6pq1s9/tablet-todo-app-mockup.webp"
     ],
     "features": [
-      "Task management: Create, edit, delete, and mark tasks as completed.",
-      "Statuses and priorities: Assign custom statuses and priority levels.",
-      "Due dates and reminders: Set due dates and notifications.",
-      "Smart date and time selection: Ensures valid time selection based on the chosen date.",
-      "Backend synchronization: Data persistence via an API.",
-      "Kanban board: Drag-and-drop tasks between different statuses for a visual workflow.",
-      "Responsive design with ShadCN UI.",
-      "Static site generation with Next.js."
+      "Kanban board with drag-and-drop between customizable status columns.",
+      "Spreadsheet-style table view with sortable, resizable columns.",
+      "Complete subtask hierarchy — tasks can contain unlimited subtasks.",
+      "Project organization — group tasks by projects with dedicated views.",
+      "Bulk operations — select multiple tasks and change status, priority, or delete in batch.",
+      "Recycle bin with restore and permanent delete functionality.",
+      "Smart date picker with due dates and reminders, adapting between tooltips and drawers.",
+      "Rich markdown input — create multiple tasks and subtasks with simple syntax.",
+      "Real-time search across tasks and subtasks with automatic expansion.",
+      "Responsive design — works seamlessly on mobile, tablet, and desktop.",
+      "Dark mode support with custom theming.",
+      "Comprehensive testing with Playwright E2E tests."
     ],
     "readmeContent": {
-      "title": "Todo app",
-      "fileName": "todo-app.md",
+      "title": "Todo App — Complete Task Management System",
+      "fileName": "Todo app - kanban board.md",
       "sections": {
-        "✨ Features": [
-          "📋 **Task management**: Create, edit, delete, and mark tasks as completed.",
-          "🎯 **Statuses and priorities**: Assign custom statuses and priority levels.",
-          "⏰ **Due dates and reminders**: Set due dates and notifications.",
-          "📅 **Smart date and time selection**: Ensures valid time selection based on the chosen date.",
-          "🔄 **Backend synchronization**: Data persistence via an API.",
-          "📌 **Kanban board**: Drag-and-drop tasks between different statuses for a visual workflow."
+        "🎯 The Big Picture": [
+          "I set out to build more than just a todo list. I wanted to create a **production-ready task management system** that could handle real-world complexity — multiple projects, subtasks, drag-and-drop, bulk operations, and a sophisticated recycling system.",
+          "What started as a simple React app evolved into a comprehensive tool with:",
+          "**Two complete views**: Kanban board and spreadsheet-style table",
+          "**Project management**: Organize tasks across different projects",
+          "**Advanced task hierarchy**: Tasks with subtasks, deep nesting",
+          "**Complete lifecycle management**: Archive, restore, permanent delete",
+          "**Bulk operations**: Select, modify, or delete multiple tasks at once",
+          "**Rich date management**: Due dates, reminders with intelligent time selection"
         ],
-        "🛠️ Technologies Used": {
-          "Frontend": [
-            "⚛️ **React** with TypeScript",
-            "🎨 **Tailwind CSS** for styling",
-            "📦 **ShadCN/UI** for UI components",
-            "🗂 **date-fns** and **date-fns-tz** for date handling",
-            "🖱 **dnd-kit** for drag-and-drop functionality in the Kanban board"
-          ],
-          "Backend (Separate GitHub Project)": [
-            "🚀 **Node.js with Express**",
-            "🐘 **PostgreSQL** as the database",
-            "🐳 **Docker** for deployment and configuration"
+        "✨ What I Built": {
+          "Core Features": [
+            "**Task Management**\nCreate, edit, delete, and mark tasks as complete. Each task has status, priority, color coding, due dates, and reminders.",
+            "**Project Organization**\nGroup tasks by projects. Create new projects, edit their details, and filter views by project.",
+            "**Subtask System**\nTasks can contain subtasks, creating hierarchical structures. Subtasks inherit project context and can be managed independently or with their parent.",
+            "**Two Powerful Views**",
+            "*Kanban Board* — Drag and drop tasks between status columns (Pending, In Progress, Completed, Blocked, Archived). Customize which columns appear, collapse them, and reorder tasks within columns.",
+            "*Table View* — A spreadsheet-style interface with sortable columns, column resizing, bulk selection, and advanced filtering. Perfect for power users who want to see everything at once.",
+            "**Recycle Bin**\nDeleted tasks go to a recycle bin first. Restore them later or permanently delete. Tasks with subtasks show warnings before deletion and offer options to preserve subtasks.",
+            "**Bulk Operations**\nSelect multiple tasks and perform actions in batch — change status, update priority, assign to projects, or delete. Smart dialogs handle edge cases like moving subtasks between projects.",
+            "**Smart Date Picker**\nDue dates and reminders with intelligent time selection. The picker validates that selected times are valid for the chosen day and adapts between tooltips (desktop) and drawers (mobile).",
+            "**Rich Text Input**\nA sophisticated input component that parses markdown. Create multiple tasks at once with syntax like:"
           ]
         },
-        "🚀 Installation": {
-          "1️⃣ Clone the repository": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "git clone https://github.com/your-user/your-todo-repo.git\ncd your-todo-repo"
-            }
+        "🛠️ Technology Stack": [
+          "**Frontend**",
+          "React with TypeScript for type safety",
+          "Tailwind CSS for styling with custom theming",
+          "ShadCN/UI for accessible component primitives",
+          "date-fns for robust date handling",
+          "DnD Kit for drag-and-drop functionality",
+          "Zustand for state management",
+          "**Backend** (Separate repository)",
+          "Node.js with Express",
+          "PostgreSQL database",
+          "Docker for consistent development and deployment",
+          "**Testing & Quality**",
+          "End-to-end testing with Playwright",
+          "Comprehensive unit tests",
+          "ESLint and Prettier for code quality"
+        ],
+        "🧠 The Real Story — Challenges I Solved": {
+          "1. ": [
+            "The biggest challenge was handling the parent-child relationship between tasks and subtasks. When you:",
+            "Delete a parent task — do subtasks get deleted too?",
+            "Move a parent to another project — do subtasks follow?",
+            "Bulk select a mix of parents and children — how do operations behave?",
+            "I built a system that respects hierarchy while giving users control. Dialogs ask the right questions:",
+            "\"Delete parent only and convert subtasks to main tasks?\"",
+            "\"Move parent and all subtasks to new project?\"",
+            "\"Delete selected subtasks while preserving their parent?\""
           ],
-          "2️⃣ Install dependencies": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm install"
-            }
+          "2. ": [
+            "The kanban board needed to handle hundreds of tasks across multiple columns without performance issues. I implemented:",
+            "Optimized re-rendering with proper memoization",
+            "Smooth animations that don't interfere with drag operations",
+            "Visual feedback with drop indicators and preview elements",
+            "Support for both desktop drag-and-drop and touch devices",
+            "The biggest win? Making drag-and-drop work seamlessly while the board is sorted (not in manual mode) or when columns are collapsed."
           ],
-          "3️⃣ Set up the backend (Docker)": [
-            "The backend is in a separate GitHub project. Follow its instructions to set it up with Docker."
+          "3. ": [
+            "Selecting 50+ tasks and changing their status should feel instant. I built:",
+            "Background processing with loading states",
+            "Toast notifications showing progress",
+            "Smart selection logic that respects filters and grouping",
+            "Optimistic updates that revert on failure",
+            "The tricky part was handling edge cases — what happens when you bulk delete a mix of parents and children? The solution involved analyzing selections and presenting clear options before executing."
           ],
-          "4️⃣ Run the frontend": [
-            {
-              "type": "code",
-              "lang": "bash",
-              "meta": null,
-              "value": "npm run dev"
-            }
+          "4. ": [
+            "The table view needed to be as powerful as a spreadsheet:",
+            "Resizable columns with visual indicators during resize",
+            "Sortable columns (ascending/descending) that work across all data types",
+            "Fixed headers that scroll with the table",
+            "Horizontal scroll for when columns exceed viewport width",
+            "Responsive behavior that adapts to mobile",
+            "The responsive version collapses into cards while maintaining all functionality — a significant UI/UX challenge that required rethinking the component structure."
+          ],
+          "5. ": [
+            "Deleting tasks shouldn't be permanent. I built a complete recycling system:",
+            "Soft delete moves tasks to trash instead of removing from database",
+            "Restore operations preserve hierarchy (restore parent, get all subtasks back)",
+            "Permanent delete with warnings for tasks that have subtasks",
+            "Search and filter within trash",
+            "Batch restore and delete operations",
+            "This required careful database design with deleted_at timestamps and ensuring cascade operations respected the soft delete pattern."
+          ],
+          "6. ": [
+            "The app needed to work beautifully on phones, tablets, and desktops. I implemented:",
+            "Tooltips on desktop, drawers on mobile for date pickers",
+            "Collapsed views that show only essential information on small screens",
+            "Touch-friendly drag-and-drop with larger hit areas",
+            "Bottom sheets for bulk actions instead of dropdowns",
+            "Responsive tables that convert to card layouts on mobile",
+            "The result is an app that feels native on any device."
+          ],
+          "7. ": [
+            "Search needed to find tasks AND subtasks, then show them in context. When you search for a subtask:",
+            "The parent task expands automatically",
+            "Matching subtasks are highlighted",
+            "Search results show counts and clear indicators",
+            "This required coordinating state across components and ensuring the UI updates without losing scroll position or user context."
+          ],
+          "8. ": [
+            "With hundreds of tasks and subtasks, performance became critical. I optimized:",
+            "Virtual scrolling for large lists",
+            "Memoized components to prevent unnecessary re-renders",
+            "Debounced search inputs",
+            "Optimistic updates for instant UI feedback",
+            "Batch database operations for bulk actions",
+            "The app now handles 1000+ tasks without noticeable lag."
           ]
         },
-        "📌 Roadmap": [
-          "[ ] Authentication integration",
-          "[ ] Support for subtasks",
-          "[ ] Real-time notifications",
-          "📌 *Contributions and suggestions are welcome.*"
+        "📊 What I Learned": {
+          "1. ": [
+            "Zustand proved perfect for this project — lightweight but powerful enough to handle complex state with selectors and middleware. The key was structuring state to minimize re-renders while keeping logic maintainable."
+          ],
+          "2. ": [
+            "The initial schema was simple. As features grew, I needed proper indexing for search, soft delete flags, hierarchy management with parent_id, and efficient queries for counts and filters. PostgreSQL's JSON capabilities helped with flexible metadata storage."
+          ],
+          "3. ": [
+            "Every edge case needs consideration. What happens when you drag a task to a collapsed column? What if you try to move a subtask to a different project? The difference between a frustrating app and a delightful one is handling these scenarios gracefully."
+          ],
+          "4. ": [
+            "Writing comprehensive tests early caught bugs that would have been nightmares to debug later. End-to-end tests with Playwright ensured critical flows (drag-and-drop, bulk operations) never regressed."
+          ],
+          "5. ": [
+            "As features grew, refactoring became essential. I went through multiple iterations of the kanban state management, the table component, and the bulk action system. Each refactor made the code cleaner and more maintainable."
+          ]
+        },
+        "📈 The Road Ahead": [
+          "I'm continuing to improve the app with:",
+          "**Authentication** — User accounts with personal data",
+          "**Real-time collaboration** — Multiple users working on the same board",
+          "**Advanced notifications** — Email reminders for due dates",
+          "**Analytics dashboard** — Charts showing productivity trends",
+          "**Pomodoro timer** — Integrated focus sessions",
+          "**AI integration** — Smart task suggestions and natural language task creation",
+          "**Mobile apps** — React Native version for iOS and Android"
+        ],
+        "💡 Final Thoughts": [
+          "This project taught me that simple ideas become complex systems when you care about details. A todo list is trivial. A **task management system that people actually want to use** requires thinking about every interaction, every edge case, and every performance bottleneck.",
+          "The result is a tool I use daily — and a codebase I'm proud to show as evidence of my ability to build production-ready applications."
         ]
       }
     }
