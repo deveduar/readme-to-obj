@@ -728,10 +728,10 @@ export const readmes = [
   {
     "id": 6,
     "repoId": "Portfolio project",
-    "date": "2026-04-02T21:18:06.018Z",
+    "date": "2026-04-03T01:53:53.794Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
     "description": "A deep dive into creating a dynamic portfolio that automatically syncs with my Obsidian vault, transforming markdown notes into a beautiful, interactive showcase of my work.",
-    "imageSrc": "https://i.postimg.cc/660BTKqC/luca-bravo-XJXWbfSo2f0-unsplash_(1).jpgg",
+    "imageSrc": "https://i.postimg.cc/J0Db8nxr/deveduar-portfolio-vercel-app.png",
     "detailedDescription": "I built a custom automation system that connects my Obsidian note-taking workflow to my Next.js portfolio. A Node.js script reads markdown files from my vault, parses them with Remark, and converts them into structured data. A PowerShell script manages the entire workflow — creating new project notes, running the conversion, and committing updates. The Next.js portfolio consumes this data, generating static pages for each project with real-time GitHub stats. The result: a portfolio that updates itself whenever I write a new note. No manual copying, no formatting headaches, just writing and publishing.",
     "technologies": [
       "Next.js 14",
@@ -770,7 +770,7 @@ export const readmes = [
     "readmeContent": {
       "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
       "fileName": "Portfolio project.md",
-      "date": "2026-04-02T21:18:06.018Z",
+      "date": "2026-04-03T01:53:53.794Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a portfolio that:",
