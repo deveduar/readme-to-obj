@@ -626,7 +626,7 @@ export const readmes = [
   {
     "id": 5,
     "repoId": "Ping Test Tool - Real-Time Network Monitor",
-    "date": "2026-04-02T16:27:34.402Z",
+    "date": "2026-04-03T13:39:48.455Z",
     "title": "Ping Test Tool - Real-Time Network Monitor",
     "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
     "imageSrc": "https://i.postimg.cc/661JsKNF/Captura.png",
@@ -640,6 +640,10 @@ export const readmes = [
       "Web Workers"
     ],
     "links": [
+      {
+        "href": "https://github.com/deveduar/network-metrics-tool.git",
+        "label": "GitHub"
+      },
       {
         "href": "https://ping-test-tool.vercel.app/",
         "label": "Live Demo"
@@ -657,7 +661,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Ping Test Tool - Real-Time Network Monitor",
       "fileName": "Ping Test Tool - Real-Time Network Monitor.md",
-      "date": "2026-04-02T16:27:34.402Z",
+      "date": "2026-04-03T13:39:48.455Z",
       "sections": {
         "✨ Features": [
           "- **Real-Time Monitoring** – Continuous updates on key network stats",
