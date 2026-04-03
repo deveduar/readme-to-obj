@@ -1228,5 +1228,256 @@ export const readmes = [
         ]
       }
     }
+  },
+  {
+    "id": 9,
+    "repoId": "Vue Dates — Building a Complete Salon Booking System",
+    "date": "2026-04-03T01:04:36.310Z",
+    "title": "Vue Dates — Complete Booking System",
+    "description": "A production-ready appointment booking system built with Vue 3, TypeScript, and Vuetify — featuring real-time availability, collision detection, provider management, and an intelligent scheduling engine.",
+    "imageSrc": "https://i.postimg.cc/cJNb6qtr/localhost-5173-(9).png",
+    "detailedDescription": "A comprehensive booking solution for service-based businesses (salons, barbershops, consultancies, clinics) built with Vue 3 Composition API, Pinia for state management, and Vuetify 3 for UI. Features include an interactive booking system with real-time availability and conflict detection, dual scheduling modes (Standard daily windows and Fixed slots), provider management with granular service assignment and schedule overrides, admin dashboard for complete business control, specialist dashboards for appointment management, and user dashboards with appointment history and rebooking. The system automatically transitions appointments through states (Pending → Upcoming → InProgress → Completed) with periodic status checks every 60 seconds, includes live timers with HH:MM:SS format and visual progress bars, prevents double-booking through comprehensive collision detection considering service durations and provider schedules, and persists all data in localStorage for zero-backend evaluation. Built with Vue 3, TypeScript, Pinia, Vuetify, Vue Router, Vitest, and Cypress.",
+    "technologies": [
+      "Vue 3",
+      "TypeScript",
+      "Pinia",
+      "Vuetify 3",
+      "Vue Router 4",
+      "Vite",
+      "Vitest",
+      "Cypress",
+      "ESLint",
+      "Prettier"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/vue-dates",
+        "label": "GitHub Repository"
+      }
+    ],
+    "gallery": [
+      "https://i.postimg.cc/q7d5gf66/localhost-5173-(15).png",
+      "https://i.postimg.cc/KYyH4X3k/localhost-5173-(14).png",
+      "https://i.postimg.cc/tgHM70nV/localhost-5173-(i-Phone-SE).png",
+      "https://i.postimg.cc/ZqhM0kvR/localhost-5173-(11).png"
+    ],
+    "features": [
+      "Interactive booking system with real-time availability and conflict detection.",
+      "Dual scheduling modes — Standard daily windows and Fixed precise slots.",
+      "Provider management with service assignment and schedule overrides.",
+      "Admin dashboard for complete service, provider, and appointment control.",
+      "Specialist dashboard for managing pending requests and upcoming appointments.",
+      "User dashboard with appointment history, active bookings, and rebooking.",
+      "Real-time appointment timer system with HH:MM:SS format and progress bar.",
+      "Automatic status transitions — Pending → Upcoming → InProgress → Completed.",
+      "Comprehensive collision detection preventing double bookings.",
+      "Provider override schedules — custom hours per specialist per service.",
+      "Persistent localStorage for zero-backend evaluation.",
+      "Dark/Light theme support with Vuetify theming.",
+      "Responsive design for mobile, tablet, and desktop.",
+      "Rich sample data for immediate testing and evaluation.",
+      "Service visibility controls — public or hidden.",
+      "Appointment cancellation and rejection with slot restoration."
+    ],
+    "readmeContent": {
+      "title": "Vue Dates — Complete Booking System",
+      "fileName": "Vue Dates — Building a Complete Salon Booking System.md",
+      "date": "2026-04-03T01:04:36.310Z",
+      "sections": {
+        "🎯 The Big Picture": [
+          "I wanted to build a complete booking solution for service-based businesses — salons, barbershops, consultancies, clinics. Not just a calendar, but a **smart scheduling engine** that handles provider availability, service durations, conflict detection, and real-time booking constraints.",
+          "The result is a full-featured application featuring:",
+          "- **Interactive booking system** with real-time availability",
+          "- **Provider management** with granular service assignment",
+          "- **Dual scheduling modes** (Standard daily windows + Fixed slots)",
+          "- **Admin dashboard** for complete business control",
+          "- **Specialist dashboards** for managing appointments",
+          "- **Real-time conflict detection** preventing double bookings",
+          "- **In-progress appointment tracking** with live timers"
+        ],
+        "✨ What I Built": {
+          "The Booking System (`/booking`)": [
+            "**Interactive Calendar** — Users select dates and see available time slots in real-time. The system automatically filters past times and respects provider-specific schedules.",
+            "**Smart Service Selection** — Services are organized by categories, can be marked as public or hidden, and each service has its own duration, pricing, and assigned specialists.",
+            "**Provider Selection** — Specialists are assigned to services. Users see expert profiles, status, and real-time availability. The system auto-selects the next available slot for a seamless experience.",
+            "**Conflict Detection** — The engine prevents double-booking by checking existing appointments, service durations, and provider schedules before showing available slots."
+          ],
+          "Admin Dashboard (`/admin`)": [
+            "**Service Management** — Complete CRUD for services with pricing, duration, categories, and visibility controls. Services can be duplicated, edited, or soft-deleted.",
+            "**Dual Scheduling Engine**",
+            "*Standard Mode* — Define daily operating windows (e.g., 9:00 AM - 5:00 PM) with configurable intervals between slots.",
+            "*Fixed Slots Mode* — Precise manual control over specific date and time combinations. Perfect for special events or limited availability.",
+            "**Provider Overrides** — Custom schedules for any provider on any specific service, overriding business defaults. Granular control per specialist.",
+            "**Provider Management** — Full CRUD for specialists with profiles, status tracking, and service assignment. Each provider can have their own schedule and service specialties."
+          ],
+          "User & Specialist Dashboards": [
+            "**User Dashboard** — View upcoming appointments, active bookings, appointment history, and rebook past services. Real-time countdown timers for active appointments.",
+            "**Specialist Dashboard** — Manage pending requests, upcoming appointments, accept/reject bookings, mark appointments as completed, and view assigned services."
+          ],
+          "Intelligent Features": [
+            "**Real-Time Timer System** — Live countdown timers for appointments (HH:MM:SS format) with visual progress bars. Shows \"Comienza en X\", \"En curso\", or \"Completado\" states.",
+            "**Automatic Status Management** — Appointments automatically transition from Pending → Upcoming → InProgress → Completed as time passes. The system runs periodic checks every 60 seconds.",
+            "**Collision Detection** — Prevents double-booking by checking:",
+            "- Existing appointments for the same provider at the same time",
+            "- Service duration impact on availability",
+            "- Provider-specific schedule constraints",
+            "- Fixed slot reservations",
+            "**Waitlist Foundation** — Infrastructure for future waitlist functionality when no slots are available."
+          ]
+        },
+        "🛠️ Technology Stack": [
+          "**Frontend Framework**",
+          "- Vue 3 (Composition API, Script Setup)",
+          "- TypeScript for type safety",
+          "- Vite for build tooling",
+          "**State Management**",
+          "- Pinia for centralized stores",
+          "- Persistent localStorage for data resilience",
+          "**UI Framework**",
+          "- Vuetify 3 for Material Design components",
+          "- Custom SASS theming with dark/light mode",
+          "**Routing & Testing**",
+          "- Vue Router 4",
+          "- Vitest for unit tests",
+          "- Cypress for E2E testing",
+          "**Code Quality**",
+          "- ESLint + Prettier"
+        ],
+        "🧠 The Real Story — Challenges I Solved": {
+          "1. **Collision Detection Across Multiple Dimensions**": [
+            "The hardest challenge was preventing double bookings while handling:",
+            "- Multiple providers with overlapping schedules",
+            "- Service durations affecting adjacent time slots",
+            "- Standard ranges vs fixed slots",
+            "- Pending, accepted, and in-progress appointments",
+            "- Rejected and cancelled appointments freeing up slots",
+            "**The solution:** I built a centralized availability engine that:",
+            "- Tracks all appointments by provider, date, and time",
+            "- Considers service duration when calculating availability",
+            "- Filters out slots that conflict with existing appointments",
+            "- Handles both range-based and fixed-slot availability models",
+            "- Updates availability in real-time as appointments change status",
+            "The engine returns available slots for any given provider, date, and service combination — used by both the booking page and the admin editors."
+          ],
+          "2. **Real-Time Timer Without Performance Issues**": [
+            "Displaying live countdowns for multiple appointments while updating every second could kill performance.",
+            "**The approach:** Each timer component manages its own `setInterval` that updates a local reactive variable. When the component unmounts, the interval is cleaned up. The store's periodic watcher (every 60 seconds) handles status transitions, while the timer handles second-by-second display.",
+            "The timer supports:",
+            "- Countdown until appointment start",
+            "- Elapsed time during active appointments",
+            "- Visual progress bar showing completion percentage",
+            "- HH:MM:SS format for longer appointments"
+          ],
+          "3. **Automatic Status Transitions**": [
+            "Appointments needed to transition through states without user intervention:",
+            "- `Pending` → `Upcoming` (specialist accepts)",
+            "- `Upcoming` → `InProgress` (start time arrives)",
+            "- `InProgress` → `Completed` (end time passes)",
+            "- `Pending`/`Upcoming` → `Expired` (date passes without acceptance)",
+            "**The implementation:** A `startAppointmentWatcher()` function runs every 60 seconds in the appointments store. It checks every appointment against the current time and updates statuses accordingly. When status changes to `Completed`, notifications are sent to both the user and the specialist."
+          ],
+          "4. **Dual Scheduling Modes**": [
+            "Businesses need different scheduling models:",
+            "- **Standard Mode** — Recurring daily windows (e.g., \"9 AM to 5 PM every weekday\")",
+            "- **Fixed Slots Mode** — Specific dates and times (e.g., \"Christmas Eve, 2 PM to 4 PM\")",
+            "**The architecture:** Both modes share the same underlying availability checking engine. Standard mode generates available slots on the fly based on daily windows and intervals. Fixed slots mode stores explicit available slots that override any standard rules.",
+            "The admin UI adapts based on mode — date pickers for standard mode, slot-by-slot management for fixed mode."
+          ],
+          "5. **Provider Overrides**": [
+            "Some providers have unique schedules. A specialist might work Wednesdays 10 AM to 2 PM while the business is open 9 AM to 6 PM.",
+            "**The solution:** Provider overrides are stored separately and checked before business defaults. When a provider is assigned to a service, their override schedule takes precedence. The admin can set overrides for any provider on any service."
+          ],
+          "6. **Performance at Scale**": [
+            "With 90+ appointments, the system started slowing down — especially on theme switching and booking page interactions.",
+            "**Optimizations applied:**",
+            "- Reduced watchers that weren't necessary",
+            "- Memoized computed properties for availability calculations",
+            "- Debounced date picker changes",
+            "- Simplified the Availability Summary component",
+            "- Lazy-loaded dashboard sections",
+            "The booking page now uses cached availability data that updates only when necessary."
+          ],
+          "7. **Resilient Data Layer**": [
+            "Since the frontend uses `localStorage` for persistence (no backend yet), data consistency is critical.",
+            "**The approach:** Pinia stores have structured actions for all CRUD operations. Each action updates the store and immediately persists to localStorage. The store initializes by loading from localStorage or seeding with rich sample data for immediate evaluation.",
+            "This gives users a fully functional app without any backend setup — perfect for evaluation or small businesses."
+          ]
+        },
+        "📊 What I Learned": {
+          "1. **Date/Time Logic is Deceptively Complex**": [
+            "Handling time zones, service durations, and conflict detection requires rigorous testing. One off-by-minute bug can show unavailable slots as available or vice versa."
+          ],
+          "2. **Vue 3 Composition API Shines for Complex Logic**": [
+            "The Composition API with script setup made the availability engine much more maintainable than Options API would have. Composable functions like `useAvailability` and `useBooking` encapsulate complex logic cleanly."
+          ],
+          "3. **Pinia is Perfect for Medium-Complexity Apps**": [
+            "Pinia strikes the right balance between simplicity and power. The appointments store handles status transitions, watchers, and notifications without becoming unmanageable."
+          ],
+          "4. **LocalStorage is Underrated for Prototyping**": [
+            "Building the app without a backend first let me iterate on the UX and booking logic rapidly. The localStorage persistence layer can be swapped for a real API later without changing the core logic."
+          ],
+          "5. **Real-Time Features Need Clean Cleanup**": [
+            "Timers and watchers must be cleaned up on component unmount. I added proper `onUnmounted` hooks for every interval and watcher to prevent memory leaks."
+          ],
+          "6. **User Feedback Prevents Confusion**": [
+            "When a slot isn't available, telling users *why* (existing booking, provider unavailable, outside business hours) reduces frustration. Clear error messages and disabled UI elements guide users to valid choices."
+          ]
+        },
+        "🔧 Technical Deep Dive": {
+          "Availability Engine Architecture": [
+            "The core availability logic is centralized in composables:",
+            "**`useAvailability`** — Takes a provider ID, date, service duration, and returns available time slots. Checks against:",
+            "- Provider's standard schedule (or overrides)",
+            "- Existing appointments (all statuses except Rejected/Cancelled)",
+            "- Service duration to block adjacent slots",
+            "- Business operating hours",
+            "**`useBooking`** — Orchestrates the booking flow:",
+            "- Validates selected slot against current availability (re-check before creation)",
+            "- Creates appointment with Pending status",
+            "- Notifies the assigned specialist",
+            "- Updates the availability cache",
+            "**`useCollisionDetection`** — Used by admin editors to prevent invalid configurations:",
+            "- Checks if new slots conflict with existing appointments",
+            "- Validates duration against available windows",
+            "- Warns about appointments that would fall outside new ranges"
+          ],
+          "Appointment State Machine": [
+            {
+              "type": "code",
+              "lang": null,
+              "meta": null,
+              "value": "Pending ──(specialist accept)──→ Upcoming ──(start time arrives)──→ InProgress\n   │                                    │\n   │                                    │\n   └──(reject/expire)──→ Rejected/Expired\n                                          │\n                                          └──(end time passes)──→ Completed"
+            },
+            "Each transition triggers appropriate side effects:",
+            "- `Pending → Upcoming`: Notification to user",
+            "- `Upcoming → InProgress`: Timer starts in dashboards",
+            "- `InProgress → Completed`: Notification to both parties, slot becomes available again"
+          ],
+          "Dashboard Architecture": [
+            "Both user and specialist dashboards share common components:",
+            "- `AppointmentCard` — Displays appointment details with actions",
+            "- `AppointmentTimer` — Live countdown/elapsed display",
+            "- `AppointmentList` — Filterable, sortable list with pagination",
+            "The dashboards are role-aware — admin sees management features, specialists see appointment management, users see booking and history."
+          ]
+        },
+        "🚀 The Road Ahead": [
+          "I'm continuing to improve the system with:",
+          "- **Real-time WebSocket updates** — Socket.io for instant slot blocking notifications",
+          "- **Backend migration** — PostgreSQL + NestJS + Docker Compose",
+          "- **Payment integration** — Stripe for deposits or full payments",
+          "- **Waitlist feature** — Notify users when slots become available",
+          "- **Multi-tenant SaaS** — Support multiple businesses from one instance",
+          "- **Email/SMS reminders** — Automatic notifications before appointments",
+          "- **Calendar export** — iCal/Google Calendar integration",
+          "- **Analytics dashboard** — Booking trends, provider performance, revenue"
+        ],
+        "💡 Final Thoughts": [
+          "This project taught me that booking systems look simple on the surface but reveal immense complexity when you dig in. Every business has unique scheduling needs — standard windows, fixed slots, provider overrides, service durations, buffer times, and more.",
+          "Building a system that handles all these cases while remaining intuitive for users is a serious engineering challenge. The result is a flexible, performant booking engine that can power real businesses.",
+          "This is the kind of application I'm proud to show as evidence of my ability to build complex, user-facing systems with clean architecture and attention to detail."
+        ]
+      }
+    }
   }
 ];
