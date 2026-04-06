@@ -551,9 +551,9 @@ export const readmes = [
   {
     "id": 4,
     "repoId": "Merakikrea Ceramica – Landing Page",
-    "date": "2026-04-02T21:14:52.163Z",
+    "date": "2026-04-05T18:55:46.870Z",
     "title": "Merakikrea Cerámica – Landing Page",
-    "description": "A custom landing page for an artisan ceramics business**, inspired by the Google Business Profile experience. The goal was to create a fast, accessible digital presence that bridges the physical store with its customers through key information, authentic reviews, and up-to-date visual content",
+    "description": "A custom landing page for an artisan ceramics business, inspired by the Google Business Profile experience. The goal was to create a fast, accessible digital presence that bridges the physical store with its customers through key information, authentic reviews, and up-to-date visual content",
     "imageSrc": "https://i.postimg.cc/y8jKgnTZ/pc-meraki-mockup.webp",
     "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
     "technologies": [
@@ -590,7 +590,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Merakikrea Cerámica – Landing Page",
       "fileName": "Merakikrea Ceramica – Landing Page.md",
-      "date": "2026-04-02T21:14:52.163Z",
+      "date": "2026-04-05T18:55:46.870Z",
       "sections": {
         "📌 About the project": [
           "This project was born from the need to centralize all the information of a local business in one place: location, customer reviews, visual catalog from Instagram, and direct contact channels. The design focuses on conveying warmth and trust, with a smooth user experience across both mobile and desktop devices."
@@ -892,10 +892,10 @@ export const readmes = [
   {
     "id": 7,
     "repoId": "Todo app - kanban board",
-    "date": "2026-04-02T21:56:51.854Z",
+    "date": "2026-04-06T18:42:41.071Z",
     "title": "Todo App — Complete Task Management System",
     "description": "A full-featured task management application with Kanban board, spreadsheet-style table view, subtask hierarchy, bulk operations, recycle bin, and project organization.",
-    "imageSrc": "https://i.postimg.cc/Bv491G9X/localhost-3001-profile.png",
+    "imageSrc": "https://i.postimg.cc/Gmc0b0nq/todo-app-trasparent-banner.png",
     "detailedDescription": "This is not just another todo list — it's a production-ready task management system I built to handle real-world complexity. Features include a Kanban board with drag-and-drop between customizable status columns, a powerful table view with sortable and resizable columns, complete subtask hierarchy, bulk operations for selecting and modifying multiple tasks at once, project organization, smart date pickers with due dates and reminders, a recycle bin with restore functionality, rich markdown input for creating multiple tasks at once, and real-time search across tasks and subtasks. The system handles edge cases like moving tasks with subtasks between projects, bulk deleting mixed selections, and maintaining order across views. Built with React, TypeScript, Zustand for state management, DnD Kit for drag-and-drop, and PostgreSQL with Docker for the backend.",
     "technologies": [
       "React.js",
@@ -944,7 +944,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Todo App — Complete Task Management System",
       "fileName": "Todo app - kanban board.md",
-      "date": "2026-04-02T21:56:51.854Z",
+      "date": "2026-04-06T18:42:41.071Z",
       "sections": {
         "🎯 The Big Picture": [
           "I set out to build more than just a todo list. I wanted to create a **production-ready task management system** that could handle real-world complexity — multiple projects, subtasks, drag-and-drop, bulk operations, and a sophisticated recycling system.",
