@@ -892,10 +892,10 @@ export const readmes = [
   {
     "id": 7,
     "repoId": "Todo app - kanban board",
-    "date": "2026-04-06T18:42:41.071Z",
+    "date": "2026-04-06T18:48:53.951Z",
     "title": "Todo App — Complete Task Management System",
     "description": "A full-featured task management application with Kanban board, spreadsheet-style table view, subtask hierarchy, bulk operations, recycle bin, and project organization.",
-    "imageSrc": "https://i.postimg.cc/Gmc0b0nq/todo-app-trasparent-banner.png",
+    "imageSrc": "https://i.postimg.cc/jSV5cSNV/todo-app-trasparent-banner.png",
     "detailedDescription": "This is not just another todo list — it's a production-ready task management system I built to handle real-world complexity. Features include a Kanban board with drag-and-drop between customizable status columns, a powerful table view with sortable and resizable columns, complete subtask hierarchy, bulk operations for selecting and modifying multiple tasks at once, project organization, smart date pickers with due dates and reminders, a recycle bin with restore functionality, rich markdown input for creating multiple tasks at once, and real-time search across tasks and subtasks. The system handles edge cases like moving tasks with subtasks between projects, bulk deleting mixed selections, and maintaining order across views. Built with React, TypeScript, Zustand for state management, DnD Kit for drag-and-drop, and PostgreSQL with Docker for the backend.",
     "technologies": [
       "React.js",
@@ -944,7 +944,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Todo App — Complete Task Management System",
       "fileName": "Todo app - kanban board.md",
-      "date": "2026-04-06T18:42:41.071Z",
+      "date": "2026-04-06T18:48:53.951Z",
       "sections": {
         "🎯 The Big Picture": [
           "I set out to build more than just a todo list. I wanted to create a **production-ready task management system** that could handle real-world complexity — multiple projects, subtasks, drag-and-drop, bulk operations, and a sophisticated recycling system.",
