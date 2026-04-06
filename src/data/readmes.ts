@@ -2,11 +2,11 @@ export const readmes = [
   {
     "id": 1,
     "repoId": "3D Audio Visualizer",
-    "date": "2026-04-02T21:04:57.600Z",
+    "date": "2026-04-06T20:01:26.901Z",
     "title": "3D Audio Visualizer — Experimental Audio Engine",
-    "description": "An interactive 3D audio visualizer built with SvelteKit, Tone.js, and Threlte. Features real-time shader manipulation, multiple visual modes, metadata extraction, and professional audio metering.",
+    "description": "Interactive 3D audio visualizer with SvelteKit and Tone.js",
     "imageSrc": "https://i.postimg.cc/YC34cbbF/localhost-5173-(7).png",
-    "detailedDescription": "This is an experimental audio visualization platform where music becomes art. Built with Svelte 5, Tone.js, and Threlte (Three.js for Svelte), the application functions as an audiovisual player featuring playlist management, transport controls, audio-reactive 3D visualizations with custom GLSL shaders, and a Live Editor panel to adjust parameters in real-time. Users can switch between visual modes (sphere, waveform, grid, cover art), modify geometry types (Icosahedron, Sphere, Torus, Octahedron), and control shader uniforms like noise frequency, wireframe opacity, and bloom strength. The system extracts metadata from MP3 files including album artwork, artist names, and track titles. Features include drag-and-drop playlist reordering, seekable progress bar, volume control, playback modes (AUTO/LOOP), dB/LUFS metering, and camera controls with zoom sync between mouse wheel and UI sliders. Built with Svelte 5 runes, TypeScript, and optimized for real-time performance.",
+    "detailedDescription": "SvelteKit-based 3D audio visualizer with shader effects and metadata extraction.",
     "technologies": [
       "Svelte 5",
       "SvelteKit",
@@ -48,7 +48,7 @@ export const readmes = [
     "readmeContent": {
       "title": "3D Audio Visualizer — Experimental Audio Engine",
       "fileName": "3D Audio Visualizer.md",
-      "date": "2026-04-02T21:04:57.600Z",
+      "date": "2026-04-06T20:01:26.901Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted to build more than just a music player. I set out to create an **experimental audio visualization platform** where music becomes art — real-time, reactive, and completely customizable.",
@@ -313,11 +313,11 @@ export const readmes = [
   {
     "id": 3,
     "repoId": "Jekyll Blog  Obsidian — Building a Personal Knowledge Management System",
-    "date": "2026-04-02T20:47:53.413Z",
+    "date": "2026-04-06T19:58:19.428Z",
     "title": "Jekyll Blog + Obsidian — Personal Knowledge Management System",
-    "description": "A static blog powered by Jekyll with Obsidian integration, visual backlink graphs, wiki-style navigation, and an automated publishing pipeline.",
+    "description": "Jekyll blog with Obsidian integration and visual backlink graphs",
     "imageSrc": "https://i.postimg.cc/4yc6pqVp/deveduar-github-io-(4).png",
-    "detailedDescription": "A complete publishing ecosystem that bridges Obsidian note-taking with Jekyll static site generation. The system includes a custom Obsidian plugin that transforms notes into web-ready markdown (converting WikiLinks, normalizing frontmatter, generating URL-friendly slugs), a Jekyll blog featuring visual backlink graphs with vis.js, wiki-style navigation with page previews, real-time search with Fuse.js, and Turbo-powered fast page transitions. A Python-based AI assistant tool provides a web interface for managing AI-generated content, tracking processed notes, and editing drafts before publishing. The entire workflow is version-controlled and hosted for free on GitHub Pages. Features include selective sync (only notes marked public_note: true), category inference, automatic date normalization, Dataview/Templater cleanup, and configurable content transformation rules. The result is a digital garden that grows automatically from everyday note-taking.",
+    "detailedDescription": "Obsidian-Jekyll publishing system with backlink graphs, wiki navigation, and AI content assistant.",
     "technologies": [
       "Jekyll",
       "Ruby",
@@ -370,7 +370,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Jekyll Blog + Obsidian — Personal Knowledge Management System",
       "fileName": "Jekyll Blog  Obsidian — Building a Personal Knowledge Management System.md",
-      "date": "2026-04-02T20:47:53.413Z",
+      "date": "2026-04-06T19:58:19.428Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a blog that worked the way I think — connected, non-linear, and deeply integrated with my note-taking system. Instead of forcing myself into a traditional CMS, I built a bridge between **Obsidian** (where I write) and **Jekyll** (where I publish).",
@@ -551,11 +551,11 @@ export const readmes = [
   {
     "id": 4,
     "repoId": "Merakikrea Ceramica – Landing Page",
-    "date": "2026-04-05T18:55:46.870Z",
+    "date": "2026-04-06T19:59:36.562Z",
     "title": "Merakikrea Cerámica – Landing Page",
-    "description": "A custom landing page for an artisan ceramics business, inspired by the Google Business Profile experience. The goal was to create a fast, accessible digital presence that bridges the physical store with its customers through key information, authentic reviews, and up-to-date visual content",
+    "description": "Landing page for artisan ceramics business with Google Maps and Instagram feed",
     "imageSrc": "https://i.postimg.cc/y8jKgnTZ/pc-meraki-mockup.webp",
-    "detailedDescription": "An optimized landing page built with Next.js and Tailwind CSS, presenting key information about Merakikrea Cerámica. It includes location details, social media links, opening hours, direct WhatsApp contact, and an Instagram feed.",
+    "detailedDescription": "Next.js landing page showcasing business info, location, reviews, and WhatsApp integration for ceramics store.",
     "technologies": [
       "Next.js",
       "TypeScript",
@@ -590,7 +590,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Merakikrea Cerámica – Landing Page",
       "fileName": "Merakikrea Ceramica – Landing Page.md",
-      "date": "2026-04-05T18:55:46.870Z",
+      "date": "2026-04-06T19:59:36.562Z",
       "sections": {
         "📌 About the project": [
           "This project was born from the need to centralize all the information of a local business in one place: location, customer reviews, visual catalog from Instagram, and direct contact channels. The design focuses on conveying warmth and trust, with a smooth user experience across both mobile and desktop devices."
@@ -626,11 +626,11 @@ export const readmes = [
   {
     "id": 5,
     "repoId": "Ping Test Tool - Real-Time Network Monitor",
-    "date": "2026-04-03T13:39:48.455Z",
+    "date": "2026-04-06T19:59:49.059Z",
     "title": "Ping Test Tool - Real-Time Network Monitor",
-    "description": "A lightweight web-based utility for monitoring your connection quality in real time.",
+    "description": "Web-based utility for real-time network connection quality monitoring",
     "imageSrc": "https://i.postimg.cc/661JsKNF/Captura.png",
-    "detailedDescription": "Ping Test Tool is a responsive and privacy-focused web app built with Next.js, TypeScript, and Zustand. It provides real-time feedback on connection quality, showing metrics like latency, jitter, and packet loss.",
+    "detailedDescription": "Next.js app measuring latency, jitter, and packet loss with Web Workers and Zustand state management.",
     "technologies": [
       "Next.js",
       "React",
@@ -661,7 +661,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Ping Test Tool - Real-Time Network Monitor",
       "fileName": "Ping Test Tool - Real-Time Network Monitor.md",
-      "date": "2026-04-03T13:39:48.455Z",
+      "date": "2026-04-06T19:59:49.059Z",
       "sections": {
         "✨ Features": [
           "- **Real-Time Monitoring** – Continuous updates on key network stats",
@@ -732,11 +732,11 @@ export const readmes = [
   {
     "id": 6,
     "repoId": "Portfolio project",
-    "date": "2026-04-03T01:53:53.794Z",
+    "date": "2026-04-06T19:58:08.671Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
-    "description": "A deep dive into creating a dynamic portfolio that automatically syncs with my Obsidian vault, transforming markdown notes into a beautiful, interactive showcase of my work.",
+    "description": "Self-updating portfolio syncing Obsidian notes with Next.js",
     "imageSrc": "https://i.postimg.cc/J0Db8nxr/deveduar-portfolio-vercel-app.png",
-    "detailedDescription": "I built a custom automation system that connects my Obsidian note-taking workflow to my Next.js portfolio. A Node.js script reads markdown files from my vault, parses them with Remark, and converts them into structured data. A PowerShell script manages the entire workflow — creating new project notes, running the conversion, and committing updates. The Next.js portfolio consumes this data, generating static pages for each project with real-time GitHub stats. The result: a portfolio that updates itself whenever I write a new note. No manual copying, no formatting headaches, just writing and publishing.",
+    "detailedDescription": "Automated system converting Obsidian markdown to Next.js portfolio with GitHub stats integration.",
     "technologies": [
       "Next.js 14",
       "TypeScript",
@@ -774,7 +774,7 @@ export const readmes = [
     "readmeContent": {
       "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
       "fileName": "Portfolio project.md",
-      "date": "2026-04-03T01:53:53.794Z",
+      "date": "2026-04-06T19:58:08.671Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a portfolio that:",
@@ -892,11 +892,11 @@ export const readmes = [
   {
     "id": 7,
     "repoId": "Todo app - kanban board",
-    "date": "2026-04-06T18:48:53.951Z",
+    "date": "2026-04-06T19:59:08.898Z",
     "title": "Todo App — Complete Task Management System",
-    "description": "A full-featured task management application with Kanban board, spreadsheet-style table view, subtask hierarchy, bulk operations, recycle bin, and project organization.",
+    "description": "Full-featured task manager with Kanban, table views, and subtasks",
     "imageSrc": "https://i.postimg.cc/jSV5cSNV/todo-app-trasparent-banner.png",
-    "detailedDescription": "This is not just another todo list — it's a production-ready task management system I built to handle real-world complexity. Features include a Kanban board with drag-and-drop between customizable status columns, a powerful table view with sortable and resizable columns, complete subtask hierarchy, bulk operations for selecting and modifying multiple tasks at once, project organization, smart date pickers with due dates and reminders, a recycle bin with restore functionality, rich markdown input for creating multiple tasks at once, and real-time search across tasks and subtasks. The system handles edge cases like moving tasks with subtasks between projects, bulk deleting mixed selections, and maintaining order across views. Built with React, TypeScript, Zustand for state management, DnD Kit for drag-and-drop, and PostgreSQL with Docker for the backend.",
+    "detailedDescription": "Production-ready task management system with Kanban board, spreadsheet view, subtask hierarchy, bulk operations, and recycle bin.",
     "technologies": [
       "React.js",
       "TypeScript",
@@ -944,7 +944,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Todo App — Complete Task Management System",
       "fileName": "Todo app - kanban board.md",
-      "date": "2026-04-06T18:48:53.951Z",
+      "date": "2026-04-06T19:59:08.898Z",
       "sections": {
         "🎯 The Big Picture": [
           "I set out to build more than just a todo list. I wanted to create a **production-ready task management system** that could handle real-world complexity — multiple projects, subtasks, drag-and-drop, bulk operations, and a sophisticated recycling system.",
@@ -1095,11 +1095,11 @@ export const readmes = [
   {
     "id": 8,
     "repoId": "Utility Tools Collection – Data Migration & Media Conversion",
-    "date": "2026-04-02T21:59:40.337Z",
+    "date": "2026-04-06T20:00:52.486Z",
     "title": "Utility Tools Collection – Data Migration & Media Conversion",
-    "description": "A collection of Python CLI tools: migrate Omnivore bookmarks to Raindrop.io, convert PDFs to CBR format for digital comics, and download YouTube audio as high-quality MP3.",
+    "description": "Python CLI tools for Omnivore migration, PDF to CBR, and YouTube MP3 download",
     "imageSrc": "https://i.postimg.cc/660BTKqC/luca-bravo-XJXWbf-So2f0-unsplash-(1).jpg",
-    "detailedDescription": "Three practical Python command-line tools designed to solve real-world problems. The Omnivore Converter helps users migrate their saved articles to Raindrop.io before the service shutdown. The PDF to CBR Converter transforms PDF files into comic book format for digital readers. The YouTube MP3 Downloader extracts high-quality audio from YouTube videos with a simple CLI interface. Each tool prioritizes simplicity, clear documentation, and robust error handling.",
+    "detailedDescription": "Collection of Python tools: Omnivore→Raindrop converter, PDF to CBR, and YouTube MP3 downloader with batch processing.",
     "technologies": [
       "Python 3",
       "yt-dlp",
@@ -1136,7 +1136,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Utility Tools Collection – Data Migration & Media Conversion",
       "fileName": "Utility Tools Collection – Data Migration & Media Conversion.md",
-      "date": "2026-04-02T21:59:40.337Z",
+      "date": "2026-04-06T20:00:52.486Z",
       "sections": {
         "📦 Project 1: Omnivore → Raindrop.io Migration Tool": {
           "✨ Key features": [
@@ -1236,11 +1236,11 @@ export const readmes = [
   {
     "id": 9,
     "repoId": "Vue Dates — Building a Complete Salon Booking System",
-    "date": "2026-04-03T01:04:36.310Z",
+    "date": "2026-04-06T20:00:30.093Z",
     "title": "Vue Dates — Complete Booking System",
-    "description": "A production-ready appointment booking system built with Vue 3, TypeScript, and Vuetify — featuring real-time availability, collision detection, provider management, and an intelligent scheduling engine.",
+    "description": "Vue 3 appointment booking system with real-time availability and conflict detection",
     "imageSrc": "https://i.postimg.cc/cJNb6qtr/localhost-5173-(9).png",
-    "detailedDescription": "A comprehensive booking solution for service-based businesses (salons, barbershops, consultancies, clinics) built with Vue 3 Composition API, Pinia for state management, and Vuetify 3 for UI. Features include an interactive booking system with real-time availability and conflict detection, dual scheduling modes (Standard daily windows and Fixed slots), provider management with granular service assignment and schedule overrides, admin dashboard for complete business control, specialist dashboards for appointment management, and user dashboards with appointment history and rebooking. The system automatically transitions appointments through states (Pending → Upcoming → InProgress → Completed) with periodic status checks every 60 seconds, includes live timers with HH:MM:SS format and visual progress bars, prevents double-booking through comprehensive collision detection considering service durations and provider schedules, and persists all data in localStorage for zero-backend evaluation. Built with Vue 3, TypeScript, Pinia, Vuetify, Vue Router, Vitest, and Cypress.",
+    "detailedDescription": "Production-ready salon booking system with Vue 3, Vuetify, and intelligent scheduling engine.",
     "technologies": [
       "Vue 3",
       "TypeScript",
@@ -1286,7 +1286,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Vue Dates — Complete Booking System",
       "fileName": "Vue Dates — Building a Complete Salon Booking System.md",
-      "date": "2026-04-03T01:04:36.310Z",
+      "date": "2026-04-06T20:00:30.093Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted to build a complete booking solution for service-based businesses — salons, barbershops, consultancies, clinics. Not just a calendar, but a **smart scheduling engine** that handles provider availability, service durations, conflict detection, and real-time booking constraints.",
