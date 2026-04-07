@@ -732,10 +732,9 @@ export const readmes = [
   {
     "id": 6,
     "repoId": "Portfolio project",
-    "date": "2026-04-06T19:58:08.671Z",
+    "date": "2026-04-07T21:13:17.919Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
     "description": "Self-updating portfolio syncing Obsidian notes with Next.js",
-    "imageSrc": "https://i.postimg.cc/J0Db8nxr/deveduar-portfolio-vercel-app.png",
     "detailedDescription": "Automated system converting Obsidian markdown to Next.js portfolio with GitHub stats integration.",
     "technologies": [
       "Next.js 14",
@@ -774,7 +773,7 @@ export const readmes = [
     "readmeContent": {
       "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
       "fileName": "Portfolio project.md",
-      "date": "2026-04-06T19:58:08.671Z",
+      "date": "2026-04-07T21:13:17.919Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a portfolio that:",
