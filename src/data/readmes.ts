@@ -2,7 +2,7 @@ export const readmes = [
   {
     "id": 1,
     "repoId": "3D Audio Visualizer",
-    "date": "2026-04-06T20:01:26.901Z",
+    "date": "2026-04-08T18:25:41.503Z",
     "title": "3D Audio Visualizer — Experimental Audio Engine",
     "description": "Interactive 3D audio visualizer with SvelteKit and Tone.js",
     "imageSrc": "https://i.postimg.cc/YC34cbbF/localhost-5173-(7).png",
@@ -45,10 +45,11 @@ export const readmes = [
       "Responsive design — works on desktop, tablet, and mobile.",
       "Dark/Light theme support for UI and visualizer separately."
     ],
+    "status": "🌟",
     "readmeContent": {
       "title": "3D Audio Visualizer — Experimental Audio Engine",
       "fileName": "3D Audio Visualizer.md",
-      "date": "2026-04-06T20:01:26.901Z",
+      "date": "2026-04-08T18:25:41.503Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted to build more than just a music player. I set out to create an **experimental audio visualization platform** where music becomes art — real-time, reactive, and completely customizable.",
@@ -191,7 +192,7 @@ export const readmes = [
   {
     "id": 2,
     "repoId": "Inventory Management System for Dropshipping Store",
-    "date": "2026-04-02T14:42:08.884Z",
+    "date": "2026-04-08T18:25:51.797Z",
     "title": "Inventory Management System for Dropshipping Store",
     "description": "A production-ready inventory management system built with Angular 21, PrimeNG, and Hexagonal Architecture. This is not just another CRUD — it's my deep dive into dropshipping integration, API caching, CSV handling, and real-world Angular challenges.",
     "imageSrc": "https://i.postimg.cc/660BTKqC/luca-bravo-XJXWbf-So2f0-unsplash-(1).jpg",
@@ -229,10 +230,11 @@ export const readmes = [
       "Real-time product editing with inline forms.",
       "Hexagonal architecture with DTO adapters."
     ],
+    "status": "📌",
     "readmeContent": {
       "title": "Inventory Management System for Dropshipping Store",
       "fileName": "Inventory Management System for Dropshipping Store.md",
-      "date": "2026-04-02T14:42:08.884Z",
+      "date": "2026-04-08T18:25:51.797Z",
       "sections": {
         "Why I built this": [
           "I wanted to understand how dropshipping platforms work under the hood. Instead of using Shopify or a pre-built solution, I decided to build my own dashboard that connects to **Printful API** — handling products, variants, categories, and exports.",
@@ -313,7 +315,7 @@ export const readmes = [
   {
     "id": 3,
     "repoId": "Jekyll Blog  Obsidian — Building a Personal Knowledge Management System",
-    "date": "2026-04-06T19:58:19.428Z",
+    "date": "2026-04-08T18:26:13.796Z",
     "title": "Jekyll Blog + Obsidian — Personal Knowledge Management System",
     "description": "Jekyll blog with Obsidian integration and visual backlink graphs",
     "imageSrc": "https://i.postimg.cc/4yc6pqVp/deveduar-github-io-(4).png",
@@ -367,10 +369,11 @@ export const readmes = [
       "Table of Contents with active heading tracking.",
       "Category and tag filtering with URL state persistence."
     ],
+    "status": "🌟",
     "readmeContent": {
       "title": "Jekyll Blog + Obsidian — Personal Knowledge Management System",
       "fileName": "Jekyll Blog  Obsidian — Building a Personal Knowledge Management System.md",
-      "date": "2026-04-06T19:58:19.428Z",
+      "date": "2026-04-08T18:26:13.796Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a blog that worked the way I think — connected, non-linear, and deeply integrated with my note-taking system. Instead of forcing myself into a traditional CMS, I built a bridge between **Obsidian** (where I write) and **Jekyll** (where I publish).",
@@ -551,7 +554,7 @@ export const readmes = [
   {
     "id": 4,
     "repoId": "Merakikrea Ceramica – Landing Page",
-    "date": "2026-04-06T19:59:36.562Z",
+    "date": "2026-04-08T18:26:21.442Z",
     "title": "Merakikrea Cerámica – Landing Page",
     "description": "Landing page for artisan ceramics business with Google Maps and Instagram feed",
     "imageSrc": "https://i.postimg.cc/y8jKgnTZ/pc-meraki-mockup.webp",
@@ -587,10 +590,11 @@ export const readmes = [
       "Google reviews and social media section.",
       "Floating WhatsApp button for quick contact."
     ],
+    "status": "📌",
     "readmeContent": {
       "title": "Merakikrea Cerámica – Landing Page",
       "fileName": "Merakikrea Ceramica – Landing Page.md",
-      "date": "2026-04-06T19:59:36.562Z",
+      "date": "2026-04-08T18:26:21.442Z",
       "sections": {
         "📌 About the project": [
           "This project was born from the need to centralize all the information of a local business in one place: location, customer reviews, visual catalog from Instagram, and direct contact channels. The design focuses on conveying warmth and trust, with a smooth user experience across both mobile and desktop devices."
@@ -626,7 +630,7 @@ export const readmes = [
   {
     "id": 5,
     "repoId": "Ping Test Tool - Real-Time Network Monitor",
-    "date": "2026-04-06T19:59:49.059Z",
+    "date": "2026-04-08T18:26:25.915Z",
     "title": "Ping Test Tool - Real-Time Network Monitor",
     "description": "Web-based utility for real-time network connection quality monitoring",
     "imageSrc": "https://i.postimg.cc/661JsKNF/Captura.png",
@@ -658,10 +662,11 @@ export const readmes = [
       "Switch between different metric views.",
       "Privacy-friendly: no personal data collected."
     ],
+    "status": "📌",
     "readmeContent": {
       "title": "Ping Test Tool - Real-Time Network Monitor",
       "fileName": "Ping Test Tool - Real-Time Network Monitor.md",
-      "date": "2026-04-06T19:59:49.059Z",
+      "date": "2026-04-08T18:26:25.915Z",
       "sections": {
         "✨ Features": [
           "- **Real-Time Monitoring** – Continuous updates on key network stats",
@@ -732,7 +737,7 @@ export const readmes = [
   {
     "id": 6,
     "repoId": "Portfolio project",
-    "date": "2026-04-07T21:13:17.919Z",
+    "date": "2026-04-08T18:26:45.775Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
     "description": "Self-updating portfolio syncing Obsidian notes with Next.js",
     "detailedDescription": "Automated system converting Obsidian markdown to Next.js portfolio with GitHub stats integration.",
@@ -770,10 +775,11 @@ export const readmes = [
       "Dark mode and responsive design.",
       "Vercel automatic deployment."
     ],
+    "status": "🌟",
     "readmeContent": {
       "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
       "fileName": "Portfolio project.md",
-      "date": "2026-04-07T21:13:17.919Z",
+      "date": "2026-04-08T18:26:45.775Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a portfolio that:",
@@ -891,7 +897,7 @@ export const readmes = [
   {
     "id": 7,
     "repoId": "Todo app - kanban board",
-    "date": "2026-04-06T19:59:08.898Z",
+    "date": "2026-04-08T18:26:53.196Z",
     "title": "Todo App — Complete Task Management System",
     "description": "Full-featured task manager with Kanban, table views, and subtasks",
     "imageSrc": "https://i.postimg.cc/jSV5cSNV/todo-app-trasparent-banner.png",
@@ -940,10 +946,11 @@ export const readmes = [
       "Dark mode support with custom theming.",
       "Comprehensive testing with Playwright E2E tests."
     ],
+    "status": "🌟",
     "readmeContent": {
       "title": "Todo App — Complete Task Management System",
       "fileName": "Todo app - kanban board.md",
-      "date": "2026-04-06T19:59:08.898Z",
+      "date": "2026-04-08T18:26:53.196Z",
       "sections": {
         "🎯 The Big Picture": [
           "I set out to build more than just a todo list. I wanted to create a **production-ready task management system** that could handle real-world complexity — multiple projects, subtasks, drag-and-drop, bulk operations, and a sophisticated recycling system.",
@@ -1094,7 +1101,7 @@ export const readmes = [
   {
     "id": 8,
     "repoId": "Utility Tools Collection – Data Migration & Media Conversion",
-    "date": "2026-04-06T20:00:52.486Z",
+    "date": "2026-04-08T18:27:02.080Z",
     "title": "Utility Tools Collection – Data Migration & Media Conversion",
     "description": "Python CLI tools for Omnivore migration, PDF to CBR, and YouTube MP3 download",
     "imageSrc": "https://i.postimg.cc/660BTKqC/luca-bravo-XJXWbf-So2f0-unsplash-(1).jpg",
@@ -1132,10 +1139,11 @@ export const readmes = [
       "Clear error handling and user feedback",
       "UTF-8 encoding support for special characters and non-English text"
     ],
+    "status": "📌",
     "readmeContent": {
       "title": "Utility Tools Collection – Data Migration & Media Conversion",
       "fileName": "Utility Tools Collection – Data Migration & Media Conversion.md",
-      "date": "2026-04-06T20:00:52.486Z",
+      "date": "2026-04-08T18:27:02.080Z",
       "sections": {
         "📦 Project 1: Omnivore → Raindrop.io Migration Tool": {
           "✨ Key features": [
@@ -1235,7 +1243,7 @@ export const readmes = [
   {
     "id": 9,
     "repoId": "Vue Dates — Building a Complete Salon Booking System",
-    "date": "2026-04-06T20:00:30.093Z",
+    "date": "2026-04-08T18:27:08.791Z",
     "title": "Vue Dates — Complete Booking System",
     "description": "Vue 3 appointment booking system with real-time availability and conflict detection",
     "imageSrc": "https://i.postimg.cc/cJNb6qtr/localhost-5173-(9).png",
@@ -1282,10 +1290,11 @@ export const readmes = [
       "Service visibility controls — public or hidden.",
       "Appointment cancellation and rejection with slot restoration."
     ],
+    "status": "🌟",
     "readmeContent": {
       "title": "Vue Dates — Complete Booking System",
       "fileName": "Vue Dates — Building a Complete Salon Booking System.md",
-      "date": "2026-04-06T20:00:30.093Z",
+      "date": "2026-04-08T18:27:08.791Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted to build a complete booking solution for service-based businesses — salons, barbershops, consultancies, clinics. Not just a calendar, but a **smart scheduling engine** that handles provider availability, service durations, conflict detection, and real-time booking constraints.",
