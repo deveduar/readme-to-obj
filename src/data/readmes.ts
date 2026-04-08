@@ -2,10 +2,10 @@ export const readmes = [
   {
     "id": 1,
     "repoId": "3D Audio Visualizer",
-    "date": "2026-04-08T18:25:41.503Z",
+    "date": "2026-04-08T21:12:46.167Z",
     "title": "3D Audio Visualizer — Experimental Audio Engine",
     "description": "Interactive 3D audio visualizer with SvelteKit and Tone.js",
-    "imageSrc": "https://i.postimg.cc/YC34cbbF/localhost-5173-(7).png",
+    "imageSrc": "https://i.postimg.cc/prQ56z5M/3d-visu-laptope.webp",
     "detailedDescription": "SvelteKit-based 3D audio visualizer with shader effects and metadata extraction.",
     "technologies": [
       "Svelte 5",
@@ -27,9 +27,9 @@ export const readmes = [
       }
     ],
     "gallery": [
-      "https://i.postimg.cc/BQncwPq2/localhost-5173-(2).png",
-      "https://i.postimg.cc/J4zcdH1k/localhost-5173-(3).png",
-      "https://i.postimg.cc/yY8Xr3VF/localhost-5173-(4).png"
+      "https://i.postimg.cc/prQ56z5M/3d-visu-laptope.webp",
+      "https://i.postimg.cc/yxh3bc3H/3d-visu-laptope-2.webp",
+      "https://i.postimg.cc/FzbkB3kv/3d-visu-phone.webp"
     ],
     "features": [
       "Real-time 3D audio visualization with custom GLSL shaders.",
@@ -49,7 +49,7 @@ export const readmes = [
     "readmeContent": {
       "title": "3D Audio Visualizer — Experimental Audio Engine",
       "fileName": "3D Audio Visualizer.md",
-      "date": "2026-04-08T18:25:41.503Z",
+      "date": "2026-04-08T21:12:46.167Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted to build more than just a music player. I set out to create an **experimental audio visualization platform** where music becomes art — real-time, reactive, and completely customizable.",
@@ -315,10 +315,10 @@ export const readmes = [
   {
     "id": 3,
     "repoId": "Jekyll Blog  Obsidian — Building a Personal Knowledge Management System",
-    "date": "2026-04-08T18:26:13.796Z",
+    "date": "2026-04-08T21:12:43.575Z",
     "title": "Jekyll Blog + Obsidian — Personal Knowledge Management System",
     "description": "Jekyll blog with Obsidian integration and visual backlink graphs",
-    "imageSrc": "https://i.postimg.cc/4yc6pqVp/deveduar-github-io-(4).png",
+    "imageSrc": "https://i.postimg.cc/Rh1JDKJC/blog-laptop-1.webp",
     "detailedDescription": "Obsidian-Jekyll publishing system with backlink graphs, wiki navigation, and AI content assistant.",
     "technologies": [
       "Jekyll",
@@ -347,10 +347,9 @@ export const readmes = [
       }
     ],
     "gallery": [
-      "https://i.postimg.cc/0QFGMPMt/deveduar-github-io-(1).png",
-      "https://i.postimg.cc/xChGJnJ6/deveduar-github-io-(2).png",
-      "https://i.postimg.cc/T1bVnFgV/deveduar-github-io-(5).png",
-      "https://i.postimg.cc/cC3Rf2wQ/deveduar-github-io-(i-Phone-14-Pro-Max)-(3).png"
+      "https://i.postimg.cc/Rh1JDKJC/blog-laptop-1.webp",
+      "https://i.postimg.cc/vT7xNfxY/blog-laptop-2.webp",
+      "https://i.postimg.cc/FzbkB3k9/blog-liphone.webp"
     ],
     "features": [
       "Custom Obsidian plugin for one-click note syncing and transformation.",
@@ -373,7 +372,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Jekyll Blog + Obsidian — Personal Knowledge Management System",
       "fileName": "Jekyll Blog  Obsidian — Building a Personal Knowledge Management System.md",
-      "date": "2026-04-08T18:26:13.796Z",
+      "date": "2026-04-08T21:12:43.575Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a blog that worked the way I think — connected, non-linear, and deeply integrated with my note-taking system. Instead of forcing myself into a traditional CMS, I built a bridge between **Obsidian** (where I write) and **Jekyll** (where I publish).",
@@ -737,9 +736,10 @@ export const readmes = [
   {
     "id": 6,
     "repoId": "Portfolio project",
-    "date": "2026-04-08T18:26:45.775Z",
+    "date": "2026-04-08T21:12:42.631Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
     "description": "Self-updating portfolio syncing Obsidian notes with Next.js",
+    "imageSrc": "https://i.postimg.cc/hv8Q5Tzk/portfolio-laptop.webp",
     "detailedDescription": "Automated system converting Obsidian markdown to Next.js portfolio with GitHub stats integration.",
     "technologies": [
       "Next.js 14",
@@ -766,6 +766,11 @@ export const readmes = [
         "label": "Live Demo"
       }
     ],
+    "gallery": [
+      "https://i.postimg.cc/hv8Q5Tzk/portfolio-laptop.webp",
+      "https://i.postimg.cc/8cdf0MJ3/portfolio-phone.webp",
+      "https://i.postimg.cc/6qV4mn2D/portfolio-tablet.webp"
+    ],
     "features": [
       "Automated markdown to data conversion.",
       "Obsidian vault integration with PowerShell automation.",
@@ -779,7 +784,7 @@ export const readmes = [
     "readmeContent": {
       "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
       "fileName": "Portfolio project.md",
-      "date": "2026-04-08T18:26:45.775Z",
+      "date": "2026-04-08T21:12:42.631Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a portfolio that:",
@@ -897,10 +902,10 @@ export const readmes = [
   {
     "id": 7,
     "repoId": "Todo app - kanban board",
-    "date": "2026-04-08T18:26:53.196Z",
+    "date": "2026-04-08T21:12:41.464Z",
     "title": "Todo App — Complete Task Management System",
     "description": "Full-featured task manager with Kanban, table views, and subtasks",
-    "imageSrc": "https://i.postimg.cc/jSV5cSNV/todo-app-trasparent-banner.png",
+    "imageSrc": "https://i.postimg.cc/Y0NLsYLw/todo-laptop-1.webp",
     "detailedDescription": "Production-ready task management system with Kanban board, spreadsheet view, subtask hierarchy, bulk operations, and recycle bin.",
     "technologies": [
       "React.js",
@@ -927,10 +932,8 @@ export const readmes = [
       }
     ],
     "gallery": [
-      "https://i.postimg.cc/Ls2KZMKJ/localhost-3001-(3).png",
-      "https://i.postimg.cc/Ls2KZMKh/localhost-3001-(2).png",
-      "https://i.postimg.cc/Ls2KZMKJ/localhost-3001-(3).png",
-      "https://i.postimg.cc/0NngYHPK/localhost-3001-profile(i-Phone-14-Pro-Max)-(1).png"
+      "https://i.postimg.cc/T1j54gLF/todo-iphonewebp.webp",
+      "https://i.postimg.cc/Y0NLsYLw/todo-laptop-1.webp"
     ],
     "features": [
       "Kanban board with drag-and-drop between customizable status columns.",
@@ -950,7 +953,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Todo App — Complete Task Management System",
       "fileName": "Todo app - kanban board.md",
-      "date": "2026-04-08T18:26:53.196Z",
+      "date": "2026-04-08T21:12:41.464Z",
       "sections": {
         "🎯 The Big Picture": [
           "I set out to build more than just a todo list. I wanted to create a **production-ready task management system** that could handle real-world complexity — multiple projects, subtasks, drag-and-drop, bulk operations, and a sophisticated recycling system.",
@@ -1243,10 +1246,10 @@ export const readmes = [
   {
     "id": 9,
     "repoId": "Vue Dates — Building a Complete Salon Booking System",
-    "date": "2026-04-08T18:27:08.791Z",
+    "date": "2026-04-08T21:10:45.346Z",
     "title": "Vue Dates — Complete Booking System",
     "description": "Vue 3 appointment booking system with real-time availability and conflict detection",
-    "imageSrc": "https://i.postimg.cc/cJNb6qtr/localhost-5173-(9).png",
+    "imageSrc": "https://i.postimg.cc/PJbvRYvr/booking-laptop-1.webp",
     "detailedDescription": "Production-ready salon booking system with Vue 3, Vuetify, and intelligent scheduling engine.",
     "technologies": [
       "Vue 3",
@@ -1267,10 +1270,9 @@ export const readmes = [
       }
     ],
     "gallery": [
-      "https://i.postimg.cc/q7d5gf66/localhost-5173-(15).png",
-      "https://i.postimg.cc/KYyH4X3k/localhost-5173-(14).png",
-      "https://i.postimg.cc/tgHM70nV/localhost-5173-(i-Phone-SE).png",
-      "https://i.postimg.cc/ZqhM0kvR/localhost-5173-(11).png"
+      "https://i.postimg.cc/PJbvRYvr/booking-laptop-1.webp",
+      "https://i.postimg.cc/Bb5PVHPt/booking-laptop-2.webp",
+      "https://i.postimg.cc/8cdf0Mfc/booking-phone.webp"
     ],
     "features": [
       "Interactive booking system with real-time availability and conflict detection.",
@@ -1294,7 +1296,7 @@ export const readmes = [
     "readmeContent": {
       "title": "Vue Dates — Complete Booking System",
       "fileName": "Vue Dates — Building a Complete Salon Booking System.md",
-      "date": "2026-04-08T18:27:08.791Z",
+      "date": "2026-04-08T21:10:45.346Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted to build a complete booking solution for service-based businesses — salons, barbershops, consultancies, clinics. Not just a calendar, but a **smart scheduling engine** that handles provider availability, service durations, conflict detection, and real-time booking constraints.",
