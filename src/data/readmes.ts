@@ -736,7 +736,7 @@ export const readmes = [
   {
     "id": 6,
     "repoId": "Portfolio project",
-    "date": "2026-04-08T21:12:42.631Z",
+    "date": "2026-04-10T12:16:14.362Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
     "description": "Self-updating portfolio syncing Obsidian notes with Next.js",
     "imageSrc": "https://i.postimg.cc/hv8Q5Tzk/portfolio-laptop.webp",
@@ -776,7 +776,9 @@ export const readmes = [
       "Obsidian vault integration with PowerShell automation.",
       "Static site generation with Next.js 14.",
       "GitHub API for real-time project stats.",
-      "Bento-grid layout with AOS animations.",
+      "Bento-grid layout with snap scrolling.",
+      "Theme system with Dracula & Catppuccin palettes.",
+      "14+ accent color options for theme customization.",
       "Dark mode and responsive design.",
       "Vercel automatic deployment."
     ],
@@ -784,7 +786,7 @@ export const readmes = [
     "readmeContent": {
       "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
       "fileName": "Portfolio project.md",
-      "date": "2026-04-08T21:12:42.631Z",
+      "date": "2026-04-10T12:16:14.362Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a portfolio that:",
@@ -842,7 +844,7 @@ export const readmes = [
             "This adds a layer of authenticity — visitors can see that these are active, real-world projects with actual community engagement."
           ],
           "Animations and Polish": [
-            "I added smooth scroll animations using a lightweight library, so elements fade in and slide up as you browse. The site is fully responsive, works on any device, and includes dark mode support for comfortable viewing at night."
+            "I added smooth scroll animations using a custom hook that snaps to sections as you browse. The theme system supports both **Dracula** and **Catppuccin** palettes with 14+ customizable accent colors. The site is fully responsive, works on any device, and includes dark/light mode with system preference detection."
           ]
         },
         "🔄 The Complete Workflow": {
@@ -870,26 +872,28 @@ export const readmes = [
             "Documenting projects in Obsidian has become part of my development process. When I finish a feature, I jot down what worked and what didn't. When I solve a tricky bug, I capture the solution. These notes become the raw material for my portfolio, making the documentation feel organic rather than an afterthought."
           ]
         },
-        "🛠️ The Tech Stack": [
-          "| Component | Technology |\n|-----------|------------|\n| **Content Authoring** | Obsidian (markdown) |\n| **Conversion Script** | Node.js + TypeScript |\n| **Markdown Parsing** | Remark ecosystem |\n| **Workflow Automation** | PowerShell |\n| **Portfolio Framework** | Next.js 14 |\n| **Styling** | Tailwind CSS |\n| **Animations** | AOS (Animate on Scroll) |\n| **API Integration** | GitHub REST API |\n| **Hosting** | Vercel |"
+        "The Tech Stack": [
+          "| Component | Technology |\n|-----------|------------|\n| **Content Authoring** | Obsidian (markdown) |\n| **Conversion Script** | Node.js + TypeScript |\n| **Markdown Parsing** | Remark ecosystem |\n| **Workflow Automation** | PowerShell |\n| **Portfolio Framework** | Next.js 14 |\n| **Styling** | Tailwind CSS with CSS variables |\n| **Theming** | Dracula & Catppuccin + custom accent colors |\n| **Scroll Navigation** | Custom snap scroll hook |\n| **API Integration** | GitHub REST API |\n| **Hosting** | Vercel |"
         ],
-        "🚀 What I Learned": [
+        "What I Learned": [
           "**Automation compounds.** The time I invested in building this workflow paid back many times over in saved manual effort. More importantly, it removed friction — I'm more likely to document projects now because the cost is so low.",
           "**Your source of truth matters.** Keeping all my project documentation in Obsidian means I have a single place to look for notes, ideas, and technical details. The portfolio is just a view into that database.",
           "**Static sites can be dynamic.** By generating pages at build time from a data source, I get the performance of static sites with the flexibility of a content management system — without actually running a CMS.",
-          "**Personal tools are worth building.** This system doesn't exist as a product. It's custom-built for my workflow, my folder structure, my way of writing. And that's exactly why it works so well."
+          "**Personal tools are worth building.** This system doesn't exist as a product. It's custom-built for my workflow, my folder structure, my way of writing. And that's exactly why it works so well.",
+          "**Theme systems are personal.** Providing users with choice — multiple palettes and accent colors — makes a portfolio feel more approachable while maintaining consistency. CSS variables + ThemeContext makes switching themes seamless."
         ],
         "📂 Repositories": [
           "- **readme-to-obj** — The Node.js converter that processes markdown files",
           "- **nextjs-portfolio** — The frontend that displays my work",
           "- **Live Portfolio** — See it in action"
         ],
-        "🔮 Future Improvements": [
+        "Future Improvements": [
           "I'm planning to add:",
           "- **Auto-sync** — watch for Obsidian file changes and trigger updates automatically",
           "- **Full-text search** — help visitors find projects by technology or topic",
           "- **Tags and categories** — organize projects beyond just listing them",
-          "- **Image handling** — automatically convert and optimize images from Obsidian"
+          "- **Image handling** — automatically convert and optimize images from Obsidian",
+          "- **More theme variants** — additional Catppuccin flavors and custom accent palettes"
         ],
         "📝 Final Thoughts": [
           "This project taught me that the best tools are the ones that disappear. My portfolio doesn't feel like a system — it just feels like my work, presented honestly and automatically.",
