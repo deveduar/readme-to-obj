@@ -736,7 +736,7 @@ export const readmes = [
   {
     "id": 6,
     "repoId": "Portfolio project",
-    "date": "2026-04-10T12:16:14.362Z",
+    "date": "2026-04-10T12:26:01.425Z",
     "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
     "description": "Self-updating portfolio syncing Obsidian notes with Next.js",
     "imageSrc": "https://i.postimg.cc/hv8Q5Tzk/portfolio-laptop.webp",
@@ -786,7 +786,7 @@ export const readmes = [
     "readmeContent": {
       "title": "How I Built a Self-Updating Portfolio with Next.js + Obsidian",
       "fileName": "Portfolio project.md",
-      "date": "2026-04-10T12:16:14.362Z",
+      "date": "2026-04-10T12:26:01.425Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted a portfolio that:",
@@ -852,9 +852,7 @@ export const readmes = [
             "I open Obsidian and create a new note. I follow a loose template: an overview paragraph, a tech stack list, the challenges I faced, and future improvements. I write naturally — no special syntax, no formatting constraints."
           ],
           "2. Run the Automation": [
-            "From my PowerShell menu, I select \"add new project\" and enter the project name. The script creates a properly formatted markdown file in my Obsidian folder if it doesn't exist.",
-            "Then I select \"convert to data\" — this runs the Node script that parses all my notes and generates the fresh data file.",
-            "Finally, I select \"commit and deploy\" — the script commits the changes and pushes to GitHub."
+            "When I run the script, it automatically scans all my notes, parses the content, and converts everything into a structured data object. This data is then committed and pushed to GitHub, keeping everything in sync without any manual input."
           ],
           "3. Automatic Deployment": [
             "Vercel detects the push to my main branch and automatically rebuilds the portfolio. Within minutes, the new project appears on my live site.",
