@@ -1,24 +1,3 @@
----
-title: "README to Object Converter"
-description: "A project to convert local Obsidian Markdown files into structured JavaScript objects for easy integration with TypeScript projects."
-imageSrc: "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
-detailedDescription: "This project reads local Markdown files from an Obsidian vault, processes them to extract key sections, and converts them into a JavaScript object. The resulting object is saved into a .ts file for later use in your portfolio or app."
-technologies:
-  - "Node.js"
-  - "TypeScript"
-  - "remark"
-links:
-  - href: "https://github.com/deveduar/readme-to-obj"
-    label: "GitHub Repository"
-features:
-  - "Reads local Markdown files from an Obsidian vault."
-  - "Extracts sections such as headings, paragraphs, lists, and code from Markdown."
-  - "Converts the extracted content into a structured JavaScript object."
-  - "Saves the resulting object in a ts file for TypeScript integration."
-  - "Works with local files instead of live GitHub downloads."
-  - "Supports preview HTML generation for the converted content."
----
-
 # README to Object Converter
 
 This project converts local `.md` files from an Obsidian vault into JavaScript objects. The goal is to facilitate the extraction of sections and content from local Markdown notes in a structured way.
