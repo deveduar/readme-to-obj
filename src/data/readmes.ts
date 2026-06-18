@@ -1106,7 +1106,7 @@ export const readmes = [
   {
     "id": 8,
     "repoId": "tui voice asistente de voz offline",
-    "date": "2026-06-18T12:55:07.337Z",
+    "date": "2026-06-18T13:05:16.846Z",
     "title": "tui-voice — Asistente de Voz Offline",
     "description": "Asistente por voz en español 100% offline con Vosk y Textual",
     "imageSrc": "https://opengraph.githubassets.com/1/deveduar/tui-voice-assistant-offline",
@@ -1127,9 +1127,6 @@ export const readmes = [
         "label": "GitHub Repository"
       }
     ],
-    "gallery": [
-      "https://opengraph.githubassets.com/1/deveduar/tui-voice-assistant-offline"
-    ],
     "features": [
       "Reconocimiento de voz completamente offline en español utilizando Vosk.",
       "Interfaz TUI moderna desarrollada con Textual.",
@@ -1148,7 +1145,7 @@ export const readmes = [
     "readmeContent": {
       "title": "tui-voice — Asistente de Voz Offline",
       "fileName": "tui voice asistente de voz offline.md",
-      "date": "2026-06-18T12:55:07.337Z",
+      "date": "2026-06-18T13:05:16.846Z",
       "sections": {
         "El objetivo": [
           "La mayoría de asistentes de voz modernos dependen de servicios en la nube para procesar comandos. Quería explorar una alternativa centrada en la privacidad, capaz de funcionar localmente y con una experiencia de usuario agradable desde la terminal.",
