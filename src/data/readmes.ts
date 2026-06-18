@@ -2,7 +2,7 @@ export const readmes = [
   {
     "id": 1,
     "repoId": "3D Audio Visualizer",
-    "date": "2026-04-08T21:12:46.167Z",
+    "date": "2026-06-18T12:52:20.193Z",
     "title": "3D Audio Visualizer — Experimental Audio Engine",
     "description": "Interactive 3D audio visualizer with SvelteKit and Tone.js",
     "imageSrc": "https://i.postimg.cc/prQ56z5M/3d-visu-laptope.webp",
@@ -49,7 +49,7 @@ export const readmes = [
     "readmeContent": {
       "title": "3D Audio Visualizer — Experimental Audio Engine",
       "fileName": "3D Audio Visualizer.md",
-      "date": "2026-04-08T21:12:46.167Z",
+      "date": "2026-06-18T12:52:20.193Z",
       "sections": {
         "🎯 The Big Picture": [
           "I wanted to build more than just a music player. I set out to create an **experimental audio visualization platform** where music becomes art — real-time, reactive, and completely customizable.",
@@ -1105,6 +1105,112 @@ export const readmes = [
   },
   {
     "id": 8,
+    "repoId": "tui voice asistente de voz offline",
+    "date": "2026-06-18T12:55:07.337Z",
+    "title": "tui-voice — Asistente de Voz Offline",
+    "description": "Asistente por voz en español 100% offline con Vosk y Textual",
+    "imageSrc": "https://opengraph.githubassets.com/1/deveduar/tui-voice-assistant-offline",
+    "detailedDescription": "Asistente de voz local para Windows con reconocimiento offline mediante Vosk, interfaz TUI moderna construida con Textual y sistema de comandos totalmente configurable mediante JSON.",
+    "technologies": [
+      "Python",
+      "Vosk",
+      "Textual",
+      "PyAudio",
+      "JSON",
+      "ctypes",
+      "Windows API",
+      "GlazeWM"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/deveduar/tui-voice-assistant-offline",
+        "label": "GitHub Repository"
+      }
+    ],
+    "gallery": [
+      "https://opengraph.githubassets.com/1/deveduar/tui-voice-assistant-offline"
+    ],
+    "features": [
+      "Reconocimiento de voz completamente offline en español utilizando Vosk.",
+      "Interfaz TUI moderna desarrollada con Textual.",
+      "Configuración automática de micrófonos y modelos de voz.",
+      "Sistema de comandos extensible mediante archivos JSON.",
+      "Modo dictado con inyección directa de texto en la ventana activa.",
+      "Soporte para múltiples nombres de activación (wake words).",
+      "Gestión visual de comandos habilitados y deshabilitados.",
+      "Paleta de comandos para acciones rápidas y configuración.",
+      "Registro automático de comandos no reconocidos para mejorar patrones.",
+      "Cambio dinámico de temas visuales sin reiniciar la aplicación.",
+      "Integración opcional con GlazeWM para automatización de ventanas.",
+      "Arquitectura asíncrona con carga de modelos sin bloquear la interfaz."
+    ],
+    "status": "🚀",
+    "readmeContent": {
+      "title": "tui-voice — Asistente de Voz Offline",
+      "fileName": "tui voice asistente de voz offline.md",
+      "date": "2026-06-18T12:55:07.337Z",
+      "sections": {
+        "El objetivo": [
+          "La mayoría de asistentes de voz modernos dependen de servicios en la nube para procesar comandos. Quería explorar una alternativa centrada en la privacidad, capaz de funcionar localmente y con una experiencia de usuario agradable desde la terminal.",
+          "El resultado fue **tui-voice**, un asistente de voz offline para Windows que escucha continuamente comandos hablados, ejecuta acciones configurables y ofrece un modo de dictado integrado para escribir texto en cualquier aplicación."
+        ],
+        "Tecnologías utilizadas": [
+          "El proyecto está construido principalmente en Python y combina varias tecnologías especializadas:",
+          "- **Vosk** para reconocimiento de voz offline.",
+          "- **PyAudio** para captura de audio en tiempo real.",
+          "- **Textual** para crear una interfaz TUI moderna y reactiva.",
+          "- **ctypes** y la API de Windows para el sistema de dictado.",
+          "- **JSON** para la configuración dinámica de comandos y preferencias.",
+          "- **GlazeWM** como integración opcional para automatización de ventanas."
+        ],
+        "Características principales": {
+          "🎤 Reconocimiento de voz local": [
+            "Todo el procesamiento de voz se realiza localmente mediante modelos Vosk en español. Esto permite utilizar el asistente sin conexión a internet y mantiene la privacidad de las conversaciones."
+          ],
+          "⌨️ Modo dictado": [
+            "Además de ejecutar comandos, Flex puede funcionar como sistema de dictado. El texto reconocido se envía directamente a la ventana activa utilizando mensajes nativos de Windows, evitando dependencias externas o el uso del portapapeles."
+          ],
+          "⚙️ Comandos configurables": [
+            "Los comandos están definidos en archivos JSON editables por el usuario. Es posible:",
+            "- Abrir programas.",
+            "- Ejecutar comandos shell.",
+            "- Lanzar URLs.",
+            "- Enviar combinaciones de teclas.",
+            "- Controlar ventanas mediante GlazeWM.",
+            "- Crear acciones personalizadas sin modificar el código fuente."
+          ],
+          "🎨 Interfaz TUI moderna": [
+            "La aplicación incorpora:",
+            "- Historial de conversaciones.",
+            "- Texto parcial en tiempo real.",
+            "- Barra de estado.",
+            "- Configuración visual de comandos.",
+            "- Paleta de acciones rápidas.",
+            "- Cambio dinámico de temas."
+          ]
+        },
+        "Retos técnicos": [
+          "Uno de los principales desafíos fue mantener la interfaz completamente responsiva mientras se cargaban modelos de reconocimiento de voz potencialmente pesados.",
+          "Para resolverlo, la carga de modelos y el procesamiento de audio se ejecutan en hilos independientes, permitiendo que la aplicación continúe respondiendo a la interacción del usuario.",
+          "Otro aspecto interesante fue el desarrollo del sistema de dictado, implementado únicamente con herramientas nativas de Windows mediante `SendMessageW(WM_CHAR)` para lograr una escritura fluida sin depender de soluciones externas."
+        ],
+        "Lo que aprendí": [
+          "Este proyecto me permitió profundizar en:",
+          "- Procesamiento de audio en tiempo real.",
+          "- Arquitecturas asíncronas en Python.",
+          "- Desarrollo de interfaces terminales modernas.",
+          "- Integración con APIs nativas de Windows.",
+          "- Diseño de sistemas configurables orientados al usuario.",
+          "Además, fue una excelente oportunidad para explorar cómo construir experiencias de usuario completas sin depender de servicios cloud."
+        ],
+        "Resultado": [
+          "tui-voice demuestra que es posible crear un asistente de voz moderno, privado y extensible utilizando únicamente herramientas open source y procesamiento local. El proyecto sigue evolucionando como laboratorio personal para experimentar con interfaces conversacionales y automatización de escritorio."
+        ]
+      }
+    }
+  },
+  {
+    "id": 9,
     "repoId": "Utility Tools Collection – Data Migration & Media Conversion",
     "date": "2026-04-08T18:27:02.080Z",
     "title": "Utility Tools Collection – Data Migration & Media Conversion",
@@ -1246,7 +1352,7 @@ export const readmes = [
     }
   },
   {
-    "id": 9,
+    "id": 10,
     "repoId": "Vue Dates — Building a Complete Salon Booking System",
     "date": "2026-04-08T21:10:45.346Z",
     "title": "Vue Dates — Complete Booking System",
